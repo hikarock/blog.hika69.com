@@ -1,0 +1,26 @@
+baseurl = "http://blog.hika69.com/"
+languageCode = "ja"
+title = "hikarock blog"
+Copyright = "All rights reserved - 2015"
+canonifyurls = true
+
+[indexes]
+  tag = "tags"
+
+[permalinks]
+  post = "/blog/:year/:month/:day/:filename/"
+
+[params]
+  # description = ""
+  cover = "images/cover_02.jpg"
+  author = "hikarock"
+  authorlocation = "Tokyo, Japan"
+  authorwebsite = "http://blog.hika69.com"
+  bio= "街に詳しい。"
+  logo = "images/logo.png"
+  githubName = "hikarock"
+  twitterName = "hika69"
+  hideHUGOSupport = false
+  customHeaderPartial = "customHeader.html"
+  customFooterPartial = "customFooter.html"
+
