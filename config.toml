@@ -12,7 +12,7 @@ canonifyurls = true
 
 [params]
   # description = ""
-  cover = "images/cover_02.jpg"
+  cover = "images/cover.jpg"
   author = "hikarock"
   authorlocation = "Tokyo, Japan"
   authorwebsite = "http://hika69.com"
