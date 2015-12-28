@@ -60,7 +60,7 @@ Casper テーマのデフォルトのスタイルでは見出しなどで「ペ�
 }
 ```
 
-詳細は以下に詳しい。
+詳細は以下。
 
 - [フォントの機能を使えるCSS3のFont feature settingsとは](http://www.riaxdnp.jp/?p=5094)
 - [font-feature-settings - CSS | MDN](https://developer.mozilla.org/ja/docs/Web/CSS/font-feature-settings)
