@@ -5,7 +5,7 @@ title = "自作アプリのシンボルフォントを作った"
 
 +++
 
-以下の『「シンボルフォント in Web」草稿』を参考に [Sketch](https://www.sketchapp.com/) と IcoMoon でシンボルフォントを作成した。
+『「シンボルフォント in Web」草稿』を参考に [Sketch](https://www.sketchapp.com/) と IcoMoon でシンボルフォントを作成した。
 
 <!--more-->
 
