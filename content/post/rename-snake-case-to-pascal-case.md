@@ -1,7 +1,7 @@
 +++
 date = "2016-01-07T21:46:22+09:00"
 draft = true
-tags = ["php", "regex"]
+tags = ["mac", "php", "regex"]
 title = "スネークケースのファイル名・クラス名をパスカルケースにリネームする"
 
 +++
