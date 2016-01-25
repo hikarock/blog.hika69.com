@@ -9,7 +9,7 @@ hugo
 git add -A
 
 # Commit changes.
-msg="rebuilding site `date`"
+msg="rebuilding site $(date +'%Y-%m-%dT%T+0900')"
 if [ $# -eq 1 ]; then
   msg="$1"
 fi
@@ -18,5 +18,5 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin master
-git subtree push --prefix=public origin gh-pages
+git subtree push --prefix=public git@github.com:hikarock/blog.hika69.com.git gh-pages
 
