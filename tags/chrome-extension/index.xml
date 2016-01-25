@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chrome Extension on hikarock blog</title>
+    <link>http://blog.hika69.com/tags/chrome-extension/</link>
+    <description>Recent content in Chrome Extension on hikarock blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Mon, 24 Feb 2014 14:47:27 +0000</lastBuildDate>
+    <atom:link href="http://blog.hika69.com/tags/chrome-extension/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Chrome 拡張「シンプル翻訳」を更新</title>
+      <link>http://blog.hika69.com/blog/2014/02/24/simple-honyaku/</link>
+      <pubDate>Mon, 24 Feb 2014 14:47:27 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2014/02/24/simple-honyaku/</guid>
+      <description>&lt;p&gt;Chrome 拡張機能の「&lt;a href=&#34;https://chrome.google.com/webstore/detail/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E7%BF%BB%E8%A8%B3/pdnmkammncjnifdeclafllianknnoaif&#34;&gt;シンプル翻訳&lt;/a&gt;」を2年ぶりに更新しました。&lt;/p&gt;
+
+&lt;p&gt;素敵なバナーやアイコンは &lt;a href=&#34;https://twitter.com/meganejunkie&#34;&gt;@meganejunkie&lt;/a&gt; 先生に作ってもらいました (ありがとうございます) 。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/simple-honyaku-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/simple-honyaku-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;利用しているAPIを変更しましたが機能的にはほぼ変わっていません。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Google翻訳APIから、Bing Translator APIに変更&lt;/li&gt;
+&lt;li&gt;オプションから個別にBing Application IDが設定可能に&lt;/li&gt;
+&lt;li&gt;翻訳結果の読み上げ機能(英語のみ)を追加&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/simple-honyaku-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;デフォルトだと一つのBing Application IDをみんなで使いまわすので、API制限かかるかもしれません。
+なので一応「オプション」画面から個別にBing Application IDを上書きできるようにしています。&lt;/p&gt;
+
+&lt;p&gt;インストールはこちらから。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E7%BF%BB%E8%A8%B3/pdnmkammncjnifdeclafllianknnoaif&#34;&gt;Chrome ウェブストア - シンプル翻訳&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ソースは&lt;a href=&#34;https://github.com/hikarock/simple_honyaku&#34;&gt;GitHub&lt;/a&gt;に置いてます。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

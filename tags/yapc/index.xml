@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yapc on hikarock blog</title>
+    <link>http://blog.hika69.com/tags/yapc/</link>
+    <description>Recent content in Yapc on hikarock blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Fri, 29 Aug 2014 11:45:06 +0000</lastBuildDate>
+    <atom:link href="http://blog.hika69.com/tags/yapc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>YAPC::Asia Tokyo 2014 前夜祭で「プライベートで3年間チーム開発した話」をしてきた</title>
+      <link>http://blog.hika69.com/blog/2014/08/29/yapc2014/</link>
+      <pubDate>Fri, 29 Aug 2014 11:45:06 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2014/08/29/yapc2014/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://yapcasia.org/2014/08/eve-of-yapcasia.html&#34;&gt;YAPC::Asia Tokyo 2014 前夜祭「欲しいものは作ればいい！ 〜Webアプリ10連発〜」&lt;/a&gt;で話してきました。&lt;/p&gt;
+
+&lt;iframe src=&#34;http://www.storyboards.jp/widget/u1g2d7&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/viewer/u1g2d7&#34;&gt;プライベートで3年間チーム開発した話 | ストーリーボード&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;気づいたら3年間Webアプリやらなんやらチームで作ってきたので、良いまとめの機会になりました。誘ってくれた &lt;a href=&#34;https://twitter.com/uzulla&#34;&gt;@uzulla&lt;/a&gt; さん、ありがとうございました。&lt;/p&gt;
+
+&lt;h3 id=&#34;補足:4ed16ff9bb0230619638850202c12cd5&#34;&gt;補足&lt;/h3&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;&lt;p&gt;誤解があったかもしれないけど「いいね」するとお金がかかるのは僕じゃなくて &lt;a href=&#34;https://twitter.com/hideack&#34;&gt;@hideack&lt;/a&gt; です。ありがとう。&lt;/p&gt;&amp;mdash; hikarock (@hika69) &lt;a href=&#34;https://twitter.com/hika69/statuses/504946565199323136&#34;&gt;2014, 8月 28&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;僕たち的には、たまにチームでビールが飲みたいなあ、とか季節の変わり目に思うことがあります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://suzuri.jp/REMP/&#34;&gt;REMP ∞ SUZURI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://spike.cc/p/scsIZLtH&#34;&gt;REMPステッカー (10枚) - SPIKE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

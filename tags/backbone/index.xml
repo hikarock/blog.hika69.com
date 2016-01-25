@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backbone on hikarock blog</title>
+    <link>http://blog.hika69.com/tags/backbone/</link>
+    <description>Recent content in Backbone on hikarock blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Tue, 28 May 2013 21:53:00 +0000</lastBuildDate>
+    <atom:link href="http://blog.hika69.com/tags/backbone/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Underscore.js の _.debounce が便利そう</title>
+      <link>http://blog.hika69.com/blog/2013/05/28/underscore-js/</link>
+      <pubDate>Tue, 28 May 2013 21:53:00 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2013/05/28/underscore-js/</guid>
+      <description>&lt;p&gt;「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.jsガイドブック&lt;/a&gt;」の読書会2回目。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/Backbone-js%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF-%E9%AB%98%E6%A9%8B-%E4%BE%91%E4%B9%85/dp/4899773501%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4899773501&#34; target=&#34;_blank&#34; title=&#34;Backbone.jsガイドブック&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/31tI0WaZukL.jpg&#34; width=&#34;394&#34; height=&#34;500&#34; alt=&#34;Backbone.jsガイドブック&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;1章の後半から始めた。underscore.jsのタイマー系の関数が超絶便利そうだった。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://underscorejs.org/#debounce&#34;&gt;debounce&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://underscorejs.org/#throttle&#34;&gt;throttle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://underscorejs.org/#delay&#34;&gt;delay&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://underscorejs.org/#defer&#34;&gt;defer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;この辺。&lt;/p&gt;
+
+&lt;p&gt;重いレンダリング処理とか保存処理のイベント多発を&lt;code&gt;setTimeout&lt;/code&gt;とか&lt;code&gt;clearTimeout&lt;/code&gt;でがんばってブロックしてたところは&lt;code&gt;_.debounce&lt;/code&gt;の方がきれいに書けそう。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;のライブラリ保存処理がちょうどこんな感じで、&lt;/p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://jsdo.it/blogparts/4prZ/js?width=100%&amp;height=540&amp;view=javascript&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;code&gt;_.debounce&lt;/code&gt;だとこんな感じになる。&lt;/p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://jsdo.it/blogparts/sUcm/js?width=100%&amp;height=320&amp;view=javascript&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp&#34;&gt;ストーリーボード&lt;/a&gt;のMarkdownのレンダリングのとこもこれ使ったらいいな、と思ってたらドキュメントにもまんまなこと書いてあった。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;For example: rendering a preview of a Markdown comment, recalculating a layout after the window has stopped being resized, and so on.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;かきなおそ。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>「Backbone.js ガイドブック」読書会がはじまった</title>
+      <link>http://blog.hika69.com/blog/2013/05/25/backbone-js/</link>
+      <pubDate>Sat, 25 May 2013 01:04:00 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2013/05/25/backbone-js/</guid>
+      <description>
+
+&lt;p&gt;社内で「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.js ガイドブック&lt;/a&gt;」の読書会が始まったので参加した。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/Backbone-js%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF-%E9%AB%98%E6%A9%8B-%E4%BE%91%E4%B9%85/dp/4899773501%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4899773501&#34; target=&#34;_blank&#34; title=&#34;Backbone.jsガイドブック&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/31tI0WaZukL.jpg&#34; width=&#34;394&#34; height=&#34;500&#34; alt=&#34;Backbone.jsガイドブック&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;1章くらい進むかな、と思ったけど、途中サンプルコードを動作確認したりしてたら10ページくらいしか読み進まなかった。&lt;/p&gt;
+
+&lt;p&gt;ためしたのはこの辺り。
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://jsdo.it/blogparts/z9YK/js?width=100%&amp;height=496&amp;view=javascript&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;クラスプロパティ・メソッドと、インスタンスプロパティ・メソッドの動作の違いを確認した。&lt;/p&gt;
+
+&lt;h3 id=&#34;ほかに:1e427e62cc44ddfd497e5b7351c6556d&#34;&gt;ほかに&lt;/h3&gt;
+
+&lt;p&gt;「&lt;a href=&#34;http://booklog.jp/item/1/477415654X&#34;&gt;コーディングを支える技術&lt;/a&gt;」を読み始めた。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E6%8A%80%E8%A1%93-%7E%E6%88%90%E3%82%8A%E7%AB%8B%E3%81%A1%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E4%BD%9C%E6%B3%95-WEB-PRESS-plus/dp/477415654X%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D477415654X&#34; target=&#34;_blank&#34; title=&#34;コーディングを支える技術 ~成り立ちから学ぶプログラミング作法 (WEB+DB PRESS plus)&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/51nXP3TKXVL.jpg&#34; width=&#34;353&#34; height=&#34;500&#34; alt=&#34;コーディングを支える技術 ~成り立ちから学ぶプログラミング作法 (WEB+DB PRESS plus)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今あるプログラミング言語の「あたりまえ」は試行錯誤の結果なんだなあと、目から鱗。&lt;/p&gt;
+
+&lt;p&gt;例外処理、制御構文のあたりは特に。&lt;/p&gt;
+
+&lt;p&gt;プログラミング言語がまだ試行錯誤の途上にある、というよく考えたら当たり前のことが新鮮に感じた。
+とにかく面白い。&lt;/p&gt;
+
+&lt;p&gt;変数の章は、気力が落ちたのでちょっと読み飛ばしたけれど。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

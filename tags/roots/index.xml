@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Roots on hikarock blog</title>
+    <link>http://blog.hika69.com/tags/roots/</link>
+    <description>Recent content in Roots on hikarock blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Wed, 01 Jul 2015 22:01:34 +0000</lastBuildDate>
+    <atom:link href="http://blog.hika69.com/tags/roots/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>静的サイトジェネレータ Roots の覚書</title>
+      <link>http://blog.hika69.com/blog/2015/07/01/roots/</link>
+      <pubDate>Wed, 01 Jul 2015 22:01:34 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/07/01/roots/</guid>
+      <description>&lt;p&gt;定期的にブログをリニューアルしたくなる病が発症する。&lt;/p&gt;
+
+&lt;p&gt;以下を条件に探してて roots がよさそうだったので試した。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;node製&lt;/li&gt;
+&lt;li&gt;stylus&lt;/li&gt;
+&lt;li&gt;ファイル構成がシンプル&lt;/li&gt;
+&lt;li&gt;拡張しやすい&lt;/li&gt;
+&lt;li&gt;デフォルトのテーマがかっこいい&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://roots.cx/&#34;&gt;Roots: Enlightened Static Sites&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;とりあえずインストールする。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm install -g roots
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ブログ用のテンプレートを追加する必要があるようなので、動画を見つつ進める。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=RitO5dyPH44&#34;&gt;Roots Templates - YouTube&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;以下のテンプレートを追加。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ roots tpl add blog https://github.com/carrot/roots-template-blog.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;-t&lt;/code&gt;でテンプレートを指定してプロジェクトを作成する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ roots new hikarock-blog -t blog
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以下のようにデフォルトのテンプレートを指定しておけば、次から&lt;code&gt;-t&lt;/code&gt;は不要になる模様。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ roots tpl default blog
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;生成された。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.
+├── app.coffee
+├── app.production.coffee
+├── assets
+│   ├── css
+│   │   ├── _settings.styl
+│   │   └── master.styl
+│   ├── img
+│   └── js
+│       └── main.coffee
+├── node_modules
+├── package.json
+├── posts
+│   ├── first_post.jade
+│   └── second_post.jade
+├── public
+│   ├── css
+│   │   ├── master.css
+│   │   └── master.css.map
+│   ├── img
+│   ├── index.html
+│   ├── js
+│   │   ├── main.js
+│   │   └── main.js.map
+│   └── posts
+│       ├── first_post.html
+│       └── second_post.html
+├── readme.md
+└── views
+    ├── _single.jade
+    ├── index.jade
+    └── layout.jade
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ファイル構成はシンプルでよさそう。&lt;/p&gt;
+
+&lt;p&gt;サイトを立ち上げる。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ roots watch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;デフォルトのテーマはないに等しいくらいに無印スタイル&lt;/li&gt;
+&lt;li&gt;jade内に markdown を書くのがちょっと慣れない。インデントがだるい&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;GitHub味のmarkdown が解釈されていない。パーサーを marked とかに変えたらよいのだろうか&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;もともと marked だった。一部解釈できない記法が含んでいたので崩れていた&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;デプロイは試してない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;他はいい感じなので気が向いたら引っ越そう。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

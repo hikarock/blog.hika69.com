@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stobo on hikarock blog</title>
+    <link>http://blog.hika69.com/tags/stobo/</link>
+    <description>Recent content in Stobo on hikarock blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Sat, 21 Feb 2015 19:28:21 +0000</lastBuildDate>
+    <atom:link href="http://blog.hika69.com/tags/stobo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>新しくなった Stobo の紹介</title>
+      <link>http://blog.hika69.com/blog/2015/02/21/stobo/</link>
+      <pubDate>Sat, 21 Feb 2015 19:28:21 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/02/21/stobo/</guid>
+      <description>&lt;p&gt;StoboはMarkdownでプレゼン資料が作れて配信できるWebアプリです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/&#34;&gt;Stobo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;もともとはストーリーボードという名前だったんだけど、これからはStobo (ストボ) が正式名称です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;URLはそのままです&lt;/li&gt;
+&lt;li&gt;ロゴは @getsukikyu が新しいものを製作中&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;今回の大きな変更点はMarkdownの拡張です。詳細は以下のスライドにまとめています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/viewer/iw1l45&#34;&gt;Stobo Flavored Markdown | Stobo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;その他に、&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;スライド時のエフェクトの廃止とアルゴリズムの変更&lt;/li&gt;
+&lt;li&gt;エディタの操作性の改善
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hikarock/editorify&#34;&gt;editorify&lt;/a&gt; の導入 (および開発)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以前から要望の多いテーマの設定については&lt;code&gt;Stobo 設定記法&lt;/code&gt;で対応予定です。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>拡大・縮小自在な LESS の mixin の作り方</title>
+      <link>http://blog.hika69.com/blog/2014/01/02/less-mixin/</link>
+      <pubDate>Thu, 02 Jan 2014 22:40:46 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2014/01/02/less-mixin/</guid>
+      <description>
+
+&lt;p&gt;ストーリーボードではスライドをHTMLとCSSで描画するため、同じレイアウト・見た目で縮尺だけ変えたいことがある。&lt;/p&gt;
+
+&lt;h4 id=&#34;エディタページ:251de83f020f23281ae170b1e5c8704b&#34;&gt;エディタページ&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/less-mixin-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;スライドページ-pc用:251de83f020f23281ae170b1e5c8704b&#34;&gt;スライドページ(PC用)&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/less-mixin-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;スライドページ-スマートフォン用:251de83f020f23281ae170b1e5c8704b&#34;&gt;スライドページ(スマートフォン用)&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/less-mixin-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;ブログパーツ:251de83f020f23281ae170b1e5c8704b&#34;&gt;ブログパーツ&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/less-mixin-4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;こんな感じにいろんなサイズで描画したい。&lt;/p&gt;
+
+&lt;p&gt;でもサイズごとにCSSを書くのは大変なので、倍率を渡すとよろしく描画してくれるmixinを定義しています。&lt;/p&gt;
+
+&lt;p&gt;できるだけ&lt;code&gt;em&lt;/code&gt;のように相対単位を指定して、サイズ系の値にはすべて&lt;code&gt;@multiplier&lt;/code&gt;を乗じています。&lt;/p&gt;
+
+&lt;h4 id=&#34;mixin-一部抜粋:251de83f020f23281ae170b1e5c8704b&#34;&gt;mixin (一部抜粋)&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.stbd-slide(@multiplier) {
+
+  padding: 25px * @multiplier;
+  color: gray;
+  font-family: @maru-go;
+  word-wrap: break-word;
+  font-size: @font-size-s * @multiplier;
+
+  img {
+    margin-bottom: @font-size-s;
+    width: 85%;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: gray;
+    font-family: @maru-go;
+    line-height: 1.25em;
+    margin-top: 0;
+    margin-bottom: @font-size-s * @multiplier;
+  }
+
+  h1 {
+    font-size: @font-size-s * 3 * @multiplier;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;呼び出し側:251de83f020f23281ae170b1e5c8704b&#34;&gt;呼び出し側&lt;/h4&gt;
+
+&lt;p&gt;こんな感じで呼び出し側でサイズを指定します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.stbd-slide(0.8);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;レスポンシブ対応もこれだけ。
+(以下はBootstrap 3を併用している場合)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.stbd-slide(1);
+
+@media (min-width: @screen-sm-min) {
+  .stbd-slide(1.5);
+}
+@media (min-width: @screen-md-min) {
+  .stbd-slide(2.5);
+}
+@media (min-width: @screen-lg-min) {
+  .stbd-slide(3);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;シンプルですね。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Leap でストボを操作する動画を作った</title>
+      <link>http://blog.hika69.com/blog/2013/12/25/leap-video/</link>
+      <pubDate>Wed, 25 Dec 2013 20:24:41 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2013/12/25/leap-video/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp&#34;&gt;ストーリーボード&lt;/a&gt;がLeap Motionに対応したんだけど、あんまり伝わってないので紹介動画を作成しました。&lt;/p&gt;
+
+&lt;p&gt;昼休みにランチしつつ開発メンバーでせわしない感じで撮りました。&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/WuMlA9TxeVQ&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/getsukikyu&#34;&gt;GETSUKIKYU&lt;/a&gt;がRoadMoviesで撮影・編集してくれました。
+ちょっとした紹介動画作るのにRoadMoviesは向いていると思った。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/roadmovies/id575022047?mt=8&amp;uo=4&#34; target=&#34;_blank&#34; title=&#34;RoadMovies&#34;&gt;&lt;img src=&#34;http://a424.phobos.apple.com/us/r30/Purple2/v4/b5/d0/ae/b5d0aeed-e39d-67b9-62ec-8d198ddaa016/mzl.jyvktlel.png&#34; width=&#34;150&#34; height=&#34;150&#34; alt=&#34;RoadMovies&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;即席絵コンテ書いてくれたゲストの&lt;a href=&#34;https://twitter.com/inouetakuya&#34;&gt;おいちゃん&lt;/a&gt;もありがとう。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ストボのバージョンアップ業</title>
+      <link>http://blog.hika69.com/blog/2013/12/24/storyboards-version-up/</link>
+      <pubDate>Tue, 24 Dec 2013 20:45:26 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2013/12/24/storyboards-version-up/</guid>
+      <description>
+
+&lt;p&gt;1年程放置ぎみだった&lt;a href=&#34;http://www.storyboards.jp&#34;&gt;ストーリーボード&lt;/a&gt;のバージョンアップ業を1ヶ月くらいやってました。&lt;/p&gt;
+
+&lt;p&gt;Markdownでプレゼンが作れるあれです。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/storyboards-emoji.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;やったこと:024d69df550fff2c327c0af111a6efb2&#34;&gt;やったこと&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bootstrap2をBootstrap3に&lt;/li&gt;
+&lt;li&gt;Grunt導入
+
+&lt;ul&gt;
+&lt;li&gt;lessのコンパイルやBower連携&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Bower導入
+
+&lt;ul&gt;
+&lt;li&gt;手動でいれてたフロント系ライブラリをBowerでインストールするようにした&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Markdownパーサーを&lt;a href=&#34;https://github.com/coreyti/showdown&#34;&gt;showdown&lt;/a&gt;から&lt;a href=&#34;https://github.com/chjj/marked&#34;&gt;marked&lt;/a&gt;に変更&lt;/li&gt;
+&lt;li&gt;Font Awesome 3.2から4.0に変更&lt;/li&gt;
+&lt;li&gt;絵文字導入(&lt;a href=&#34;http://hassankhan.github.io/emojify.js/&#34;&gt;emojify.js&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;こういうのはこまめにやるのがいいですね。
+Bootstrap3の&lt;code&gt;box-sizing: border-box&lt;/code&gt;導入はドラスティックすぎてやばかったです。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Less でボタンの mixin</title>
+      <link>http://blog.hika69.com/blog/2013/12/05/less-button-mixin/</link>
+      <pubDate>Thu, 05 Dec 2013 00:02:29 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2013/12/05/less-button-mixin/</guid>
+      <description>&lt;p&gt;以下の画像ボタンを再現するLessのmixin書いた。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/img-button.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;上が画像、下がLess版。まあまあ再現できた。&lt;/p&gt;
+
+&lt;p&gt;色は引数で変えられるようにした。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/less-button.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.stbd-btn(@color) {
+  margin: auto;
+  padding: 4px;
+  #gradient &amp;gt; .vertical(fade(darken(greyscale(@color), 90%), 30%),
+                        fade(lighten(greyscale(@color), 10%), 10%));
+  border-radius: 8px;
+
+  a {
+    color: #fff;
+    font-family: @kaku-go;
+    letter-spacing: 0.1em;
+    font-size: 1.3em;
+    display: block;
+    padding: 17px;
+    text-align: center;
+    text-shadow: 2px 2px 1px darken(@color, 5%);
+    border-radius: 6px;
+    border: 1px solid lighten(@color, 30%);
+    #gradient &amp;gt; .vertical(lighten(@color, 15%), @color);
+
+    &amp;amp;:hover {
+      #gradient &amp;gt; .vertical(lighten(@color, 25%), lighten(@color, 10%));
+      text-decoration: none;
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;darken&lt;/code&gt;とか&lt;code&gt;lighten&lt;/code&gt;とか便利すわ。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

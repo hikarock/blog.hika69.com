@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Triph on hikarock blog</title>
+    <link>http://blog.hika69.com/tags/triph/</link>
+    <description>Recent content in Triph on hikarock blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Thu, 31 Jul 2014 23:25:25 +0000</lastBuildDate>
+    <atom:link href="http://blog.hika69.com/tags/triph/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Meteor でアプリのランディングページを作った</title>
+      <link>http://blog.hika69.com/blog/2014/07/31/meteor/</link>
+      <pubDate>Thu, 31 Jul 2014 23:25:25 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2014/07/31/meteor/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://triph.jp&#34;&gt;triph&lt;/a&gt;のランディングページ(というかアプリ全体&amp;hellip;)をHerokuに乗せていたんだけど、ちょっとおおげさな感じがしてきたので&lt;a href=&#34;https://meteor.com&#34;&gt;Meteor&lt;/a&gt;に移した。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hikarock/triph-web&#34;&gt;hikarock/triph-web&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;meteorにデプロイ:48e026c0e83d0c2d35c1335d577eda8a&#34;&gt;Meteorにデプロイ&lt;/h3&gt;
+
+&lt;p&gt;アカウントが無い場合はあらかじめ&lt;a href=&#34;https://meteor.com&#34;&gt;Meteor&lt;/a&gt;でサインアップして&lt;code&gt;$ meteor login&lt;/code&gt;しておく。&lt;/p&gt;
+
+&lt;p&gt;Meteorのサブドメインでサイトを運用する場合は、以下のようにコマンドを叩くだけでデプロイできる。簡単すぎる。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ meteor deploy hikarock.meteor.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;今回は独自ドメインの&lt;code&gt;triph.jp&lt;/code&gt;で運用したかったので、以下のようにデプロイする。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ meteor deploy triph.jp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;登録されているサイト一覧を確認。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ meteor list-sites
+hikarock.meteor.com
+triph.jp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;dnsの設定:48e026c0e83d0c2d35c1335d577eda8a&#34;&gt;DNSの設定&lt;/h3&gt;
+
+&lt;p&gt;この状態だと&lt;code&gt;triph.jp&lt;/code&gt;を参照できないので、DNSにAレコードを追加する。
+&lt;code&gt;www.triph.jp&lt;/code&gt;のようにサブドメありでよければCNAMEレコードの値に&lt;code&gt;origin.meteor.com&lt;/code&gt;を追加する。&lt;/p&gt;
+
+&lt;p&gt;DNSの管理画面で以下のように設定。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/meteor-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;origin.meteor.com&lt;/code&gt;のIPは&lt;code&gt;dig&lt;/code&gt;で調べた。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ dig origin.meteor.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;参考にした記事:48e026c0e83d0c2d35c1335d577eda8a&#34;&gt;参考にした記事&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/15706411&#34;&gt;javascript - Meteor.js deploy to &amp;quot;example.com&amp;quot; or &amp;quot;www.example.com&amp;quot;? - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;デプロイ可能なユーザーを追加する:48e026c0e83d0c2d35c1335d577eda8a&#34;&gt;デプロイ可能なユーザーを追加する&lt;/h3&gt;
+
+&lt;p&gt;triphを一緒に作っている &lt;a href=&#34;https://twitter.com/hypermkt&#34;&gt;@hypermkt&lt;/a&gt; もデプロイ可能する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ meteor authorized triph.jp --add hypermkt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;triphのiPhoneアプリはもうちょっとで申請できそう。作り始めていろいろ回り道してたら1年たってしまった。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://triph.jp&#34;&gt;triph | あなたの散歩を旅行に変えます&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

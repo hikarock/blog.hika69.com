@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bootstrap on hikarock blog</title>
+    <link>http://blog.hika69.com/tags/bootstrap/</link>
+    <description>Recent content in Bootstrap on hikarock blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Tue, 24 Dec 2013 20:45:26 +0000</lastBuildDate>
+    <atom:link href="http://blog.hika69.com/tags/bootstrap/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ストボのバージョンアップ業</title>
+      <link>http://blog.hika69.com/blog/2013/12/24/storyboards-version-up/</link>
+      <pubDate>Tue, 24 Dec 2013 20:45:26 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2013/12/24/storyboards-version-up/</guid>
+      <description>
+
+&lt;p&gt;1年程放置ぎみだった&lt;a href=&#34;http://www.storyboards.jp&#34;&gt;ストーリーボード&lt;/a&gt;のバージョンアップ業を1ヶ月くらいやってました。&lt;/p&gt;
+
+&lt;p&gt;Markdownでプレゼンが作れるあれです。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/storyboards-emoji.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;やったこと:024d69df550fff2c327c0af111a6efb2&#34;&gt;やったこと&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bootstrap2をBootstrap3に&lt;/li&gt;
+&lt;li&gt;Grunt導入
+
+&lt;ul&gt;
+&lt;li&gt;lessのコンパイルやBower連携&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Bower導入
+
+&lt;ul&gt;
+&lt;li&gt;手動でいれてたフロント系ライブラリをBowerでインストールするようにした&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Markdownパーサーを&lt;a href=&#34;https://github.com/coreyti/showdown&#34;&gt;showdown&lt;/a&gt;から&lt;a href=&#34;https://github.com/chjj/marked&#34;&gt;marked&lt;/a&gt;に変更&lt;/li&gt;
+&lt;li&gt;Font Awesome 3.2から4.0に変更&lt;/li&gt;
+&lt;li&gt;絵文字導入(&lt;a href=&#34;http://hassankhan.github.io/emojify.js/&#34;&gt;emojify.js&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;こういうのはこまめにやるのがいいですね。
+Bootstrap3の&lt;code&gt;box-sizing: border-box&lt;/code&gt;導入はドラスティックすぎてやばかったです。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

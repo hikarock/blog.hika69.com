@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on hikarock blog</title>
+    <link>http://blog.hika69.com/tags/git/</link>
+    <description>Recent content in Git on hikarock blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Mon, 25 Jan 2016 20:04:28 +0900</lastBuildDate>
+    <atom:link href="http://blog.hika69.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>BFG で巨大なファイルを削除して GitHub に push するまで</title>
+      <link>http://blog.hika69.com/blog/2016/01/25/bfg/</link>
+      <pubDate>Mon, 25 Jan 2016 20:04:28 +0900</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2016/01/25/bfg/</guid>
+      <description>&lt;p&gt;あるリポジトリを GitHub に push した時に、100MB 以上のファイルが含まれていたため拒否されてしまった。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% git push origin master
+...
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+remote: error: Trace: xxx
+remote: error: See http://git.io/iEPt8g for more information.
+remote: error: File big.exe is 160.21 MB; this exceeds GitHub&#39;s file size limit of 100.00 MB
+To git@github.com:hikarock/some-big-repo.git
+ ! [remote rejected] master -&amp;gt; master (pre-receive hook declined)
+error: failed to push some refs to &#39;git@github.com:hikarock/some-big-repo.git&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://git-lfs.github.com/&#34;&gt;Git Large File Storage&lt;/a&gt; も使ってみたかったけど課金してないので、素直に &lt;code&gt;more information&lt;/code&gt; のリンクを開く。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://help.github.com/articles/removing-files-from-a-repository-s-history/&#34;&gt;Removing files from a repository&amp;rsquo;s history - User Documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2パターンのファイル削除方法が掲載されていて、今回はだいぶ昔にコミットされたファイルを消したかったので &lt;code&gt;Removing a file added in an older commit&lt;/code&gt; で紹介されている BFG を使う。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://rtyley.github.io/bfg-repo-cleaner/&#34;&gt;BFG Repo-Cleaner by rtyley&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;BFG のサイトから jar ファイルをダウンロードして、&lt;code&gt;.zshrc&lt;/code&gt; にエイリアスを設定した。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;alias bfg=&#39;java -jar ~/bin/bfg-1.12.8.jar&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;リポジトリに移動して、エラーの原因になっている巨大ファイルを &lt;code&gt;git rm&lt;/code&gt; する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% cd some-big-repo
+% git rm big.exe
+rm &#39;big.exe&#39;
+% git ci -m &#39;巨大なファイルを削除&#39;
+[master xxx] 巨大なファイルを削除
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100755 big.exe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;対象リポジトリ内の100M以上のファイルを対象に &lt;code&gt;bfg&lt;/code&gt; を実行。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% cd ..
+% bfg --strip-blobs-bigger-than 100M some-big-repo
+SLF4J: Failed to load class &amp;quot;org.slf4j.impl.StaticLoggerBinder&amp;quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+Using repo : some-big-repo/.git
+
+...
+
+Deleted files
+-------------
+
+        Filename                       Git id
+        --------------------------------------------------
+        big.exe                      | xxx (160.2 MB)
+
+In total, 7 object ids were changed. Full details are logged here:
+
+        /Users/hikarock/some-big-repo.bfg-report/2016-01-25/20-00-01
+
+BFG run is complete! When ready, run: git reflog expire --expire=now --all &amp;amp;&amp;amp; git gc --prune=now --aggressive
+
+Has the BFG saved you time?  Support the BFG on BountySource:  https://j.mp/fund-bfg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;メッセージの最後に出ている通りに &lt;code&gt;git reflog&lt;/code&gt; を実行する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% git reflog expire --expire=now --all &amp;amp;&amp;amp; git gc --prune=now --aggressive
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;もういちど &lt;code&gt;git push&lt;/code&gt; を実行。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% git push origin master
+...
+To git@github.com:hikarock/some-big-repo
+ * [new branch]      master -&amp;gt; master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;push できた。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>hub コマンドで GitHub と GHE に PullRequest する</title>
+      <link>http://blog.hika69.com/blog/2015/02/09/git-pr/</link>
+      <pubDate>Mon, 09 Feb 2015 19:36:38 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/02/09/git-pr/</guid>
+      <description>&lt;p&gt;GitHubでは以下のalias (リンク参照) を設定して&lt;code&gt;git pr master&lt;/code&gt;のように使っていたけれど、GHEで動かなかったので&lt;code&gt;.gitconfig&lt;/code&gt;を編集した。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/banyan@github/items/3c82fa357fe355c16f32#comment-cf6dbbe34ce80d0ac3a7&#34;&gt;GitHub へ簡単に Pull Request を送る - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;[alias]
+  pr = !REP_OWNER=$(git remote -v | grep -e &#39;(push)&#39; | awk &#39;{print $2}&#39; | awk -F &#39;[:/]&#39; &#39;{print $2}&#39;) &amp;amp;&amp;amp; hub pull-request $2 -h $REP_OWNER:`git rev-parse --abbrev-ref HEAD` -b $REP_OWNER:$1 &amp;amp;&amp;amp; shift &amp;quot;$#&amp;quot; 1&amp;gt;/dev/null 2&amp;gt;/dev/null
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;快適。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>iOSアプリ開発のGit運用</title>
+      <link>http://blog.hika69.com/blog/2014/12/16/git-flow/</link>
+      <pubDate>Tue, 16 Dec 2014 09:37:50 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2014/12/16/git-flow/</guid>
+      <description>
+
+&lt;p&gt;iOSアプリはリリースサイクルが長くなりがちなので、&lt;a href=&#34;https://gist.github.com/Gab-km/3705015&#34;&gt;GitHub Flow&lt;/a&gt;ではなく、&lt;a href=&#34;http://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html&#34;&gt;git-flow&lt;/a&gt;を参考にしたフローを使っている。&lt;/p&gt;
+
+&lt;p&gt;仕事もプライベートもこのフローで今のところ問題はない感じ (複数人開発含む)。&lt;/p&gt;
+
+&lt;h3 id=&#34;各ブランチの役割:0550120cb8935579b8c8c5fd080ebba7&#34;&gt;各ブランチの役割&lt;/h3&gt;
+
+&lt;p&gt;基本的に普通の &lt;code&gt;git-flow&lt;/code&gt; と変わらないけれど、AppStore がからむとこを中心に説明します。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;master
+
+&lt;ul&gt;
+&lt;li&gt;現在AppStoreで配布中の最新バージョンと常にイコール&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;release
+
+&lt;ul&gt;
+&lt;li&gt;リリース準備ができたら&lt;code&gt;develop&lt;/code&gt;から分岐する。AppStoreでリリース申請通過後に&lt;strong&gt;リリース完了した時点&lt;/strong&gt;で&lt;code&gt;master&lt;/code&gt;と&lt;code&gt;develop&lt;/code&gt;にマージする。リリース前に&lt;code&gt;release&lt;/code&gt;上で変更があった場合は適宜&lt;code&gt;develop&lt;/code&gt; &lt;code&gt;feature&lt;/code&gt;にマージする。&lt;/li&gt;
+&lt;li&gt;リリース後にタグを打つのを忘れずに。&lt;code&gt;git tag -a v1.0.1 -m &#39;my version 1.0.1&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;develop
+
+&lt;ul&gt;
+&lt;li&gt;開発ブランチ。次期バージョンの要件を満たしたら&lt;code&gt;release&lt;/code&gt;ブランチを作成する。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;feature
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;develop&lt;/code&gt;ブランチから作成して、作業完了したら&lt;code&gt;develop&lt;/code&gt;にマージする。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;hotfix
+
+&lt;ul&gt;
+&lt;li&gt;AppStoreで配布中のバージョンで障害が発生した場合に&lt;code&gt;master&lt;/code&gt;から作成する。AppStoreでリリース申請通過後に&lt;strong&gt;リリース完了した時点&lt;/strong&gt;で&lt;code&gt;master&lt;/code&gt;と&lt;code&gt;develop&lt;/code&gt;に(必要であれば&lt;code&gt;release&lt;/code&gt; &lt;code&gt;feature&lt;/code&gt;にも)マージする。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;git-flow-コマンドについて:0550120cb8935579b8c8c5fd080ebba7&#34;&gt;git-flow コマンドについて&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;git-flow&lt;/code&gt;コマンドは上記のようなフローでの開発を補助するgitのサブコマンドです。
+各ブランチの作成やマージが便利になるコマンドが用意されているけど、プルリクエストやGithub上でのマージは考慮されていない。&lt;/p&gt;
+
+&lt;p&gt;上記フローを実践するために必ずしも&lt;code&gt;git-flow&lt;/code&gt;コマンドを使う必要はない。僕は普通のgitコマンドでブランチ切ったり、Github上のプルリクエストからマージしたりしてる。&lt;/p&gt;
+
+&lt;h3 id=&#34;何がうれしいか:0550120cb8935579b8c8c5fd080ebba7&#34;&gt;何がうれしいか&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iTunes Connectで申請中に、次のバージョンの機能を&lt;code&gt;develop&lt;/code&gt;にさくさくマージできる
+
+&lt;ul&gt;
+&lt;li&gt;GitHub Flow だと&lt;code&gt;master&lt;/code&gt;とトピックブランチだけなのでシンプルで良いんだけど、iOSアプリはリリース申請期間が長いし、その間も開発はしたいので無理が出てくる&lt;/li&gt;
+&lt;li&gt;日次で&lt;code&gt;develop&lt;/code&gt;と&lt;code&gt;release&lt;/code&gt;ブランチをそれぞれ DeployGate 等に配布する仕組みがあれば検証する人も便利&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;リリース版のアプリで不具合があった時に、常に&lt;code&gt;master&lt;/code&gt;がリリースされたものと同一だと安心感がある。&lt;code&gt;hotfix&lt;/code&gt;で障害対応が可能&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;release&lt;/code&gt;ブランチをプルリクエストしておくと&lt;code&gt;What&#39;s New in this Version&lt;/code&gt;をまとめるときに便利&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>GitHub の非公開リポジトリを Bitbucket に引越</title>
+      <link>http://blog.hika69.com/blog/2014/11/18/github-to-bitbucket/</link>
+      <pubDate>Tue, 18 Nov 2014 11:34:01 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2014/11/18/github-to-bitbucket/</guid>
+      <description>
+
+&lt;p&gt;GitHub のプライベートリポジトリの上限がきてしまったので、使用頻度の低いリポジトリを Bitbucket の非公開リポジトリに引越した。&lt;/p&gt;
+
+&lt;h3 id=&#34;コードの引越:c2ae888402f8d3c8a64fa936a8c437a5&#34;&gt;コードの引越&lt;/h3&gt;
+
+&lt;p&gt;Bitbucket に GitHub と同名のリポジトリを作成して、Bitbucket に push するだけ。
+&lt;code&gt;{username}&lt;/code&gt;、&lt;code&gt;{reponame}&lt;/code&gt;は適宜読み替えてください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cd {reponame}
+$ git remote add bitbucket https://{username}@bitbucket.org/{username}/{reponame}.git
+$ git push bitbucket master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;issues-の引越:c2ae888402f8d3c8a64fa936a8c437a5&#34;&gt;Issues の引越&lt;/h3&gt;
+
+&lt;p&gt;これを使った。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sorich87/github-to-bitbucket-issues-migration&#34;&gt;sorich87/github-to-bitbucket-issues-migration&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Usage の通りに実行すると zip ファイルが生成された。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ bundle install
+$ bundle exec ruby cli.rb {username}/{reponame} {username} {password} exportfilename.zip
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bitbucket のウェブUIから zip ファイルをインポートできる。URL は以下。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;https://bitbucket.org/{username}/{reponame}/admin/issues/import-export&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;wiki-の引越:c2ae888402f8d3c8a64fa936a8c437a5&#34;&gt;Wiki の引越&lt;/h3&gt;
+
+&lt;p&gt;コードと同様に GitHub の wiki を clone して Bitbucket に push する。&lt;/p&gt;
+
+&lt;p&gt;以下のエントリを参考にした。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://codetheory.in/export-your-issues-and-wikis-from-github-repo-and-import-to-bitbucket-migration/&#34;&gt;Export your Issues and Wikis from Github Repo and Import to Bitbucket (Migration)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;wiki を clone 。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git clone https://github.com/{username}/{reponame}.wiki.git
+$ cd {reponame}.wiki
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;remote に bitbucket を追加。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git remote add bitbucket https://{username}@bitbucket.org/{username}/{reponame}.git/wiki
+$ git remote -v
+bitbucket       https://{username}@bitbucket.org/{username}/{reponame}.git/wiki (fetch)
+bitbucket       https://{username}@bitbucket.org/{username}/{reponame}.git/wiki (push)
+origin  https://github.com/{username}/{reponame}.wiki.git (fetch)
+origin  https://github.com/{username}/{reponame}.wiki.git (push)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;あらかじめデフォルトの wiki が生成されていて、普通に push すると reject されてしまったので &lt;code&gt;-f&lt;/code&gt; オプションをつけた。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git push -f bitbucket master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以上で完了。GitHub Flavored Markdown が一部動いてないけど十分いい感じに移行できた。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
