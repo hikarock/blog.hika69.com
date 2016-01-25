@@ -6,6 +6,7 @@ comments: true
 tags: 
 - github
 - bitbucket
+- git
 ---
 
 Githubのプライベートリポジトリの上限がきてしまったので、使用頻度の低いリポジトリをBitbucketの非公開リポジトリに引越した。
