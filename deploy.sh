@@ -20,6 +20,5 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin master
-git subtree push --prefix=public git@github.com:hikarock/blog.hika69.com.git gh-pages
-
+git subtree push --prefix public/ origin gh-pages
 
