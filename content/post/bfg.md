@@ -30,7 +30,7 @@ error: failed to push some refs to 'git@github.com:hikarock/some-big-repo.git'
 
 [BFG Repo-Cleaner by rtyley](https://rtyley.github.io/bfg-repo-cleaner/)
 
-BFG のサイトからjarファイルをダウンロードして、`.zshrc` にエイリアスを設定した。
+BFG のサイトから jar ファイルをダウンロードして、`.zshrc` にエイリアスを設定した。
 
 ```
 alias bfg='java -jar ~/bin/bfg-1.12.8.jar'
