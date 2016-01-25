@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on hikarock blog</title>
+    <link>http://blog.hika69.com/tags/javascript/</link>
+    <description>Recent content in Javascript on hikarock blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Tue, 05 May 2015 17:03:27 +0000</lastBuildDate>
+    <atom:link href="http://blog.hika69.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>eslint を vim-watchdogs から使う</title>
+      <link>http://blog.hika69.com/blog/2015/05/05/eslint/</link>
+      <pubDate>Tue, 05 May 2015 17:03:27 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/05/05/eslint/</guid>
+      <description>&lt;p&gt;vim-watchdogs から eslint が使えるように設定したのでメモ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/osyo-manga/vim-watchdogs&#34;&gt;osyo-manga/vim-watchdogs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;eslint をグローバルにインストールする。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eslint.org/&#34;&gt;ESLint - Pluggable JavaScript linter&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm install -g eslint
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;.vimrc&lt;/code&gt;でファイルタイプが&lt;code&gt;javascript&lt;/code&gt;の場合に eslint コマンドが実行されるように設定する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-vim&#34;&gt;let g:watchdogs_check_BufWritePost_enable = 1
+let g:watchdogs_check_CursorHold_enable = 1
+
+&amp;quot;
+&amp;quot; 以下を追記
+&amp;quot;
+let g:quickrun_config = {
+\   &amp;quot;javascript/watchdogs_checker&amp;quot; : {
+\     &amp;quot;type&amp;quot; : &amp;quot;eslint&amp;quot;
+\   }
+\ }
+call watchdogs#setup(g:quickrun_config)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これで&lt;code&gt;:WatchdogsRun&lt;/code&gt;した時に eslint が実行される。&lt;/p&gt;
+
+&lt;p&gt;ただ、このままだと ES6/JSX の構文を使っているとエラーとして検出されてしまうので、&lt;code&gt;.eslintrc&lt;/code&gt;の&lt;code&gt;ecmaFeatures&lt;/code&gt;に値を指定して機能毎に有効にする。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{
+  &amp;quot;ecmaFeatures&amp;quot;: {
+    &amp;quot;templateStrings&amp;quot;: true
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;.eslintrc&lt;/code&gt;の設定により以下の構文はエラーとして検出されない。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;console.log(`Hello, ${name}!`);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;その他の機能毎の設定方法は以下を参照。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eslint.org/docs/user-guide/configuring.html&#34;&gt;Documentation - ESLint - Pluggable JavaScript linter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>JavaScript の IMAP クライアント browserbox で Gmail に接続する</title>
+      <link>http://blog.hika69.com/blog/2015/02/24/browserbox/</link>
+      <pubDate>Tue, 24 Feb 2015 12:47:45 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/02/24/browserbox/</guid>
+      <description>&lt;p&gt;iOS 標準のメモアプリのように、IMAP で Gmail と同期できるクライアントを JS で作れないかな、と思って&lt;a href=&#34;https://github.com/whiteout-io/browserbox&#34;&gt;whiteout-io/browserbox&lt;/a&gt;を試してみた。&lt;/p&gt;
+
+&lt;p&gt;もろもろフリーダムな環境にしたかったので&lt;a href=&#34;https://github.com/nwjs/nw.js&#34;&gt;nwjs/nw.js&lt;/a&gt;を使って環境を作る。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{
+  &amp;quot;name&amp;quot;: &amp;quot;imap&amp;quot;,
+  &amp;quot;main&amp;quot;: &amp;quot;index.html&amp;quot;,
+  &amp;quot;dependencies&amp;quot;: {
+    &amp;quot;browserbox&amp;quot;: &amp;quot;^0.8.1&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;mail&amp;lt;/title&amp;gt;
+    &amp;lt;script src=&amp;quot;mail.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var BrowserBox = require(&#39;browserbox&#39;),
+
+var host     = &#39;imap.gmail.com&#39;,
+    port     = 993,
+    email    = &#39;example@gmail.com&#39;,
+    password = &#39;xxxxxxxxxxxxxxxx&#39;,
+    mailbox  = &#39;INBOX&#39;;
+
+var client = new BrowserBox(host, port, {
+  auth: {
+    user: email,
+    pass: password
+  }
+});
+
+client.connect();
+client.onauth = function() {
+  client.listMailboxes(function(err, mailboxes) {
+    console.log(err || mailboxes);
+    client.selectMailbox(mailbox, function(err, mailbox) {
+      console.log(err || &#39;Mailbox was successfully changed to &#39; + mailbox);
+    });
+  });
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;実行。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ /Applications/nwjs.app/Contents/MacOS/nwjs .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Gmail で2段階認証を使っている場合はこのコードで接続できない。
+さらに、以下の設定で「安全性の低いアプリ」を許可しないと接続できなかった。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.google.com/settings/security/lesssecureapps&#34;&gt;安全性の低いアプリ - アカウント設定&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;許可しない場合は以下のエラーが出る。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[98549:0224/125046:INFO:CONSOLE(41)] &amp;quot;&amp;quot;[2015-02-24T03:50:46.248Z][browserbox IMAP]&amp;quot; &amp;quot;[1] S: W3 NO [ALERT] Please log in via your web browser: http://support.google.com/mail/accounts/bin/answer.py?answer=78754 (Failure)&amp;quot;&amp;quot;, source: /Users/projects/mail/node_modules/browserbox/node_modules/axe-logger/axe.js (41)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;このままでは実用的ではない感じ。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>editorify というライブラリを作った</title>
+      <link>http://blog.hika69.com/blog/2015/02/13/editorify/</link>
+      <pubDate>Fri, 13 Feb 2015 00:55:57 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/02/13/editorify/</guid>
+      <description>&lt;p&gt;エディタリファイと読むんだろうか。とにかく&lt;code&gt;fy&lt;/code&gt;ってつけたかっただけな感じで言いづらい jQuery プラグインを作った。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/hikarock/editorify&#34;&gt;hikarock/editorify&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ひとことでいうと &lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt; を使って簡単なウィジウィグとか作れるライブラリ。
+例えば、markdown のリンクを挿入する場合はこんな感じに書く。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(&#39;.link&#39;).on(&#39;click&#39;, function (evt) {
+  $(&#39;.editor&#39;).editorify([
+    [&#39;clear&#39;],
+    [&#39;insert&#39;, &#39;[](http://example.com)&#39;],
+    [&#39;start&#39;],
+    [&#39;right&#39;, 1]
+  ]);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;left&lt;/code&gt; とか &lt;code&gt;start&lt;/code&gt; とかでカーソル移動できるので &lt;code&gt;[]&lt;/code&gt; の中にカーソルが移動している状態になる。&lt;a href=&#34;https://dl.dropboxusercontent.com/u/459142/editorify/index.html&#34;&gt;DEMO&lt;/a&gt;はこちら。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/&#34;&gt;Stobo&lt;/a&gt; のエディタ部分を絶賛改造中でモンスターブランチがもうスカイツリーくらいに育っているんだけど、その中の成果が分割されて editorify になった。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>東京 Node 学園 14時限目で Rendr の話をした</title>
+      <link>http://blog.hika69.com/blog/2014/08/25/tng14/</link>
+      <pubDate>Mon, 25 Aug 2014 21:05:21 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2014/08/25/tng14/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;
+
+&lt;p&gt;そういえば、&lt;a href=&#34;http://blog.nodejs.jp/2011/03/node-1_25.html&#34;&gt;最初のNode学園&lt;/a&gt;からお客さん側だったので感慨深い。緊張しました。&lt;/p&gt;
+
+&lt;p&gt;今回は「IsomorphicなWAF」がテーマだったらしく、&lt;a href=&#34;https://twitter.com/yosuke_furukawa&#34;&gt;@yosuke_furukawa&lt;/a&gt;さんに「MeteorもしくはRendrの話をしませんか」とお誘いいただいてRendrの話をすることになりました。&lt;/p&gt;
+
+&lt;p&gt;主に&lt;a href=&#34;http://ca.storyboards.jp/&#34;&gt;Casto&lt;/a&gt;でRendrを使うにいたったSPAに対するもやもやと、実際に使ってみてどうだったか、を振り返ってみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;http://www.storyboards.jp/widget/wo41ho&#34;&gt;&lt;/iframe&gt;
+&lt;a href=&#34;http://www.storyboards.jp/viewer/wo41ho&#34;&gt;Rendrの話 | ストーリーボード&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;そもそも-isomorphic-javascript-とはなんぞや:185887276d78685095b8b7ba1df81f2e&#34;&gt;そもそも Isomorphic JavaScript とはなんぞや&lt;/h3&gt;
+
+&lt;p&gt;と理解が浅い感じがするので、リンクをまとめておく。
+すいません、後で読む。&lt;/p&gt;
+
+&lt;h5 id=&#34;isomorphic-javascript-とは:185887276d78685095b8b7ba1df81f2e&#34;&gt;Isomorphic JavaScript とは&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.nodejitsu.com/scaling-isomorphic-javascript-code/&#34;&gt;Scaling Isomorphic Javascript Code | Nodejitsu Inc.&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/tily/1362110&#34;&gt;(翻訳) サバクラ両方で動く JavaScript の大規模開発を行うために&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&#34;rendr:185887276d78685095b8b7ba1df81f2e&#34;&gt;Rendr&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/&#34;&gt;Isomorphic JavaScript: The Future of Web Apps - Airbnb Engineering&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://wazanova.jp/post/66745548194/airbnb&#34;&gt;(翻訳) Airbnb: シングルページアプリを実現するハイブリッドアプローチの課題 -  ワザノバ | wazanova&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://nerds.airbnb.com/slides-and-video-from-spike-brehms-tech-talk/&#34;&gt;Building Single-Page Apps - Airbnb Engineering&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/spikebrehm/building-a-singlepage-app-backbone-nodejs-and-beyond&#34;&gt;Slides on SlideShare&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&#34;meteor:185887276d78685095b8b7ba1df81f2e&#34;&gt;Meteor&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/naoya/20120422/1335109615&#34;&gt;Meteor.js - naoyaのはてなダイアリー&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&#34;その他:185887276d78685095b8b7ba1df81f2e&#34;&gt;その他&lt;/h5&gt;
+
+&lt;p&gt;Isomorphic JavaScriptに関するまとめサイト。こんなんあったのね。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://isomorphic.net/&#34;&gt;Isomorphic JavaScript - The future of web app development&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>rendr-handlebars で部分テンプレートを使う</title>
+      <link>http://blog.hika69.com/blog/2014/04/23/rendr-handlebars/</link>
+      <pubDate>Wed, 23 Apr 2014 00:10:08 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2014/04/23/rendr-handlebars/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rendrjs/rendr-handlebars&#34;&gt;rendr-handlebars&lt;/a&gt;でpartial (部分テンプレート) が使えることにさっき気づいた。&lt;/p&gt;
+
+&lt;p&gt;引数に&lt;code&gt;app/templates&lt;/code&gt;以下のパスを指定する。&lt;/p&gt;
+
+&lt;p&gt;app/templates/home/index.hbs&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{partial &amp;quot;home/include&amp;quot;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上のようにパスだけ指定した場合は読み込み元と同じコンテキストで変数にアクセスすることができる。&lt;/p&gt;
+
+&lt;p&gt;app/templates/home/include.hbs&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{partial &amp;quot;home/include&amp;quot; name=&amp;quot;taro&amp;quot;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;こんな感じでコンテキストを渡すこともできる。&lt;/p&gt;
+
+&lt;p&gt;便利ですね。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Chrome 拡張「シンプル翻訳」を更新</title>
+      <link>http://blog.hika69.com/blog/2014/02/24/simple-honyaku/</link>
+      <pubDate>Mon, 24 Feb 2014 14:47:27 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2014/02/24/simple-honyaku/</guid>
+      <description>&lt;p&gt;Chrome 拡張機能の「&lt;a href=&#34;https://chrome.google.com/webstore/detail/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E7%BF%BB%E8%A8%B3/pdnmkammncjnifdeclafllianknnoaif&#34;&gt;シンプル翻訳&lt;/a&gt;」を2年ぶりに更新しました。&lt;/p&gt;
+
+&lt;p&gt;素敵なバナーやアイコンは &lt;a href=&#34;https://twitter.com/meganejunkie&#34;&gt;@meganejunkie&lt;/a&gt; 先生に作ってもらいました (ありがとうございます) 。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/simple-honyaku-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/simple-honyaku-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;利用しているAPIを変更しましたが機能的にはほぼ変わっていません。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Google翻訳APIから、Bing Translator APIに変更&lt;/li&gt;
+&lt;li&gt;オプションから個別にBing Application IDが設定可能に&lt;/li&gt;
+&lt;li&gt;翻訳結果の読み上げ機能(英語のみ)を追加&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/simple-honyaku-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;デフォルトだと一つのBing Application IDをみんなで使いまわすので、API制限かかるかもしれません。
+なので一応「オプション」画面から個別にBing Application IDを上書きできるようにしています。&lt;/p&gt;
+
+&lt;p&gt;インストールはこちらから。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E7%BF%BB%E8%A8%B3/pdnmkammncjnifdeclafllianknnoaif&#34;&gt;Chrome ウェブストア - シンプル翻訳&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ソースは&lt;a href=&#34;https://github.com/hikarock/simple_honyaku&#34;&gt;GitHub&lt;/a&gt;に置いてます。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Twitter 検索の結果を Google Drive のスプレッドシートに出力する</title>
+      <link>http://blog.hika69.com/blog/2014/01/28/google-apps-script/</link>
+      <pubDate>Tue, 28 Jan 2014 17:07:27 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2014/01/28/google-apps-script/</guid>
+      <description>
+
+&lt;p&gt;以前Google Apps Scriptで作成したプログラムがTwitter API Ver.1の廃止で動かなくなってたので直しました。&lt;/p&gt;
+
+&lt;p&gt;ついでにライブラリとしてだれでも使えるようにしました。&lt;del&gt;ソースコードは&lt;a href=&#34;#&#34;&gt;ここ&lt;/a&gt;に置いてます。&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;使い方まとめるよ。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2015/10/7 追記: Google Apps Scriptで&lt;code&gt;OAuthConfig&lt;/code&gt;が廃止されたため、このスクリプトは動きません。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;1-twitterアプリの作成:810c749fc8fa5127bcde89e372276574&#34;&gt;1) Twitterアプリの作成&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/&#34;&gt;Twitter Developers&lt;/a&gt;でGoogle Apps Script用のアプリを作成してください。&lt;/p&gt;
+
+&lt;p&gt;以下は入力例です。&lt;code&gt;Callback URL&lt;/code&gt;は以下で指定するURLを設定してください。
+他の項目は自分がわかりやすいもので。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Name: &lt;code&gt;GoogleAppsScript&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Description: &lt;code&gt;GoogleAppsScriptから利用します&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Website: &lt;code&gt;http://example.com/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Callback URL: &lt;code&gt;https://spreadsheets.google.com/macros&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;作成が成功すると&lt;code&gt;Consumer key&lt;/code&gt;と&lt;code&gt;Consumer secret&lt;/code&gt;が発行されます。これはあとで使います。&lt;/p&gt;
+
+&lt;h3 id=&#34;2-スプレッドシートの作成:810c749fc8fa5127bcde89e372276574&#34;&gt;2) スプレッドシートの作成&lt;/h3&gt;
+
+&lt;p&gt;Google Driveでスプレッドシート作成します。&lt;/p&gt;
+
+&lt;p&gt;メニューから&lt;code&gt;ツール &amp;gt; スクリプトエディタ&lt;/code&gt;を選択します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/google-apps-script-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;「無題のプロジェクト」が開きますので、プロジェクトに適当に名前をつけてください。&lt;/p&gt;
+
+&lt;h3 id=&#34;3-ライブラリの読込:810c749fc8fa5127bcde89e372276574&#34;&gt;3) ライブラリの読込&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;リソース &amp;gt; ライブラリ&lt;/code&gt;を選択すると以下のウィンドウが表示されます。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/google-apps-script-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;「ライブラリを検索」に &lt;code&gt;MHGYgT-unu1fC7zXOkNfBUVSHJARy_IP7&lt;/code&gt; を入力して選択ボタンを押します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/google-apps-script-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;最新のバージョンを選択します。この例では「1」を選択して保存。&lt;/p&gt;
+
+&lt;h3 id=&#34;4-プロジェクトのプロパティの設定:810c749fc8fa5127bcde89e372276574&#34;&gt;4) プロジェクトのプロパティの設定&lt;/h3&gt;
+
+&lt;p&gt;次に&lt;code&gt;ファイル &amp;gt; プロジェクトのプロパティ&lt;/code&gt;を選択します。
+ユーザーのプロパティタブを開いて以下の名前のプロパティを設定します。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;TWITTER_CONSUMER_SECRET&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TWITTER_CONSUMER_KEY&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;それぞれに先ほどTwitter Developersで取得した「Consumer key」と「Consumer secret」の値を設定してください。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/google-apps-script-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;5-トリガースクリプトの作成:810c749fc8fa5127bcde89e372276574&#34;&gt;5) トリガースクリプトの作成&lt;/h3&gt;
+
+&lt;p&gt;コード.gsに以下のようなスクリプトを記述してください。
+この例は検索キーワード「都知事」で最初(0番目)のシートに検索結果を出力する、という意味です。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;function myFunction() {
+  Twitter.search(&amp;quot;都知事&amp;quot;, 0);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;実行するとスプレッドシートに検索結果が出力されます。
+初回実行時はTwitterとGoogleの承認画面が表示されると思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/google-apps-script-06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;こんな感じで検索結果が出力されてたら成功。&lt;/p&gt;
+
+&lt;h3 id=&#34;6-定期的に検索を実行する:810c749fc8fa5127bcde89e372276574&#34;&gt;6) 定期的に検索を実行する&lt;/h3&gt;
+
+&lt;p&gt;メニューから&lt;code&gt;リソース &amp;gt; 現在のスクリプトのトリガー&lt;/code&gt;を選択します。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/google-apps-script-05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;この設定だと1時間おきに検索が実行されて、検索結果がスプレッドシートに貯まっていきます。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hoodie の話をした</title>
+      <link>http://blog.hika69.com/blog/2013/11/20/klab-js/</link>
+      <pubDate>Wed, 20 Nov 2013 22:43:00 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2013/11/20/klab-js/</guid>
+      <description>&lt;p&gt;KLab さんの JavaScript 勉強会で Hoodie の話をしました。&lt;/p&gt;
+
+&lt;iframe src=&#34;http://www.storyboards.jp/widget/ycy7it&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;(ストーリーボードのブログ埋め込み機能初めて使った)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>はじめての Node.js</title>
+      <link>http://blog.hika69.com/blog/2013/06/13/learning-node-js/</link>
+      <pubDate>Thu, 13 Jun 2013 23:54:00 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2013/06/13/learning-node-js/</guid>
+      <description>&lt;p&gt;読み始めた。&lt;/p&gt;
+
+&lt;p&gt;分厚いので電書版を出してほしい。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AENode-js-%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%B5%E3%82%A4%E3%83%89JavaScript%E3%81%A7Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E9%96%8B%E7%99%BA%E3%81%99%E3%82%8B-%E6%9D%BE%E5%B3%B6-%E6%B5%A9%E9%81%93/dp/4797370904%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4797370904&#34; target=&#34;_blank&#34; title=&#34;はじめてのNode.js -サーバーサイドJavaScriptでWebアプリを開発する-&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/510pDzY1u9L.jpg&#34; width=&#34;396&#34; height=&#34;500&#34; alt=&#34;はじめてのNode.js -サーバーサイドJavaScriptでWebアプリを開発する-&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Grunt を導入</title>
+      <link>http://blog.hika69.com/blog/2013/06/01/grunt-js/</link>
+      <pubDate>Sat, 01 Jun 2013 22:28:00 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2013/06/01/grunt-js/</guid>
+      <description>
+
+&lt;p&gt;Gruntを&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;に導入するためのメモ。&lt;/p&gt;
+
+&lt;h3 id=&#34;node-jsのインストール:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;node.jsのインストール&lt;/h3&gt;
+
+&lt;p&gt;node.jsを最新版にする。&lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt;のinstallボタンで落ちてくるパッケージから再インストールするだけ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;node -v
+v0.10.8
+npm -v
+1.2.23
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;grunt-cliのインストール:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;grunt-cliのインストール&lt;/h3&gt;
+
+&lt;p&gt;グローバルにgrunt-cliをインストール。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install -g grunt-cli
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;プロジェクト毎にgruntを導入する:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;プロジェクト毎にgruntを導入する&lt;/h3&gt;
+
+&lt;p&gt;プロジェクトのルートでpackage.jsonを生成する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;プロジェクトのルートでgruntをインストール。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install grunt --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;--save-dev&lt;/code&gt;をつけるとpackage.jsonにインストールしたタスクの依存関係が記録される。
+package.jsonに依存関係が記録されていれば&lt;code&gt;npm install&lt;/code&gt;だけで一括導入ができるので流用しやすそう。
+なので&lt;code&gt;--save-dev&lt;/code&gt;をつけることにする。&lt;/p&gt;
+
+&lt;h3 id=&#34;タスクのインストール:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;タスクのインストール&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;grunt-contrib-uglify
+
+&lt;ul&gt;
+&lt;li&gt;JavaScriptを圧縮する&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;grunt-contrib-watch
+
+&lt;ul&gt;
+&lt;li&gt;Lessを監視して変更した時に別のタスクを呼び出す&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;grunt-contrib-less
+
+&lt;ul&gt;
+&lt;li&gt;Lessをcssにコンパイルしたり圧縮したりする&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install grunt-contrib-uglify grunt-contrib-watch grunt-contrib-less --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以下だと便利タスク一式が一発で入るらしいけど、一個ずつ選びたいので使わない。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install grunt-contrib
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;いまの設定:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;いまの設定&lt;/h3&gt;
+
+&lt;script src=&#34;https://gist.github.com/hikarock/5690366.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;&lt;p&gt;lessコンパイルで対象ファイル一個ずつ書かなくていい方法。ありがとうstackoverflow - &lt;a href=&#34;http://t.co/GRA670cij9&#34; title=&#34;http://stackoverflow.com/questions/15344584/grunt-0-4-less-task-how-to-not-concatenate-destination-files&#34;&gt;stackoverflow.com/questions/1534…&lt;/a&gt;&lt;/p&gt;&amp;mdash; hika69さん (@hika69) &lt;a href=&#34;https://twitter.com/hika69/status/340436916019286017&#34;&gt;2013年5月31日&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;lessファイルとコンパイル先のcssを両方ワイルドカード指定する方法がわからなくてはまったけど解決。
+このリンクを参考に設定した。&lt;/p&gt;
+
+&lt;h3 id=&#34;実行:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;実行&lt;/h3&gt;
+
+&lt;p&gt;デフォルトのタスクを実行する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;grunt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;タスクを指定して実行する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;grunt less:dist
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;参考:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;参考&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://gruntjs.com/sample-gruntfile&#34;&gt;Sumple Gruntfile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://js.studio-kingdom.com/grunt&#34;&gt;Grunt 日本語リファレンス&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Underscore.js の _.debounce が便利そう</title>
+      <link>http://blog.hika69.com/blog/2013/05/28/underscore-js/</link>
+      <pubDate>Tue, 28 May 2013 21:53:00 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2013/05/28/underscore-js/</guid>
+      <description>&lt;p&gt;「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.jsガイドブック&lt;/a&gt;」の読書会2回目。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/Backbone-js%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF-%E9%AB%98%E6%A9%8B-%E4%BE%91%E4%B9%85/dp/4899773501%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4899773501&#34; target=&#34;_blank&#34; title=&#34;Backbone.jsガイドブック&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/31tI0WaZukL.jpg&#34; width=&#34;394&#34; height=&#34;500&#34; alt=&#34;Backbone.jsガイドブック&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;1章の後半から始めた。underscore.jsのタイマー系の関数が超絶便利そうだった。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://underscorejs.org/#debounce&#34;&gt;debounce&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://underscorejs.org/#throttle&#34;&gt;throttle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://underscorejs.org/#delay&#34;&gt;delay&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://underscorejs.org/#defer&#34;&gt;defer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;この辺。&lt;/p&gt;
+
+&lt;p&gt;重いレンダリング処理とか保存処理のイベント多発を&lt;code&gt;setTimeout&lt;/code&gt;とか&lt;code&gt;clearTimeout&lt;/code&gt;でがんばってブロックしてたところは&lt;code&gt;_.debounce&lt;/code&gt;の方がきれいに書けそう。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;のライブラリ保存処理がちょうどこんな感じで、&lt;/p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://jsdo.it/blogparts/4prZ/js?width=100%&amp;height=540&amp;view=javascript&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;code&gt;_.debounce&lt;/code&gt;だとこんな感じになる。&lt;/p&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://jsdo.it/blogparts/sUcm/js?width=100%&amp;height=320&amp;view=javascript&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp&#34;&gt;ストーリーボード&lt;/a&gt;のMarkdownのレンダリングのとこもこれ使ったらいいな、と思ってたらドキュメントにもまんまなこと書いてあった。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;For example: rendering a preview of a Markdown comment, recalculating a layout after the window has stopped being resized, and so on.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;かきなおそ。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>JavaScript 忍者を買った</title>
+      <link>http://blog.hika69.com/blog/2013/05/27/javascript-ninja/</link>
+      <pubDate>Mon, 27 May 2013 20:40:00 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2013/05/27/javascript-ninja/</guid>
+      <description>&lt;p&gt;買ってきた。&lt;/p&gt;
+
+&lt;p&gt;目次だけざっと見たけど &lt;code&gt;with&lt;/code&gt; についてけっこうページさいてる。
+バッドパーツだって何度で目にした気がするけれど。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/JavaScript-Ninja%E3%81%AE%E6%A5%B5%E6%84%8F-%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E9%96%8B%E7%99%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E7%9F%A5%E8%AD%98%E3%81%A8%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0-Programmers%E2%80%99-SELECTION/dp/4798128457%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4798128457&#34; target=&#34;_blank&#34; title=&#34;JavaScript Ninjaの極意 ライブラリ開発のための知識とコーディング (Programmers’ SELECTION)&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/51wsFoSKrKL.jpg&#34; width=&#34;388&#34; height=&#34;500&#34; alt=&#34;JavaScript Ninjaの極意 ライブラリ開発のための知識とコーディング (Programmers’ SELECTION)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;読む本たくさんあって追いつかない。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>「Backbone.js ガイドブック」読書会がはじまった</title>
+      <link>http://blog.hika69.com/blog/2013/05/25/backbone-js/</link>
+      <pubDate>Sat, 25 May 2013 01:04:00 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2013/05/25/backbone-js/</guid>
+      <description>
+
+&lt;p&gt;社内で「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.js ガイドブック&lt;/a&gt;」の読書会が始まったので参加した。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/Backbone-js%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF-%E9%AB%98%E6%A9%8B-%E4%BE%91%E4%B9%85/dp/4899773501%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4899773501&#34; target=&#34;_blank&#34; title=&#34;Backbone.jsガイドブック&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/31tI0WaZukL.jpg&#34; width=&#34;394&#34; height=&#34;500&#34; alt=&#34;Backbone.jsガイドブック&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;1章くらい進むかな、と思ったけど、途中サンプルコードを動作確認したりしてたら10ページくらいしか読み進まなかった。&lt;/p&gt;
+
+&lt;p&gt;ためしたのはこの辺り。
+&lt;script type=&#34;text/javascript&#34; src=&#34;http://jsdo.it/blogparts/z9YK/js?width=100%&amp;height=496&amp;view=javascript&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;クラスプロパティ・メソッドと、インスタンスプロパティ・メソッドの動作の違いを確認した。&lt;/p&gt;
+
+&lt;h3 id=&#34;ほかに:1e427e62cc44ddfd497e5b7351c6556d&#34;&gt;ほかに&lt;/h3&gt;
+
+&lt;p&gt;「&lt;a href=&#34;http://booklog.jp/item/1/477415654X&#34;&gt;コーディングを支える技術&lt;/a&gt;」を読み始めた。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E6%8A%80%E8%A1%93-%7E%E6%88%90%E3%82%8A%E7%AB%8B%E3%81%A1%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E4%BD%9C%E6%B3%95-WEB-PRESS-plus/dp/477415654X%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D477415654X&#34; target=&#34;_blank&#34; title=&#34;コーディングを支える技術 ~成り立ちから学ぶプログラミング作法 (WEB+DB PRESS plus)&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/51nXP3TKXVL.jpg&#34; width=&#34;353&#34; height=&#34;500&#34; alt=&#34;コーディングを支える技術 ~成り立ちから学ぶプログラミング作法 (WEB+DB PRESS plus)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今あるプログラミング言語の「あたりまえ」は試行錯誤の結果なんだなあと、目から鱗。&lt;/p&gt;
+
+&lt;p&gt;例外処理、制御構文のあたりは特に。&lt;/p&gt;
+
+&lt;p&gt;プログラミング言語がまだ試行錯誤の途上にある、というよく考えたら当たり前のことが新鮮に感じた。
+とにかく面白い。&lt;/p&gt;
+
+&lt;p&gt;変数の章は、気力が落ちたのでちょっと読み飛ばしたけれど。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

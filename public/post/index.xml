@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on hikarock blog</title>
+    <link>http://blog.hika69.com/post/</link>
+    <description>Recent content in Posts on hikarock blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Mon, 25 Jan 2016 20:04:28 +0900</lastBuildDate>
+    <atom:link href="http://blog.hika69.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>BFG で巨大なファイルを削除して GitHub に push するまで</title>
+      <link>http://blog.hika69.com/blog/2016/01/25/bfg/</link>
+      <pubDate>Mon, 25 Jan 2016 20:04:28 +0900</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2016/01/25/bfg/</guid>
+      <description>&lt;p&gt;あるリポジトリを GitHub に push した時に、100MB 以上のファイルが含まれていたため拒否されてしまった。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% git push origin master
+...
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+remote: error: Trace: xxx
+remote: error: See http://git.io/iEPt8g for more information.
+remote: error: File big.exe is 160.21 MB; this exceeds GitHub&#39;s file size limit of 100.00 MB
+To git@github.com:hikarock/some-big-repo.git
+ ! [remote rejected] master -&amp;gt; master (pre-receive hook declined)
+error: failed to push some refs to &#39;git@github.com:hikarock/some-big-repo.git&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://git-lfs.github.com/&#34;&gt;Git Large File Storage&lt;/a&gt; も使ってみたかったけど課金してないので、素直に &lt;code&gt;more information&lt;/code&gt; のリンクを開く。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://help.github.com/articles/removing-files-from-a-repository-s-history/&#34;&gt;Removing files from a repository&amp;rsquo;s history - User Documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2パターンのファイル削除方法が掲載されていて、今回はだいぶ昔にコミットされたファイルを消したかったので &lt;code&gt;Removing a file added in an older commit&lt;/code&gt; で紹介されている BFG を使う。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://rtyley.github.io/bfg-repo-cleaner/&#34;&gt;BFG Repo-Cleaner by rtyley&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;BFG のサイトから jar ファイルをダウンロードして、&lt;code&gt;.zshrc&lt;/code&gt; にエイリアスを設定した。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;alias bfg=&#39;java -jar ~/bin/bfg-1.12.8.jar&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;リポジトリに移動して、エラーの原因になっている巨大ファイルを &lt;code&gt;git rm&lt;/code&gt; する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% cd some-big-repo
+% git rm big.exe
+rm &#39;big.exe&#39;
+% git ci -m &#39;巨大なファイルを削除&#39;
+[master xxx] 巨大なファイルを削除
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100755 big.exe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;対象リポジトリ内の100M以上のファイルを対象に &lt;code&gt;bfg&lt;/code&gt; を実行。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% cd ..
+% bfg --strip-blobs-bigger-than 100M some-big-repo
+SLF4J: Failed to load class &amp;quot;org.slf4j.impl.StaticLoggerBinder&amp;quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+Using repo : some-big-repo/.git
+
+...
+
+Deleted files
+-------------
+
+        Filename                       Git id
+        --------------------------------------------------
+        big.exe                      | xxx (160.2 MB)
+
+In total, 7 object ids were changed. Full details are logged here:
+
+        /Users/hikarock/some-big-repo.bfg-report/2016-01-25/20-00-01
+
+BFG run is complete! When ready, run: git reflog expire --expire=now --all &amp;amp;&amp;amp; git gc --prune=now --aggressive
+
+Has the BFG saved you time?  Support the BFG on BountySource:  https://j.mp/fund-bfg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;メッセージの最後に出ている通りに &lt;code&gt;git reflog&lt;/code&gt; を実行する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% git reflog expire --expire=now --all &amp;amp;&amp;amp; git gc --prune=now --aggressive
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;もういちど &lt;code&gt;git push&lt;/code&gt; を実行。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% git push origin master
+...
+To git@github.com:hikarock/some-big-repo
+ * [new branch]      master -&amp;gt; master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;push できた。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>スネークケースのファイル名・クラス名をパスカルケースにリネームする</title>
+      <link>http://blog.hika69.com/blog/2016/01/07/rename-snake-case-to-pascal-case/</link>
+      <pubDate>Thu, 07 Jan 2016 21:46:22 +0900</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2016/01/07/rename-snake-case-to-pascal-case/</guid>
+      <description>
+
+&lt;p&gt;あるプロジェクトで &lt;a href=&#34;http://www.php-fig.org/psr/psr-0/&#34;&gt;PSR-0&lt;/a&gt; に対応する作業に関連して、スネークケースのファイル名とクラス名をパスカルケースに変換する必要があった。&lt;/p&gt;
+
+&lt;h3 id=&#34;ファイル名の変換:4739118768bed0d63c3796c5bfa8d06b&#34;&gt;ファイル名の変換&lt;/h3&gt;
+
+&lt;p&gt;Mac に rename コマンドをインストールする。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ brew install rename
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;変換前&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ls -l
+-rw-r--r-- 1 hikarock staff 0  1  7 21:47 foo_bar_buzz.php
+-rw-r--r-- 1 hikarock staff 0  1  7 21:47 hoge_fuga.php
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;rename コマンドを叩く。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ rename -f &#39;s/(^|_)(.)/\U$2\E/g&#39; *.php
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;変換後&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ls -l
+total 0
+-rw-r--r-- 1 hikarock staff 0  1  7 21:47 FooBarBuzz.php
+-rw-r--r-- 1 hikarock staff 0  1  7 21:47 HogeFuga.php
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;よさそう。&lt;/p&gt;
+
+&lt;h3 id=&#34;クラス名の変換:4739118768bed0d63c3796c5bfa8d06b&#34;&gt;クラス名の変換&lt;/h3&gt;
+
+&lt;p&gt;Mac に標準で入っている sed は使わずに GNU sed をインストールする。&lt;/p&gt;
+
+&lt;p&gt;参考: &lt;a href=&#34;http://shunirr.hatenablog.jp/entry/2012/12/19/160544&#34;&gt;Homebrew を使って OSX に GNU sed を入れる - おともだちティータイム&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ brew install gnu-sed
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;変換前。対象はクラス名だけにしたいので、他のスネークケースの変数名や関数名を含んだ状態で、余計な箇所が変更されていないか確認しながら検証する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+
+class foo_bar_buzz_controller extends bar_buzz_controller {
+  private $hoge_fuga;
+  public function set_hoge_fuga() {
+    //
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;gsed コマンドで変換する。&lt;code&gt;/^class.*\{$/&lt;/code&gt; で対象行でクラス宣言の行だけに絞り込んでいる ( &lt;code&gt;{&lt;/code&gt; は改行した次の行に書く場合の方が多いかもしれないけど、このプロジェクトでは &lt;code&gt;class&lt;/code&gt; と同一行に書いている)。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ gsed -i -r &#39;/^class.*\{$/ s/_(.)/\U\1\E/g&#39; *.php
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;変換後&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+
+class fooBarBuzzController extends barBuzzController {
+  private $hoge_fuga;
+  public function set_hoge_fuga() {
+    //
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;クラス名の先頭が小文字のままだった。&lt;/p&gt;
+
+&lt;p&gt;今回はたまたま対象クラス名の末尾に必ず &lt;code&gt;Controller&lt;/code&gt; が含まれていたので、以下のようにしてお茶を濁した。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ perl -pi -e &#39;s/ (\w+?)Controller/ \u\1Controller/g&#39; *.php
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;perl コマンドを使ったのは sed で最短一致ができなかったため。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php
+
+class FooBarBuzzController extends BarBuzzController {
+  private $hoge_fuga;
+  public function set_hoge_fuga() {
+    //
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;完了。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Node の CLI アプリと Vim などのエディタを連携する</title>
+      <link>http://blog.hika69.com/blog/2016/01/02/node-cli-open-editor/</link>
+      <pubDate>Sat, 02 Jan 2016 18:56:05 +0900</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2016/01/02/node-cli-open-editor/</guid>
+      <description>&lt;p&gt;&lt;code&gt;git commit&lt;/code&gt; をコマンドラインから実行した時に Vim が自動で開いてコミットコメントを入力できるが、このような挙動を Node のCLIアプリを自作するときにどうやるか調べた。&lt;/p&gt;
+
+&lt;p&gt;ずばりな回答が以下。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/15726004/is-there-a-way-to-quit-node-js-and-launch-vim-on-a-file&#34;&gt;Is there a way to quit Node.js and launch VIM on a file? - Stack Overflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この回答では Vim を固定で指定しているが &lt;code&gt;process.env.EDITOR&lt;/code&gt; で Vim 以外のエディタにも対応できる。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var fs = require(&#39;fs&#39;);
+var file = &#39;~/.foo.txt&#39;;
+var editor = require(&#39;child_process&#39;).spawn(process.env.EDITOR, [file], {stdio: &#39;inherit&#39;});
+
+editor.on(&#39;exit&#39;, function() {
+  var text = fs.readFileSync(file, &#39;utf-8&#39;);
+  console.log(text);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;エディタの終了を &lt;code&gt;exit&lt;/code&gt; イベントで検知してコールバック内でファイルの内容を取得している。&lt;/p&gt;
+
+&lt;p&gt;毎回内容をクリアする場合は、&lt;code&gt;fs.readFile[Sync]&lt;/code&gt; した後に &lt;code&gt;fs.unlink[Sync]&lt;/code&gt; すればよい。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>自作アプリのシンボルフォントを作った</title>
+      <link>http://blog.hika69.com/blog/2015/12/28/symbol-font/</link>
+      <pubDate>Mon, 28 Dec 2015 20:32:36 +0900</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/12/28/symbol-font/</guid>
+      <description>&lt;p&gt;『「シンボルフォント in Web」草稿』を参考に &lt;a href=&#34;https://www.sketchapp.com/&#34;&gt;Sketch&lt;/a&gt; と IcoMoon でシンボルフォントを作成した。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/cognitom/symbol-font-in-web&#34;&gt;cognitom/symbol-font-in-web&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;リポジトリ内に、Sketch 用のテンプレートファイルがあるのでこれを使わせてもらった。感謝。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://icomoon.io/&#34;&gt;IcoMoon&lt;/a&gt; は自作フォントと FontAwesome 等のシンボルフォントを混ぜて一つのフォントとして生成できるので便利だ。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/icomoon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;作成したフォントは &lt;a href=&#34;http://hika69.com&#34;&gt;hika69.com&lt;/a&gt; で使用している (ポートフォリオのようなただのリンク集) 。&lt;/p&gt;
+
+&lt;p&gt;自作のシンボルフォントは拡大すると線がガタついてたりするが、遠目にみるといい感じだ。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>静的サイトジェネレータ Roots の覚書</title>
+      <link>http://blog.hika69.com/blog/2015/07/01/roots/</link>
+      <pubDate>Wed, 01 Jul 2015 22:01:34 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/07/01/roots/</guid>
+      <description>&lt;p&gt;定期的にブログをリニューアルしたくなる病が発症する。&lt;/p&gt;
+
+&lt;p&gt;以下を条件に探してて roots がよさそうだったので試した。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;node製&lt;/li&gt;
+&lt;li&gt;stylus&lt;/li&gt;
+&lt;li&gt;ファイル構成がシンプル&lt;/li&gt;
+&lt;li&gt;拡張しやすい&lt;/li&gt;
+&lt;li&gt;デフォルトのテーマがかっこいい&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://roots.cx/&#34;&gt;Roots: Enlightened Static Sites&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;とりあえずインストールする。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm install -g roots
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ブログ用のテンプレートを追加する必要があるようなので、動画を見つつ進める。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=RitO5dyPH44&#34;&gt;Roots Templates - YouTube&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;以下のテンプレートを追加。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ roots tpl add blog https://github.com/carrot/roots-template-blog.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;-t&lt;/code&gt;でテンプレートを指定してプロジェクトを作成する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ roots new hikarock-blog -t blog
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以下のようにデフォルトのテンプレートを指定しておけば、次から&lt;code&gt;-t&lt;/code&gt;は不要になる模様。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ roots tpl default blog
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;生成された。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.
+├── app.coffee
+├── app.production.coffee
+├── assets
+│   ├── css
+│   │   ├── _settings.styl
+│   │   └── master.styl
+│   ├── img
+│   └── js
+│       └── main.coffee
+├── node_modules
+├── package.json
+├── posts
+│   ├── first_post.jade
+│   └── second_post.jade
+├── public
+│   ├── css
+│   │   ├── master.css
+│   │   └── master.css.map
+│   ├── img
+│   ├── index.html
+│   ├── js
+│   │   ├── main.js
+│   │   └── main.js.map
+│   └── posts
+│       ├── first_post.html
+│       └── second_post.html
+├── readme.md
+└── views
+    ├── _single.jade
+    ├── index.jade
+    └── layout.jade
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ファイル構成はシンプルでよさそう。&lt;/p&gt;
+
+&lt;p&gt;サイトを立ち上げる。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ roots watch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;デフォルトのテーマはないに等しいくらいに無印スタイル&lt;/li&gt;
+&lt;li&gt;jade内に markdown を書くのがちょっと慣れない。インデントがだるい&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;GitHub味のmarkdown が解釈されていない。パーサーを marked とかに変えたらよいのだろうか&lt;/del&gt;
+
+&lt;ul&gt;
+&lt;li&gt;もともと marked だった。一部解釈できない記法が含んでいたので崩れていた&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;デプロイは試してない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;他はいい感じなので気が向いたら引っ越そう。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>eslint を vim-watchdogs から使う</title>
+      <link>http://blog.hika69.com/blog/2015/05/05/eslint/</link>
+      <pubDate>Tue, 05 May 2015 17:03:27 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/05/05/eslint/</guid>
+      <description>&lt;p&gt;vim-watchdogs から eslint が使えるように設定したのでメモ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/osyo-manga/vim-watchdogs&#34;&gt;osyo-manga/vim-watchdogs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;eslint をグローバルにインストールする。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eslint.org/&#34;&gt;ESLint - Pluggable JavaScript linter&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm install -g eslint
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;.vimrc&lt;/code&gt;でファイルタイプが&lt;code&gt;javascript&lt;/code&gt;の場合に eslint コマンドが実行されるように設定する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-vim&#34;&gt;let g:watchdogs_check_BufWritePost_enable = 1
+let g:watchdogs_check_CursorHold_enable = 1
+
+&amp;quot;
+&amp;quot; 以下を追記
+&amp;quot;
+let g:quickrun_config = {
+\   &amp;quot;javascript/watchdogs_checker&amp;quot; : {
+\     &amp;quot;type&amp;quot; : &amp;quot;eslint&amp;quot;
+\   }
+\ }
+call watchdogs#setup(g:quickrun_config)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これで&lt;code&gt;:WatchdogsRun&lt;/code&gt;した時に eslint が実行される。&lt;/p&gt;
+
+&lt;p&gt;ただ、このままだと ES6/JSX の構文を使っているとエラーとして検出されてしまうので、&lt;code&gt;.eslintrc&lt;/code&gt;の&lt;code&gt;ecmaFeatures&lt;/code&gt;に値を指定して機能毎に有効にする。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{
+  &amp;quot;ecmaFeatures&amp;quot;: {
+    &amp;quot;templateStrings&amp;quot;: true
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;.eslintrc&lt;/code&gt;の設定により以下の構文はエラーとして検出されない。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;console.log(`Hello, ${name}!`);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;その他の機能毎の設定方法は以下を参照。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eslint.org/docs/user-guide/configuring.html&#34;&gt;Documentation - ESLint - Pluggable JavaScript linter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>JavaScript の IMAP クライアント browserbox で Gmail に接続する</title>
+      <link>http://blog.hika69.com/blog/2015/02/24/browserbox/</link>
+      <pubDate>Tue, 24 Feb 2015 12:47:45 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/02/24/browserbox/</guid>
+      <description>&lt;p&gt;iOS 標準のメモアプリのように、IMAP で Gmail と同期できるクライアントを JS で作れないかな、と思って&lt;a href=&#34;https://github.com/whiteout-io/browserbox&#34;&gt;whiteout-io/browserbox&lt;/a&gt;を試してみた。&lt;/p&gt;
+
+&lt;p&gt;もろもろフリーダムな環境にしたかったので&lt;a href=&#34;https://github.com/nwjs/nw.js&#34;&gt;nwjs/nw.js&lt;/a&gt;を使って環境を作る。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{
+  &amp;quot;name&amp;quot;: &amp;quot;imap&amp;quot;,
+  &amp;quot;main&amp;quot;: &amp;quot;index.html&amp;quot;,
+  &amp;quot;dependencies&amp;quot;: {
+    &amp;quot;browserbox&amp;quot;: &amp;quot;^0.8.1&amp;quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;mail&amp;lt;/title&amp;gt;
+    &amp;lt;script src=&amp;quot;mail.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var BrowserBox = require(&#39;browserbox&#39;),
+
+var host     = &#39;imap.gmail.com&#39;,
+    port     = 993,
+    email    = &#39;example@gmail.com&#39;,
+    password = &#39;xxxxxxxxxxxxxxxx&#39;,
+    mailbox  = &#39;INBOX&#39;;
+
+var client = new BrowserBox(host, port, {
+  auth: {
+    user: email,
+    pass: password
+  }
+});
+
+client.connect();
+client.onauth = function() {
+  client.listMailboxes(function(err, mailboxes) {
+    console.log(err || mailboxes);
+    client.selectMailbox(mailbox, function(err, mailbox) {
+      console.log(err || &#39;Mailbox was successfully changed to &#39; + mailbox);
+    });
+  });
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;実行。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ /Applications/nwjs.app/Contents/MacOS/nwjs .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Gmail で2段階認証を使っている場合はこのコードで接続できない。
+さらに、以下の設定で「安全性の低いアプリ」を許可しないと接続できなかった。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.google.com/settings/security/lesssecureapps&#34;&gt;安全性の低いアプリ - アカウント設定&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;許可しない場合は以下のエラーが出る。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[98549:0224/125046:INFO:CONSOLE(41)] &amp;quot;&amp;quot;[2015-02-24T03:50:46.248Z][browserbox IMAP]&amp;quot; &amp;quot;[1] S: W3 NO [ALERT] Please log in via your web browser: http://support.google.com/mail/accounts/bin/answer.py?answer=78754 (Failure)&amp;quot;&amp;quot;, source: /Users/projects/mail/node_modules/browserbox/node_modules/axe-logger/axe.js (41)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;このままでは実用的ではない感じ。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>新しくなった Stobo の紹介</title>
+      <link>http://blog.hika69.com/blog/2015/02/21/stobo/</link>
+      <pubDate>Sat, 21 Feb 2015 19:28:21 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/02/21/stobo/</guid>
+      <description>&lt;p&gt;StoboはMarkdownでプレゼン資料が作れて配信できるWebアプリです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/&#34;&gt;Stobo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;もともとはストーリーボードという名前だったんだけど、これからはStobo (ストボ) が正式名称です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;URLはそのままです&lt;/li&gt;
+&lt;li&gt;ロゴは @getsukikyu が新しいものを製作中&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;今回の大きな変更点はMarkdownの拡張です。詳細は以下のスライドにまとめています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/viewer/iw1l45&#34;&gt;Stobo Flavored Markdown | Stobo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;その他に、&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;スライド時のエフェクトの廃止とアルゴリズムの変更&lt;/li&gt;
+&lt;li&gt;エディタの操作性の改善
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hikarock/editorify&#34;&gt;editorify&lt;/a&gt; の導入 (および開発)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以前から要望の多いテーマの設定については&lt;code&gt;Stobo 設定記法&lt;/code&gt;で対応予定です。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>npm init 時のデフォルト設定をカスタマイズする</title>
+      <link>http://blog.hika69.com/blog/2015/02/21/npm-init/</link>
+      <pubDate>Sat, 21 Feb 2015 19:17:39 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/02/21/npm-init/</guid>
+      <description>&lt;p&gt;&lt;code&gt;npm init&lt;/code&gt;した時にlicenceの種類やauthorの情報を自動的にいれる設定。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm config set init.author.name &amp;quot;hikarock&amp;quot;
+$ npm config set init.author.email i@hika69.com
+$ npm config set init.author.url http://blog.hika69.com
+$ npm config set init.license MIT
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;~/.npmrc&lt;/code&gt;というファイルが作られて以下のように設定されている。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;init.license=MIT
+init.author.name=hikarock
+init.author.email=i@hika69.com
+init.author.url=http://blog.hika69.com
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;また&lt;code&gt;npm config list&lt;/code&gt;でも現在の設定を確認できる。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://docs.npmjs.com/cli/config&#34;&gt;config | npm Documentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>editorify というライブラリを作った</title>
+      <link>http://blog.hika69.com/blog/2015/02/13/editorify/</link>
+      <pubDate>Fri, 13 Feb 2015 00:55:57 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/02/13/editorify/</guid>
+      <description>&lt;p&gt;エディタリファイと読むんだろうか。とにかく&lt;code&gt;fy&lt;/code&gt;ってつけたかっただけな感じで言いづらい jQuery プラグインを作った。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/hikarock/editorify&#34;&gt;hikarock/editorify&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ひとことでいうと &lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt; を使って簡単なウィジウィグとか作れるライブラリ。
+例えば、markdown のリンクを挿入する場合はこんな感じに書く。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(&#39;.link&#39;).on(&#39;click&#39;, function (evt) {
+  $(&#39;.editor&#39;).editorify([
+    [&#39;clear&#39;],
+    [&#39;insert&#39;, &#39;[](http://example.com)&#39;],
+    [&#39;start&#39;],
+    [&#39;right&#39;, 1]
+  ]);
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;left&lt;/code&gt; とか &lt;code&gt;start&lt;/code&gt; とかでカーソル移動できるので &lt;code&gt;[]&lt;/code&gt; の中にカーソルが移動している状態になる。&lt;a href=&#34;https://dl.dropboxusercontent.com/u/459142/editorify/index.html&#34;&gt;DEMO&lt;/a&gt;はこちら。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/&#34;&gt;Stobo&lt;/a&gt; のエディタ部分を絶賛改造中でモンスターブランチがもうスカイツリーくらいに育っているんだけど、その中の成果が分割されて editorify になった。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IB_DESIGNABLE を使おう</title>
+      <link>http://blog.hika69.com/blog/2015/02/10/ibdesignable/</link>
+      <pubDate>Tue, 10 Feb 2015 19:55:15 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/02/10/ibdesignable/</guid>
+      <description>
+
+&lt;p&gt;Xcode6 から使える &lt;code&gt;IB_DESIGNABLE&lt;/code&gt; と &lt;code&gt;IBInspectable&lt;/code&gt; が非常に便利なんだけど情報が少ない。&lt;/p&gt;
+
+&lt;p&gt;ので、基本とかは置いといて、とりあえず知ってることを雑多にまとめてみる。&lt;/p&gt;
+
+&lt;h3 id=&#34;有用なリンク:37abba03a2e327338726ad5c5fd40ef4&#34;&gt;有用なリンク&lt;/h3&gt;
+
+&lt;p&gt;とりあえずここらへんを眺めると良いとおもう。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/library/ios/recipes/xcode_help-IB_objects_media/chapters/CreatingaLiveViewofaCustomObject.html&#34;&gt;Creating a Custom View That Renders in Interface Builder&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://nshipster.com/ibinspectable-ibdesignable/&#34;&gt;IBInspectable / IBDesignable - NSHipster&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.weheartswift.com/make-awesome-ui-components-ios-8-using-swift-xcode-6/&#34;&gt;How to make awesome UI components in iOS 8 using Swift and XCode 6 - IBDesignable and IBInspectable&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;ib-designable-な-view-は-uiview-もしくは-nsview-を継承して作る:37abba03a2e327338726ad5c5fd40ef4&#34;&gt;&lt;code&gt;IB_DESIGNABLE&lt;/code&gt; な View は &lt;code&gt;UIView&lt;/code&gt; もしくは &lt;code&gt;NSView&lt;/code&gt; を継承して作る&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;UITableViewCell&lt;/code&gt; とか継承して &lt;code&gt;IB_DESIGNABLE&lt;/code&gt; を設定しても IB 上では動かない。Preview でも同様に反映されなかった。残念。&lt;/p&gt;
+
+&lt;p&gt;ただし &lt;code&gt;IBInspectable&lt;/code&gt; は使える。コードを書かないで値を設定できるだけでも便利なので、使い道はあると思う。
+心の目で見るんだ。&lt;/p&gt;
+
+&lt;h3 id=&#34;初期値を設定する:37abba03a2e327338726ad5c5fd40ef4&#34;&gt;初期値を設定する&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;initWithCoder&lt;/code&gt; で設定する。ただし、ここで設定した初期値が IB 上のフォームで選択状態になってたりはしない。心の目で見るんだ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objective-c&#34;&gt;- (id)initWithCoder:(NSCoder *)aDecoder {
+  self = [super initWithCoder:aDecoder];
+  if (self != nil) {
+    self.cornerRadius = 8;
+    self.borderWidth  = 0.5;
+  }
+  return self;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;ibinspectable-で使える型:37abba03a2e327338726ad5c5fd40ef4&#34;&gt;&lt;code&gt;IBInspectable&lt;/code&gt; で使える型&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;enum&lt;/code&gt; が使えると便利そうだと思ったけどだめだった。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;上でも紹介している、&lt;a href=&#34;https://www.weheartswift.com/make-awesome-ui-components-ios-8-using-swift-xcode-6/&#34;&gt;このエントリ&lt;/a&gt;
+にある型を試した。他にも使える型があるのかもしれない。&lt;/p&gt;
+
+&lt;h3 id=&#34;要素の消し忘れに注意:37abba03a2e327338726ad5c5fd40ef4&#34;&gt;要素の消し忘れに注意&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;IBInspectable&lt;/code&gt; で設定した値は &lt;code&gt;Identity Inspector&lt;/code&gt; 上の &lt;code&gt;User Defined Runtime Attributes&lt;/code&gt; 上に保存される。
+プロパティを設定後に、プロパティ名を変更したり削除したりすると、ここに迷子の要素が残ってしまう。&lt;/p&gt;
+
+&lt;p&gt;迷子の要素がある画面を iOS7.1 で開いたら何もログを出さずに落ちたが、要素を削除したら問題なく起動した(iOS8 では問題なかった)。やっかいだ。&lt;/p&gt;
+
+&lt;h3 id=&#34;ibinspectable-な-view-を継承する:37abba03a2e327338726ad5c5fd40ef4&#34;&gt;&lt;code&gt;IBInspectable&lt;/code&gt; な View を継承する&lt;/h3&gt;
+
+&lt;p&gt;継承した &lt;code&gt;IBInspectable&lt;/code&gt; な View のプロパティが両方 IB 上に表示される。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2つの View でそれぞれ設定した値がストーリーボード上に反映されている。&lt;/p&gt;
+
+&lt;p&gt;(&lt;code&gt;UIView&lt;/code&gt; を継承している &lt;code&gt;UITableViewCell&lt;/code&gt; の場合は &lt;code&gt;IB_DESIGNABLE&lt;/code&gt; が動かなかったので、このへんの仕組みがよくわからない感じ)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>hub コマンドで GitHub と GHE に PullRequest する</title>
+      <link>http://blog.hika69.com/blog/2015/02/09/git-pr/</link>
+      <pubDate>Mon, 09 Feb 2015 19:36:38 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/02/09/git-pr/</guid>
+      <description>&lt;p&gt;GitHubでは以下のalias (リンク参照) を設定して&lt;code&gt;git pr master&lt;/code&gt;のように使っていたけれど、GHEで動かなかったので&lt;code&gt;.gitconfig&lt;/code&gt;を編集した。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/banyan@github/items/3c82fa357fe355c16f32#comment-cf6dbbe34ce80d0ac3a7&#34;&gt;GitHub へ簡単に Pull Request を送る - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;[alias]
+  pr = !REP_OWNER=$(git remote -v | grep -e &#39;(push)&#39; | awk &#39;{print $2}&#39; | awk -F &#39;[:/]&#39; &#39;{print $2}&#39;) &amp;amp;&amp;amp; hub pull-request $2 -h $REP_OWNER:`git rev-parse --abbrev-ref HEAD` -b $REP_OWNER:$1 &amp;amp;&amp;amp; shift &amp;quot;$#&amp;quot; 1&amp;gt;/dev/null 2&amp;gt;/dev/null
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;快適。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Xcode のストーリーボードで背後の要素を選択する</title>
+      <link>http://blog.hika69.com/blog/2015/01/08/xcode-select-bg-elements/</link>
+      <pubDate>Thu, 08 Jan 2015 10:54:17 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/01/08/xcode-select-bg-elements/</guid>
+      <description>&lt;p&gt;Xcode のストーリーボード上で背後の要素をあれこれしたかったけど、前面の要素がじゃまして選択できなくて困ってたが、コマンドで簡単に選択できることがわかった。&lt;/p&gt;
+
+&lt;p&gt;選択したい要素にポインタを移動して、&lt;code&gt;Command + Shift&lt;/code&gt; を押しながらクリックすると、同じ座標にある View の一覧が表示される。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/xcode-slect-bg-elements.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ここから View を選択すればOK。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>hexbin に Casto ステッカーが追加された</title>
+      <link>http://blog.hika69.com/blog/2014/12/29/hexbin/</link>
+      <pubDate>Mon, 29 Dec 2014 21:12:44 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2014/12/29/hexbin/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://hexb.in/&#34;&gt;hexbin&lt;/a&gt; は六角形の主にNode系のロゴを集めたサイト。運営しているのは NodeSchool に携わっている&lt;a href=&#34;https://twitter.com/maxogden&#34;&gt;@maxogden&lt;/a&gt;さん。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/hexbin.png&#34; alt=&#34;hexbin&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;以下のようにPRを送ると、サイトにロゴを掲載してもらえる。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/maxogden/hexbin/pull/19&#34;&gt;Add Casto sticker by hikarock · Pull Request #19 · maxogden/hexbin&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;そうそうたるプロジェクトと一緒に Casto が並んでるのを見てにやにやしている。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Xcode のキー配置をカスタマイズする</title>
+      <link>http://blog.hika69.com/blog/2014/12/28/xcode-remap-key/</link>
+      <pubDate>Sun, 28 Dec 2014 13:01:51 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2014/12/28/xcode-remap-key/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/XVimProject/XVim&#34;&gt;XVim&lt;/a&gt; を使いはじめたら、Xcodeのキー配置が、カスタマイズ済みのターミナル (およびVim) と微妙に違うのが気になってきた (ターミナルはControlキーをよく使うので、CommandキーとControlキーを入れ替えている) 。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://pqrs.org/osx/karabiner/index.html.ja&#34;&gt;Karabiner&lt;/a&gt; を使ってXcodeのCommandキーとControlキーを入れ替えた。&lt;/p&gt;
+
+&lt;p&gt;private.xmlに以下を追記した。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt;
+&amp;lt;root&amp;gt;
+  &amp;lt;list&amp;gt;
+    &amp;lt;item&amp;gt;
+      &amp;lt;name&amp;gt;Enable at only Xcode&amp;lt;/name&amp;gt;
+      &amp;lt;appdef&amp;gt;
+        &amp;lt;appname&amp;gt;XCODE&amp;lt;/appname&amp;gt;
+        &amp;lt;equal&amp;gt;com.apple.dt.Xcode&amp;lt;/equal&amp;gt;
+      &amp;lt;/appdef&amp;gt;
+      &amp;lt;item&amp;gt;
+        &amp;lt;name&amp;gt;Control_L to Command_L (XCODE ONLY)&amp;lt;/name&amp;gt;
+        &amp;lt;only&amp;gt;XCODE&amp;lt;/only&amp;gt;
+        &amp;lt;identifier&amp;gt;remap.app_xcode_contolL2commandL2&amp;lt;/identifier&amp;gt;
+        &amp;lt;autogen&amp;gt;--KeyToKey-- KeyCode::CONTROL_L, KeyCode::COMMAND_L&amp;lt;/autogen&amp;gt;
+      &amp;lt;/item&amp;gt;
+      &amp;lt;item&amp;gt;
+        &amp;lt;name&amp;gt;Command_L to Control_L (XCODE ONLY)&amp;lt;/name&amp;gt;
+        &amp;lt;only&amp;gt;XCODE&amp;lt;/only&amp;gt;
+        &amp;lt;identifier&amp;gt;remap.app_xcode_commandL2controlL2&amp;lt;/identifier&amp;gt;
+        &amp;lt;autogen&amp;gt;--KeyToKey-- KeyCode::COMMAND_L, KeyCode::CONTROL_L&amp;lt;/autogen&amp;gt;
+      &amp;lt;/item&amp;gt;
+    &amp;lt;/item&amp;gt;
+  &amp;lt;/list&amp;gt;
+&amp;lt;/root&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;Reload XML&lt;/code&gt;したら設定が現れるので、両方にチェックをいれて完了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/karabiner.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;XVim 入れたらこういうことになるだろうなあ、と思ってたけど案の定 Xcode Way から遠ざかりつつある&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

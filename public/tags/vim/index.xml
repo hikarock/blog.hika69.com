@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on hikarock blog</title>
+    <link>http://blog.hika69.com/tags/vim/</link>
+    <description>Recent content in Vim on hikarock blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Tue, 05 May 2015 17:03:27 +0000</lastBuildDate>
+    <atom:link href="http://blog.hika69.com/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>eslint を vim-watchdogs から使う</title>
+      <link>http://blog.hika69.com/blog/2015/05/05/eslint/</link>
+      <pubDate>Tue, 05 May 2015 17:03:27 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2015/05/05/eslint/</guid>
+      <description>&lt;p&gt;vim-watchdogs から eslint が使えるように設定したのでメモ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/osyo-manga/vim-watchdogs&#34;&gt;osyo-manga/vim-watchdogs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;eslint をグローバルにインストールする。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eslint.org/&#34;&gt;ESLint - Pluggable JavaScript linter&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm install -g eslint
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;.vimrc&lt;/code&gt;でファイルタイプが&lt;code&gt;javascript&lt;/code&gt;の場合に eslint コマンドが実行されるように設定する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-vim&#34;&gt;let g:watchdogs_check_BufWritePost_enable = 1
+let g:watchdogs_check_CursorHold_enable = 1
+
+&amp;quot;
+&amp;quot; 以下を追記
+&amp;quot;
+let g:quickrun_config = {
+\   &amp;quot;javascript/watchdogs_checker&amp;quot; : {
+\     &amp;quot;type&amp;quot; : &amp;quot;eslint&amp;quot;
+\   }
+\ }
+call watchdogs#setup(g:quickrun_config)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これで&lt;code&gt;:WatchdogsRun&lt;/code&gt;した時に eslint が実行される。&lt;/p&gt;
+
+&lt;p&gt;ただ、このままだと ES6/JSX の構文を使っているとエラーとして検出されてしまうので、&lt;code&gt;.eslintrc&lt;/code&gt;の&lt;code&gt;ecmaFeatures&lt;/code&gt;に値を指定して機能毎に有効にする。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{
+  &amp;quot;ecmaFeatures&amp;quot;: {
+    &amp;quot;templateStrings&amp;quot;: true
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;.eslintrc&lt;/code&gt;の設定により以下の構文はエラーとして検出されない。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;console.log(`Hello, ${name}!`);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;その他の機能毎の設定方法は以下を参照。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://eslint.org/docs/user-guide/configuring.html&#34;&gt;Documentation - ESLint - Pluggable JavaScript linter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

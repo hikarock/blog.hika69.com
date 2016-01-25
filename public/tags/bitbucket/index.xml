@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bitbucket on hikarock blog</title>
+    <link>http://blog.hika69.com/tags/bitbucket/</link>
+    <description>Recent content in Bitbucket on hikarock blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Tue, 18 Nov 2014 11:34:01 +0000</lastBuildDate>
+    <atom:link href="http://blog.hika69.com/tags/bitbucket/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>GitHub の非公開リポジトリを Bitbucket に引越</title>
+      <link>http://blog.hika69.com/blog/2014/11/18/github-to-bitbucket/</link>
+      <pubDate>Tue, 18 Nov 2014 11:34:01 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2014/11/18/github-to-bitbucket/</guid>
+      <description>
+
+&lt;p&gt;GitHub のプライベートリポジトリの上限がきてしまったので、使用頻度の低いリポジトリを Bitbucket の非公開リポジトリに引越した。&lt;/p&gt;
+
+&lt;h3 id=&#34;コードの引越:c2ae888402f8d3c8a64fa936a8c437a5&#34;&gt;コードの引越&lt;/h3&gt;
+
+&lt;p&gt;Bitbucket に GitHub と同名のリポジトリを作成して、Bitbucket に push するだけ。
+&lt;code&gt;{username}&lt;/code&gt;、&lt;code&gt;{reponame}&lt;/code&gt;は適宜読み替えてください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cd {reponame}
+$ git remote add bitbucket https://{username}@bitbucket.org/{username}/{reponame}.git
+$ git push bitbucket master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;issues-の引越:c2ae888402f8d3c8a64fa936a8c437a5&#34;&gt;Issues の引越&lt;/h3&gt;
+
+&lt;p&gt;これを使った。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sorich87/github-to-bitbucket-issues-migration&#34;&gt;sorich87/github-to-bitbucket-issues-migration&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Usage の通りに実行すると zip ファイルが生成された。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ bundle install
+$ bundle exec ruby cli.rb {username}/{reponame} {username} {password} exportfilename.zip
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Bitbucket のウェブUIから zip ファイルをインポートできる。URL は以下。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;https://bitbucket.org/{username}/{reponame}/admin/issues/import-export&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;wiki-の引越:c2ae888402f8d3c8a64fa936a8c437a5&#34;&gt;Wiki の引越&lt;/h3&gt;
+
+&lt;p&gt;コードと同様に GitHub の wiki を clone して Bitbucket に push する。&lt;/p&gt;
+
+&lt;p&gt;以下のエントリを参考にした。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://codetheory.in/export-your-issues-and-wikis-from-github-repo-and-import-to-bitbucket-migration/&#34;&gt;Export your Issues and Wikis from Github Repo and Import to Bitbucket (Migration)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;wiki を clone 。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git clone https://github.com/{username}/{reponame}.wiki.git
+$ cd {reponame}.wiki
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;remote に bitbucket を追加。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git remote add bitbucket https://{username}@bitbucket.org/{username}/{reponame}.git/wiki
+$ git remote -v
+bitbucket       https://{username}@bitbucket.org/{username}/{reponame}.git/wiki (fetch)
+bitbucket       https://{username}@bitbucket.org/{username}/{reponame}.git/wiki (push)
+origin  https://github.com/{username}/{reponame}.wiki.git (fetch)
+origin  https://github.com/{username}/{reponame}.wiki.git (push)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;あらかじめデフォルトの wiki が生成されていて、普通に push すると reject されてしまったので &lt;code&gt;-f&lt;/code&gt; オプションをつけた。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git push -f bitbucket master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以上で完了。GitHub Flavored Markdown が一部動いてないけど十分いい感じに移行できた。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

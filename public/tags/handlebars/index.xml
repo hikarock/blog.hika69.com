@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Handlebars on hikarock blog</title>
+    <link>http://blog.hika69.com/tags/handlebars/</link>
+    <description>Recent content in Handlebars on hikarock blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Wed, 23 Apr 2014 00:10:08 +0000</lastBuildDate>
+    <atom:link href="http://blog.hika69.com/tags/handlebars/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>rendr-handlebars で部分テンプレートを使う</title>
+      <link>http://blog.hika69.com/blog/2014/04/23/rendr-handlebars/</link>
+      <pubDate>Wed, 23 Apr 2014 00:10:08 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2014/04/23/rendr-handlebars/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rendrjs/rendr-handlebars&#34;&gt;rendr-handlebars&lt;/a&gt;でpartial (部分テンプレート) が使えることにさっき気づいた。&lt;/p&gt;
+
+&lt;p&gt;引数に&lt;code&gt;app/templates&lt;/code&gt;以下のパスを指定する。&lt;/p&gt;
+
+&lt;p&gt;app/templates/home/index.hbs&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{partial &amp;quot;home/include&amp;quot;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上のようにパスだけ指定した場合は読み込み元と同じコンテキストで変数にアクセスすることができる。&lt;/p&gt;
+
+&lt;p&gt;app/templates/home/include.hbs&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{partial &amp;quot;home/include&amp;quot; name=&amp;quot;taro&amp;quot;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;こんな感じでコンテキストを渡すこともできる。&lt;/p&gt;
+
+&lt;p&gt;便利ですね。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

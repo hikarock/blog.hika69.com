@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hoodie on hikarock blog</title>
+    <link>http://blog.hika69.com/tags/hoodie/</link>
+    <description>Recent content in Hoodie on hikarock blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Wed, 20 Nov 2013 22:43:00 +0000</lastBuildDate>
+    <atom:link href="http://blog.hika69.com/tags/hoodie/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hoodie の話をした</title>
+      <link>http://blog.hika69.com/blog/2013/11/20/klab-js/</link>
+      <pubDate>Wed, 20 Nov 2013 22:43:00 +0000</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2013/11/20/klab-js/</guid>
+      <description>&lt;p&gt;KLab さんの JavaScript 勉強会で Hoodie の話をしました。&lt;/p&gt;
+
+&lt;iframe src=&#34;http://www.storyboards.jp/widget/ycy7it&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;(ストーリーボードのブログ埋め込み機能初めて使った)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

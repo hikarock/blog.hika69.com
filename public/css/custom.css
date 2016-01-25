@@ -1,0 +1,67 @@
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+}
+* {
+  -webkit-font-feature-settings: normal !important;
+  -moz-font-feature-settings: normal !important;
+  -o-font-feature-settings: normal !important;
+}
+pre {
+  color: #a39e9b;
+  background-color: #2f1e2e;
+}
+iframe {
+  border: 1px solid #d5dbde;
+  width: 640px;
+  height: 480px;
+}
+@media only screen and (max-width: 800px) {
+  iframe {
+    width: 100%;
+  }
+}
+h1, h2, h3,
+h4, h5, h6 {
+    margin: 0 0 3rem 0;
+}
+h1 {
+    font-size: 3.2rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.9rem;
+}
+h4 {
+    font-size: 2.6rem;
+}
+h5 {
+    font-size: 2.3rem;
+}
+h6 {
+    font-size: 2rem;
+}
+
+.post-header .post-meta .post-date {
+  margin: 1.0em 0 2.0em 0;
+}
+.main-header-content a {
+  text-decoration: none;
+}
+.main-header a.scroll-down {
+  outline: 0 !important;
+}
+.post-footer .share {
+  width: 184px;
+}
+.main-header {
+  padding: 0 !important;
+}
+.vertical {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.main-header h1.page-title {
+  font-family: 'Source Code Pro';
+  color: #fff;
+}
