@@ -1,6 +1,5 @@
 +++
 date = "2016-01-25T20:04:28+09:00"
-draft = false
 tags = ["git", "github"]
 title = "BFG で巨大なファイルを削除して GitHub に push するまで"
 
