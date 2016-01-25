@@ -29,7 +29,7 @@ To git@github.com:hikarock/some-big-repo.git
 error: failed to push some refs to &#39;git@github.com:hikarock/some-big-repo.git&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://git-lfs.github.com/&#34;&gt;Git Large File Storage&lt;/a&gt; も使ってみたかったけど課金してないので、素直に &lt;code&gt;more information&lt;/code&gt; のリンクを開く。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://git-lfs.github.com/&#34;&gt;Git Large File Storage&lt;/a&gt; も使ってみたかったけど課金&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:ae8ab95f0667855683a86e9e88aa2ebd:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:ae8ab95f0667855683a86e9e88aa2ebd:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;してないので、素直に &lt;code&gt;more information&lt;/code&gt; のリンクを開く。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://help.github.com/articles/removing-files-from-a-repository-s-history/&#34;&gt;Removing files from a repository&amp;rsquo;s history - User Documentation&lt;/a&gt;&lt;/p&gt;
 
@@ -95,6 +95,15 @@ To git@github.com:hikarock/some-big-repo
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;push できた。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:ae8ab95f0667855683a86e9e88aa2ebd:1&#34;&gt;容量1GB、帯域1GB/月 までは無料だったので今回のケースでは使ってもよかったかも。&lt;a href=&#34;https://github.com/pricing&#34;&gt;詳細&lt;/a&gt;
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:ae8ab95f0667855683a86e9e88aa2ebd:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </description>
     </item>
     

@@ -21,7 +21,7 @@ To git@github.com:hikarock/some-big-repo.git
 error: failed to push some refs to 'git@github.com:hikarock/some-big-repo.git'
 ```
 
-[Git Large File Storage](https://git-lfs.github.com/) も使ってみたかったけど課金してないので、素直に `more information` のリンクを開く。
+[Git Large File Storage](https://git-lfs.github.com/) も使ってみたかったけど課金[^1]してないので、素直に `more information` のリンクを開く。
 
 [Removing files from a repository's history - User Documentation](https://help.github.com/articles/removing-files-from-a-repository-s-history/)
 
@@ -92,4 +92,6 @@ To git@github.com:hikarock/some-big-repo
 ```
 
 push できた。
+
+[^1]: 容量1GB、帯域1GB/月 までは無料だったので今回のケースでは使ってもよかったかも。[詳細](https://github.com/pricing)
 
