@@ -7,8 +7,96 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Thu, 07 Jan 2016 21:46:22 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 25 Jan 2016 20:04:28 +0900</lastBuildDate>
     <atom:link href="http://blog.hika69.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>BFG で巨大なファイルを削除して GitHub に push するまで</title>
+      <link>http://blog.hika69.com/blog/2016/01/25/bfg/</link>
+      <pubDate>Mon, 25 Jan 2016 20:04:28 +0900</pubDate>
+      
+      <guid>http://blog.hika69.com/blog/2016/01/25/bfg/</guid>
+      <description>&lt;p&gt;あるリポジトリを GitHub に push した時に、100MB 以上のファイルが含まれていたため拒否されてしまった。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% git push origin master
+...
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+remote: error: Trace: xxx
+remote: error: See http://git.io/iEPt8g for more information.
+remote: error: File big.exe is 160.21 MB; this exceeds GitHub&#39;s file size limit of 100.00 MB
+To git@github.com:hikarock/some-big-repo.git
+ ! [remote rejected] master -&amp;gt; master (pre-receive hook declined)
+error: failed to push some refs to &#39;git@github.com:hikarock/some-big-repo.git&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://git-lfs.github.com/&#34;&gt;Git Large File Storage&lt;/a&gt; も使ってみたかったけど課金してないので、素直に &lt;code&gt;more information&lt;/code&gt; のリンクを開く。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://help.github.com/articles/removing-files-from-a-repository-s-history/&#34;&gt;Removing files from a repository&amp;rsquo;s history - User Documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;2パターンのファイル削除方法が掲載されていて、今回はだいぶ昔にコミットされたファイルを消したかったので &lt;code&gt;Removing a file added in an older commit&lt;/code&gt; で紹介されている BFG を使う。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://rtyley.github.io/bfg-repo-cleaner/&#34;&gt;BFG Repo-Cleaner by rtyley&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;BFG のサイトから jar ファイルをダウンロードして、&lt;code&gt;.zshrc&lt;/code&gt; にエイリアスを設定した。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;alias bfg=&#39;java -jar ~/bin/bfg-1.12.8.jar&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;リポジトリに移動して、エラーの原因になっている巨大ファイルを &lt;code&gt;git rm&lt;/code&gt; する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% cd some-big-repo
+% git rm big.exe
+rm &#39;big.exe&#39;
+% git ci -m &#39;巨大なファイルを削除&#39;
+[master xxx] 巨大なファイルを削除
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100755 big.exe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;対象リポジトリ内の100M以上のファイルを対象に &lt;code&gt;bfg&lt;/code&gt; を実行。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% cd ..
+% bfg --strip-blobs-bigger-than 100M some-big-repo
+SLF4J: Failed to load class &amp;quot;org.slf4j.impl.StaticLoggerBinder&amp;quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+
+Using repo : some-big-repo/.git
+
+...
+
+Deleted files
+-------------
+
+        Filename                       Git id
+        --------------------------------------------------
+        big.exe                      | xxx (160.2 MB)
+
+In total, 7 object ids were changed. Full details are logged here:
+
+        /Users/hikarock/some-big-repo.bfg-report/2016-01-25/20-00-01
+
+BFG run is complete! When ready, run: git reflog expire --expire=now --all &amp;amp;&amp;amp; git gc --prune=now --aggressive
+
+Has the BFG saved you time?  Support the BFG on BountySource:  https://j.mp/fund-bfg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;メッセージの最後に出ている通りに &lt;code&gt;git reflog&lt;/code&gt; を実行する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% git reflog expire --expire=now --all &amp;amp;&amp;amp; git gc --prune=now --aggressive
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;もういちど &lt;code&gt;git push&lt;/code&gt; を実行。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% git push origin master
+...
+To git@github.com:hikarock/some-big-repo
+ * [new branch]      master -&amp;gt; master
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;push できた。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>スネークケースのファイル名・クラス名をパスカルケースにリネームする</title>
@@ -661,24 +749,6 @@ init.author.url=http://blog.hika69.com
 &lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/karabiner.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;XVim 入れたらこういうことになるだろうなあ、と思ってたけど案の定 Xcode Way から遠ざかりつつある&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Casto のステッカーができた</title>
-      <link>http://blog.hika69.com/blog/2014/12/28/casto-sticker/</link>
-      <pubDate>Sun, 28 Dec 2014 11:34:27 +0000</pubDate>
-      
-      <guid>http://blog.hika69.com/blog/2014/12/28/casto-sticker/</guid>
-      <description>&lt;p&gt;Node 系のステッカーは六角形で揃えてるみたいなので、&lt;a href=&#34;http://ca.storyboards.jp&#34;&gt;Casto&lt;/a&gt; も Node/Rendr で動いてるので同じ形にしてみました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/casto-sticker.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;ここで売ってます。5セット限定なのでお早めに！&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/casto-hexagon.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://spike.cc/p/gKeopedV&#34; class=&#34;spike-button&#34; data-code=&#34;gKeopedV&#34; data-button-style=&#34;pay_large&#34; data-button-text-key=&#34;1&#34;&gt;今すぐ支払う&lt;/a&gt;&lt;script src=&#34;https://spike.cc/button/v1/button.js&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 </description>
     </item>
     
