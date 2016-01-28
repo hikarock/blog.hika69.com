@@ -83,7 +83,8 @@ Has the BFG saved you time?  Support the BFG on BountySource:  https://j.mp/fund
 
 &lt;p&gt;メッセージの最後に出ている通りに &lt;code&gt;git reflog&lt;/code&gt; を実行する。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;% git reflog expire --expire=now --all &amp;amp;&amp;amp; git gc --prune=now --aggressive
+&lt;pre&gt;&lt;code&gt;% cd some-big-repo
+% git reflog expire --expire=now --all &amp;amp;&amp;amp; git gc --prune=now --aggressive
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;もういちど &lt;code&gt;git push&lt;/code&gt; を実行。&lt;/p&gt;
