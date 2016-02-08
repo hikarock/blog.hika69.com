@@ -1,6 +1,5 @@
 +++
 date = "2015-11-15T13:07:37+09:00"
-draft = true
 tags = ["hugo"]
 title = "ブログを Hugo に変えた"
 +++
