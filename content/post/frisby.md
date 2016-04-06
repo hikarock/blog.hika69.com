@@ -1,7 +1,6 @@
 +++
 date = "2016-04-06T22:26:17+09:00"
-draft = true
-tags = ["js", ""]
+tags = ["node", "api", "javascript"]
 title = "REST API のテストツール Frisby.js"
 
 +++
