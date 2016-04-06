@@ -46,7 +46,7 @@ $ tree
 ```
 {
   "url": "http://api.example.com/v1",
-  "url-auth": "http://test:password@api.exaple.com/v1"
+  "url-auth": "http://test:password@api.example.com/v1"
 }
 ```
 
