@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  	<meta property="og:title" content=" REST API のテストツール Frisby.js &middot;  hikarock blog" />
+  	<meta property="og:site_name" content="hikarock blog" />
+  	<meta property="og:url" content="http://localhost:1313/blog/2016/04/06/frisby/" />
+
+    
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="2016-04-06T22:26:17&#43;09:00" />
+
+    
+    <meta property="og:article:tag" content="js" />
+    
+    <meta property="og:article:tag" content="" />
+    
+    
+
+  <title>
+     REST API のテストツール Frisby.js &middot;  hikarock blog
+  </title>
+
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://localhost:1313/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+
+    
+      
+          <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="hikarock blog" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.14" />
+
+    <link rel="canonical" href="http://localhost:1313/blog/2016/04/06/frisby/" />
+
+    
+
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.css">
+<link rel="apple-touch-icon" sizes="57x57" href="http://localhost:1313/images/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://localhost:1313/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://localhost:1313/images/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://localhost:1313/images/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://localhost:1313/images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://localhost:1313/images/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://localhost:1313/images/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon-180x180.png">
+
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+    </ul>
+    
+    
+    <a class="subscribe-button icon-feed" href="http://localhost:1313/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+      <a class="blog-logo" href="http://localhost:1313/"><img src="http://localhost:1313/images/logo.png" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="http://localhost:1313/index.xml">&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">REST API のテストツール Frisby.js</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2016-04-06T22:26:17&#43;09:00">
+            Apr 6, 2016
+          </time>
+        
+         
+          <span class="post-tag small"><a href="http://localhost:1313/tags/js/">#js</a></span>
+         
+          <span class="post-tag small"><a href="http://localhost:1313/tags//">#</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p>REST API のテストツール Frisby.js を使ってみた。</p>
+
+<h3 id="導入:93f38952e09b7e441a25f845abcaf75b">導入</h3>
+
+<p><a href="http://frisbyjs.com/">REST API Testing—Frisby.js</a></p>
+
+<p>npm で Frisby.js を導入する。</p>
+
+<p>jasmine-node は依存パッケージで、config は必須ではないけど本番環境と開発環境の切り替えに使う。</p>
+
+<pre><code>$ npm i -D frisby jasmine-node config
+</code></pre>
+
+<p>ファイル構成はこんな感じになった。</p>
+
+<pre><code class="language-bash">$ tree
+ .
+ ├── package.json
+ ├── node_modules
+ ├── config
+ │  └── test
+ │      └── api
+ │          └── v1
+ │              ├── development.json
+ │              └── production.json
+ └── test
+     └── api
+         └── v1
+             ├── bar.spec.js
+             └── foo.spec.js
+</code></pre>
+
+<p>設定ファイルには、とりあえずAPIのURLだけ追加。</p>
+
+<pre><code>{
+  &quot;url&quot;: &quot;http://api.example.com/v1&quot;,
+  &quot;url-auth&quot;: &quot;http://test:password@api.exaple.com/v1&quot;
+}
+</code></pre>
+
+<p><code>package.json</code> にテストを実行するタスクを追加する。</p>
+
+<pre><code class="language-json">  &quot;scripts&quot;: {
+    &quot;test:api:development&quot;: &quot;export NODE_ENV=development &amp;&amp; export NODE_CONFIG_DIR=./config/test/api/v1 &amp;&amp; jasmine-node ./test/api/v1&quot;,
+    &quot;test:api:production&quot;: &quot;export NODE_ENV=production &amp;&amp; export NODE_CONFIG_DIR=./config/test/api/v1 &amp;&amp; jasmine-node ./test/api/v1&quot;
+  },
+</code></pre>
+
+<p>テストを実行する。</p>
+
+<pre><code class="language-bash">$ npm run test:api:production
+</code></pre>
+
+<h3 id="json-レスポンス-内の型を検証する:93f38952e09b7e441a25f845abcaf75b">JSON レスポンス 内の型を検証する</h3>
+
+<p>例えば以下のようなレスポンスが返るAPIの場合。</p>
+
+<pre><code class="language-json">{
+  &quot;id&quot;: 1,
+  &quot;name&quot;: &quot;hikarock&quot;,
+  &quot;url&quot;: &quot;http://hika69.com&quot;
+}
+</code></pre>
+
+<p>以下の <code>users.spec.js</code> を用意する。</p>
+
+<pre><code class="language-js">var frisby = require('frisby');
+var config = require('config');
+
+frisby.create('GET:users')
+  .get(config.get('url') + '/users/hikarock')
+  .expectStatus(200)
+  .expectHeaderContains('content-type', 'application/json')
+  .expectJSONTypes({
+    id: Number,
+    name: String,
+    url: String
+  })
+.toss();
+</code></pre>
+
+<h3 id="配列の検証:93f38952e09b7e441a25f845abcaf75b">配列の検証</h3>
+
+<p>配列内の1レコードの検証を行いたい場合は <code>expectJSONTypes</code> の第一引数に <code>users.0</code> のような独自の記法で指定する。
+複数レコードの検証を行う場合は <code>users.*</code> のようにワイルドカードも指定できる。</p>
+
+<p>例えば以下のようなレスポンスが返るAPIの場合。</p>
+
+<pre><code class="language-json">{
+  users: [
+    {
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;hikarock&quot;,
+      &quot;url&quot;: &quot;http://hika69.com&quot;
+    },
+    {
+      &quot;id&quot;: 2,
+      &quot;name&quot;: &quot;foo&quot;,
+      &quot;url&quot;: &quot;http://example.com&quot;
+    }
+    ...
+  ]
+}
+</code></pre>
+
+<p>1レコード目を検証する場合は以下のように記述する。</p>
+
+<pre><code class="language-js">frisby.create('GET:users')
+  .get(config.get('url') + '/users')
+  .expectStatus(200)
+  .expectHeaderContains('content-type', 'application/json')
+  .expectJSONTypes('users.0', {
+    id: Number,
+    name: String,
+    url: String
+  })
+.toss();
+</code></pre>
+
+<h3 id="まとめ:93f38952e09b7e441a25f845abcaf75b">まとめ</h3>
+
+<p>導入も楽で、いい感じ。</p>
+
+<p>今回はGETの正常系しか試してないので、実行順を考慮する必要のある更新系なども試してみたい。</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+    <figure class="author-image">
+        <a class="img" href="http://localhost:1313/" style="background-image: url(http://localhost:1313/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+    </figure>
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://localhost:1313/">hikarock</a></h4>
+  
+  <p>街に詳しい。</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Tokyo, Japan</span>
+    <span class="author-link icon-link"><a href="http://hika69.com">http://hika69.com</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=REST%20API%20%e3%81%ae%e3%83%86%e3%82%b9%e3%83%88%e3%83%84%e3%83%bc%e3%83%ab%20Frisby.js&amp;url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f04%2f06%2ffrisby%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f04%2f06%2ffrisby%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f04%2f06%2ffrisby%2f&amp;description=REST%20API%20%e3%81%ae%e3%83%86%e3%82%b9%e3%83%88%e3%83%84%e3%83%bc%e3%83%ab%20Frisby.js"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f04%2f06%2ffrisby%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+  </footer>
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://localhost:1313/js/jquery.js"></script>
+    <script type="text/javascript" src="http://localhost:1313/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://localhost:1313/js/index.js"></script>
+    
+        <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>
+
