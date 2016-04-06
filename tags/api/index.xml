@@ -54,7 +54,7 @@
 
 &lt;pre&gt;&lt;code&gt;{
   &amp;quot;url&amp;quot;: &amp;quot;http://api.example.com/v1&amp;quot;,
-  &amp;quot;url-auth&amp;quot;: &amp;quot;http://test:password@api.exaple.com/v1&amp;quot;
+  &amp;quot;url-auth&amp;quot;: &amp;quot;http://test:password@api.example.com/v1&amp;quot;
 }
 &lt;/code&gt;&lt;/pre&gt;
 
