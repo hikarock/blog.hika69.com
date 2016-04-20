@@ -11,7 +11,7 @@
     <atom:link href="http://blog.hika69.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Twitter 検索の結果を Google Drive のスプレッドシートに出力する (その2)</title>
+      <title>Twitter 検索の結果を Google Drive のスプレッドシートに出力する (2016年春版)</title>
       <link>http://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/</link>
       <pubDate>Wed, 20 Apr 2016 00:19:20 +0900</pubDate>
       
@@ -25,6 +25,8 @@
 &lt;script src=&#34;https://gist.github.com/hikarock/61fa2cbd933c3ec3abc3afa1830ba68b.js&#34;&gt;&lt;/script&gt;
 
 &lt;h3 id=&#34;twitter-gas-js-https-gist-github-com-hikarock-e4d549ddbae5d9d67a1d93b56d69e129:1fd485e9c2c175413383efa6ac2e016a&#34;&gt;&lt;a href=&#34;https://gist.github.com/hikarock/e4d549ddbae5d9d67a1d93b56d69e129&#34;&gt;twitter-gas.js&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;@hideack さんがコメントで、同時に Slack 通知する方法についても書いてくれてます。&lt;/p&gt;
 
 &lt;script src=&#34;https://gist.github.com/hikarock/e4d549ddbae5d9d67a1d93b56d69e129.js&#34;&gt;&lt;/script&gt;
 </description>
