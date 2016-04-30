@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sql on hikarock blog</title>
-    <link>http://blog.hika69.com/tags/sql/</link>
+    <link>https://blog.hika69.com/tags/sql/</link>
     <description>Recent content in Sql on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Mon, 27 May 2013 20:51:00 +0000</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>SQL アンチパターン</title>
-      <link>http://blog.hika69.com/blog/2013/05/27/sql-antipatterns/</link>
+      <link>https://blog.hika69.com/blog/2013/05/27/sql-antipatterns/</link>
       <pubDate>Mon, 27 May 2013 20:51:00 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2013/05/27/sql-antipatterns/</guid>
+      <guid>https://blog.hika69.com/blog/2013/05/27/sql-antipatterns/</guid>
       <description>&lt;p&gt;3章まで読んだ。Kindle for iPadで読んでると表が見づらい&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/SQL%E3%82%A2%E3%83%B3%E3%83%81%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3-Bill-Karwin/dp/4873115892%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4873115892&#34; target=&#34;_blank&#34; title=&#34;SQLアンチパターン&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/41qHKrFZi0L.jpg&#34; width=&#34;391&#34; height=&#34;500&#34; alt=&#34;SQLアンチパターン&#34; /&gt;&lt;/a&gt;&lt;/p&gt;

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Api on hikarock blog</title>
-    <link>http://blog.hika69.com/tags/api/</link>
+    <link>https://blog.hika69.com/tags/api/</link>
     <description>Recent content in Api on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Wed, 06 Apr 2016 22:26:17 +0900</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/api/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>REST API のテストツール Frisby.js</title>
-      <link>http://blog.hika69.com/blog/2016/04/06/frisby/</link>
+      <link>https://blog.hika69.com/blog/2016/04/06/frisby/</link>
       <pubDate>Wed, 06 Apr 2016 22:26:17 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2016/04/06/frisby/</guid>
+      <guid>https://blog.hika69.com/blog/2016/04/06/frisby/</guid>
       <description>
 
 &lt;p&gt;REST API のテストツール Frisby.js を使ってみた。&lt;/p&gt;

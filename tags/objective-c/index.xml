@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Objective C on hikarock blog</title>
-    <link>http://blog.hika69.com/tags/objective-c/</link>
+    <link>https://blog.hika69.com/tags/objective-c/</link>
     <description>Recent content in Objective C on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Tue, 10 Feb 2015 19:55:15 +0000</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/tags/objective-c/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/objective-c/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>IB_DESIGNABLE を使おう</title>
-      <link>http://blog.hika69.com/blog/2015/02/10/ibdesignable/</link>
+      <link>https://blog.hika69.com/blog/2015/02/10/ibdesignable/</link>
       <pubDate>Tue, 10 Feb 2015 19:55:15 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/02/10/ibdesignable/</guid>
+      <guid>https://blog.hika69.com/blog/2015/02/10/ibdesignable/</guid>
       <description>
 
 &lt;p&gt;Xcode6 から使える &lt;code&gt;IB_DESIGNABLE&lt;/code&gt; と &lt;code&gt;IBInspectable&lt;/code&gt; が非常に便利なんだけど情報が少ない。&lt;/p&gt;

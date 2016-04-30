@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Npm on hikarock blog</title>
-    <link>http://blog.hika69.com/tags/npm/</link>
+    <link>https://blog.hika69.com/tags/npm/</link>
     <description>Recent content in Npm on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Sat, 21 Feb 2015 19:17:39 +0000</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/tags/npm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/npm/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>npm init 時のデフォルト設定をカスタマイズする</title>
-      <link>http://blog.hika69.com/blog/2015/02/21/npm-init/</link>
+      <link>https://blog.hika69.com/blog/2015/02/21/npm-init/</link>
       <pubDate>Sat, 21 Feb 2015 19:17:39 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/02/21/npm-init/</guid>
+      <guid>https://blog.hika69.com/blog/2015/02/21/npm-init/</guid>
       <description>&lt;p&gt;&lt;code&gt;npm init&lt;/code&gt;した時にlicenceの種類やauthorの情報を自動的にいれる設定。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ npm config set init.author.name &amp;quot;hikarock&amp;quot;

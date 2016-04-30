@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yapc on hikarock blog</title>
-    <link>http://blog.hika69.com/tags/yapc/</link>
+    <link>https://blog.hika69.com/tags/yapc/</link>
     <description>Recent content in Yapc on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Fri, 29 Aug 2014 11:45:06 +0000</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/tags/yapc/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/yapc/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>YAPC::Asia Tokyo 2014 前夜祭で「プライベートで3年間チーム開発した話」をしてきた</title>
-      <link>http://blog.hika69.com/blog/2014/08/29/yapc2014/</link>
+      <link>https://blog.hika69.com/blog/2014/08/29/yapc2014/</link>
       <pubDate>Fri, 29 Aug 2014 11:45:06 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2014/08/29/yapc2014/</guid>
+      <guid>https://blog.hika69.com/blog/2014/08/29/yapc2014/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;http://yapcasia.org/2014/08/eve-of-yapcasia.html&#34;&gt;YAPC::Asia Tokyo 2014 前夜祭「欲しいものは作ればいい！ 〜Webアプリ10連発〜」&lt;/a&gt;で話してきました。&lt;/p&gt;

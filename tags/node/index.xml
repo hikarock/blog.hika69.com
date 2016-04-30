@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Node on hikarock blog</title>
-    <link>http://blog.hika69.com/tags/node/</link>
+    <link>https://blog.hika69.com/tags/node/</link>
     <description>Recent content in Node on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Wed, 06 Apr 2016 22:26:17 +0900</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/tags/node/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/node/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>REST API のテストツール Frisby.js</title>
-      <link>http://blog.hika69.com/blog/2016/04/06/frisby/</link>
+      <link>https://blog.hika69.com/blog/2016/04/06/frisby/</link>
       <pubDate>Wed, 06 Apr 2016 22:26:17 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2016/04/06/frisby/</guid>
+      <guid>https://blog.hika69.com/blog/2016/04/06/frisby/</guid>
       <description>
 
 &lt;p&gt;REST API のテストツール Frisby.js を使ってみた。&lt;/p&gt;
@@ -147,10 +147,10 @@ frisby.create(&#39;GET:users&#39;)
     
     <item>
       <title>Node の CLI アプリと Vim などのエディタを連携する</title>
-      <link>http://blog.hika69.com/blog/2016/01/02/node-cli-open-editor/</link>
+      <link>https://blog.hika69.com/blog/2016/01/02/node-cli-open-editor/</link>
       <pubDate>Sat, 02 Jan 2016 18:56:05 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2016/01/02/node-cli-open-editor/</guid>
+      <guid>https://blog.hika69.com/blog/2016/01/02/node-cli-open-editor/</guid>
       <description>&lt;p&gt;&lt;code&gt;git commit&lt;/code&gt; をコマンドラインから実行した時に Vim が自動で開いてコミットコメントを入力できるが、このような挙動を Node のCLIアプリを自作するときにどうやるか調べた。&lt;/p&gt;
 
 &lt;p&gt;ずばりな回答が以下。&lt;/p&gt;
@@ -177,10 +177,10 @@ editor.on(&#39;exit&#39;, function() {
     
     <item>
       <title>静的サイトジェネレータ Roots の覚書</title>
-      <link>http://blog.hika69.com/blog/2015/07/01/roots/</link>
+      <link>https://blog.hika69.com/blog/2015/07/01/roots/</link>
       <pubDate>Wed, 01 Jul 2015 22:01:34 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/07/01/roots/</guid>
+      <guid>https://blog.hika69.com/blog/2015/07/01/roots/</guid>
       <description>&lt;p&gt;定期的にブログをリニューアルしたくなる病が発症する。&lt;/p&gt;
 
 &lt;p&gt;以下を条件に探してて roots がよさそうだったので試した。&lt;/p&gt;
@@ -279,10 +279,10 @@ editor.on(&#39;exit&#39;, function() {
     
     <item>
       <title>npm init 時のデフォルト設定をカスタマイズする</title>
-      <link>http://blog.hika69.com/blog/2015/02/21/npm-init/</link>
+      <link>https://blog.hika69.com/blog/2015/02/21/npm-init/</link>
       <pubDate>Sat, 21 Feb 2015 19:17:39 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/02/21/npm-init/</guid>
+      <guid>https://blog.hika69.com/blog/2015/02/21/npm-init/</guid>
       <description>&lt;p&gt;&lt;code&gt;npm init&lt;/code&gt;した時にlicenceの種類やauthorの情報を自動的にいれる設定。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ npm config set init.author.name &amp;quot;hikarock&amp;quot;
@@ -307,10 +307,10 @@ init.author.url=http://blog.hika69.com
     
     <item>
       <title>はじめての Node.js</title>
-      <link>http://blog.hika69.com/blog/2013/06/13/learning-node-js/</link>
+      <link>https://blog.hika69.com/blog/2013/06/13/learning-node-js/</link>
       <pubDate>Thu, 13 Jun 2013 23:54:00 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2013/06/13/learning-node-js/</guid>
+      <guid>https://blog.hika69.com/blog/2013/06/13/learning-node-js/</guid>
       <description>&lt;p&gt;読み始めた。&lt;/p&gt;
 
 &lt;p&gt;分厚いので電書版を出してほしい。&lt;/p&gt;

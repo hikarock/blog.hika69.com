@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on hikarock blog</title>
-    <link>http://blog.hika69.com/tags/git/</link>
+    <link>https://blog.hika69.com/tags/git/</link>
     <description>Recent content in Git on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Mon, 25 Jan 2016 20:04:28 +0900</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>BFG で巨大なファイルを削除して GitHub に push するまで</title>
-      <link>http://blog.hika69.com/blog/2016/01/25/bfg/</link>
+      <link>https://blog.hika69.com/blog/2016/01/25/bfg/</link>
       <pubDate>Mon, 25 Jan 2016 20:04:28 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2016/01/25/bfg/</guid>
+      <guid>https://blog.hika69.com/blog/2016/01/25/bfg/</guid>
       <description>&lt;p&gt;あるリポジトリを GitHub に push した時に、100MB 以上のファイルが含まれていたため拒否されてしまった。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;% git push origin master
@@ -110,10 +110,10 @@ To git@github.com:hikarock/some-big-repo
     
     <item>
       <title>hub コマンドで GitHub と GHE に PullRequest する</title>
-      <link>http://blog.hika69.com/blog/2015/02/09/git-pr/</link>
+      <link>https://blog.hika69.com/blog/2015/02/09/git-pr/</link>
       <pubDate>Mon, 09 Feb 2015 19:36:38 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/02/09/git-pr/</guid>
+      <guid>https://blog.hika69.com/blog/2015/02/09/git-pr/</guid>
       <description>&lt;p&gt;GitHubでは以下のalias (リンク参照) を設定して&lt;code&gt;git pr master&lt;/code&gt;のように使っていたけれど、GHEで動かなかったので&lt;code&gt;.gitconfig&lt;/code&gt;を編集した。&lt;/p&gt;
 
 &lt;ul&gt;
@@ -130,10 +130,10 @@ To git@github.com:hikarock/some-big-repo
     
     <item>
       <title>iOSアプリ開発のGit運用</title>
-      <link>http://blog.hika69.com/blog/2014/12/16/git-flow/</link>
+      <link>https://blog.hika69.com/blog/2014/12/16/git-flow/</link>
       <pubDate>Tue, 16 Dec 2014 09:37:50 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2014/12/16/git-flow/</guid>
+      <guid>https://blog.hika69.com/blog/2014/12/16/git-flow/</guid>
       <description>
 
 &lt;p&gt;iOSアプリはリリースサイクルが長くなりがちなので、&lt;a href=&#34;https://gist.github.com/Gab-km/3705015&#34;&gt;GitHub Flow&lt;/a&gt;ではなく、&lt;a href=&#34;http://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html&#34;&gt;git-flow&lt;/a&gt;を参考にしたフローを使っている。&lt;/p&gt;
@@ -197,10 +197,10 @@ To git@github.com:hikarock/some-big-repo
     
     <item>
       <title>GitHub の非公開リポジトリを Bitbucket に引越</title>
-      <link>http://blog.hika69.com/blog/2014/11/18/github-to-bitbucket/</link>
+      <link>https://blog.hika69.com/blog/2014/11/18/github-to-bitbucket/</link>
       <pubDate>Tue, 18 Nov 2014 11:34:01 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2014/11/18/github-to-bitbucket/</guid>
+      <guid>https://blog.hika69.com/blog/2014/11/18/github-to-bitbucket/</guid>
       <description>
 
 &lt;p&gt;GitHub のプライベートリポジトリの上限がきてしまったので、使用頻度の低いリポジトリを Bitbucket の非公開リポジトリに引越した。&lt;/p&gt;

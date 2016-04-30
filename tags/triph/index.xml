@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Triph on hikarock blog</title>
-    <link>http://blog.hika69.com/tags/triph/</link>
+    <link>https://blog.hika69.com/tags/triph/</link>
     <description>Recent content in Triph on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Thu, 31 Jul 2014 23:25:25 +0000</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/tags/triph/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/triph/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Meteor でアプリのランディングページを作った</title>
-      <link>http://blog.hika69.com/blog/2014/07/31/meteor/</link>
+      <link>https://blog.hika69.com/blog/2014/07/31/meteor/</link>
       <pubDate>Thu, 31 Jul 2014 23:25:25 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2014/07/31/meteor/</guid>
+      <guid>https://blog.hika69.com/blog/2014/07/31/meteor/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;http://triph.jp&#34;&gt;triph&lt;/a&gt;のランディングページ(というかアプリ全体&amp;hellip;)をHerokuに乗せていたんだけど、ちょっとおおげさな感じがしてきたので&lt;a href=&#34;https://meteor.com&#34;&gt;Meteor&lt;/a&gt;に移した。&lt;/p&gt;

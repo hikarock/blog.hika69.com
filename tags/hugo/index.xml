@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on hikarock blog</title>
-    <link>http://blog.hika69.com/tags/hugo/</link>
+    <link>https://blog.hika69.com/tags/hugo/</link>
     <description>Recent content in Hugo on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Sun, 15 Nov 2015 13:07:37 +0900</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ブログを Hugo に変えた</title>
-      <link>http://blog.hika69.com/blog/2015/11/15/hugo/</link>
+      <link>https://blog.hika69.com/blog/2015/11/15/hugo/</link>
       <pubDate>Sun, 15 Nov 2015 13:07:37 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/11/15/hugo/</guid>
+      <guid>https://blog.hika69.com/blog/2015/11/15/hugo/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;http://blog.hika69.com/blog/2015/07/01/roots/&#34;&gt;前回のエントリ&lt;/a&gt;で、Roots について調べていたけどなぜか Hugo でブログをリニューアルしていた。
+&lt;p&gt;&lt;a href=&#34;https://blog.hika69.com/blog/2015/07/01/roots/&#34;&gt;前回のエントリ&lt;/a&gt;で、Roots について調べていたけどなぜか Hugo でブログをリニューアルしていた。
 Octopress にくらべて生成速度が速くてとても快適だ。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo :: A fast and modern static website engine&lt;/a&gt;&lt;/p&gt;

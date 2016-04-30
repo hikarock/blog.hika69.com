@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Php on hikarock blog</title>
-    <link>http://blog.hika69.com/tags/php/</link>
+    <link>https://blog.hika69.com/tags/php/</link>
     <description>Recent content in Php on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Thu, 07 Jan 2016 21:46:22 +0900</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>スネークケースのファイル名・クラス名をパスカルケースにリネームする</title>
-      <link>http://blog.hika69.com/blog/2016/01/07/rename-snake-case-to-pascal-case/</link>
+      <link>https://blog.hika69.com/blog/2016/01/07/rename-snake-case-to-pascal-case/</link>
       <pubDate>Thu, 07 Jan 2016 21:46:22 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2016/01/07/rename-snake-case-to-pascal-case/</guid>
+      <guid>https://blog.hika69.com/blog/2016/01/07/rename-snake-case-to-pascal-case/</guid>
       <description>
 
 &lt;p&gt;あるプロジェクトで &lt;a href=&#34;http://www.php-fig.org/psr/psr-0/&#34;&gt;PSR-0&lt;/a&gt; に対応する作業に関連して、スネークケースのファイル名とクラス名をパスカルケースに変換する必要があった。&lt;/p&gt;
