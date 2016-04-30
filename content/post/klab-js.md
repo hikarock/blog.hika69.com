@@ -13,7 +13,5 @@ KLab さんの JavaScript 勉強会で Hoodie の話をしました。
 
 <!--more-->
 
-<iframe src="http://www.storyboards.jp/widget/ycy7it"></iframe>
-
-(ストーリーボードのブログ埋め込み機能初めて使った)
+[Hoodieでノーバックエンド開発 | Stobo](http://www.storyboards.jp/viewer/ycy7it)
 

@@ -20,8 +20,7 @@ tags:
 
 主に[Casto](http://ca.storyboards.jp/)でRendrを使うにいたったSPAに対するもやもやと、実際に使ってみてどうだったか、を振り返ってみました。
 
-<iframe src="http://www.storyboards.jp/widget/wo41ho"></iframe>
-[Rendrの話 | ストーリーボード](http://www.storyboards.jp/viewer/wo41ho)
+[Rendrの話 | Stobo](http://www.storyboards.jp/viewer/wo41ho)
 
 ### そもそも Isomorphic JavaScript とはなんぞや
 

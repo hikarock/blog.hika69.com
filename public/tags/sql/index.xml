@@ -18,7 +18,7 @@
       <guid>https://blog.hika69.com/blog/2013/05/27/sql-antipatterns/</guid>
       <description>&lt;p&gt;3章まで読んだ。Kindle for iPadで読んでると表が見づらい&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/SQL%E3%82%A2%E3%83%B3%E3%83%81%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3-Bill-Karwin/dp/4873115892%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4873115892&#34; target=&#34;_blank&#34; title=&#34;SQLアンチパターン&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/41qHKrFZi0L.jpg&#34; width=&#34;391&#34; height=&#34;500&#34; alt=&#34;SQLアンチパターン&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/SQL%E3%82%A2%E3%83%B3%E3%83%81%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3-Bill-Karwin/dp/4873115892%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4873115892&#34; target=&#34;_blank&#34; title=&#34;SQLアンチパターン&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/41qHKrFZi0L.jpg&#34; width=&#34;391&#34; height=&#34;500&#34; alt=&#34;SQLアンチパターン&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;ジェイウォーク（信号無視）&lt;/li&gt;
