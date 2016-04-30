@@ -18,7 +18,7 @@
       <guid>https://blog.hika69.com/blog/2013/05/28/underscore-js/</guid>
       <description>&lt;p&gt;「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.jsガイドブック&lt;/a&gt;」の読書会2回目。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/Backbone-js%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF-%E9%AB%98%E6%A9%8B-%E4%BE%91%E4%B9%85/dp/4899773501%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4899773501&#34; target=&#34;_blank&#34; title=&#34;Backbone.jsガイドブック&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/31tI0WaZukL.jpg&#34; width=&#34;394&#34; height=&#34;500&#34; alt=&#34;Backbone.jsガイドブック&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/Backbone-js%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF-%E9%AB%98%E6%A9%8B-%E4%BE%91%E4%B9%85/dp/4899773501%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4899773501&#34; target=&#34;_blank&#34; title=&#34;Backbone.jsガイドブック&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/31tI0WaZukL.jpg&#34; width=&#34;394&#34; height=&#34;500&#34; alt=&#34;Backbone.jsガイドブック&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;1章の後半から始めた。underscore.jsのタイマー系の関数が超絶便利そうだった。&lt;/p&gt;
 
@@ -35,11 +35,11 @@
 
 &lt;p&gt;&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;のライブラリ保存処理がちょうどこんな感じで、&lt;/p&gt;
 
-&lt;script type=&#34;text/javascript&#34; src=&#34;http://jsdo.it/blogparts/4prZ/js?width=100%&amp;height=540&amp;view=javascript&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://jsdo.it/blogparts/4prZ/js?width=100%&amp;height=540&amp;view=javascript&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;code&gt;_.debounce&lt;/code&gt;だとこんな感じになる。&lt;/p&gt;
 
-&lt;script type=&#34;text/javascript&#34; src=&#34;http://jsdo.it/blogparts/sUcm/js?width=100%&amp;height=320&amp;view=javascript&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://jsdo.it/blogparts/sUcm/js?width=100%&amp;height=320&amp;view=javascript&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp&#34;&gt;ストーリーボード&lt;/a&gt;のMarkdownのレンダリングのとこもこれ使ったらいいな、と思ってたらドキュメントにもまんまなこと書いてあった。&lt;/p&gt;
 
@@ -61,12 +61,12 @@
 
 &lt;p&gt;社内で「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.js ガイドブック&lt;/a&gt;」の読書会が始まったので参加した。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/Backbone-js%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF-%E9%AB%98%E6%A9%8B-%E4%BE%91%E4%B9%85/dp/4899773501%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4899773501&#34; target=&#34;_blank&#34; title=&#34;Backbone.jsガイドブック&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/31tI0WaZukL.jpg&#34; width=&#34;394&#34; height=&#34;500&#34; alt=&#34;Backbone.jsガイドブック&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/Backbone-js%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF-%E9%AB%98%E6%A9%8B-%E4%BE%91%E4%B9%85/dp/4899773501%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4899773501&#34; target=&#34;_blank&#34; title=&#34;Backbone.jsガイドブック&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/31tI0WaZukL.jpg&#34; width=&#34;394&#34; height=&#34;500&#34; alt=&#34;Backbone.jsガイドブック&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;1章くらい進むかな、と思ったけど、途中サンプルコードを動作確認したりしてたら10ページくらいしか読み進まなかった。&lt;/p&gt;
 
 &lt;p&gt;ためしたのはこの辺り。
-&lt;script type=&#34;text/javascript&#34; src=&#34;http://jsdo.it/blogparts/z9YK/js?width=100%&amp;height=496&amp;view=javascript&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://jsdo.it/blogparts/z9YK/js?width=100%&amp;height=496&amp;view=javascript&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;クラスプロパティ・メソッドと、インスタンスプロパティ・メソッドの動作の違いを確認した。&lt;/p&gt;
 
@@ -74,7 +74,7 @@
 
 &lt;p&gt;「&lt;a href=&#34;http://booklog.jp/item/1/477415654X&#34;&gt;コーディングを支える技術&lt;/a&gt;」を読み始めた。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E6%8A%80%E8%A1%93-%7E%E6%88%90%E3%82%8A%E7%AB%8B%E3%81%A1%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E4%BD%9C%E6%B3%95-WEB-PRESS-plus/dp/477415654X%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D477415654X&#34; target=&#34;_blank&#34; title=&#34;コーディングを支える技術 ~成り立ちから学ぶプログラミング作法 (WEB+DB PRESS plus)&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/51nXP3TKXVL.jpg&#34; width=&#34;353&#34; height=&#34;500&#34; alt=&#34;コーディングを支える技術 ~成り立ちから学ぶプログラミング作法 (WEB+DB PRESS plus)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E6%8A%80%E8%A1%93-%7E%E6%88%90%E3%82%8A%E7%AB%8B%E3%81%A1%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E4%BD%9C%E6%B3%95-WEB-PRESS-plus/dp/477415654X%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D477415654X&#34; target=&#34;_blank&#34; title=&#34;コーディングを支える技術 ~成り立ちから学ぶプログラミング作法 (WEB+DB PRESS plus)&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/51nXP3TKXVL.jpg&#34; width=&#34;353&#34; height=&#34;500&#34; alt=&#34;コーディングを支える技術 ~成り立ちから学ぶプログラミング作法 (WEB+DB PRESS plus)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;今あるプログラミング言語の「あたりまえ」は試行錯誤の結果なんだなあと、目から鱗。&lt;/p&gt;
 
