@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gas on hikarock blog</title>
-    <link>http://blog.hika69.com/tags/gas/</link>
+    <link>https://blog.hika69.com/tags/gas/</link>
     <description>Recent content in Gas on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:19:20 +0900</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/tags/gas/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/gas/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Twitter 検索の結果を Google Drive のスプレッドシートに出力する (その2)</title>
-      <link>http://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/</link>
+      <link>https://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/</link>
       <pubDate>Wed, 20 Apr 2016 00:19:20 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/</guid>
+      <guid>https://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/</guid>
       <description>
 
 &lt;p&gt;以前書いたエントリ &lt;a href=&#34;http://blog.hika69.com/blog/2014/01/28/google-apps-script/&#34;&gt;Twitter 検索の結果を Google Drive のスプレッドシートに出力する&lt;/a&gt; の方法が現在使えなくなっているので、代替のスクリプトとその使い方を Gist に置きました。&lt;/p&gt;
@@ -32,10 +32,10 @@
     
     <item>
       <title>Twitter 検索の結果を Google Drive のスプレッドシートに出力する</title>
-      <link>http://blog.hika69.com/blog/2014/01/28/google-apps-script/</link>
+      <link>https://blog.hika69.com/blog/2014/01/28/google-apps-script/</link>
       <pubDate>Tue, 28 Jan 2014 17:07:27 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2014/01/28/google-apps-script/</guid>
+      <guid>https://blog.hika69.com/blog/2014/01/28/google-apps-script/</guid>
       <description>
 
 &lt;p&gt;以前Google Apps Scriptで作成したプログラムがTwitter API Ver.1の廃止で動かなくなってたので直しました。&lt;/p&gt;
@@ -46,7 +46,7 @@
 
 &lt;p&gt;&lt;strong&gt;2015/10/7 追記: Google Apps Scriptで&lt;code&gt;OAuthConfig&lt;/code&gt;が廃止されたため、このスクリプトは動きません。&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2016/4/20 追記: 何人かにこのスクリプトが使いたいと要望をもらったので、ちょっと面倒な方法ですが&lt;a href=&#34;http://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/&#34;&gt;ここ&lt;/a&gt;に現在動作するスクリプトの使い方を書きました。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2016/4/20 追記: 何人かにこのスクリプトが使いたいと要望をもらったので、ちょっと面倒な方法ですが&lt;a href=&#34;https://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/&#34;&gt;ここ&lt;/a&gt;に現在動作するスクリプトの使い方を書きました。&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;1-twitterアプリの作成:810c749fc8fa5127bcde89e372276574&#34;&gt;1) Twitterアプリの作成&lt;/h3&gt;
 

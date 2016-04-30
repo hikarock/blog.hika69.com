@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hexbin on hikarock blog</title>
-    <link>http://blog.hika69.com/tags/hexbin/</link>
+    <link>https://blog.hika69.com/tags/hexbin/</link>
     <description>Recent content in Hexbin on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Mon, 29 Dec 2014 21:12:44 +0000</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/tags/hexbin/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/hexbin/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hexbin に Casto ステッカーが追加された</title>
-      <link>http://blog.hika69.com/blog/2014/12/29/hexbin/</link>
+      <link>https://blog.hika69.com/blog/2014/12/29/hexbin/</link>
       <pubDate>Mon, 29 Dec 2014 21:12:44 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2014/12/29/hexbin/</guid>
+      <guid>https://blog.hika69.com/blog/2014/12/29/hexbin/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://hexb.in/&#34;&gt;hexbin&lt;/a&gt; は六角形の主にNode系のロゴを集めたサイト。運営しているのは NodeSchool に携わっている&lt;a href=&#34;https://twitter.com/maxogden&#34;&gt;@maxogden&lt;/a&gt;さん。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/hexbin.png&#34; alt=&#34;hexbin&#34; /&gt;&lt;/p&gt;

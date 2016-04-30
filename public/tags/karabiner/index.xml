@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Karabiner on hikarock blog</title>
-    <link>http://blog.hika69.com/tags/karabiner/</link>
+    <link>https://blog.hika69.com/tags/karabiner/</link>
     <description>Recent content in Karabiner on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Sun, 28 Dec 2014 13:01:51 +0000</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/tags/karabiner/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/karabiner/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Xcode のキー配置をカスタマイズする</title>
-      <link>http://blog.hika69.com/blog/2014/12/28/xcode-remap-key/</link>
+      <link>https://blog.hika69.com/blog/2014/12/28/xcode-remap-key/</link>
       <pubDate>Sun, 28 Dec 2014 13:01:51 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2014/12/28/xcode-remap-key/</guid>
+      <guid>https://blog.hika69.com/blog/2014/12/28/xcode-remap-key/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/XVimProject/XVim&#34;&gt;XVim&lt;/a&gt; を使いはじめたら、Xcodeのキー配置が、カスタマイズ済みのターミナル (およびVim) と微妙に違うのが気になってきた (ターミナルはControlキーをよく使うので、CommandキーとControlキーを入れ替えている) 。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://pqrs.org/osx/karabiner/index.html.ja&#34;&gt;Karabiner&lt;/a&gt; を使ってXcodeのCommandキーとControlキーを入れ替えた。&lt;/p&gt;

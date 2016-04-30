@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Design on hikarock blog</title>
-    <link>http://blog.hika69.com/tags/design/</link>
+    <link>https://blog.hika69.com/tags/design/</link>
     <description>Recent content in Design on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Mon, 28 Dec 2015 20:32:36 +0900</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>自作アプリのシンボルフォントを作った</title>
-      <link>http://blog.hika69.com/blog/2015/12/28/symbol-font/</link>
+      <link>https://blog.hika69.com/blog/2015/12/28/symbol-font/</link>
       <pubDate>Mon, 28 Dec 2015 20:32:36 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/12/28/symbol-font/</guid>
+      <guid>https://blog.hika69.com/blog/2015/12/28/symbol-font/</guid>
       <description>&lt;p&gt;『「シンボルフォント in Web」草稿』を参考に &lt;a href=&#34;https://www.sketchapp.com/&#34;&gt;Sketch&lt;/a&gt; と IcoMoon でシンボルフォントを作成した。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/cognitom/symbol-font-in-web&#34;&gt;cognitom/symbol-font-in-web&lt;/a&gt;&lt;/p&gt;

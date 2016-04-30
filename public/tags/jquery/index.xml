@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jquery on hikarock blog</title>
-    <link>http://blog.hika69.com/tags/jquery/</link>
+    <link>https://blog.hika69.com/tags/jquery/</link>
     <description>Recent content in Jquery on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Fri, 13 Feb 2015 00:55:57 +0000</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>editorify というライブラリを作った</title>
-      <link>http://blog.hika69.com/blog/2015/02/13/editorify/</link>
+      <link>https://blog.hika69.com/blog/2015/02/13/editorify/</link>
       <pubDate>Fri, 13 Feb 2015 00:55:57 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/02/13/editorify/</guid>
+      <guid>https://blog.hika69.com/blog/2015/02/13/editorify/</guid>
       <description>&lt;p&gt;エディタリファイと読むんだろうか。とにかく&lt;code&gt;fy&lt;/code&gt;ってつけたかっただけな感じで言いづらい jQuery プラグインを作った。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/hikarock/editorify&#34;&gt;hikarock/editorify&lt;/a&gt;&lt;/p&gt;
