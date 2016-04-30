@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on hikarock blog</title>
-    <link>http://blog.hika69.com/post/</link>
+    <link>https://blog.hika69.com/post/</link>
     <description>Recent content in Posts on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:19:20 +0900</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Twitter 検索の結果を Google Drive のスプレッドシートに出力する (2016年春版)</title>
-      <link>http://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/</link>
+      <link>https://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/</link>
       <pubDate>Wed, 20 Apr 2016 00:19:20 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/</guid>
+      <guid>https://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/</guid>
       <description>
 
 &lt;p&gt;以前書いたエントリ &lt;a href=&#34;http://blog.hika69.com/blog/2014/01/28/google-apps-script/&#34;&gt;Twitter 検索の結果を Google Drive のスプレッドシートに出力する&lt;/a&gt; の方法が現在使えなくなっているので、代替のスクリプトとその使い方を Gist に置きました。&lt;/p&gt;
@@ -34,10 +34,10 @@
     
     <item>
       <title>REST API のテストツール Frisby.js</title>
-      <link>http://blog.hika69.com/blog/2016/04/06/frisby/</link>
+      <link>https://blog.hika69.com/blog/2016/04/06/frisby/</link>
       <pubDate>Wed, 06 Apr 2016 22:26:17 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2016/04/06/frisby/</guid>
+      <guid>https://blog.hika69.com/blog/2016/04/06/frisby/</guid>
       <description>
 
 &lt;p&gt;REST API のテストツール Frisby.js を使ってみた。&lt;/p&gt;
@@ -169,10 +169,10 @@ frisby.create(&#39;GET:users&#39;)
     
     <item>
       <title>Raspberry Pi 3 のセットアップ</title>
-      <link>http://blog.hika69.com/blog/2016/04/02/raspberry-pi-3/</link>
+      <link>https://blog.hika69.com/blog/2016/04/02/raspberry-pi-3/</link>
       <pubDate>Sat, 02 Apr 2016 12:21:22 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2016/04/02/raspberry-pi-3/</guid>
+      <guid>https://blog.hika69.com/blog/2016/04/02/raspberry-pi-3/</guid>
       <description>
 
 &lt;p&gt;使いみちを決めないで Raspberry Pi 3 を買ってしまったけど、とりあえず OS いれて起動するまでセットアップしてみる。&lt;/p&gt;
@@ -252,10 +252,10 @@ $ sudo dd bs=1M if=/Users/hikarock/Downloads/2016-03-18-raspbian-jessie.img of=/
     
     <item>
       <title>BFG で巨大なファイルを削除して GitHub に push するまで</title>
-      <link>http://blog.hika69.com/blog/2016/01/25/bfg/</link>
+      <link>https://blog.hika69.com/blog/2016/01/25/bfg/</link>
       <pubDate>Mon, 25 Jan 2016 20:04:28 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2016/01/25/bfg/</guid>
+      <guid>https://blog.hika69.com/blog/2016/01/25/bfg/</guid>
       <description>&lt;p&gt;あるリポジトリを GitHub に push した時に、100MB 以上のファイルが含まれていたため拒否されてしまった。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;% git push origin master
@@ -350,10 +350,10 @@ To git@github.com:hikarock/some-big-repo
     
     <item>
       <title>スネークケースのファイル名・クラス名をパスカルケースにリネームする</title>
-      <link>http://blog.hika69.com/blog/2016/01/07/rename-snake-case-to-pascal-case/</link>
+      <link>https://blog.hika69.com/blog/2016/01/07/rename-snake-case-to-pascal-case/</link>
       <pubDate>Thu, 07 Jan 2016 21:46:22 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2016/01/07/rename-snake-case-to-pascal-case/</guid>
+      <guid>https://blog.hika69.com/blog/2016/01/07/rename-snake-case-to-pascal-case/</guid>
       <description>
 
 &lt;p&gt;あるプロジェクトで &lt;a href=&#34;http://www.php-fig.org/psr/psr-0/&#34;&gt;PSR-0&lt;/a&gt; に対応する作業に関連して、スネークケースのファイル名とクラス名をパスカルケースに変換する必要があった。&lt;/p&gt;
@@ -450,10 +450,10 @@ class FooBarBuzzController extends BarBuzzController {
     
     <item>
       <title>Node の CLI アプリと Vim などのエディタを連携する</title>
-      <link>http://blog.hika69.com/blog/2016/01/02/node-cli-open-editor/</link>
+      <link>https://blog.hika69.com/blog/2016/01/02/node-cli-open-editor/</link>
       <pubDate>Sat, 02 Jan 2016 18:56:05 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2016/01/02/node-cli-open-editor/</guid>
+      <guid>https://blog.hika69.com/blog/2016/01/02/node-cli-open-editor/</guid>
       <description>&lt;p&gt;&lt;code&gt;git commit&lt;/code&gt; をコマンドラインから実行した時に Vim が自動で開いてコミットコメントを入力できるが、このような挙動を Node のCLIアプリを自作するときにどうやるか調べた。&lt;/p&gt;
 
 &lt;p&gt;ずばりな回答が以下。&lt;/p&gt;
@@ -480,10 +480,10 @@ editor.on(&#39;exit&#39;, function() {
     
     <item>
       <title>自作アプリのシンボルフォントを作った</title>
-      <link>http://blog.hika69.com/blog/2015/12/28/symbol-font/</link>
+      <link>https://blog.hika69.com/blog/2015/12/28/symbol-font/</link>
       <pubDate>Mon, 28 Dec 2015 20:32:36 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/12/28/symbol-font/</guid>
+      <guid>https://blog.hika69.com/blog/2015/12/28/symbol-font/</guid>
       <description>&lt;p&gt;『「シンボルフォント in Web」草稿』を参考に &lt;a href=&#34;https://www.sketchapp.com/&#34;&gt;Sketch&lt;/a&gt; と IcoMoon でシンボルフォントを作成した。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/cognitom/symbol-font-in-web&#34;&gt;cognitom/symbol-font-in-web&lt;/a&gt;&lt;/p&gt;
@@ -502,13 +502,13 @@ editor.on(&#39;exit&#39;, function() {
     
     <item>
       <title>ブログを Hugo に変えた</title>
-      <link>http://blog.hika69.com/blog/2015/11/15/hugo/</link>
+      <link>https://blog.hika69.com/blog/2015/11/15/hugo/</link>
       <pubDate>Sun, 15 Nov 2015 13:07:37 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/11/15/hugo/</guid>
+      <guid>https://blog.hika69.com/blog/2015/11/15/hugo/</guid>
       <description>
 
-&lt;p&gt;&lt;a href=&#34;http://blog.hika69.com/blog/2015/07/01/roots/&#34;&gt;前回のエントリ&lt;/a&gt;で、Roots について調べていたけどなぜか Hugo でブログをリニューアルしていた。
+&lt;p&gt;&lt;a href=&#34;https://blog.hika69.com/blog/2015/07/01/roots/&#34;&gt;前回のエントリ&lt;/a&gt;で、Roots について調べていたけどなぜか Hugo でブログをリニューアルしていた。
 Octopress にくらべて生成速度が速くてとても快適だ。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo :: A fast and modern static website engine&lt;/a&gt;&lt;/p&gt;
@@ -580,10 +580,10 @@ Octopress にくらべて生成速度が速くてとても快適だ。&lt;/p&gt;
     
     <item>
       <title>静的サイトジェネレータ Roots の覚書</title>
-      <link>http://blog.hika69.com/blog/2015/07/01/roots/</link>
+      <link>https://blog.hika69.com/blog/2015/07/01/roots/</link>
       <pubDate>Wed, 01 Jul 2015 22:01:34 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/07/01/roots/</guid>
+      <guid>https://blog.hika69.com/blog/2015/07/01/roots/</guid>
       <description>&lt;p&gt;定期的にブログをリニューアルしたくなる病が発症する。&lt;/p&gt;
 
 &lt;p&gt;以下を条件に探してて roots がよさそうだったので試した。&lt;/p&gt;
@@ -682,10 +682,10 @@ Octopress にくらべて生成速度が速くてとても快適だ。&lt;/p&gt;
     
     <item>
       <title>eslint を vim-watchdogs から使う</title>
-      <link>http://blog.hika69.com/blog/2015/05/05/eslint/</link>
+      <link>https://blog.hika69.com/blog/2015/05/05/eslint/</link>
       <pubDate>Tue, 05 May 2015 17:03:27 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/05/05/eslint/</guid>
+      <guid>https://blog.hika69.com/blog/2015/05/05/eslint/</guid>
       <description>&lt;p&gt;vim-watchdogs から eslint が使えるように設定したのでメモ。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/osyo-manga/vim-watchdogs&#34;&gt;osyo-manga/vim-watchdogs&lt;/a&gt;&lt;/p&gt;
@@ -737,10 +737,10 @@ call watchdogs#setup(g:quickrun_config)
     
     <item>
       <title>JavaScript の IMAP クライアント browserbox で Gmail に接続する</title>
-      <link>http://blog.hika69.com/blog/2015/02/24/browserbox/</link>
+      <link>https://blog.hika69.com/blog/2015/02/24/browserbox/</link>
       <pubDate>Tue, 24 Feb 2015 12:47:45 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/02/24/browserbox/</guid>
+      <guid>https://blog.hika69.com/blog/2015/02/24/browserbox/</guid>
       <description>&lt;p&gt;iOS 標準のメモアプリのように、IMAP で Gmail と同期できるクライアントを JS で作れないかな、と思って&lt;a href=&#34;https://github.com/whiteout-io/browserbox&#34;&gt;whiteout-io/browserbox&lt;/a&gt;を試してみた。&lt;/p&gt;
 
 &lt;p&gt;もろもろフリーダムな環境にしたかったので&lt;a href=&#34;https://github.com/nwjs/nw.js&#34;&gt;nwjs/nw.js&lt;/a&gt;を使って環境を作る。&lt;/p&gt;
@@ -814,10 +814,10 @@ client.onauth = function() {
     
     <item>
       <title>新しくなった Stobo の紹介</title>
-      <link>http://blog.hika69.com/blog/2015/02/21/stobo/</link>
+      <link>https://blog.hika69.com/blog/2015/02/21/stobo/</link>
       <pubDate>Sat, 21 Feb 2015 19:28:21 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/02/21/stobo/</guid>
+      <guid>https://blog.hika69.com/blog/2015/02/21/stobo/</guid>
       <description>&lt;p&gt;StoboはMarkdownでプレゼン資料が作れて配信できるWebアプリです。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/&#34;&gt;Stobo&lt;/a&gt;&lt;/p&gt;
@@ -850,10 +850,10 @@ client.onauth = function() {
     
     <item>
       <title>npm init 時のデフォルト設定をカスタマイズする</title>
-      <link>http://blog.hika69.com/blog/2015/02/21/npm-init/</link>
+      <link>https://blog.hika69.com/blog/2015/02/21/npm-init/</link>
       <pubDate>Sat, 21 Feb 2015 19:17:39 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/02/21/npm-init/</guid>
+      <guid>https://blog.hika69.com/blog/2015/02/21/npm-init/</guid>
       <description>&lt;p&gt;&lt;code&gt;npm init&lt;/code&gt;した時にlicenceの種類やauthorの情報を自動的にいれる設定。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ npm config set init.author.name &amp;quot;hikarock&amp;quot;
@@ -878,10 +878,10 @@ init.author.url=http://blog.hika69.com
     
     <item>
       <title>editorify というライブラリを作った</title>
-      <link>http://blog.hika69.com/blog/2015/02/13/editorify/</link>
+      <link>https://blog.hika69.com/blog/2015/02/13/editorify/</link>
       <pubDate>Fri, 13 Feb 2015 00:55:57 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/02/13/editorify/</guid>
+      <guid>https://blog.hika69.com/blog/2015/02/13/editorify/</guid>
       <description>&lt;p&gt;エディタリファイと読むんだろうか。とにかく&lt;code&gt;fy&lt;/code&gt;ってつけたかっただけな感じで言いづらい jQuery プラグインを作った。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/hikarock/editorify&#34;&gt;hikarock/editorify&lt;/a&gt;&lt;/p&gt;
@@ -907,10 +907,10 @@ init.author.url=http://blog.hika69.com
     
     <item>
       <title>IB_DESIGNABLE を使おう</title>
-      <link>http://blog.hika69.com/blog/2015/02/10/ibdesignable/</link>
+      <link>https://blog.hika69.com/blog/2015/02/10/ibdesignable/</link>
       <pubDate>Tue, 10 Feb 2015 19:55:15 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/02/10/ibdesignable/</guid>
+      <guid>https://blog.hika69.com/blog/2015/02/10/ibdesignable/</guid>
       <description>
 
 &lt;p&gt;Xcode6 から使える &lt;code&gt;IB_DESIGNABLE&lt;/code&gt; と &lt;code&gt;IBInspectable&lt;/code&gt; が非常に便利なんだけど情報が少ない。&lt;/p&gt;

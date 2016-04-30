@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javascript on hikarock blog</title>
-    <link>http://blog.hika69.com/tags/javascript/</link>
+    <link>https://blog.hika69.com/tags/javascript/</link>
     <description>Recent content in Javascript on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:19:20 +0900</lastBuildDate>
-    <atom:link href="http://blog.hika69.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Twitter 検索の結果を Google Drive のスプレッドシートに出力する (2016年春版)</title>
-      <link>http://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/</link>
+      <link>https://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/</link>
       <pubDate>Wed, 20 Apr 2016 00:19:20 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/</guid>
+      <guid>https://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/</guid>
       <description>
 
 &lt;p&gt;以前書いたエントリ &lt;a href=&#34;http://blog.hika69.com/blog/2014/01/28/google-apps-script/&#34;&gt;Twitter 検索の結果を Google Drive のスプレッドシートに出力する&lt;/a&gt; の方法が現在使えなくなっているので、代替のスクリプトとその使い方を Gist に置きました。&lt;/p&gt;
@@ -34,10 +34,10 @@
     
     <item>
       <title>REST API のテストツール Frisby.js</title>
-      <link>http://blog.hika69.com/blog/2016/04/06/frisby/</link>
+      <link>https://blog.hika69.com/blog/2016/04/06/frisby/</link>
       <pubDate>Wed, 06 Apr 2016 22:26:17 +0900</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2016/04/06/frisby/</guid>
+      <guid>https://blog.hika69.com/blog/2016/04/06/frisby/</guid>
       <description>
 
 &lt;p&gt;REST API のテストツール Frisby.js を使ってみた。&lt;/p&gt;
@@ -169,10 +169,10 @@ frisby.create(&#39;GET:users&#39;)
     
     <item>
       <title>eslint を vim-watchdogs から使う</title>
-      <link>http://blog.hika69.com/blog/2015/05/05/eslint/</link>
+      <link>https://blog.hika69.com/blog/2015/05/05/eslint/</link>
       <pubDate>Tue, 05 May 2015 17:03:27 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/05/05/eslint/</guid>
+      <guid>https://blog.hika69.com/blog/2015/05/05/eslint/</guid>
       <description>&lt;p&gt;vim-watchdogs から eslint が使えるように設定したのでメモ。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/osyo-manga/vim-watchdogs&#34;&gt;osyo-manga/vim-watchdogs&lt;/a&gt;&lt;/p&gt;
@@ -224,10 +224,10 @@ call watchdogs#setup(g:quickrun_config)
     
     <item>
       <title>JavaScript の IMAP クライアント browserbox で Gmail に接続する</title>
-      <link>http://blog.hika69.com/blog/2015/02/24/browserbox/</link>
+      <link>https://blog.hika69.com/blog/2015/02/24/browserbox/</link>
       <pubDate>Tue, 24 Feb 2015 12:47:45 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/02/24/browserbox/</guid>
+      <guid>https://blog.hika69.com/blog/2015/02/24/browserbox/</guid>
       <description>&lt;p&gt;iOS 標準のメモアプリのように、IMAP で Gmail と同期できるクライアントを JS で作れないかな、と思って&lt;a href=&#34;https://github.com/whiteout-io/browserbox&#34;&gt;whiteout-io/browserbox&lt;/a&gt;を試してみた。&lt;/p&gt;
 
 &lt;p&gt;もろもろフリーダムな環境にしたかったので&lt;a href=&#34;https://github.com/nwjs/nw.js&#34;&gt;nwjs/nw.js&lt;/a&gt;を使って環境を作る。&lt;/p&gt;
@@ -301,10 +301,10 @@ client.onauth = function() {
     
     <item>
       <title>editorify というライブラリを作った</title>
-      <link>http://blog.hika69.com/blog/2015/02/13/editorify/</link>
+      <link>https://blog.hika69.com/blog/2015/02/13/editorify/</link>
       <pubDate>Fri, 13 Feb 2015 00:55:57 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2015/02/13/editorify/</guid>
+      <guid>https://blog.hika69.com/blog/2015/02/13/editorify/</guid>
       <description>&lt;p&gt;エディタリファイと読むんだろうか。とにかく&lt;code&gt;fy&lt;/code&gt;ってつけたかっただけな感じで言いづらい jQuery プラグインを作った。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/hikarock/editorify&#34;&gt;hikarock/editorify&lt;/a&gt;&lt;/p&gt;
@@ -330,10 +330,10 @@ client.onauth = function() {
     
     <item>
       <title>東京 Node 学園 14時限目で Rendr の話をした</title>
-      <link>http://blog.hika69.com/blog/2014/08/25/tng14/</link>
+      <link>https://blog.hika69.com/blog/2014/08/25/tng14/</link>
       <pubDate>Mon, 25 Aug 2014 21:05:21 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2014/08/25/tng14/</guid>
+      <guid>https://blog.hika69.com/blog/2014/08/25/tng14/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;
@@ -395,10 +395,10 @@ client.onauth = function() {
     
     <item>
       <title>rendr-handlebars で部分テンプレートを使う</title>
-      <link>http://blog.hika69.com/blog/2014/04/23/rendr-handlebars/</link>
+      <link>https://blog.hika69.com/blog/2014/04/23/rendr-handlebars/</link>
       <pubDate>Wed, 23 Apr 2014 00:10:08 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2014/04/23/rendr-handlebars/</guid>
+      <guid>https://blog.hika69.com/blog/2014/04/23/rendr-handlebars/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rendrjs/rendr-handlebars&#34;&gt;rendr-handlebars&lt;/a&gt;でpartial (部分テンプレート) が使えることにさっき気づいた。&lt;/p&gt;
 
 &lt;p&gt;引数に&lt;code&gt;app/templates&lt;/code&gt;以下のパスを指定する。&lt;/p&gt;
@@ -423,10 +423,10 @@ client.onauth = function() {
     
     <item>
       <title>Chrome 拡張「シンプル翻訳」を更新</title>
-      <link>http://blog.hika69.com/blog/2014/02/24/simple-honyaku/</link>
+      <link>https://blog.hika69.com/blog/2014/02/24/simple-honyaku/</link>
       <pubDate>Mon, 24 Feb 2014 14:47:27 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2014/02/24/simple-honyaku/</guid>
+      <guid>https://blog.hika69.com/blog/2014/02/24/simple-honyaku/</guid>
       <description>&lt;p&gt;Chrome 拡張機能の「&lt;a href=&#34;https://chrome.google.com/webstore/detail/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E7%BF%BB%E8%A8%B3/pdnmkammncjnifdeclafllianknnoaif&#34;&gt;シンプル翻訳&lt;/a&gt;」を2年ぶりに更新しました。&lt;/p&gt;
 
 &lt;p&gt;素敵なバナーやアイコンは &lt;a href=&#34;https://twitter.com/meganejunkie&#34;&gt;@meganejunkie&lt;/a&gt; 先生に作ってもらいました (ありがとうございます) 。&lt;/p&gt;
@@ -458,10 +458,10 @@ client.onauth = function() {
     
     <item>
       <title>Twitter 検索の結果を Google Drive のスプレッドシートに出力する</title>
-      <link>http://blog.hika69.com/blog/2014/01/28/google-apps-script/</link>
+      <link>https://blog.hika69.com/blog/2014/01/28/google-apps-script/</link>
       <pubDate>Tue, 28 Jan 2014 17:07:27 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2014/01/28/google-apps-script/</guid>
+      <guid>https://blog.hika69.com/blog/2014/01/28/google-apps-script/</guid>
       <description>
 
 &lt;p&gt;以前Google Apps Scriptで作成したプログラムがTwitter API Ver.1の廃止で動かなくなってたので直しました。&lt;/p&gt;
@@ -472,7 +472,7 @@ client.onauth = function() {
 
 &lt;p&gt;&lt;strong&gt;2015/10/7 追記: Google Apps Scriptで&lt;code&gt;OAuthConfig&lt;/code&gt;が廃止されたため、このスクリプトは動きません。&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;2016/4/20 追記: 何人かにこのスクリプトが使いたいと要望をもらったので、ちょっと面倒な方法ですが&lt;a href=&#34;http://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/&#34;&gt;ここ&lt;/a&gt;に現在動作するスクリプトの使い方を書きました。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2016/4/20 追記: 何人かにこのスクリプトが使いたいと要望をもらったので、ちょっと面倒な方法ですが&lt;a href=&#34;https://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/&#34;&gt;ここ&lt;/a&gt;に現在動作するスクリプトの使い方を書きました。&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;1-twitterアプリの作成:810c749fc8fa5127bcde89e372276574&#34;&gt;1) Twitterアプリの作成&lt;/h3&gt;
 
@@ -555,10 +555,10 @@ client.onauth = function() {
     
     <item>
       <title>Hoodie の話をした</title>
-      <link>http://blog.hika69.com/blog/2013/11/20/klab-js/</link>
+      <link>https://blog.hika69.com/blog/2013/11/20/klab-js/</link>
       <pubDate>Wed, 20 Nov 2013 22:43:00 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2013/11/20/klab-js/</guid>
+      <guid>https://blog.hika69.com/blog/2013/11/20/klab-js/</guid>
       <description>&lt;p&gt;KLab さんの JavaScript 勉強会で Hoodie の話をしました。&lt;/p&gt;
 
 &lt;iframe src=&#34;http://www.storyboards.jp/widget/ycy7it&#34;&gt;&lt;/iframe&gt;
@@ -569,10 +569,10 @@ client.onauth = function() {
     
     <item>
       <title>はじめての Node.js</title>
-      <link>http://blog.hika69.com/blog/2013/06/13/learning-node-js/</link>
+      <link>https://blog.hika69.com/blog/2013/06/13/learning-node-js/</link>
       <pubDate>Thu, 13 Jun 2013 23:54:00 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2013/06/13/learning-node-js/</guid>
+      <guid>https://blog.hika69.com/blog/2013/06/13/learning-node-js/</guid>
       <description>&lt;p&gt;読み始めた。&lt;/p&gt;
 
 &lt;p&gt;分厚いので電書版を出してほしい。&lt;/p&gt;
@@ -583,10 +583,10 @@ client.onauth = function() {
     
     <item>
       <title>Grunt を導入</title>
-      <link>http://blog.hika69.com/blog/2013/06/01/grunt-js/</link>
+      <link>https://blog.hika69.com/blog/2013/06/01/grunt-js/</link>
       <pubDate>Sat, 01 Jun 2013 22:28:00 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2013/06/01/grunt-js/</guid>
+      <guid>https://blog.hika69.com/blog/2013/06/01/grunt-js/</guid>
       <description>
 
 &lt;p&gt;Gruntを&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;に導入するためのメモ。&lt;/p&gt;
@@ -685,10 +685,10 @@ package.jsonに依存関係が記録されていれば&lt;code&gt;npm install&lt
     
     <item>
       <title>Underscore.js の _.debounce が便利そう</title>
-      <link>http://blog.hika69.com/blog/2013/05/28/underscore-js/</link>
+      <link>https://blog.hika69.com/blog/2013/05/28/underscore-js/</link>
       <pubDate>Tue, 28 May 2013 21:53:00 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2013/05/28/underscore-js/</guid>
+      <guid>https://blog.hika69.com/blog/2013/05/28/underscore-js/</guid>
       <description>&lt;p&gt;「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.jsガイドブック&lt;/a&gt;」の読書会2回目。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/Backbone-js%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF-%E9%AB%98%E6%A9%8B-%E4%BE%91%E4%B9%85/dp/4899773501%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4899773501&#34; target=&#34;_blank&#34; title=&#34;Backbone.jsガイドブック&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/31tI0WaZukL.jpg&#34; width=&#34;394&#34; height=&#34;500&#34; alt=&#34;Backbone.jsガイドブック&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -726,10 +726,10 @@ package.jsonに依存関係が記録されていれば&lt;code&gt;npm install&lt
     
     <item>
       <title>JavaScript 忍者を買った</title>
-      <link>http://blog.hika69.com/blog/2013/05/27/javascript-ninja/</link>
+      <link>https://blog.hika69.com/blog/2013/05/27/javascript-ninja/</link>
       <pubDate>Mon, 27 May 2013 20:40:00 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2013/05/27/javascript-ninja/</guid>
+      <guid>https://blog.hika69.com/blog/2013/05/27/javascript-ninja/</guid>
       <description>&lt;p&gt;買ってきた。&lt;/p&gt;
 
 &lt;p&gt;目次だけざっと見たけど &lt;code&gt;with&lt;/code&gt; についてけっこうページさいてる。
@@ -743,10 +743,10 @@ package.jsonに依存関係が記録されていれば&lt;code&gt;npm install&lt
     
     <item>
       <title>「Backbone.js ガイドブック」読書会がはじまった</title>
-      <link>http://blog.hika69.com/blog/2013/05/25/backbone-js/</link>
+      <link>https://blog.hika69.com/blog/2013/05/25/backbone-js/</link>
       <pubDate>Sat, 25 May 2013 01:04:00 +0000</pubDate>
       
-      <guid>http://blog.hika69.com/blog/2013/05/25/backbone-js/</guid>
+      <guid>https://blog.hika69.com/blog/2013/05/25/backbone-js/</guid>
       <description>
 
 &lt;p&gt;社内で「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.js ガイドブック&lt;/a&gt;」の読書会が始まったので参加した。&lt;/p&gt;
