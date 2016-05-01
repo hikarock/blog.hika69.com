@@ -20,6 +20,7 @@ canonifyurls = true
   logo = "images/logo.png"
   githubName = "hikarock"
   twitterName = "hika69"
+  googleAnalyticsUserID = "UA-16254980-7"
   hideHUGOSupport = false
   customHeaderPartial = "customHeader.html"
   customFooterPartial = "customFooter.html"
