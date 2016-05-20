@@ -143,7 +143,7 @@
     </header>
 
     <section class="post-content">
-      <p>PHP の<a href="http://www.php-fig.org/psr/psr-2/">PSR-2</a> で「最終行に空行を入れる」という規約がある。</p>
+      <p>PHP の <a href="http://www.php-fig.org/psr/psr-2/">PSR-2</a> で「最終行に空行を入れる」という規約がある。</p>
 
 <blockquote>
 <p>All PHP files MUST end with a single blank line.</p>
@@ -159,11 +159,11 @@
 <p>viのような由緒正しきテキストエディターは、この定義を忠実に守っており、行末には必ず改行が入る仕様になっている。</p>
 </blockquote>
 
-<p>このため Vim で最終行に <strong>改行が見える</strong> ように記述している場合、最終行に改行が連続(LFLF)して入力されている。</p>
+<p>このため Vim で最終行に <strong>空行が見える</strong> ように記述している場合、最終行に改行が連続(LFLF)して入力されている。</p>
 
-<p>GitHub でも最終行の空行は表示されない。本当はLFが入力されていて PSR-2 の規約を満たしていたのに、Vim でも GitHub でも見えない<sup class="footnote-ref" id="fnref:068fbfaf1d29160431985fc269a051fe:2"><a rel="footnote" href="#fn:068fbfaf1d29160431985fc269a051fe:2">2</a></sup>ので LFLF を入力してしまっていた。</p>
+<p>GitHub でも最終行の空行は表示されないが、実際はLFが入力されていて PSR-2 の規約を満たしていたのに、Vim でも GitHub でも見えない<sup class="footnote-ref" id="fnref:068fbfaf1d29160431985fc269a051fe:2"><a rel="footnote" href="#fn:068fbfaf1d29160431985fc269a051fe:2">2</a></sup>ため LFLF を入力してしまっていた。</p>
 
-<p>ということで PSR-2 に従う場合、Vim では最終行に改行が見えない状態であるのが正解のようだ。</p>
+<p>ということで PSR-2 に従う場合、Vim では最終行の <strong>空行が見えない状態が正解</strong> のようだ。</p>
 <div class="footnotes">
 
 <hr />
