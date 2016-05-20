@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  	<meta property="og:title" content=" PSR-2 の最終行の空行についての規約を勘違いしていた &middot;  hikarock blog" />
+  	<meta property="og:site_name" content="hikarock blog" />
+  	<meta property="og:url" content="http://localhost:1313/blog/2016/05/20/crlf/" />
+
+    
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="2016-05-20T23:29:22&#43;09:00" />
+
+    
+    <meta property="og:article:tag" content="vim" />
+    
+    <meta property="og:article:tag" content="php" />
+    
+    
+
+  <title>
+     PSR-2 の最終行の空行についての規約を勘違いしていた &middot;  hikarock blog
+  </title>
+
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://localhost:1313/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+
+    
+      
+          <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="hikarock blog" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.14" />
+
+    <link rel="canonical" href="http://localhost:1313/blog/2016/05/20/crlf/" />
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-16254980-7', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.css">
+<link rel="apple-touch-icon" sizes="57x57" href="http://localhost:1313/images/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://localhost:1313/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://localhost:1313/images/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://localhost:1313/images/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://localhost:1313/images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://localhost:1313/images/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://localhost:1313/images/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon-180x180.png">
+
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+    </ul>
+    
+    
+    <a class="subscribe-button icon-feed" href="http://localhost:1313/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+      <a class="blog-logo" href="http://localhost:1313/"><img src="http://localhost:1313/images/logo.png" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="http://localhost:1313/index.xml">&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">PSR-2 の最終行の空行についての規約を勘違いしていた</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2016-05-20T23:29:22&#43;09:00">
+            May 20, 2016
+          </time>
+        
+         
+          <span class="post-tag small"><a href="http://localhost:1313/tags/vim/">#vim</a></span>
+         
+          <span class="post-tag small"><a href="http://localhost:1313/tags/php/">#php</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      <p>PHP の<a href="http://www.php-fig.org/psr/psr-2/">PSR-2</a> で「最終行に空行を入れる」という規約がある。</p>
+
+<blockquote>
+<p>All PHP files MUST end with a single blank line.</p>
+</blockquote>
+
+<p>この規約に従っていたつもりなんだけど、勘違いしていたことがわかった<sup class="footnote-ref" id="fnref:84d43292760455ae056b5b361304c71d:1"><a rel="footnote" href="#fn:84d43292760455ae056b5b361304c71d:1">1</a></sup>ので備忘。</p>
+
+<p><a href="https://firegoby.jp/archives/2391">UNIXの行の定義とviの改行コード | Firegoby</a> より引用</p>
+
+<blockquote>
+<p>POSIXでは「Unix においてテキストファイルとは行の集合であり、行とは改行文字で終わるものと定義される」と定義されている。</p>
+
+<p>viのような由緒正しきテキストエディターは、この定義を忠実に守っており、行末には必ず改行が入る仕様になっている。</p>
+</blockquote>
+
+<p>このため Vim で最終行に <strong>改行が見える</strong> ように記述している場合、最終行に改行が連続(LFLF)して入力されている。</p>
+
+<p>GitHub でも最終行の空行は表示されない。本当はLFが入力されていて PSR-2 の規約を満たしていたのに、Vim でも GitHub でも見えない<sup class="footnote-ref" id="fnref:84d43292760455ae056b5b361304c71d:2"><a rel="footnote" href="#fn:84d43292760455ae056b5b361304c71d:2">2</a></sup>ので LFLF を入力してしまっていた。</p>
+
+<p>ということで PSR-2 に従う場合、Vim では最終行に改行が見えない状態であるのが正解のようだ。</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:84d43292760455ae056b5b361304c71d:1">発端はプロジェクトの新メンバーのエディタが Atom で、僕が Vim だったため表示が違ったこと
+ <a class="footnote-return" href="#fnref:84d43292760455ae056b5b361304c71d:1"><sup>[return]</sup></a></li>
+<li id="fn:84d43292760455ae056b5b361304c71d:2">GitHub の表示については PHP-FIG のメンバーである <a href="https://github.com/cakephp/cakephp/blob/master/src/Collection/Collection.php#L101">CakePHP</a> や <a href="https://github.com/drupal/drupal/blob/8.1.x/core/lib/Drupal.php#L724">Drual</a> の .php ファイルの最終行の表示を確認した。
+ <a class="footnote-return" href="#fnref:84d43292760455ae056b5b361304c71d:2"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+    <figure class="author-image">
+        <a class="img" href="http://localhost:1313/" style="background-image: url(http://localhost:1313/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+    </figure>
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://localhost:1313/">hikarock</a></h4>
+  
+  <p>街に詳しい。</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Tokyo, Japan</span>
+    <span class="author-link icon-link"><a href="https://hika69.com">https://hika69.com</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=PSR-2%20%e3%81%ae%e6%9c%80%e7%b5%82%e8%a1%8c%e3%81%ae%e7%a9%ba%e8%a1%8c%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6%e3%81%ae%e8%a6%8f%e7%b4%84%e3%82%92%e5%8b%98%e9%81%95%e3%81%84%e3%81%97%e3%81%a6%e3%81%84%e3%81%9f&amp;url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f05%2f20%2fcrlf%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f05%2f20%2fcrlf%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f05%2f20%2fcrlf%2f&amp;description=PSR-2%20%e3%81%ae%e6%9c%80%e7%b5%82%e8%a1%8c%e3%81%ae%e7%a9%ba%e8%a1%8c%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6%e3%81%ae%e8%a6%8f%e7%b4%84%e3%82%92%e5%8b%98%e9%81%95%e3%81%84%e3%81%97%e3%81%a6%e3%81%84%e3%81%9f"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f05%2f20%2fcrlf%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+  </footer>
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://localhost:1313/js/jquery.js"></script>
+    <script type="text/javascript" src="http://localhost:1313/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://localhost:1313/js/index.js"></script>
+    
+        <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>
+
