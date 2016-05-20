@@ -7,8 +7,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:19:20 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 20 May 2016 23:29:22 +0900</lastBuildDate>
     <atom:link href="https://blog.hika69.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>PSR-2 の最終行の空行についての規約を勘違いしていた</title>
+      <link>https://blog.hika69.com/blog/2016/05/20/psr-2-single-blank-line/</link>
+      <pubDate>Fri, 20 May 2016 23:29:22 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2016/05/20/psr-2-single-blank-line/</guid>
+      <description>&lt;p&gt;PHP の&lt;a href=&#34;http://www.php-fig.org/psr/psr-2/&#34;&gt;PSR-2&lt;/a&gt; で「最終行に空行を入れる」という規約がある。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;All PHP files MUST end with a single blank line.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;この規約に従っていたつもりなんだけど、勘違いしていたことがわかった&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:068fbfaf1d29160431985fc269a051fe:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:068fbfaf1d29160431985fc269a051fe:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;ので備忘。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://firegoby.jp/archives/2391&#34;&gt;UNIXの行の定義とviの改行コード | Firegoby&lt;/a&gt; より引用&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;POSIXでは「Unix においてテキストファイルとは行の集合であり、行とは改行文字で終わるものと定義される」と定義されている。&lt;/p&gt;
+
+&lt;p&gt;viのような由緒正しきテキストエディターは、この定義を忠実に守っており、行末には必ず改行が入る仕様になっている。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;このため Vim で最終行に &lt;strong&gt;改行が見える&lt;/strong&gt; ように記述している場合、最終行に改行が連続(LFLF)して入力されている。&lt;/p&gt;
+
+&lt;p&gt;GitHub でも最終行の空行は表示されない。本当はLFが入力されていて PSR-2 の規約を満たしていたのに、Vim でも GitHub でも見えない&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:068fbfaf1d29160431985fc269a051fe:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:068fbfaf1d29160431985fc269a051fe:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;ので LFLF を入力してしまっていた。&lt;/p&gt;
+
+&lt;p&gt;ということで PSR-2 に従う場合、Vim では最終行に改行が見えない状態であるのが正解のようだ。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:068fbfaf1d29160431985fc269a051fe:1&#34;&gt;発端はプロジェクトの新メンバーのエディタが Atom で、僕が Vim だったため表示が違ったこと
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:068fbfaf1d29160431985fc269a051fe:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:068fbfaf1d29160431985fc269a051fe:2&#34;&gt;GitHub の表示については PHP-FIG のメンバーである &lt;a href=&#34;https://github.com/cakephp/cakephp/blob/master/src/Collection/Collection.php#L101&#34;&gt;CakePHP&lt;/a&gt; や &lt;a href=&#34;https://github.com/drupal/drupal/blob/8.1.x/core/lib/Drupal.php#L724&#34;&gt;Drual&lt;/a&gt; の .php ファイルの最終行の表示を確認した。
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:068fbfaf1d29160431985fc269a051fe:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Twitter 検索の結果を Google Drive のスプレッドシートに出力する (2016年春版)</title>
@@ -902,81 +943,6 @@ init.author.url=http://blog.hika69.com
 &lt;p&gt;&lt;code&gt;left&lt;/code&gt; とか &lt;code&gt;start&lt;/code&gt; とかでカーソル移動できるので &lt;code&gt;[]&lt;/code&gt; の中にカーソルが移動している状態になる。&lt;a href=&#34;https://dl.dropboxusercontent.com/u/459142/editorify/index.html&#34;&gt;DEMO&lt;/a&gt;はこちら。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/&#34;&gt;Stobo&lt;/a&gt; のエディタ部分を絶賛改造中でモンスターブランチがもうスカイツリーくらいに育っているんだけど、その中の成果が分割されて editorify になった。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>IB_DESIGNABLE を使おう</title>
-      <link>https://blog.hika69.com/blog/2015/02/10/ibdesignable/</link>
-      <pubDate>Tue, 10 Feb 2015 19:55:15 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/blog/2015/02/10/ibdesignable/</guid>
-      <description>
-
-&lt;p&gt;Xcode6 から使える &lt;code&gt;IB_DESIGNABLE&lt;/code&gt; と &lt;code&gt;IBInspectable&lt;/code&gt; が非常に便利なんだけど情報が少ない。&lt;/p&gt;
-
-&lt;p&gt;ので、基本とかは置いといて、とりあえず知ってることを雑多にまとめてみる。&lt;/p&gt;
-
-&lt;h3 id=&#34;有用なリンク:37abba03a2e327338726ad5c5fd40ef4&#34;&gt;有用なリンク&lt;/h3&gt;
-
-&lt;p&gt;とりあえずここらへんを眺めると良いとおもう。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.apple.com/library/ios/recipes/xcode_help-IB_objects_media/chapters/CreatingaLiveViewofaCustomObject.html&#34;&gt;Creating a Custom View That Renders in Interface Builder&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://nshipster.com/ibinspectable-ibdesignable/&#34;&gt;IBInspectable / IBDesignable - NSHipster&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.weheartswift.com/make-awesome-ui-components-ios-8-using-swift-xcode-6/&#34;&gt;How to make awesome UI components in iOS 8 using Swift and XCode 6 - IBDesignable and IBInspectable&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;ib-designable-な-view-は-uiview-もしくは-nsview-を継承して作る:37abba03a2e327338726ad5c5fd40ef4&#34;&gt;&lt;code&gt;IB_DESIGNABLE&lt;/code&gt; な View は &lt;code&gt;UIView&lt;/code&gt; もしくは &lt;code&gt;NSView&lt;/code&gt; を継承して作る&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;UITableViewCell&lt;/code&gt; とか継承して &lt;code&gt;IB_DESIGNABLE&lt;/code&gt; を設定しても IB 上では動かない。Preview でも同様に反映されなかった。残念。&lt;/p&gt;
-
-&lt;p&gt;ただし &lt;code&gt;IBInspectable&lt;/code&gt; は使える。コードを書かないで値を設定できるだけでも便利なので、使い道はあると思う。
-心の目で見るんだ。&lt;/p&gt;
-
-&lt;h3 id=&#34;初期値を設定する:37abba03a2e327338726ad5c5fd40ef4&#34;&gt;初期値を設定する&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;initWithCoder&lt;/code&gt; で設定する。ただし、ここで設定した初期値が IB 上のフォームで選択状態になってたりはしない。心の目で見るんだ。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-objective-c&#34;&gt;- (id)initWithCoder:(NSCoder *)aDecoder {
-  self = [super initWithCoder:aDecoder];
-  if (self != nil) {
-    self.cornerRadius = 8;
-    self.borderWidth  = 0.5;
-  }
-  return self;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;ibinspectable-で使える型:37abba03a2e327338726ad5c5fd40ef4&#34;&gt;&lt;code&gt;IBInspectable&lt;/code&gt; で使える型&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;enum&lt;/code&gt; が使えると便利そうだと思ったけどだめだった。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;上でも紹介している、&lt;a href=&#34;https://www.weheartswift.com/make-awesome-ui-components-ios-8-using-swift-xcode-6/&#34;&gt;このエントリ&lt;/a&gt;
-にある型を試した。他にも使える型があるのかもしれない。&lt;/p&gt;
-
-&lt;h3 id=&#34;要素の消し忘れに注意:37abba03a2e327338726ad5c5fd40ef4&#34;&gt;要素の消し忘れに注意&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;IBInspectable&lt;/code&gt; で設定した値は &lt;code&gt;Identity Inspector&lt;/code&gt; 上の &lt;code&gt;User Defined Runtime Attributes&lt;/code&gt; 上に保存される。
-プロパティを設定後に、プロパティ名を変更したり削除したりすると、ここに迷子の要素が残ってしまう。&lt;/p&gt;
-
-&lt;p&gt;迷子の要素がある画面を iOS7.1 で開いたら何もログを出さずに落ちたが、要素を削除したら問題なく起動した(iOS8 では問題なかった)。やっかいだ。&lt;/p&gt;
-
-&lt;h3 id=&#34;ibinspectable-な-view-を継承する:37abba03a2e327338726ad5c5fd40ef4&#34;&gt;&lt;code&gt;IBInspectable&lt;/code&gt; な View を継承する&lt;/h3&gt;
-
-&lt;p&gt;継承した &lt;code&gt;IBInspectable&lt;/code&gt; な View のプロパティが両方 IB 上に表示される。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;2つの View でそれぞれ設定した値がストーリーボード上に反映されている。&lt;/p&gt;
-
-&lt;p&gt;(&lt;code&gt;UIView&lt;/code&gt; を継承している &lt;code&gt;UITableViewCell&lt;/code&gt; の場合は &lt;code&gt;IB_DESIGNABLE&lt;/code&gt; が動かなかったので、このへんの仕組みがよくわからない感じ)&lt;/p&gt;
 </description>
     </item>
     

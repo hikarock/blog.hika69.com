@@ -7,8 +7,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Tue, 05 May 2015 17:03:27 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 May 2016 23:29:22 +0900</lastBuildDate>
     <atom:link href="https://blog.hika69.com/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>PSR-2 の最終行の空行についての規約を勘違いしていた</title>
+      <link>https://blog.hika69.com/blog/2016/05/20/psr-2-single-blank-line/</link>
+      <pubDate>Fri, 20 May 2016 23:29:22 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2016/05/20/psr-2-single-blank-line/</guid>
+      <description>&lt;p&gt;PHP の&lt;a href=&#34;http://www.php-fig.org/psr/psr-2/&#34;&gt;PSR-2&lt;/a&gt; で「最終行に空行を入れる」という規約がある。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;All PHP files MUST end with a single blank line.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;この規約に従っていたつもりなんだけど、勘違いしていたことがわかった&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:068fbfaf1d29160431985fc269a051fe:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:068fbfaf1d29160431985fc269a051fe:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;ので備忘。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://firegoby.jp/archives/2391&#34;&gt;UNIXの行の定義とviの改行コード | Firegoby&lt;/a&gt; より引用&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;POSIXでは「Unix においてテキストファイルとは行の集合であり、行とは改行文字で終わるものと定義される」と定義されている。&lt;/p&gt;
+
+&lt;p&gt;viのような由緒正しきテキストエディターは、この定義を忠実に守っており、行末には必ず改行が入る仕様になっている。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;このため Vim で最終行に &lt;strong&gt;改行が見える&lt;/strong&gt; ように記述している場合、最終行に改行が連続(LFLF)して入力されている。&lt;/p&gt;
+
+&lt;p&gt;GitHub でも最終行の空行は表示されない。本当はLFが入力されていて PSR-2 の規約を満たしていたのに、Vim でも GitHub でも見えない&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:068fbfaf1d29160431985fc269a051fe:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:068fbfaf1d29160431985fc269a051fe:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;ので LFLF を入力してしまっていた。&lt;/p&gt;
+
+&lt;p&gt;ということで PSR-2 に従う場合、Vim では最終行に改行が見えない状態であるのが正解のようだ。&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:068fbfaf1d29160431985fc269a051fe:1&#34;&gt;発端はプロジェクトの新メンバーのエディタが Atom で、僕が Vim だったため表示が違ったこと
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:068fbfaf1d29160431985fc269a051fe:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:068fbfaf1d29160431985fc269a051fe:2&#34;&gt;GitHub の表示については PHP-FIG のメンバーである &lt;a href=&#34;https://github.com/cakephp/cakephp/blob/master/src/Collection/Collection.php#L101&#34;&gt;CakePHP&lt;/a&gt; や &lt;a href=&#34;https://github.com/drupal/drupal/blob/8.1.x/core/lib/Drupal.php#L724&#34;&gt;Drual&lt;/a&gt; の .php ファイルの最終行の表示を確認した。
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:068fbfaf1d29160431985fc269a051fe:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>eslint を vim-watchdogs から使う</title>
