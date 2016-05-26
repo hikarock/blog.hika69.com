@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  	<meta property="og:title" content=" Chrome 拡張の Inline Installation に対応する &middot;  hikarock blog" />
+  	<meta property="og:site_name" content="hikarock blog" />
+  	<meta property="og:url" content="http://localhost:1313/blog/2016/05/27/chrome-extension-inline-install/" />
+
+    
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="2016-05-27T00:20:53&#43;09:00" />
+
+    
+    <meta property="og:article:tag" content="javascript" />
+    
+    <meta property="og:article:tag" content="chrome-extension" />
+    
+    
+
+  <title>
+     Chrome 拡張の Inline Installation に対応する &middot;  hikarock blog
+  </title>
+
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://localhost:1313/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+
+    
+      
+          <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="hikarock blog" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.14" />
+
+    <link rel="canonical" href="http://localhost:1313/blog/2016/05/27/chrome-extension-inline-install/" />
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-16254980-7', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.css">
+<link rel="apple-touch-icon" sizes="57x57" href="http://localhost:1313/images/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://localhost:1313/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://localhost:1313/images/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://localhost:1313/images/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://localhost:1313/images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://localhost:1313/images/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://localhost:1313/images/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon-180x180.png">
+
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+    </ul>
+    
+    
+    <a class="subscribe-button icon-feed" href="http://localhost:1313/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+      <a class="blog-logo" href="http://localhost:1313/"><img src="http://localhost:1313/images/logo.png" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="http://localhost:1313/index.xml">&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">Chrome 拡張の Inline Installation に対応する</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2016-05-27T00:20:53&#43;09:00">
+            May 27, 2016
+          </time>
+        
+         
+          <span class="post-tag small"><a href="http://localhost:1313/tags/javascript/">#javascript</a></span>
+         
+          <span class="post-tag small"><a href="http://localhost:1313/tags/chrome-extension/">#chrome-extension</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p>Chrome 拡張を Chrome ウェブストア に遷移せずにインストールできる Inline Installation に対応した時の覚書。</p>
+
+<h3 id="オフィシャルのドキュメント:97c4b7edc7ed1d60b05fc5875229f18c">オフィシャルのドキュメント</h3>
+
+<p><a href="https://developer.chrome.com/webstore/inline_installation">Using Inline Installation - Google Chrome</a></p>
+
+<h3 id="手順:97c4b7edc7ed1d60b05fc5875229f18c">手順</h3>
+
+<p>あらかじめ Chrome ウェブストアのデベロッパー ダッシュボードと Google Search Console で、Inline Installation を導入したいウェブサイトを設定する。</p>
+
+<p>Inline Installation を設置したいサイトの head 内に link タグを挿入する。<code>{itemId}</code> に該当の拡張機能のURLに含まれるIDを指定する。</p>
+
+<pre><code class="language-html">&lt;link rel=&quot;chrome-webstore-item&quot; href=&quot;https://chrome.google.com/webstore/detail/{itemId}&quot;&gt;
+</code></pre>
+
+<p>リンクやボタンなどを押下したタイミングで Inline Installation を実行する。</p>
+
+<pre><code class="language-javascript">$(document).on('click', '.install-button', function(evt) {
+    evt.preventDefault();
+
+    if (!('chrome' in window)) {
+        console.log('拡張機能をインストールするには、Google Chrome をご利用ください');
+        return;
+    }
+
+    chrome.webstore.install('', function() {
+        // successCallback
+    }, function(errMessage, code) {
+        // failureCallback
+        console.log(errMessage, code);
+    });
+});
+</code></pre>
+
+<h3 id="インストール済みか判定して表示を変更する:97c4b7edc7ed1d60b05fc5875229f18c">インストール済みか判定して表示を変更する</h3>
+
+<p><code>chrome.app.isInstalled</code> の値を判定すればよいだけかと思っていたけど、Chrome 拡張機能の場合はこの値は常に false になる。</p>
+
+<p><a href="http://stackoverflow.com/questions/18275960/chrome-app-isinstalled-always-returns-false-for-google-chrome-extensions">chrome.app.isInstalled always returns false for Google Chrome extensions? - Stack Overflow</a></p>
+
+<p>この回答によると <code>isInstalled</code> が使えるのは Hosted apps の場合のみで、拡張機能の場合は <a href="https://developer.chrome.com/extensions/content_scripts">Content Script</a> で以下のように body に判定用の DOM を挿入しないといけないようだ。</p>
+
+<pre><code class="language-javascript">$('body').append($('&lt;div&gt;').attr('id', 'extension-is-installed'));
+</code></pre>
+
+<pre><code class="language-javascript">if ($('#extension-is-installed').length &gt; 0) {
+  $('#install-button').css('display', 'none');
+}
+</code></pre>
+
+<p>このようにインストール済みか判定をしないとどうなるかというと、インストール済みでボタンを押下しても初回と同様のダイアログが表示されて、再インストールが実行されるだけ。</p>
+
+<p>インストール済みの場合に拡張機能のチュートリアルを表示したい、とかでない限りはこの対応はいらない気がする。</p>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+    <figure class="author-image">
+        <a class="img" href="http://localhost:1313/" style="background-image: url(http://localhost:1313/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+    </figure>
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://localhost:1313/">hikarock</a></h4>
+  
+  <p>街に詳しい。</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Tokyo, Japan</span>
+    <span class="author-link icon-link"><a href="https://hika69.com">https://hika69.com</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Chrome%20%e6%8b%a1%e5%bc%b5%e3%81%ae%20Inline%20Installation%20%e3%81%ab%e5%af%be%e5%bf%9c%e3%81%99%e3%82%8b&amp;url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f05%2f27%2fchrome-extension-inline-install%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f05%2f27%2fchrome-extension-inline-install%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f05%2f27%2fchrome-extension-inline-install%2f&amp;description=Chrome%20%e6%8b%a1%e5%bc%b5%e3%81%ae%20Inline%20Installation%20%e3%81%ab%e5%af%be%e5%bf%9c%e3%81%99%e3%82%8b"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f05%2f27%2fchrome-extension-inline-install%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+  </footer>
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://localhost:1313/js/jquery.js"></script>
+    <script type="text/javascript" src="http://localhost:1313/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://localhost:1313/js/index.js"></script>
+    
+        <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>
+
