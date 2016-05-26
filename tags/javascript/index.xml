@@ -7,8 +7,72 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:19:20 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 27 May 2016 00:20:53 +0900</lastBuildDate>
     <atom:link href="https://blog.hika69.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Chrome 拡張の Inline Installation に対応する</title>
+      <link>https://blog.hika69.com/blog/2016/05/27/chrome-extension-inline-install/</link>
+      <pubDate>Fri, 27 May 2016 00:20:53 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2016/05/27/chrome-extension-inline-install/</guid>
+      <description>
+
+&lt;p&gt;Chrome 拡張を Chrome ウェブストア に遷移せずにインストールできる Inline Installation に対応した時の覚書。&lt;/p&gt;
+
+&lt;h3 id=&#34;オフィシャルのドキュメント:97c4b7edc7ed1d60b05fc5875229f18c&#34;&gt;オフィシャルのドキュメント&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://developer.chrome.com/webstore/inline_installation&#34;&gt;Using Inline Installation - Google Chrome&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;手順:97c4b7edc7ed1d60b05fc5875229f18c&#34;&gt;手順&lt;/h3&gt;
+
+&lt;p&gt;あらかじめ Chrome ウェブストアのデベロッパー ダッシュボードと Google Search Console で、Inline Installation を導入したいウェブサイトを設定する。&lt;/p&gt;
+
+&lt;p&gt;Inline Installation を設置したいサイトの head 内に link タグを挿入する。&lt;code&gt;{itemId}&lt;/code&gt; に該当の拡張機能のURLに含まれるIDを指定する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;link rel=&amp;quot;chrome-webstore-item&amp;quot; href=&amp;quot;https://chrome.google.com/webstore/detail/{itemId}&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;リンクやボタンなどを押下したタイミングで Inline Installation を実行する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(document).on(&#39;click&#39;, &#39;.install-button&#39;, function(evt) {
+    evt.preventDefault();
+
+    if (!(&#39;chrome&#39; in window)) {
+        console.log(&#39;拡張機能をインストールするには、Google Chrome をご利用ください&#39;);
+        return;
+    }
+
+    chrome.webstore.install(&#39;&#39;, function() {
+        // successCallback
+    }, function(errMessage, code) {
+        // failureCallback
+        console.log(errMessage, code);
+    });
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;インストール済みか判定して表示を変更する:97c4b7edc7ed1d60b05fc5875229f18c&#34;&gt;インストール済みか判定して表示を変更する&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;chrome.app.isInstalled&lt;/code&gt; の値を判定すればよいだけかと思っていたけど、Chrome 拡張機能の場合はこの値は常に false になる。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/18275960/chrome-app-isinstalled-always-returns-false-for-google-chrome-extensions&#34;&gt;chrome.app.isInstalled always returns false for Google Chrome extensions? - Stack Overflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この回答によると &lt;code&gt;isInstalled&lt;/code&gt; が使えるのは Hosted apps の場合のみで、拡張機能の場合は &lt;a href=&#34;https://developer.chrome.com/extensions/content_scripts&#34;&gt;Content Script&lt;/a&gt; で以下のように body に判定用の DOM を挿入しないといけないようだ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(&#39;body&#39;).append($(&#39;&amp;lt;div&amp;gt;&#39;).attr(&#39;id&#39;, &#39;extension-is-installed&#39;));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;if ($(&#39;#extension-is-installed&#39;).length &amp;gt; 0) {
+  $(&#39;#install-button&#39;).css(&#39;display&#39;, &#39;none&#39;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;このようにインストール済みか判定をしないとどうなるかというと、インストール済みでボタンを押下しても初回と同様のダイアログが表示されて、再インストールが実行されるだけ。&lt;/p&gt;
+
+&lt;p&gt;インストール済みの場合に拡張機能のチュートリアルを表示したい、とかでない限りはこの対応はいらない気がする。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Twitter 検索の結果を Google Drive のスプレッドシートに出力する (2016年春版)</title>
@@ -735,42 +799,6 @@ package.jsonに依存関係が記録されていれば&lt;code&gt;npm install&lt
 &lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/JavaScript-Ninja%E3%81%AE%E6%A5%B5%E6%84%8F-%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E9%96%8B%E7%99%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E7%9F%A5%E8%AD%98%E3%81%A8%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0-Programmers%E2%80%99-SELECTION/dp/4798128457%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4798128457&#34; target=&#34;_blank&#34; title=&#34;JavaScript Ninjaの極意 ライブラリ開発のための知識とコーディング (Programmers’ SELECTION)&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/51wsFoSKrKL.jpg&#34; width=&#34;388&#34; height=&#34;500&#34; alt=&#34;JavaScript Ninjaの極意 ライブラリ開発のための知識とコーディング (Programmers’ SELECTION)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;読む本たくさんあって追いつかない。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>「Backbone.js ガイドブック」読書会がはじまった</title>
-      <link>https://blog.hika69.com/blog/2013/05/25/backbone-js/</link>
-      <pubDate>Sat, 25 May 2013 01:04:00 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/blog/2013/05/25/backbone-js/</guid>
-      <description>
-
-&lt;p&gt;社内で「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.js ガイドブック&lt;/a&gt;」の読書会が始まったので参加した。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/Backbone-js%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF-%E9%AB%98%E6%A9%8B-%E4%BE%91%E4%B9%85/dp/4899773501%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4899773501&#34; target=&#34;_blank&#34; title=&#34;Backbone.jsガイドブック&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/31tI0WaZukL.jpg&#34; width=&#34;394&#34; height=&#34;500&#34; alt=&#34;Backbone.jsガイドブック&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;1章くらい進むかな、と思ったけど、途中サンプルコードを動作確認したりしてたら10ページくらいしか読み進まなかった。&lt;/p&gt;
-
-&lt;p&gt;ためしたのはこの辺り。
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://jsdo.it/blogparts/z9YK/js?width=100%&amp;height=496&amp;view=javascript&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;クラスプロパティ・メソッドと、インスタンスプロパティ・メソッドの動作の違いを確認した。&lt;/p&gt;
-
-&lt;h3 id=&#34;ほかに:1e427e62cc44ddfd497e5b7351c6556d&#34;&gt;ほかに&lt;/h3&gt;
-
-&lt;p&gt;「&lt;a href=&#34;http://booklog.jp/item/1/477415654X&#34;&gt;コーディングを支える技術&lt;/a&gt;」を読み始めた。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E6%8A%80%E8%A1%93-%7E%E6%88%90%E3%82%8A%E7%AB%8B%E3%81%A1%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E4%BD%9C%E6%B3%95-WEB-PRESS-plus/dp/477415654X%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D477415654X&#34; target=&#34;_blank&#34; title=&#34;コーディングを支える技術 ~成り立ちから学ぶプログラミング作法 (WEB+DB PRESS plus)&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/51nXP3TKXVL.jpg&#34; width=&#34;353&#34; height=&#34;500&#34; alt=&#34;コーディングを支える技術 ~成り立ちから学ぶプログラミング作法 (WEB+DB PRESS plus)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;今あるプログラミング言語の「あたりまえ」は試行錯誤の結果なんだなあと、目から鱗。&lt;/p&gt;
-
-&lt;p&gt;例外処理、制御構文のあたりは特に。&lt;/p&gt;
-
-&lt;p&gt;プログラミング言語がまだ試行錯誤の途上にある、というよく考えたら当たり前のことが新鮮に感じた。
-とにかく面白い。&lt;/p&gt;
-
-&lt;p&gt;変数の章は、気力が落ちたのでちょっと読み飛ばしたけれど。&lt;/p&gt;
 </description>
     </item>
     
