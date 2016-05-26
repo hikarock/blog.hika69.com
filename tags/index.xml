@@ -7,142 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Wed, 06 Apr 2016 22:26:17 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 27 May 2016 00:20:53 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>REST API のテストツール Frisby.js</title>
-      <link>http://localhost:1313/blog/2016/04/06/frisby/</link>
-      <pubDate>Wed, 06 Apr 2016 22:26:17 +0900</pubDate>
+      <title>chorome extension inline install</title>
+      <link>http://localhost:1313/blog/2016/05/27/chrome-extension-inline-install/</link>
+      <pubDate>Fri, 27 May 2016 00:20:53 +0900</pubDate>
       
-      <guid>http://localhost:1313/blog/2016/04/06/frisby/</guid>
-      <description>
-
-&lt;p&gt;REST API のテストツール Frisby.js を使ってみた。&lt;/p&gt;
-
-&lt;h3 id=&#34;導入:93f38952e09b7e441a25f845abcaf75b&#34;&gt;導入&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://frisbyjs.com/&#34;&gt;REST API Testing—Frisby.js&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;npm で Frisby.js を導入する。&lt;/p&gt;
-
-&lt;p&gt;jasmine-node は依存パッケージで、config は必須ではないけど本番環境と開発環境の切り替えに使う。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ npm i -D frisby jasmine-node config
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ファイル構成はこんな感じになった。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ tree
- .
- ├── package.json
- ├── node_modules
- ├── config
- │  └── test
- │      └── api
- │          └── v1
- │              ├── development.json
- │              └── production.json
- └── test
-     └── api
-         └── v1
-             ├── bar.spec.js
-             └── foo.spec.js
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;設定ファイルには、とりあえずAPIのURLだけ追加。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;url&amp;quot;: &amp;quot;http://api.example.com/v1&amp;quot;,
-  &amp;quot;url-auth&amp;quot;: &amp;quot;http://test:password@api.exaple.com/v1&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;package.json&lt;/code&gt; にテストを実行するタスクを追加する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;  &amp;quot;scripts&amp;quot;: {
-    &amp;quot;test:api:development&amp;quot;: &amp;quot;export NODE_ENV=development &amp;amp;&amp;amp; export NODE_CONFIG_DIR=./config/test/api/v1 &amp;amp;&amp;amp; jasmine-node ./test/api/v1&amp;quot;,
-    &amp;quot;test:api:production&amp;quot;: &amp;quot;export NODE_ENV=production &amp;amp;&amp;amp; export NODE_CONFIG_DIR=./config/test/api/v1 &amp;amp;&amp;amp; jasmine-node ./test/api/v1&amp;quot;
-  },
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;テストを実行する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm run test:api:production
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;json-レスポンス-内の型を検証する:93f38952e09b7e441a25f845abcaf75b&#34;&gt;JSON レスポンス 内の型を検証する&lt;/h3&gt;
-
-&lt;p&gt;例えば以下のようなレスポンスが返るAPIの場合。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;id&amp;quot;: 1,
-  &amp;quot;name&amp;quot;: &amp;quot;hikarock&amp;quot;,
-  &amp;quot;url&amp;quot;: &amp;quot;http://hika69.com&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以下の &lt;code&gt;users.spec.js&lt;/code&gt; を用意する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var frisby = require(&#39;frisby&#39;);
-var config = require(&#39;config&#39;);
-
-frisby.create(&#39;GET:users&#39;)
-  .get(config.get(&#39;url&#39;) + &#39;/users/hikarock&#39;)
-  .expectStatus(200)
-  .expectHeaderContains(&#39;content-type&#39;, &#39;application/json&#39;)
-  .expectJSONTypes({
-    id: Number,
-    name: String,
-    url: String
-  })
-.toss();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;配列の検証:93f38952e09b7e441a25f845abcaf75b&#34;&gt;配列の検証&lt;/h3&gt;
-
-&lt;p&gt;配列内の1レコードの検証を行いたい場合は &lt;code&gt;expectJSONTypes&lt;/code&gt; の第一引数に &lt;code&gt;users.0&lt;/code&gt; のような独自の記法で指定する。
-複数レコードの検証を行う場合は &lt;code&gt;users.*&lt;/code&gt; のようにワイルドカードも指定できる。&lt;/p&gt;
-
-&lt;p&gt;例えば以下のようなレスポンスが返るAPIの場合。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  users: [
-    {
-      &amp;quot;id&amp;quot;: 1,
-      &amp;quot;name&amp;quot;: &amp;quot;hikarock&amp;quot;,
-      &amp;quot;url&amp;quot;: &amp;quot;http://hika69.com&amp;quot;
-    },
-    {
-      &amp;quot;id&amp;quot;: 2,
-      &amp;quot;name&amp;quot;: &amp;quot;foo&amp;quot;,
-      &amp;quot;url&amp;quot;: &amp;quot;http://example.com&amp;quot;
-    }
-    ...
-  ]
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;1レコード目を検証する場合は以下のように記述する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;frisby.create(&#39;GET:users&#39;)
-  .get(config.get(&#39;url&#39;) + &#39;/users&#39;)
-  .expectStatus(200)
-  .expectHeaderContains(&#39;content-type&#39;, &#39;application/json&#39;)
-  .expectJSONTypes(&#39;users.0&#39;, {
-    id: Number,
-    name: String,
-    url: String
-  })
-.toss();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;まとめ:93f38952e09b7e441a25f845abcaf75b&#34;&gt;まとめ&lt;/h3&gt;
-
-&lt;p&gt;導入も楽で、いい感じ。&lt;/p&gt;
-
-&lt;p&gt;今回はGETの正常系しか試してないので、実行順を考慮する必要のある更新系なども試してみたい。&lt;/p&gt;
-</description>
+      <guid>http://localhost:1313/blog/2016/05/27/chrome-extension-inline-install/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chorome extension inline install</title>
+      <link>http://localhost:1313/blog/2016/05/27/chrome-extension-inline-install/</link>
+      <pubDate>Fri, 27 May 2016 00:20:53 +0900</pubDate>
+      
+      <guid>http://localhost:1313/blog/2016/05/27/chrome-extension-inline-install/</guid>
+      <description></description>
     </item>
     
   </channel>
