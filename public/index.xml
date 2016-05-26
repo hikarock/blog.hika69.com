@@ -7,8 +7,72 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Fri, 20 May 2016 23:29:22 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 27 May 2016 00:20:53 +0900</lastBuildDate>
     <atom:link href="https://blog.hika69.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Chrome 拡張の Inline Installation に対応する</title>
+      <link>https://blog.hika69.com/blog/2016/05/27/chrome-extension-inline-install/</link>
+      <pubDate>Fri, 27 May 2016 00:20:53 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2016/05/27/chrome-extension-inline-install/</guid>
+      <description>
+
+&lt;p&gt;Chrome 拡張を Chrome ウェブストア に遷移せずにインストールできる Inline Installation に対応した時の覚書。&lt;/p&gt;
+
+&lt;h3 id=&#34;オフィシャルのドキュメント:97c4b7edc7ed1d60b05fc5875229f18c&#34;&gt;オフィシャルのドキュメント&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://developer.chrome.com/webstore/inline_installation&#34;&gt;Using Inline Installation - Google Chrome&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;手順:97c4b7edc7ed1d60b05fc5875229f18c&#34;&gt;手順&lt;/h3&gt;
+
+&lt;p&gt;あらかじめ Chrome ウェブストアのデベロッパー ダッシュボードと Google Search Console で、Inline Installation を導入したいウェブサイトを設定する。&lt;/p&gt;
+
+&lt;p&gt;Inline Installation を設置したいサイトの head 内に link タグを挿入する。&lt;code&gt;{itemId}&lt;/code&gt; に該当の拡張機能のURLに含まれるIDを指定する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;link rel=&amp;quot;chrome-webstore-item&amp;quot; href=&amp;quot;https://chrome.google.com/webstore/detail/{itemId}&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;リンクやボタンなどを押下したタイミングで Inline Installation を実行する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(document).on(&#39;click&#39;, &#39;.install-button&#39;, function(evt) {
+    evt.preventDefault();
+
+    if (!(&#39;chrome&#39; in window)) {
+        console.log(&#39;拡張機能をインストールするには、Google Chrome をご利用ください&#39;);
+        return;
+    }
+
+    chrome.webstore.install(&#39;&#39;, function() {
+        // successCallback
+    }, function(errMessage, code) {
+        // failureCallback
+        console.log(errMessage, code);
+    });
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;インストール済みか判定して表示を変更する:97c4b7edc7ed1d60b05fc5875229f18c&#34;&gt;インストール済みか判定して表示を変更する&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;chrome.app.isInstalled&lt;/code&gt; の値を判定すればよいだけかと思っていたけど、Chrome 拡張機能の場合はこの値は常に false になる。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/18275960/chrome-app-isinstalled-always-returns-false-for-google-chrome-extensions&#34;&gt;chrome.app.isInstalled always returns false for Google Chrome extensions? - Stack Overflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この回答によると &lt;code&gt;isInstalled&lt;/code&gt; が使えるのは Hosted apps の場合のみで、拡張機能の場合は &lt;a href=&#34;https://developer.chrome.com/extensions/content_scripts&#34;&gt;Content Script&lt;/a&gt; で以下のように body に判定用の DOM を挿入しないといけないようだ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(&#39;body&#39;).append($(&#39;&amp;lt;div&amp;gt;&#39;).attr(&#39;id&#39;, &#39;extension-is-installed&#39;));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;if ($(&#39;#extension-is-installed&#39;).length &amp;gt; 0) {
+  $(&#39;#install-button&#39;).css(&#39;display&#39;, &#39;none&#39;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;このようにインストール済みか判定をしないとどうなるかというと、インストール済みでボタンを押下しても初回と同様のダイアログが表示されて、再インストールが実行されるだけ。&lt;/p&gt;
+
+&lt;p&gt;インストール済みの場合に拡張機能のチュートリアルを表示したい、とかでない限りはこの対応はいらない気がする。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>PSR-2 の最終行の空行についての規約を勘違いしていた</title>
@@ -914,35 +978,6 @@ init.author.url=http://blog.hika69.com
 &lt;p&gt;また&lt;code&gt;npm config list&lt;/code&gt;でも現在の設定を確認できる。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://docs.npmjs.com/cli/config&#34;&gt;config | npm Documentation&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>editorify というライブラリを作った</title>
-      <link>https://blog.hika69.com/blog/2015/02/13/editorify/</link>
-      <pubDate>Fri, 13 Feb 2015 00:55:57 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/blog/2015/02/13/editorify/</guid>
-      <description>&lt;p&gt;エディタリファイと読むんだろうか。とにかく&lt;code&gt;fy&lt;/code&gt;ってつけたかっただけな感じで言いづらい jQuery プラグインを作った。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/hikarock/editorify&#34;&gt;hikarock/editorify&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ひとことでいうと &lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt; を使って簡単なウィジウィグとか作れるライブラリ。
-例えば、markdown のリンクを挿入する場合はこんな感じに書く。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(&#39;.link&#39;).on(&#39;click&#39;, function (evt) {
-  $(&#39;.editor&#39;).editorify([
-    [&#39;clear&#39;],
-    [&#39;insert&#39;, &#39;[](http://example.com)&#39;],
-    [&#39;start&#39;],
-    [&#39;right&#39;, 1]
-  ]);
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;left&lt;/code&gt; とか &lt;code&gt;start&lt;/code&gt; とかでカーソル移動できるので &lt;code&gt;[]&lt;/code&gt; の中にカーソルが移動している状態になる。&lt;a href=&#34;https://dl.dropboxusercontent.com/u/459142/editorify/index.html&#34;&gt;DEMO&lt;/a&gt;はこちら。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/&#34;&gt;Stobo&lt;/a&gt; のエディタ部分を絶賛改造中でモンスターブランチがもうスカイツリーくらいに育っているんだけど、その中の成果が分割されて editorify になった。&lt;/p&gt;
 </description>
     </item>
     

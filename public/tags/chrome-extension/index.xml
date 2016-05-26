@@ -7,8 +7,72 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Mon, 24 Feb 2014 14:47:27 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 May 2016 00:20:53 +0900</lastBuildDate>
     <atom:link href="https://blog.hika69.com/tags/chrome-extension/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Chrome 拡張の Inline Installation に対応する</title>
+      <link>https://blog.hika69.com/blog/2016/05/27/chrome-extension-inline-install/</link>
+      <pubDate>Fri, 27 May 2016 00:20:53 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2016/05/27/chrome-extension-inline-install/</guid>
+      <description>
+
+&lt;p&gt;Chrome 拡張を Chrome ウェブストア に遷移せずにインストールできる Inline Installation に対応した時の覚書。&lt;/p&gt;
+
+&lt;h3 id=&#34;オフィシャルのドキュメント:97c4b7edc7ed1d60b05fc5875229f18c&#34;&gt;オフィシャルのドキュメント&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://developer.chrome.com/webstore/inline_installation&#34;&gt;Using Inline Installation - Google Chrome&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;手順:97c4b7edc7ed1d60b05fc5875229f18c&#34;&gt;手順&lt;/h3&gt;
+
+&lt;p&gt;あらかじめ Chrome ウェブストアのデベロッパー ダッシュボードと Google Search Console で、Inline Installation を導入したいウェブサイトを設定する。&lt;/p&gt;
+
+&lt;p&gt;Inline Installation を設置したいサイトの head 内に link タグを挿入する。&lt;code&gt;{itemId}&lt;/code&gt; に該当の拡張機能のURLに含まれるIDを指定する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;link rel=&amp;quot;chrome-webstore-item&amp;quot; href=&amp;quot;https://chrome.google.com/webstore/detail/{itemId}&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;リンクやボタンなどを押下したタイミングで Inline Installation を実行する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(document).on(&#39;click&#39;, &#39;.install-button&#39;, function(evt) {
+    evt.preventDefault();
+
+    if (!(&#39;chrome&#39; in window)) {
+        console.log(&#39;拡張機能をインストールするには、Google Chrome をご利用ください&#39;);
+        return;
+    }
+
+    chrome.webstore.install(&#39;&#39;, function() {
+        // successCallback
+    }, function(errMessage, code) {
+        // failureCallback
+        console.log(errMessage, code);
+    });
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;インストール済みか判定して表示を変更する:97c4b7edc7ed1d60b05fc5875229f18c&#34;&gt;インストール済みか判定して表示を変更する&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;chrome.app.isInstalled&lt;/code&gt; の値を判定すればよいだけかと思っていたけど、Chrome 拡張機能の場合はこの値は常に false になる。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/18275960/chrome-app-isinstalled-always-returns-false-for-google-chrome-extensions&#34;&gt;chrome.app.isInstalled always returns false for Google Chrome extensions? - Stack Overflow&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この回答によると &lt;code&gt;isInstalled&lt;/code&gt; が使えるのは Hosted apps の場合のみで、拡張機能の場合は &lt;a href=&#34;https://developer.chrome.com/extensions/content_scripts&#34;&gt;Content Script&lt;/a&gt; で以下のように body に判定用の DOM を挿入しないといけないようだ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(&#39;body&#39;).append($(&#39;&amp;lt;div&amp;gt;&#39;).attr(&#39;id&#39;, &#39;extension-is-installed&#39;));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;if ($(&#39;#extension-is-installed&#39;).length &amp;gt; 0) {
+  $(&#39;#install-button&#39;).css(&#39;display&#39;, &#39;none&#39;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;このようにインストール済みか判定をしないとどうなるかというと、インストール済みでボタンを押下しても初回と同様のダイアログが表示されて、再インストールが実行されるだけ。&lt;/p&gt;
+
+&lt;p&gt;インストール済みの場合に拡張機能のチュートリアルを表示したい、とかでない限りはこの対応はいらない気がする。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Chrome 拡張「シンプル翻訳」を更新</title>

@@ -1,6 +1,5 @@
 +++
 date = "2016-05-27T00:20:53+09:00"
-draft = true
 tags = ["javascript", "chrome-extension"]
 title = "Chrome 拡張の Inline Installation に対応する"
 
