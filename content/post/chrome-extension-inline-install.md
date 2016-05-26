@@ -26,7 +26,7 @@ Inline Installation を設置したいサイトの head 内に link タグを挿
 リンクやボタンなどを押下したタイミングで Inline Installation を実行する。
 
 ```javascript
-$(document).on('click', '.install-button', function(evt) {
+$(document).on('click', '#install-button', function(evt) {
     evt.preventDefault();
 
     if (!('chrome' in window)) {
