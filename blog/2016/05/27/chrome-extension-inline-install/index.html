@@ -162,7 +162,7 @@
 
 <p>リンクやボタンなどを押下したタイミングで Inline Installation を実行する。</p>
 
-<pre><code class="language-javascript">$(document).on('click', '.install-button', function(evt) {
+<pre><code class="language-javascript">$(document).on('click', '#install-button', function(evt) {
     evt.preventDefault();
 
     if (!('chrome' in window)) {
