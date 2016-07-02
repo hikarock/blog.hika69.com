@@ -7,8 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Fri, 27 May 2016 00:20:53 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 01 Jul 2016 14:18:19 +0900</lastBuildDate>
     <atom:link href="https://blog.hika69.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Web SQL Database を使って &lt;table&gt; タグを SQL ライクにセレクトするライブラリ chab を再公開した</title>
+      <link>https://blog.hika69.com/blog/2016/07/01/chab/</link>
+      <pubDate>Fri, 01 Jul 2016 14:18:19 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2016/07/01/chab/</guid>
+      <description>
+
+&lt;p&gt;chab という6年前に作ったライブラリなんだけど、しばらく放置してたら動かなくなっていたので、改修して GitHub で再公開した。&lt;/p&gt;
+
+&lt;h3 id=&#34;リポジトリ:78308e31204479aa19490f2ca34d4a0e&#34;&gt;リポジトリ&lt;/h3&gt;
+
+&lt;p&gt;詳細は &lt;a href=&#34;https://github.com/hikarock/chab&#34;&gt;README.md&lt;/a&gt; にて。&lt;/p&gt;
+
+&lt;h3 id=&#34;デモ:78308e31204479aa19490f2ca34d4a0e&#34;&gt;デモ&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://hikarock.github.io/chab/&#34;&gt;https://hikarock.github.io/chab/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;今回の修正内容:78308e31204479aa19490f2ca34d4a0e&#34;&gt;今回の修正内容&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.w3.org/TR/webdatabase/&#34;&gt;Web SQL Database&lt;/a&gt; の openDatabase の引数を2つしか指定していなかったのが原因で動作していなかったようなので修正した。&lt;/p&gt;
+
+&lt;p&gt;第3引数は &lt;code&gt;displayName&lt;/code&gt; だけど Chrome Developer Tools を見る限りだと第1引数に指定した値が表示されている。どこで使われるのかはわからなかった。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/chab-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;第4引数は &lt;code&gt;estimatedSize&lt;/code&gt; はDBのサイズを byte で指定する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;this.db = openDatabase(&amp;quot;chabdb&amp;quot;, &amp;quot;1.0.1&amp;quot;, &amp;quot;chab&amp;quot;, 1024 * 1024);
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Chrome 拡張の Inline Installation に対応する</title>
@@ -950,34 +983,6 @@ client.onauth = function() {
 &lt;/ul&gt;
 
 &lt;p&gt;以前から要望の多いテーマの設定については&lt;code&gt;Stobo 設定記法&lt;/code&gt;で対応予定です。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>npm init 時のデフォルト設定をカスタマイズする</title>
-      <link>https://blog.hika69.com/blog/2015/02/21/npm-init/</link>
-      <pubDate>Sat, 21 Feb 2015 19:17:39 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/blog/2015/02/21/npm-init/</guid>
-      <description>&lt;p&gt;&lt;code&gt;npm init&lt;/code&gt;した時にlicenceの種類やauthorの情報を自動的にいれる設定。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ npm config set init.author.name &amp;quot;hikarock&amp;quot;
-$ npm config set init.author.email i@hika69.com
-$ npm config set init.author.url http://blog.hika69.com
-$ npm config set init.license MIT
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;~/.npmrc&lt;/code&gt;というファイルが作られて以下のように設定されている。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;init.license=MIT
-init.author.name=hikarock
-init.author.email=i@hika69.com
-init.author.url=http://blog.hika69.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;また&lt;code&gt;npm config list&lt;/code&gt;でも現在の設定を確認できる。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://docs.npmjs.com/cli/config&#34;&gt;config | npm Documentation&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
