@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on hikarock blog</title>
+    <link>http://localhost:1313/blog/</link>
+    <description>Recent content in Blogs on hikarock blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Sun, 24 Jul 2016 14:51:49 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>spa layout boilerplate</title>
+      <link>http://localhost:1313/blog/spa-layout-boilerplate/</link>
+      <pubDate>Sun, 24 Jul 2016 14:51:49 +0900</pubDate>
+      
+      <guid>http://localhost:1313/blog/spa-layout-boilerplate/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
