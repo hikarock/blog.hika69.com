@@ -1,6 +1,5 @@
 +++
 date = "2016-07-24T14:51:49+09:00"
-draft = true
 tags = ["stylus", "css"]
 title = "SPAのよくあるレイアウトの雛形を作った"
 

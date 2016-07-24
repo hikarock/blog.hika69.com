@@ -7,8 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Fri, 01 Jul 2016 14:18:19 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 24 Jul 2016 14:51:49 +0900</lastBuildDate>
     <atom:link href="https://blog.hika69.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>SPAのよくあるレイアウトの雛形を作った</title>
+      <link>https://blog.hika69.com/blog/2016/07/24/spa-layout-boilerplate/</link>
+      <pubDate>Sun, 24 Jul 2016 14:51:49 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2016/07/24/spa-layout-boilerplate/</guid>
+      <description>&lt;p&gt;SPA を書き始める時に、大枠のレイアウトをどう組むか迷う。&lt;/p&gt;
+
+&lt;p&gt;タイトルの &lt;strong&gt;よくあるレイアウト&lt;/strong&gt; は、固定のヘッダ・フッタがあり、中央のメイン部が2カラムでスクロール可能なもの。要するに Mac の Finder のようなレイアウト。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/236607/17078886/a8b40728-513a-11e6-9e17-2f24f8604f52.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Grid 系のフレームワークを検討はするものの Bootstrap のような重量級のフレームワークはおおげさに感じる。&lt;/p&gt;
+
+&lt;p&gt;また、Electron のような単一の実行環境の場合は、クロスブラウザを意識したフレームワークが無駄に感じられるので使いたくない、というのもある。&lt;/p&gt;
+
+&lt;p&gt;それで &lt;code&gt;position: absolute&lt;/code&gt; を使った数十行の CSS (Stylus) をいつも書いている気がするので、以下のリポジトリにまとめた。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/hikarock/spa-layout-boilerplate&#34;&gt;hikarock/spa-layout-boilerplate&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;それぞれのプロジェクトから &lt;code&gt;@require &#39;layout&#39;&lt;/code&gt; して使うことを想定している。&lt;/p&gt;
+
+&lt;p&gt;セレクタがタグなのが行儀が悪いけれど、&lt;code&gt;header&lt;/code&gt; とか &lt;code&gt;main&lt;/code&gt; を同一アプリで繰り返し使わない、と割り切る。&lt;code&gt;nav&lt;/code&gt; は繰り返し使いたくなりそうだけど、まあその時はクラスセレクタに変更すればよいだろう。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Web SQL Database を使って &lt;table&gt; タグを SQL ライクにセレクトするライブラリ chab を再公開した</title>
@@ -947,42 +973,6 @@ client.onauth = function() {
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;このままでは実用的ではない感じ。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>新しくなった Stobo の紹介</title>
-      <link>https://blog.hika69.com/blog/2015/02/21/stobo/</link>
-      <pubDate>Sat, 21 Feb 2015 19:28:21 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/blog/2015/02/21/stobo/</guid>
-      <description>&lt;p&gt;StoboはMarkdownでプレゼン資料が作れて配信できるWebアプリです。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/&#34;&gt;Stobo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;もともとはストーリーボードという名前だったんだけど、これからはStobo (ストボ) が正式名称です。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;URLはそのままです&lt;/li&gt;
-&lt;li&gt;ロゴは @getsukikyu が新しいものを製作中&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;今回の大きな変更点はMarkdownの拡張です。詳細は以下のスライドにまとめています。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/viewer/iw1l45&#34;&gt;Stobo Flavored Markdown | Stobo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;その他に、&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;スライド時のエフェクトの廃止とアルゴリズムの変更&lt;/li&gt;
-&lt;li&gt;エディタの操作性の改善
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hikarock/editorify&#34;&gt;editorify&lt;/a&gt; の導入 (および開発)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;以前から要望の多いテーマの設定については&lt;code&gt;Stobo 設定記法&lt;/code&gt;で対応予定です。&lt;/p&gt;
 </description>
     </item>
     
