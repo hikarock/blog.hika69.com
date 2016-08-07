@@ -28,7 +28,7 @@
 
 &lt;p&gt;それで &lt;code&gt;position: absolute&lt;/code&gt; を使った数十行の CSS (Stylus) をいつも書いている気がするので、以下のリポジトリにまとめた。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/hikarock/spa-layout-boilerplate&#34;&gt;hikarock/spa-layout-boilerplate&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/hikarock/electron-layout-boilerplate&#34;&gt;hikarock/electron-layout-boilerplate&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;それぞれのプロジェクトから &lt;code&gt;@require &#39;layout&#39;&lt;/code&gt; して使うことを想定している。&lt;/p&gt;
 

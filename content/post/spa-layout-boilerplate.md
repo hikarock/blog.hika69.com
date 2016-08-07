@@ -19,7 +19,7 @@ Grid 系のフレームワークを検討はするものの Bootstrap のよう�
 
 それで `position: absolute` を使った数十行の CSS (Stylus) をいつも書いている気がするので、以下のリポジトリにまとめた。
 
-[hikarock/spa\-layout\-boilerplate](https://github.com/hikarock/spa-layout-boilerplate)
+[hikarock/electron\-layout\-boilerplate](https://github.com/hikarock/electron-layout-boilerplate)
 
 それぞれのプロジェクトから `@require 'layout'` して使うことを想定している。
 
