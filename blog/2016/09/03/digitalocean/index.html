@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  	<meta property="og:title" content=" DigitalOcean 上に Vagrant でサーバーを立ち上げる &middot;  hikarock blog" />
+  	<meta property="og:site_name" content="hikarock blog" />
+  	<meta property="og:url" content="http://localhost:1313/blog/2016/09/03/digitalocean/" />
+
+    
+  	<meta property="og:type" content="article" />
+
+    <meta property="og:article:published_time" content="2016-09-03T16:41:41&#43;09:00" />
+
+    
+    <meta property="og:article:tag" content="digital-ocean" />
+    
+    <meta property="og:article:tag" content="vagrant" />
+    
+    
+
+  <title>
+     DigitalOcean 上に Vagrant でサーバーを立ち上げる &middot;  hikarock blog
+  </title>
+
+    <meta name="description" content="" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="http://localhost:1313/images/favicon.ico">
+	  <link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
+
+
+    
+      
+          <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="hikarock blog" />
+      
+      
+    
+    <meta name="generator" content="Hugo 0.14" />
+
+    <link rel="canonical" href="http://localhost:1313/blog/2016/09/03/digitalocean/" />
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-16254980-7', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.css">
+<link rel="apple-touch-icon" sizes="57x57" href="http://localhost:1313/images/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://localhost:1313/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://localhost:1313/images/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://localhost:1313/images/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://localhost:1313/images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://localhost:1313/images/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://localhost:1313/images/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon-180x180.png">
+
+
+    
+</head>
+<body class="nav-closed">
+
+  <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+        
+        
+        
+    </ul>
+    
+    
+    <a class="subscribe-button icon-feed" href="http://localhost:1313/index.xml">Subscribe</a>
+    
+</div>
+<span class="nav-cover"></span>
+
+
+ <div class="site-wrapper">
+
+
+
+
+<header class="main-header post-head no-cover">
+  <nav class="main-nav clearfix">
+
+
+  
+      <a class="blog-logo" href="http://localhost:1313/"><img src="http://localhost:1313/images/logo.png" alt="Home" /></a>
+  
+  
+      <a class="menu-button icon-feed" href="http://localhost:1313/index.xml">&nbsp;&nbsp;Subscribe</a>
+  
+  </nav>
+</header>
+
+
+
+<main class="content" role="main">
+
+
+
+
+  <article class="post post">
+
+    <header class="post-header">
+        <h1 class="post-title">DigitalOcean 上に Vagrant でサーバーを立ち上げる</h1>
+        <small></small>
+
+        <section class="post-meta">
+        
+          <time class="post-date" datetime="2016-09-03T16:41:41&#43;09:00">
+            Sep 3, 2016
+          </time>
+        
+         
+          <span class="post-tag small"><a href="http://localhost:1313/tags/digital-ocean/">#digital-ocean</a></span>
+         
+          <span class="post-tag small"><a href="http://localhost:1313/tags/vagrant/">#vagrant</a></span>
+         
+        </section>
+    </header>
+
+    <section class="post-content">
+      
+
+<p><a href="https://m.do.co/c/a129e4a597f1">DigitalOcean</a> 上に Vagtant で仮想サーバー (DigitalOcean では <code>droplet</code> と言うらしい) が立ち上がるまでのログ。</p>
+
+<p>DigitalOcean アカウントは作成済みの前提。</p>
+
+<h3 id="tugboat-の導入:408d90965407ccd8c9d1d1bcc218cd96">tugboat の導入</h3>
+
+<p>DigitalOcean を便利に操作できるコマンドラインツール tugboat を導入する。</p>
+
+<p><a href="https://github.com/pearkes/tugboat">pearkes/tugboat</a></p>
+
+<p>あらかじめ以下のページで tugboat 用のトークンを発行しておく。</p>
+
+<p><a href="https://cloud.digitalocean.com/settings/api/tokens">DigitalOcean - API Tokens</a></p>
+
+<pre><code class="language-sh">% gem install tugboat
+</code></pre>
+
+<p>以下のコマンドで 上記で発行したトークンを設定する。</p>
+
+<pre><code class="language-sh">% tugboat authorize
+</code></pre>
+
+<p>CentOS の images を一覧する例。</p>
+
+<pre><code class="language-sh">% tugboat images | grep centos
+6.7 x32 (slug: centos-6-5-x32, id: 14782899, distro: CentOS)
+6.7 x64 (slug: centos-6-5-x64, id: 14782952, distro: CentOS)
+5.11 x32 (slug: centos-5-x32, id: 18292035, distro: CentOS)
+5.11 x64 (slug: centos-5-x64, id: 18292131, distro: CentOS)
+7.2 x64 (slug: centos-7-0-x64, id: 18835303, distro: CentOS)
+7.2 x64 (slug: centos-7-x64, id: 19389325, distro: CentOS)
+6.8 x64 (slug: centos-6-x64, id: 19389823, distro: CentOS)
+6.8 x32 (slug: centos-6-x32, id: 19389931, distro: CentOS)
+</code></pre>
+
+<p><code>7.2 x64</code> がなぜか2つある。slug <code>centos-7-x64</code> を今回は利用してみる。</p>
+
+<h3 id="vagrant-の準備:408d90965407ccd8c9d1d1bcc218cd96">Vagrant の準備</h3>
+
+<p>Vagrant のバージョンを確認。</p>
+
+<pre><code class="language-sh">% vagrant -v
+Vagrant 1.8.5
+</code></pre>
+
+<p>Vagrant のプラグイン <code>vagrant-digitalocean</code> を導入する。</p>
+
+<p><a href="https://github.com/devopsgroup-io/vagrant-digitalocean#configure">devopsgroup-io/vagrant-digitalocean</a></p>
+
+<pre><code class="language-sh">% vagrant plugin install vagrant-digitalocean
+</code></pre>
+
+<p>README.md にあるように <code>Vagrantfile</code> を作成する。<code>provider.xxx</code> のあたりは tugboat を使って調べつつ適宜書き換える。</p>
+
+<pre><code class="language-ruby">Vagrant.configure('2') do |config|
+  config.vm.hostname = 'foo.hika69.com'
+
+  config.vm.provider :digital_ocean do |provider, override|
+    override.ssh.private_key_path = '~/.ssh/id_rsa'
+    override.vm.box = 'digital_ocean'
+    override.vm.box_url = 'https://github.com/devopsgroup-io/vagrant-digitalocean/raw/master/box/digital_ocean.box'
+    provider.token = 'xxxxxxxxxxxxxxxxxxxxxxxxx'
+    provider.image = 'centos-7-x64'
+    provider.region = 'sgp1'
+    provider.size = '512mb'
+  end
+end
+</code></pre>
+
+<p><code>provider.region</code> のバリエーションを調べる。</p>
+
+<pre><code class="language-sh">% tugboat regions
+</code></pre>
+
+<p><code>provider.size</code> の場合。</p>
+
+<pre><code class="language-sh">% tugboat sizes
+</code></pre>
+
+<p>tugboat を使わないで以下のように vagrant-digitalocean の機能を使っても同じことができる (ただトークンをつけるのが少し面倒)。</p>
+
+<pre><code class="language-sh">% vagrant digitalocean-list regions {TOKEN}
+</code></pre>
+
+<h3 id="vagrant-up-する:408d90965407ccd8c9d1d1bcc218cd96">Vagrant up する</h3>
+
+<pre><code class="language-sh">% vagrant up --provider=digital_ocean
+</code></pre>
+
+<h3 id="サーバーに-ssh-接続する:408d90965407ccd8c9d1d1bcc218cd96">サーバーに SSH 接続する</h3>
+
+<pre><code class="language-sh">% vagrant ssh
+
+Last login: Sun Sep  4 07:55:24 2016 from xxx
+[root@foo ~]# cat /etc/redhat-release
+CentOS Linux release 7.2.1511 (Core)
+</code></pre>
+
+    </section>
+
+
+  <footer class="post-footer">
+
+
+    
+    <figure class="author-image">
+        <a class="img" href="http://localhost:1313/" style="background-image: url(http://localhost:1313/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+    </figure>
+    
+
+    
+
+
+
+
+
+<section class="author">
+  <h4><a href="http://localhost:1313/">hikarock</a></h4>
+  
+  <p>街に詳しい。</p>
+  
+  <div class="author-meta">
+    <span class="author-location icon-location">Tokyo, Japan</span>
+    <span class="author-link icon-link"><a href="https://hika69.com">https://hika69.com</a></span>
+  </div>
+</section>
+
+
+
+    
+<section class="share">
+  <h4>Share this post</h4>
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=DigitalOcean%20%e4%b8%8a%e3%81%ab%20Vagrant%20%e3%81%a7%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e3%82%92%e7%ab%8b%e3%81%a1%e4%b8%8a%e3%81%92%e3%82%8b&amp;url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f09%2f03%2fdigitalocean%2f"
+      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+      <span class="hidden">Twitter</span>
+  </a>
+  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f09%2f03%2fdigitalocean%2f"
+      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+      <span class="hidden">Facebook</span>
+  </a>
+  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f09%2f03%2fdigitalocean%2f&amp;description=DigitalOcean%20%e4%b8%8a%e3%81%ab%20Vagrant%20%e3%81%a7%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e3%82%92%e7%ab%8b%e3%81%a1%e4%b8%8a%e3%81%92%e3%82%8b"
+      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
+      <span class="hidden">Pinterest</span>
+  </a>
+  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2flocalhost%3a1313%2fblog%2f2016%2f09%2f03%2fdigitalocean%2f"
+     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+      <span class="hidden">Google+</span>
+  </a>
+</section>
+
+
+
+    
+
+
+
+
+  </footer>
+</article>
+
+</main>
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        
+        <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
+        
+    </footer>
+    </div>
+    <script type="text/javascript" src="http://localhost:1313/js/jquery.js"></script>
+    <script type="text/javascript" src="http://localhost:1313/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="http://localhost:1313/js/index.js"></script>
+    
+        <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>
+
