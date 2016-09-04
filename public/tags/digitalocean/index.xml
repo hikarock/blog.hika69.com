@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vagrant on hikarock blog</title>
-    <link>https://blog.hika69.com/tags/vagrant/</link>
-    <description>Recent content in Vagrant on hikarock blog</description>
+    <title>Digitalocean on hikarock blog</title>
+    <link>https://blog.hika69.com/tags/digitalocean/</link>
+    <description>Recent content in Digitalocean on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Sat, 03 Sep 2016 16:41:41 +0900</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/vagrant/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/digitalocean/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>DigitalOcean 上に Vagrant でサーバーを立ち上げる</title>

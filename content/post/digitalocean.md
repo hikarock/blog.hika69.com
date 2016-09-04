@@ -1,7 +1,6 @@
 +++
 date = "2016-09-03T16:41:41+09:00"
-draft = true
-tags = ["digital-ocean", "vagrant"]
+tags = ["digitalocean", "vagrant"]
 title = "DigitalOcean 上に Vagrant でサーバーを立ち上げる"
 
 +++
@@ -103,11 +102,15 @@ tugboat を使わないで以下のように vagrant-digitalocean の機能を�
 
 ### Vagrant up する
 
+仮想サーバーを起動する。
+
 ```sh
 % vagrant up --provider=digital_ocean
 ```
 
 ### サーバーに SSH 接続する
+
+接続は `vagrant ssh` するだけ。
 
 ```sh
 % vagrant ssh
@@ -116,6 +119,4 @@ Last login: Sun Sep  4 07:55:24 2016 from xxx
 [root@foo ~]# cat /etc/redhat-release
 CentOS Linux release 7.2.1511 (Core)
 ```
-
-
 
