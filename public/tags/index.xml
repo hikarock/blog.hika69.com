@@ -7,140 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Sun, 24 Jul 2016 14:51:49 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 07 Nov 2016 23:14:10 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>spa layout boilerplate</title>
-      <link>http://localhost:1313/blog/2016/07/24/spa-layout-boilerplate/</link>
-      <pubDate>Sun, 24 Jul 2016 14:51:49 +0900</pubDate>
+      <title>HyperTalk の play コマンド風のカスタム要素をつくった</title>
+      <link>http://localhost:1313/blog/2016/11/07/x-play/</link>
+      <pubDate>Mon, 07 Nov 2016 23:14:10 +0900</pubDate>
       
-      <guid>http://localhost:1313/blog/2016/07/24/spa-layout-boilerplate/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>spa layout boilerplate</title>
-      <link>http://localhost:1313/blog/2016/07/24/spa-layout-boilerplate/</link>
-      <pubDate>Sun, 24 Jul 2016 14:51:49 +0900</pubDate>
-      
-      <guid>http://localhost:1313/blog/2016/07/24/spa-layout-boilerplate/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web ext</title>
-      <link>http://localhost:1313/blog/2016/07/03/web-ext/</link>
-      <pubDate>Sun, 03 Jul 2016 12:59:54 +0900</pubDate>
-      
-      <guid>http://localhost:1313/blog/2016/07/03/web-ext/</guid>
-      <description>&lt;p&gt;&lt;code&gt;web-ext&lt;/code&gt; をインストール。&lt;/p&gt;
+      <guid>http://localhost:1313/blog/2016/11/07/x-play/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/hikarock/x-play&#34;&gt;hikarock/x-play&lt;/a&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;% node -v
-v6.2.2
-% npm install -g web-ext
+&lt;p&gt;&lt;a href=&#34;http://www.kreativekorp.com/docs/openxion/1.4/manual/hyp/cm/play.html&#34;&gt;HyperTalk Commands - play&lt;/a&gt;&lt;/p&gt;
 
-&amp;gt; node-pre-gyp install --fallback-to-build
-
-gyp ERR! configure error
-gyp ERR! stack Error: Python executable &amp;quot;/Users/hikarock/.pyenv/shims/python&amp;quot; is v3.5.1, which is not supported by gyp.
-gyp ERR! stack You can pass the --python switch to point to Python &amp;gt;= v2.5.0 &amp;amp; &amp;lt; 3.0.0.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;gyp のインストールが走って Python のバージョンがいかんと怒られた。pyenv で 2.7 に切り替える。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% pyenv version
-3.5.1 (set by /Users/hikarock/.pyenv/version)
-% pyenv global system
-% python --version
-Python 2.7.10
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;再度 &lt;code&gt;npm install -g web-ext&lt;/code&gt; を実行したらうまく入った。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% web-ext --version
-{ Error: Cannot find module &#39;./build/Release/DTraceProviderBindings&#39; ...
-{ Error: Cannot find module &#39;./build/default/DTraceProviderBindings&#39; ...
-{ Error: Cannot find module &#39;./build/Debug/DTraceProviderBindings&#39; ...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;しかし実行すると &lt;code&gt;DTraceProviderBindings&lt;/code&gt; がみつからない云々言われる。
-一応エラーの後でバージョンは表示されていたけど気持ちわるいので &lt;code&gt;--no-optional&lt;/code&gt; つきで再インストールしてみる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% npm install -g --no-optional web-ext
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;上記のエラーはでなくなった。&lt;/p&gt;
-
-&lt;p&gt;次は web-ext コマンドを使って Chrome 拡張を Firefox で起動してみる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% cd projects/simple-honyaku
-% web-ext run
-...
-run: WebExtError: Temporary add-on installation is not supported in this version of Firefox (you need Firefox 49 or higher). For older Firefox versions, use --pre-install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Firefox 49 以上を使えと言われたので以下からダウンロードする&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.mozilla.org/ja/firefox/developer/&#34;&gt;Firefox Developer Edition — Mozilla&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>web ext</title>
-      <link>http://localhost:1313/blog/2016/07/03/web-ext/</link>
-      <pubDate>Sun, 03 Jul 2016 12:59:54 +0900</pubDate>
-      
-      <guid>http://localhost:1313/blog/2016/07/03/web-ext/</guid>
-      <description>&lt;p&gt;&lt;code&gt;web-ext&lt;/code&gt; をインストール。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% node -v
-v6.2.2
-% npm install -g web-ext
-
-&amp;gt; node-pre-gyp install --fallback-to-build
-
-gyp ERR! configure error
-gyp ERR! stack Error: Python executable &amp;quot;/Users/hikarock/.pyenv/shims/python&amp;quot; is v3.5.1, which is not supported by gyp.
-gyp ERR! stack You can pass the --python switch to point to Python &amp;gt;= v2.5.0 &amp;amp; &amp;lt; 3.0.0.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;gyp のインストールが走って Python のバージョンがいかんと怒られた。pyenv で 2.7 に切り替える。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% pyenv version
-3.5.1 (set by /Users/hikarock/.pyenv/version)
-% pyenv global system
-% python --version
-Python 2.7.10
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;再度 &lt;code&gt;npm install -g web-ext&lt;/code&gt; を実行したらうまく入った。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% web-ext --version
-{ Error: Cannot find module &#39;./build/Release/DTraceProviderBindings&#39; ...
-{ Error: Cannot find module &#39;./build/default/DTraceProviderBindings&#39; ...
-{ Error: Cannot find module &#39;./build/Debug/DTraceProviderBindings&#39; ...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;しかし実行すると &lt;code&gt;DTraceProviderBindings&lt;/code&gt; がみつからない云々言われる。
-一応エラーの後でバージョンは表示されていたけど気持ちわるいので &lt;code&gt;--no-optional&lt;/code&gt; つきで再インストールしてみる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% npm install -g --no-optional web-ext
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;上記のエラーはでなくなった。&lt;/p&gt;
-
-&lt;p&gt;次は web-ext コマンドを使って Chrome 拡張を Firefox で起動してみる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% cd projects/simple-honyaku
-% web-ext run
-...
-run: WebExtError: Temporary add-on installation is not supported in this version of Firefox (you need Firefox 49 or higher). For older Firefox versions, use --pre-install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Firefox 49 以上を使えと言われたので以下からダウンロードする&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.mozilla.org/ja/firefox/developer/&#34;&gt;Firefox Developer Edition — Mozilla&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/Music_Macro_Language&#34;&gt;Music Macro Language - Wikipedia&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
