@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web Components on hikarock blog</title>
-    <link>http://localhost:1313/tags/web-components/</link>
+    <link>https://blog.hika69.com/tags/web-components/</link>
     <description>Recent content in Web Components on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
     <lastBuildDate>Mon, 07 Nov 2016 23:14:10 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/web-components/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hika69.com/tags/web-components/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>HyperTalk の play コマンド風のカスタム要素 &lt;x-play&gt; をつくった</title>
-      <link>http://localhost:1313/blog/2016/11/07/x-play/</link>
+      <link>https://blog.hika69.com/blog/2016/11/07/x-play/</link>
       <pubDate>Mon, 07 Nov 2016 23:14:10 +0900</pubDate>
       
-      <guid>http://localhost:1313/blog/2016/11/07/x-play/</guid>
+      <guid>https://blog.hika69.com/blog/2016/11/07/x-play/</guid>
       <description>
 
 &lt;p&gt;20 年ほど前に買った &lt;a href=&#34;http://booklog.jp/item/1/479529609X&#34;&gt;HyperCardの本&lt;/a&gt; をパラパラめくっていたら、&lt;code&gt;play&lt;/code&gt; というコマンドが紹介されていた。音色とメロディーを指定して、音楽を再生することができる便利なコマンドだ。&lt;/p&gt;
