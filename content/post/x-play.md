@@ -1,7 +1,7 @@
 +++
 date = "2016-11-07T23:14:10+09:00"
 draft = true
-tags = ["polymer", "web-components"]
+tags = ["polymer", "web-components", "javascript"]
 title = "HyperTalk の play コマンド風のカスタム要素 <x-play> をつくった"
 
 +++
