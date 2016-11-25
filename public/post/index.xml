@@ -7,8 +7,163 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Mon, 07 Nov 2016 23:14:10 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 25 Nov 2016 17:49:12 +0900</lastBuildDate>
     <atom:link href="https://blog.hika69.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>開発環境に Phan を導入した</title>
+      <link>https://blog.hika69.com/blog/2016/11/25/phan/</link>
+      <pubDate>Fri, 25 Nov 2016 17:49:12 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2016/11/25/phan/</guid>
+      <description>
+
+&lt;p&gt;開発環境 (Mac) で PHP の静的解析がしたくて Phan を導入した。&lt;/p&gt;
+
+&lt;p&gt;さくっといけるかと思いきやいろいろつまづいたので備忘。&lt;/p&gt;
+
+&lt;h3 id=&#34;参考:593646a7e5561d464cbb25a13a7e3164&#34;&gt;参考&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/etsy/phan&#34;&gt;etsy/phan: Static analyzer for PHP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://inside.pixiv.net/entry/2016/11/11/202656&#34;&gt;Phan静的解析がもたらす大PHP型検査時代 - pixiv inside&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;php7-を準備:593646a7e5561d464cbb25a13a7e3164&#34;&gt;PHP7 を準備&lt;/h3&gt;
+
+&lt;p&gt;phan が要求する PHP7 を導入する。今回は PHP5.6 も同居させたいので phpbrew を使う。&lt;/p&gt;
+
+&lt;p&gt;以下のエントリが参考になった。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.karakaram.com/mac-install-phpbrew&#34;&gt;MacでのPHP開発はphpbrewが非常に良い | karakaram-blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;phpbrew-をインストール:593646a7e5561d464cbb25a13a7e3164&#34;&gt;phpbrew をインストール&lt;/h4&gt;
+
+&lt;p&gt;以下のドキュメントを見つつ進める。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/phpbrew/phpbrew#install&#34;&gt;phpbrew/phpbrew#install&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;phpbrew をダウンロードしてパスの通ったところに配置する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
+% chmod +x phpbrew
+% mv phpbrew ~/bin/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;初期設定のコマンドを実行。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% phpbrew init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;.zshrc&lt;/code&gt; に以下の記述を追記。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;if [ -d ${HOME}/.phpbrew ]; then
+  source $HOME/.phpbrew/bashrc
+fi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;利用可能なPHPのバージョンを調べる。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% phpbrew known
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;7系で最新のバージョンをインストールする。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% phpbrew install 7.0.13 +default
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ちなみに 5.3.x のような古いバージョンを入れたい時は &lt;code&gt;--old&lt;/code&gt; オプションで表示される。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% phpbrew known --old
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;インストールが完了したらバージョンを切り替える。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% phpbrew switch php-7.0.13
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;phan-をインストール:593646a7e5561d464cbb25a13a7e3164&#34;&gt;phan をインストール&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/etsy/phan/wiki/Getting-Started#from-phanphar&#34;&gt;Getting Started · etsy/phan Wiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;From Phan.phar&amp;rdquo; の手順で進める。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% curl -L https://github.com/etsy/phan/releases/download/0.6/phan.phar -o phan.phar;
+% mv phan.phar ~/bin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://inside.pixiv.net/entry/2016/11/11/202656&#34;&gt;pixiv さんのエントリ&lt;/a&gt; を参考に、以下のスクリプトを、パスの通ったところに設置する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;#!/bin/sh
+
+/Users/hikarock/.phpbrew/php/php-7.0.13/bin/php ${PHAN_BIN:-/Users/hikarock/bin/phan.phar} &amp;quot;$@&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;php-ast-をインストール:593646a7e5561d464cbb25a13a7e3164&#34;&gt;php-ast をインストール&lt;/h3&gt;
+
+&lt;p&gt;phan が依存している php-ast をインストールする。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/nikic/php-ast#installation&#34;&gt;nikic/php-ast: Extension exposing PHP 7 abstract syntax tree&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% git clone git@github.com:nikic/php-ast.git
+% cd php-ast
+% phpize
+% ./configure
+% make
+% sudo make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;php -i | grep extension_dir&lt;/code&gt; などで extension のインストール先を確認して、該当ディレクトリに &lt;code&gt;ast.so&lt;/code&gt; が配置されていることを確認。&lt;/p&gt;
+
+&lt;p&gt;ちなみに以下に配置されていた。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% pwd
+/Users/hikarock/.phpbrew/php/php-7.0.13/lib/php/extensions/no-debug-non-zts-20151012
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;php.ini の &lt;code&gt;[php]&lt;/code&gt; 配下に以下を追記して extension を読み込む。php.ini の場所は &lt;code&gt;php --ini&lt;/code&gt; で確認する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;extension = &amp;quot;ast.so&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;足りてなかった-extension-を追加:593646a7e5561d464cbb25a13a7e3164&#34;&gt;足りてなかった extension を追加&lt;/h3&gt;
+
+&lt;p&gt;phan が依存している &lt;code&gt;sqlite3&lt;/code&gt; が足りていなかったので phpbrew で追加する&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% phpbrew ext install sqlite3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ここでようやく phan コマンドが正常動作した。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;phan -h
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;phan-config-php-の設置:593646a7e5561d464cbb25a13a7e3164&#34;&gt;.phan/config.php の設置&lt;/h3&gt;
+
+&lt;p&gt;静的解析を行いたいプロジェクトのディレクトリ直下に &lt;code&gt;.phan/config.php&lt;/code&gt; を作成する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+return [
+    // 解析対象のディレクトリ
+    &#39;directory_list&#39; =&amp;gt; [
+        &#39;lib/&#39;
+    ],
+    // 解析対象外のディレクトリ
+    &#39;exclude_analysis_directory_list&#39; =&amp;gt; [
+        &#39;vendor/&#39;
+    ],
+];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;実行する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% cd /path/to/project
+% phan --progress-bar -ophan.log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;大量の解析結果が &lt;code&gt;phan.log&lt;/code&gt; に出力された。めでたしめでたし。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>HyperTalk の play コマンド風のカスタム要素 &lt;x-play&gt; をつくった</title>
@@ -910,108 +1065,6 @@ Octopress にくらべて生成速度が速くてとても快適だ。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[params]
   cover = &amp;quot;images/cover.jpg&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>静的サイトジェネレータ Roots の覚書</title>
-      <link>https://blog.hika69.com/blog/2015/07/01/roots/</link>
-      <pubDate>Wed, 01 Jul 2015 22:01:34 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/blog/2015/07/01/roots/</guid>
-      <description>&lt;p&gt;定期的にブログをリニューアルしたくなる病が発症する。&lt;/p&gt;
-
-&lt;p&gt;以下を条件に探してて roots がよさそうだったので試した。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;node製&lt;/li&gt;
-&lt;li&gt;stylus&lt;/li&gt;
-&lt;li&gt;ファイル構成がシンプル&lt;/li&gt;
-&lt;li&gt;拡張しやすい&lt;/li&gt;
-&lt;li&gt;デフォルトのテーマがかっこいい&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://roots.cx/&#34;&gt;Roots: Enlightened Static Sites&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;とりあえずインストールする。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ npm install -g roots
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ブログ用のテンプレートを追加する必要があるようなので、動画を見つつ進める。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=RitO5dyPH44&#34;&gt;Roots Templates - YouTube&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;以下のテンプレートを追加。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ roots tpl add blog https://github.com/carrot/roots-template-blog.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;-t&lt;/code&gt;でテンプレートを指定してプロジェクトを作成する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ roots new hikarock-blog -t blog
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以下のようにデフォルトのテンプレートを指定しておけば、次から&lt;code&gt;-t&lt;/code&gt;は不要になる模様。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ roots tpl default blog
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;生成された。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;.
-├── app.coffee
-├── app.production.coffee
-├── assets
-│   ├── css
-│   │   ├── _settings.styl
-│   │   └── master.styl
-│   ├── img
-│   └── js
-│       └── main.coffee
-├── node_modules
-├── package.json
-├── posts
-│   ├── first_post.jade
-│   └── second_post.jade
-├── public
-│   ├── css
-│   │   ├── master.css
-│   │   └── master.css.map
-│   ├── img
-│   ├── index.html
-│   ├── js
-│   │   ├── main.js
-│   │   └── main.js.map
-│   └── posts
-│       ├── first_post.html
-│       └── second_post.html
-├── readme.md
-└── views
-    ├── _single.jade
-    ├── index.jade
-    └── layout.jade
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ファイル構成はシンプルでよさそう。&lt;/p&gt;
-
-&lt;p&gt;サイトを立ち上げる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ roots watch
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;デフォルトのテーマはないに等しいくらいに無印スタイル&lt;/li&gt;
-&lt;li&gt;jade内に markdown を書くのがちょっと慣れない。インデントがだるい&lt;/li&gt;
-&lt;li&gt;&lt;del&gt;GitHub味のmarkdown が解釈されていない。パーサーを marked とかに変えたらよいのだろうか&lt;/del&gt;
-
-&lt;ul&gt;
-&lt;li&gt;もともと marked だった。一部解釈できない記法が含んでいたので崩れていた&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;デプロイは試してない&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;他はいい感じなので気が向いたら引っ越そう。&lt;/p&gt;
 </description>
     </item>
     
