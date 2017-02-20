@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Httpie on hikarock blog</title>
+    <link>https://blog.hika69.com/tags/httpie/</link>
+    <description>Recent content in Httpie on hikarock blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Mon, 20 Feb 2017 22:55:56 +0900</lastBuildDate>
+    <atom:link href="https://blog.hika69.com/tags/httpie/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>HTTPie の Sessions の使い方</title>
+      <link>https://blog.hika69.com/blog/2017/02/20/httpie/</link>
+      <pubDate>Mon, 20 Feb 2017 22:55:56 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2017/02/20/httpie/</guid>
+      <description>&lt;p&gt;API のリクエストにめっちゃ長いトークンを含めないといけなかったりすると、コマンドを打つのもコピペするのも面倒なんだけど、&lt;a href=&#34;https://httpie.org/&#34;&gt;HTTPie&lt;/a&gt; に &lt;a href=&#34;https://httpie.org/doc#sessions&#34;&gt;Sessions&lt;/a&gt; という便利そうな機能があったので試してみた。&lt;/p&gt;
+
+&lt;p&gt;ここでは例として &lt;code&gt;foo&lt;/code&gt; という名前の Session を作る。 &lt;code&gt;Authorization:&amp;quot;~&amp;quot;&lt;/code&gt; が入力がめんどいトークンなど。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% http --session=foo api.example.com Authorization:&amp;quot;Bearer {very-very-long-token}&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Session &lt;code&gt;foo&lt;/code&gt; を使うと、上記のヘッダ付きのリクエストになる。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% http --session=foo api.example.jp/bar
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Session の情報は以下のパスに保存されていた。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% cat ~/.httpie/sessions/api.example.com/foo.json
+{
+    &amp;quot;__meta__&amp;quot;: {
+        &amp;quot;about&amp;quot;: &amp;quot;HTTPie session file&amp;quot;,
+        &amp;quot;help&amp;quot;: &amp;quot;https://httpie.org/docs#sessions&amp;quot;,
+        &amp;quot;httpie&amp;quot;: &amp;quot;0.9.8&amp;quot;
+    },
+    &amp;quot;auth&amp;quot;: {
+        &amp;quot;password&amp;quot;: null,
+        &amp;quot;type&amp;quot;: null,
+        &amp;quot;username&amp;quot;: null
+    },
+    &amp;quot;cookies&amp;quot;: {},
+    &amp;quot;headers&amp;quot;: {
+        &amp;quot;Authorization&amp;quot;: &amp;quot;Bearer {very-very-long-token}&amp;quot;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
