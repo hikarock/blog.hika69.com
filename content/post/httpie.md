@@ -18,7 +18,7 @@ API のリクエストにめっちゃ長いトークンを含めないといけ�
 Session `foo` を使うと、上記のヘッダ付きのリクエストになる。
 
 ```
-% http --session=foo api.example.jp/bar
+% http --session=foo api.example.com/bar
 ```
 
 Session の情報は以下のパスに保存されていた。
