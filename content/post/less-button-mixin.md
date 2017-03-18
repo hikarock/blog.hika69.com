@@ -12,13 +12,13 @@ tags:
 
 <!--more-->
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/img-button.png)
+![](/images/post/less-button-mixin-1.png)
 
 上が画像、下がLess版。まあまあ再現できた。
 
 色は引数で変えられるようにした。
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/less-button.png)
+![](/images/post/less-button-mixin-2.png)
 
 ```css
 .stbd-btn(@color) {

@@ -14,7 +14,7 @@ tags:
 
 Xcode でカラーパレットを開いて、中央のタブ (Color Palettes) を選択する。
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/colors.png)
+![](/images/post/osx-color-palettes-1.png)
 
 左端の歯車のアイコンをクリックして`New`を選択するとカラーパレットを作成することができる。
 

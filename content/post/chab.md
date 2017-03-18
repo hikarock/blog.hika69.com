@@ -23,7 +23,7 @@ chab という6年前に作ったライブラリなんだけど、しばらく�
 
 第3引数は `displayName` だけど Chrome Developer Tools を見る限りだと第1引数に指定した値が表示されている。どこで使われるのかはわからなかった。
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/chab-01.png)
+![](/images/post/chab-01.png)
 
 第4引数は `estimatedSize` はDBのサイズを byte で指定する。
 

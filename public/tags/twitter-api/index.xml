@@ -72,7 +72,7 @@
 
 &lt;p&gt;メニューから&lt;code&gt;ツール &amp;gt; スクリプトエディタ&lt;/code&gt;を選択します。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/google-apps-script-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/google-apps-script-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;「無題のプロジェクト」が開きますので、プロジェクトに適当に名前をつけてください。&lt;/p&gt;
 
@@ -80,11 +80,11 @@
 
 &lt;p&gt;&lt;code&gt;リソース &amp;gt; ライブラリ&lt;/code&gt;を選択すると以下のウィンドウが表示されます。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/google-apps-script-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/google-apps-script-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;「ライブラリを検索」に &lt;code&gt;MHGYgT-unu1fC7zXOkNfBUVSHJARy_IP7&lt;/code&gt; を入力して選択ボタンを押します。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/google-apps-script-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/google-apps-script-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;最新のバージョンを選択します。この例では「1」を選択して保存。&lt;/p&gt;
 
@@ -100,7 +100,7 @@
 
 &lt;p&gt;それぞれに先ほどTwitter Developersで取得した「Consumer key」と「Consumer secret」の値を設定してください。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/google-apps-script-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/google-apps-script-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;5-トリガースクリプトの作成:810c749fc8fa5127bcde89e372276574&#34;&gt;5) トリガースクリプトの作成&lt;/h3&gt;
 
@@ -115,7 +115,7 @@
 &lt;p&gt;実行するとスプレッドシートに検索結果が出力されます。
 初回実行時はTwitterとGoogleの承認画面が表示されると思います。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/google-apps-script-06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/google-apps-script-06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;こんな感じで検索結果が出力されてたら成功。&lt;/p&gt;
 
@@ -123,7 +123,7 @@
 
 &lt;p&gt;メニューから&lt;code&gt;リソース &amp;gt; 現在のスクリプトのトリガー&lt;/code&gt;を選択します。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/google-apps-script-05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/google-apps-script-05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;この設定だと1時間おきに検索が実行されて、検索結果がスプレッドシートに貯まっていきます。&lt;/p&gt;
 </description>

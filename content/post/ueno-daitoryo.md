@@ -11,7 +11,7 @@ tags:
 
 <!--more-->
 
-![上野大統領のもつ煮込み](https://dl.dropboxusercontent.com/u/459142/IFTTT/Instagram/618a2324caa511e2979522000a9f309d_7.jpg)
+![上野大統領のもつ煮込み](/images/post/ueno-daitoryo-1.jpg)
 
 上野に住みたい。
 

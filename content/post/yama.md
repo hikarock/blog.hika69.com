@@ -11,11 +11,11 @@ tags:
 
 <!--more-->
 
-![双子池](https://dl.dropboxusercontent.com/u/459142/IFTTT/Instagram/2e606d7617c311e3821b22000aeb0baa_7.jpg)
+![双子池](/images/post/yama-1.jpg)
 
 八ヶ岳・双子池のキャンプ場。とても静かでいいところだった。
 
-![箸を忘れた](https://dl.dropboxusercontent.com/u/459142/IFTTT/Instagram/712857a417c311e3a52422000aaa0a0f_7.jpg)
+![箸を忘れた](/images/post/yama-2.jpg)
 
 棒ノ折山。箸を忘れた。
 

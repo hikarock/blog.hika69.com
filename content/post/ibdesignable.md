@@ -25,7 +25,7 @@ Xcode6 から使える `IB_DESIGNABLE` と `IBInspectable` が非常に便利な
 
 ### `IB_DESIGNABLE` な View は `UIView` もしくは `NSView` を継承して作る
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-1.png)
+![](/images/post/ib-designable-1.png)
 
 `UITableViewCell` とか継承して `IB_DESIGNABLE` を設定しても IB 上では動かない。Preview でも同様に反映されなかった。残念。
 
@@ -51,14 +51,14 @@ Xcode6 から使える `IB_DESIGNABLE` と `IBInspectable` が非常に便利な
 
 `enum` が使えると便利そうだと思ったけどだめだった。
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-2.png)
+![](/images/post/ib-designable-2.png)
 
 上でも紹介している、[このエントリ](https://www.weheartswift.com/make-awesome-ui-components-ios-8-using-swift-xcode-6/)
 にある型を試した。他にも使える型があるのかもしれない。
 
 ### 要素の消し忘れに注意
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-3.png)
+![](/images/post/ib-designable-3.png)
 
 `IBInspectable` で設定した値は `Identity Inspector` 上の `User Defined Runtime Attributes` 上に保存される。
 プロパティを設定後に、プロパティ名を変更したり削除したりすると、ここに迷子の要素が残ってしまう。
@@ -69,7 +69,7 @@ Xcode6 から使える `IB_DESIGNABLE` と `IBInspectable` が非常に便利な
 
 継承した `IBInspectable` な View のプロパティが両方 IB 上に表示される。
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-4.png)
+![](/images/post/ib-designable-4.png)
 
 2つの View でそれぞれ設定した値がストーリーボード上に反映されている。
 

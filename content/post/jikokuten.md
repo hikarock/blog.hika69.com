@@ -11,7 +11,7 @@ tags:
 
 <!--more-->
 
-![持国天のフィギュア](https://dl.dropboxusercontent.com/u/459142/IFTTT/Instagram/14aed81ad1bc11e2b16122000a1f9e61_7.jpg)
+![持国天のフィギュア](/images/post/jikokuten-1.jpg)
 
 > 持国天（じこくてん）、梵名ドゥリタラーシュトラ （धृतराष्ट्र [dhRtaraaSTra] 『国を支える者』、提頭頼咤）とは仏教における天部の仏神。増長天、広目天、多聞天と共に四天王の一尊に数えられる。--[Wikipedia](http://ja.wikipedia.org/wiki/%E6%8C%81%E5%9B%BD%E5%A4%A9)
 

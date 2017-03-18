@@ -11,11 +11,11 @@ Node 系のステッカーは六角形で揃えてるみたいなので、[Casto
 
 <!--more-->
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/casto-sticker.jpg)
+![](/images/post/casto-sticker-1.jpg)
 
 ここで売ってます。5セット限定なのでお早めに！
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/casto-hexagon.png)
+![](/images/post/casto-sticker-2.png)
 
 <a href="https://spike.cc/p/gKeopedV" class="spike-button" data-code="gKeopedV" data-button-style="pay_large" data-button-text-key="1">今すぐ支払う</a><script src="https://spike.cc/button/v1/button.js" type="text/javascript"></script>
 

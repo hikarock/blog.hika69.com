@@ -45,7 +45,7 @@ triph.jp
 
 DNSの管理画面で以下のように設定。
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/meteor-1.png)
+![](/images/post/meteor-1.png)
 
 `origin.meteor.com`のIPは`dig`で調べた。
 

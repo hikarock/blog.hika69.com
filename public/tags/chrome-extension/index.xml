@@ -84,9 +84,9 @@
 
 &lt;p&gt;素敵なバナーやアイコンは &lt;a href=&#34;https://twitter.com/meganejunkie&#34;&gt;@meganejunkie&lt;/a&gt; 先生に作ってもらいました (ありがとうございます) 。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/simple-honyaku-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/simple-honyaku-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/simple-honyaku-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/simple-honyaku-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;利用しているAPIを変更しましたが機能的にはほぼ変わっていません。&lt;/p&gt;
 
@@ -96,7 +96,7 @@
 &lt;li&gt;翻訳結果の読み上げ機能(英語のみ)を追加&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/simple-honyaku-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/simple-honyaku-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;デフォルトだと一つのBing Application IDをみんなで使いまわすので、API制限かかるかもしれません。
 なので一応「オプション」画面から個別にBing Application IDを上書きできるようにしています。&lt;/p&gt;

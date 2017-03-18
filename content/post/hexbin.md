@@ -12,7 +12,7 @@ tags:
 
 <!--more-->
 
-![hexbin](https://dl.dropboxusercontent.com/u/459142/img/blog/hexbin.png)
+![hexbin](/images/post/hexbin.png)
 
 以下のようにPRを送ると、サイトにロゴを掲載してもらえる。
 

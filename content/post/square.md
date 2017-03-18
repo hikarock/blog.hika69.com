@@ -11,7 +11,7 @@ tags:
 
 <!--more-->
 
-![Squareリーダー](https://dl.dropboxusercontent.com/u/459142/IFTTT/Instagram/28c9eb60d1d911e2943422000a9f1416_7.jpg)
+![Squareリーダー](/images/post/square-1.jpg)
 
 「じゃがポックル」を100円で売りました。明日入金されるぞ。
 

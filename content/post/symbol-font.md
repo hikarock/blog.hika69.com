@@ -15,7 +15,7 @@ title = "自作アプリのシンボルフォントを作った"
 
 [IcoMoon](https://icomoon.io/) は自作フォントと FontAwesome 等のシンボルフォントを混ぜて一つのフォントとして生成できるので便利だ。
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/icomoon.png)
+![](/images/post/icomoon.png)
 
 作成したフォントは [hika69.com](http://hika69.com) で使用している (ポートフォリオのようなただのリンク集) 。
 

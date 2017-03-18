@@ -165,7 +165,7 @@
 
 <h3 id="ib-designable-な-view-は-uiview-もしくは-nsview-を継承して作る:37abba03a2e327338726ad5c5fd40ef4"><code>IB_DESIGNABLE</code> な View は <code>UIView</code> もしくは <code>NSView</code> を継承して作る</h3>
 
-<p><img src="https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-1.png" alt="" /></p>
+<p><img src="https://blog.hika69.com/images/post/ib-designable-1.png" alt="" /></p>
 
 <p><code>UITableViewCell</code> とか継承して <code>IB_DESIGNABLE</code> を設定しても IB 上では動かない。Preview でも同様に反映されなかった。残念。</p>
 
@@ -190,14 +190,14 @@
 
 <p><code>enum</code> が使えると便利そうだと思ったけどだめだった。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-2.png" alt="" /></p>
+<p><img src="https://blog.hika69.com/images/post/ib-designable-2.png" alt="" /></p>
 
 <p>上でも紹介している、<a href="https://www.weheartswift.com/make-awesome-ui-components-ios-8-using-swift-xcode-6/">このエントリ</a>
 にある型を試した。他にも使える型があるのかもしれない。</p>
 
 <h3 id="要素の消し忘れに注意:37abba03a2e327338726ad5c5fd40ef4">要素の消し忘れに注意</h3>
 
-<p><img src="https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-3.png" alt="" /></p>
+<p><img src="https://blog.hika69.com/images/post/ib-designable-3.png" alt="" /></p>
 
 <p><code>IBInspectable</code> で設定した値は <code>Identity Inspector</code> 上の <code>User Defined Runtime Attributes</code> 上に保存される。
 プロパティを設定後に、プロパティ名を変更したり削除したりすると、ここに迷子の要素が残ってしまう。</p>
@@ -208,7 +208,7 @@
 
 <p>継承した <code>IBInspectable</code> な View のプロパティが両方 IB 上に表示される。</p>
 
-<p><img src="https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-4.png" alt="" /></p>
+<p><img src="https://blog.hika69.com/images/post/ib-designable-4.png" alt="" /></p>
 
 <p>2つの View でそれぞれ設定した値がストーリーボード上に反映されている。</p>
 

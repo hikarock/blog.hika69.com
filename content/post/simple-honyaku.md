@@ -14,9 +14,9 @@ Chrome 拡張機能の「[シンプル翻訳](https://chrome.google.com/webstore
 
 素敵なバナーやアイコンは [@meganejunkie](https://twitter.com/meganejunkie) 先生に作ってもらいました (ありがとうございます) 。
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/simple-honyaku-1.png)
+![](/images/post/simple-honyaku-1.png)
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/simple-honyaku-2.png)
+![](/images/post/simple-honyaku-2.png)
 
 利用しているAPIを変更しましたが機能的にはほぼ変わっていません。
 
@@ -24,7 +24,7 @@ Chrome 拡張機能の「[シンプル翻訳](https://chrome.google.com/webstore
 - オプションから個別にBing Application IDが設定可能に
 - 翻訳結果の読み上げ機能(英語のみ)を追加
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/simple-honyaku-3.png)
+![](/images/post/simple-honyaku-3.png)
 
 デフォルトだと一つのBing Application IDをみんなで使いまわすので、API制限かかるかもしれません。
 なので一応「オプション」画面から個別にBing Application IDを上書きできるようにしています。

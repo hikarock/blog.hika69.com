@@ -46,7 +46,7 @@ private.xmlに以下を追記した。
 
 `Reload XML`したら設定が現れるので、両方にチェックをいれて完了。
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/karabiner.png)
+![](/images/post/karabiner.png)
 
 XVim 入れたらこういうことになるだろうなあ、と思ってたけど案の定 Xcode Way から遠ざかりつつある...
 

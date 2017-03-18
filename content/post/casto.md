@@ -18,7 +18,7 @@ tags:
 - [超簡単なライブコーディング支援サービス「Casto」- ソフトアンテナブログ](http://www.softantenna.com/wp/webservice/casto/)
 - [Castoというサービスを作りました - Live coding in browse, using text editor. - テノニッキ (@hideack &#39;s diary)](http://hideack.hatenablog.com/entry/2014/03/30/163413)
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/casto-01.png)
+![](/images/post/casto-01.png)
 
 ひとことで言うと「リアルタイムで更新できるgist」(by [@hideack](https://twitter.com/hideack))です。
 
@@ -26,7 +26,7 @@ tags:
 
 41日前の会話。
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/casto-02.png)
+![](/images/post/casto-02.png)
 
 結局「ペアプロ」は[課題が多く](https://github.com/hikarock/casto/issues/38#issuecomment-38985343)、「ライブコーディング」のアプリとして発表しました。
 
@@ -39,7 +39,7 @@ tags:
 この回答のサンプルをそのままMeteorにアップロードしてみたのが[こちら](http://casto.meteor.com/)。
 ファイルを保存したタイミングで画面が更新できています。
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/casto-03.png)
+![](/images/post/casto-03.png)
 
 ### ファイルの変更箇所を検知できるか
 
@@ -49,7 +49,7 @@ tags:
 
 最初は「変更箇所をマークする記法をあらかじめ決めておいて、エディタでそれを入力してもらって目印にする」という方式を考えていたのですが、社内の開発者に相談したところ、[@hikalin8686](https://twitter.com/hikalin8686)が、「変更前のテキストを保存しておいてDiffをとればいいのでは」というアイディアを出してくれて、その方法で実装しました。
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/casto-04.png)
+![](/images/post/casto-04.png)
 
 変更した行がハイライトされています。
 

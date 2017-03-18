@@ -13,7 +13,7 @@ Xcode のストーリーボード上で背後の要素をあれこれしたか�
 
 選択したい要素にポインタを移動して、`Command + Shift` を押しながらクリックすると、同じ座標にある View の一覧が表示される。
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/xcode-slect-bg-elements.png)
+![](/images/post/xcode-select-bg-elements.png)
 
 ここから View を選択すればOK。
 

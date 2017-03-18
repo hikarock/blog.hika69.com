@@ -14,19 +14,19 @@ tags:
 
 #### エディタページ
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/less-mixin-1.png)
+![](/images/post/less-mixin-1.png)
 
 #### スライドページ(PC用)
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/less-mixin-2.png)
+![](/images/post/less-mixin-2.png)
 
 #### スライドページ(スマートフォン用)
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/less-mixin-3.png)
+![](/images/post/less-mixin-3.png)
 
 #### ブログパーツ
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/less-mixin-4.png)
+![](/images/post/less-mixin-4.png)
 
 こんな感じにいろんなサイズで描画したい。
 

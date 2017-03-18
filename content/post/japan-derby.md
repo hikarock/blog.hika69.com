@@ -21,7 +21,7 @@ tags:
 
 府中本町駅手前の[小さな絵地図専門店](http://www2.odn.ne.jp/~cdf21010/)で「多摩川散策絵図」と「丹沢大山散策絵図」を買った。
 
-![多摩川散策絵図](https://dl.dropboxusercontent.com/u/459142/IFTTT/Instagram/18f0e9c8c61c11e28ce622000a9f13a7_7.jpg)
+![多摩川散策絵図](/images/post/japan-derby-1.jpg)
 
 多摩川の源流から羽田空港のある河口までを描いている絵地図。広げると縦長で3mくらいある。
 名所がデフォルメされていてとても楽しい。

@@ -15,10 +15,10 @@ iPhone ドックが欲しいけど買うまででもない感じなので、YouT
 
 足りなかったブロックは適当に合いそうなもので代用した。子供のころからつかっているものなので結構ぼろいし、無駄に装飾的になっている。
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/lego-dock-1.jpg)
+![](/images/post/lego-dock-1.jpg)
 
 動画の通りだと iPhone がちょっとぐらついたので、コネクタの左右にプレートを足している。
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/lego-dock-2.jpg)
+![](/images/post/lego-dock-2.jpg)
 
 今回は使わなかったけれど、パーツが足りない時は[こういう店](http://www.brickers.jp/)でバラ買いするとよさそう。

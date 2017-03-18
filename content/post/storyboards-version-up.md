@@ -14,7 +14,7 @@ tags:
 
 Markdownでプレゼンが作れるあれです。
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/storyboards-emoji.png)
+![](/images/post/storyboards-emoji.png)
 
 ### やったこと
 

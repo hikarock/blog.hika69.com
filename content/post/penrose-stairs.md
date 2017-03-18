@@ -11,7 +11,7 @@ tags:
 
 <!--more-->
 
-![](https://dl.dropboxusercontent.com/u/459142/img/blog/penrose-stairs.jpg)
+![](/images/post/penrose-stairs.jpg)
 
 近い距離から撮影すると階段の遠近感が狂って見えてしまう。1メートル以上離れて、ズームすると綺麗に撮れた。
 
