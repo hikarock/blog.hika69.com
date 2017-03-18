@@ -25,7 +25,7 @@
 
 &lt;p&gt;Session &lt;code&gt;foo&lt;/code&gt; を使うと、上記のヘッダ付きのリクエストになる。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;% http --session=foo api.example.jp/bar
+&lt;pre&gt;&lt;code&gt;% http --session=foo api.example.com/bar
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Session の情報は以下のパスに保存されていた。&lt;/p&gt;
