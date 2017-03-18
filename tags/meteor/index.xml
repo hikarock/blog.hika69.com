@@ -116,7 +116,7 @@ triph.jp
 
 &lt;p&gt;DNSの管理画面で以下のように設定。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/meteor-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/meteor-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;origin.meteor.com&lt;/code&gt;のIPは&lt;code&gt;dig&lt;/code&gt;で調べた。&lt;/p&gt;
 

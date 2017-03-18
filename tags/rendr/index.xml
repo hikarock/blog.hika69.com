@@ -119,7 +119,7 @@
 &lt;li&gt;&lt;a href=&#34;http://hideack.hatenablog.com/entry/2014/03/30/163413&#34;&gt;Castoというサービスを作りました - Live coding in browse, using text editor. - テノニッキ (@hideack &amp;#39;s diary)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/casto-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/casto-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;ひとことで言うと「リアルタイムで更新できるgist」(by &lt;a href=&#34;https://twitter.com/hideack&#34;&gt;@hideack&lt;/a&gt;)です。&lt;/p&gt;
 
@@ -127,7 +127,7 @@
 
 &lt;p&gt;41日前の会話。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/casto-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/casto-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;結局「ペアプロ」は&lt;a href=&#34;https://github.com/hikarock/casto/issues/38#issuecomment-38985343&#34;&gt;課題が多く&lt;/a&gt;、「ライブコーディング」のアプリとして発表しました。&lt;/p&gt;
 
@@ -140,7 +140,7 @@
 &lt;p&gt;この回答のサンプルをそのままMeteorにアップロードしてみたのが&lt;a href=&#34;http://casto.meteor.com/&#34;&gt;こちら&lt;/a&gt;。
 ファイルを保存したタイミングで画面が更新できています。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/casto-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/casto-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;ファイルの変更箇所を検知できるか:8088fdbe1388420ca422f5a4aebd3214&#34;&gt;ファイルの変更箇所を検知できるか&lt;/h3&gt;
 
@@ -150,7 +150,7 @@
 
 &lt;p&gt;最初は「変更箇所をマークする記法をあらかじめ決めておいて、エディタでそれを入力してもらって目印にする」という方式を考えていたのですが、社内の開発者に相談したところ、&lt;a href=&#34;https://twitter.com/hikalin8686&#34;&gt;@hikalin8686&lt;/a&gt;が、「変更前のテキストを保存しておいてDiffをとればいいのでは」というアイディアを出してくれて、その方法で実装しました。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/casto-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/casto-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;変更した行がハイライトされています。&lt;/p&gt;
 

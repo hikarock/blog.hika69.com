@@ -22,19 +22,19 @@
 
 &lt;h4 id=&#34;エディタページ:251de83f020f23281ae170b1e5c8704b&#34;&gt;エディタページ&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/less-mixin-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/less-mixin-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;スライドページ-pc用:251de83f020f23281ae170b1e5c8704b&#34;&gt;スライドページ(PC用)&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/less-mixin-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/less-mixin-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;スライドページ-スマートフォン用:251de83f020f23281ae170b1e5c8704b&#34;&gt;スライドページ(スマートフォン用)&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/less-mixin-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/less-mixin-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;ブログパーツ:251de83f020f23281ae170b1e5c8704b&#34;&gt;ブログパーツ&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/less-mixin-4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/less-mixin-4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;こんな感じにいろんなサイズで描画したい。&lt;/p&gt;
 
@@ -105,13 +105,13 @@
       <guid>https://blog.hika69.com/blog/2013/12/05/less-button-mixin/</guid>
       <description>&lt;p&gt;以下の画像ボタンを再現するLessのmixin書いた。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/img-button.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/less-button-mixin-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;上が画像、下がLess版。まあまあ再現できた。&lt;/p&gt;
 
 &lt;p&gt;色は引数で変えられるようにした。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/less-button.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/less-button-mixin-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.stbd-btn(@color) {
   margin: auto;

@@ -150,7 +150,7 @@ class FooBarBuzzController extends BarBuzzController {
 
 &lt;p&gt;&lt;code&gt;Reload XML&lt;/code&gt;したら設定が現れるので、両方にチェックをいれて完了。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/karabiner.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/karabiner.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;XVim 入れたらこういうことになるだろうなあ、と思ってたけど案の定 Xcode Way から遠ざかりつつある&amp;hellip;&lt;/p&gt;
 </description>
@@ -166,7 +166,7 @@ class FooBarBuzzController extends BarBuzzController {
 
 &lt;p&gt;Xcode でカラーパレットを開いて、中央のタブ (Color Palettes) を選択する。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/colors.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/osx-color-palettes-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;左端の歯車のアイコンをクリックして&lt;code&gt;New&lt;/code&gt;を選択するとカラーパレットを作成することができる。&lt;/p&gt;
 

@@ -34,7 +34,7 @@
 
 &lt;h3 id=&#34;ib-designable-な-view-は-uiview-もしくは-nsview-を継承して作る:37abba03a2e327338726ad5c5fd40ef4&#34;&gt;&lt;code&gt;IB_DESIGNABLE&lt;/code&gt; な View は &lt;code&gt;UIView&lt;/code&gt; もしくは &lt;code&gt;NSView&lt;/code&gt; を継承して作る&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/ib-designable-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;UITableViewCell&lt;/code&gt; とか継承して &lt;code&gt;IB_DESIGNABLE&lt;/code&gt; を設定しても IB 上では動かない。Preview でも同様に反映されなかった。残念。&lt;/p&gt;
 
@@ -59,14 +59,14 @@
 
 &lt;p&gt;&lt;code&gt;enum&lt;/code&gt; が使えると便利そうだと思ったけどだめだった。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/ib-designable-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;上でも紹介している、&lt;a href=&#34;https://www.weheartswift.com/make-awesome-ui-components-ios-8-using-swift-xcode-6/&#34;&gt;このエントリ&lt;/a&gt;
 にある型を試した。他にも使える型があるのかもしれない。&lt;/p&gt;
 
 &lt;h3 id=&#34;要素の消し忘れに注意:37abba03a2e327338726ad5c5fd40ef4&#34;&gt;要素の消し忘れに注意&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/ib-designable-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;IBInspectable&lt;/code&gt; で設定した値は &lt;code&gt;Identity Inspector&lt;/code&gt; 上の &lt;code&gt;User Defined Runtime Attributes&lt;/code&gt; 上に保存される。
 プロパティを設定後に、プロパティ名を変更したり削除したりすると、ここに迷子の要素が残ってしまう。&lt;/p&gt;
@@ -77,7 +77,7 @@
 
 &lt;p&gt;継承した &lt;code&gt;IBInspectable&lt;/code&gt; な View のプロパティが両方 IB 上に表示される。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/ib-designable-4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/ib-designable-4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2つの View でそれぞれ設定した値がストーリーボード上に反映されている。&lt;/p&gt;
 
@@ -95,7 +95,7 @@
 
 &lt;p&gt;選択したい要素にポインタを移動して、&lt;code&gt;Command + Shift&lt;/code&gt; を押しながらクリックすると、同じ座標にある View の一覧が表示される。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/xcode-slect-bg-elements.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/xcode-select-bg-elements.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;ここから View を選択すればOK。&lt;/p&gt;
 </description>
@@ -141,7 +141,7 @@
 
 &lt;p&gt;&lt;code&gt;Reload XML&lt;/code&gt;したら設定が現れるので、両方にチェックをいれて完了。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/karabiner.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/karabiner.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;XVim 入れたらこういうことになるだろうなあ、と思ってたけど案の定 Xcode Way から遠ざかりつつある&amp;hellip;&lt;/p&gt;
 </description>
@@ -157,7 +157,7 @@
 
 &lt;p&gt;Xcode でカラーパレットを開いて、中央のタブ (Color Palettes) を選択する。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://dl.dropboxusercontent.com/u/459142/img/blog/colors.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/osx-color-palettes-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;左端の歯車のアイコンをクリックして&lt;code&gt;New&lt;/code&gt;を選択するとカラーパレットを作成することができる。&lt;/p&gt;
 
