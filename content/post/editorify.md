@@ -28,6 +28,6 @@ $('.link').on('click', function (evt) {
 });
 ```
 
-`left` とか `start` とかでカーソル移動できるので `[]` の中にカーソルが移動している状態になる。[DEMO](https://dl.dropboxusercontent.com/u/459142/editorify/index.html)はこちら。
+`left` とか `start` とかでカーソル移動できるので `[]` の中にカーソルが移動している状態になる。[DEMO](https://hikarock.github.io/editorify/)はこちら。
 
 [Stobo](http://www.storyboards.jp/) のエディタ部分を絶賛改造中でモンスターブランチがもうスカイツリーくらいに育っているんだけど、その中の成果が分割されて editorify になった。
