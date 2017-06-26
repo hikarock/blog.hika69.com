@@ -6,9 +6,11 @@
     <description>Recent content in Leap Motion on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Wed, 25 Dec 2013 20:24:41 +0000</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/leap-motion/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/leap-motion/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Leap でストボを操作する動画を作った</title>
@@ -18,17 +20,7 @@
       <guid>https://blog.hika69.com/blog/2013/12/25/leap-video/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp&#34;&gt;ストーリーボード&lt;/a&gt;がLeap Motionに対応したんだけど、あんまり伝わってないので紹介動画を作成しました。&lt;/p&gt;
 
-&lt;p&gt;昼休みにランチしつつ開発メンバーでせわしない感じで撮りました。&lt;/p&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/WuMlA9TxeVQ&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/getsukikyu&#34;&gt;GETSUKIKYU&lt;/a&gt;がRoadMoviesで撮影・編集してくれました。
-ちょっとした紹介動画作るのにRoadMoviesは向いていると思った。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/roadmovies/id575022047?mt=8&amp;uo=4&#34; target=&#34;_blank&#34; title=&#34;RoadMovies&#34;&gt;&lt;img src=&#34;http://a424.phobos.apple.com/us/r30/Purple2/v4/b5/d0/ae/b5d0aeed-e39d-67b9-62ec-8d198ddaa016/mzl.jyvktlel.png&#34; width=&#34;150&#34; height=&#34;150&#34; alt=&#34;RoadMovies&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;即席絵コンテ書いてくれたゲストの&lt;a href=&#34;https://twitter.com/inouetakuya&#34;&gt;おいちゃん&lt;/a&gt;もありがとう。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -39,19 +31,7 @@
       <guid>https://blog.hika69.com/blog/2013/12/24/estimote/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://twitter.com/nakajijapan&#34;&gt;@nakajijapan&lt;/a&gt;と共同購入して1個だけ入手。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/estimote-1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;3個セットで1個あたり$33くらい。高い。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://triph.jp&#34;&gt;triph&lt;/a&gt;で使いたいので休み中いろいろ試す予定。
-端末が安くなったら浅草にくばって回りたい。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/estimote-2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;あとLeap Motionも買ってた。&lt;a href=&#34;https://twitter.com/KitaitiMakoto&#34;&gt;@KitaitiMakoto&lt;/a&gt;さんがストーリーボードのページめくりにLeapを使えるようにしてくれたのを試したかったので。&lt;/p&gt;
-
-&lt;p&gt;しかしほかに使い道が見つからない。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -6,9 +6,11 @@
     <description>Recent content in Hugo on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Sun, 15 Nov 2015 13:07:37 +0900</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>ブログを Hugo に変えた</title>
@@ -16,76 +18,10 @@
       <pubDate>Sun, 15 Nov 2015 13:07:37 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2015/11/15/hugo/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://blog.hika69.com/blog/2015/07/01/roots/&#34;&gt;前回のエントリ&lt;/a&gt;で、Roots について調べていたけどなぜか Hugo でブログをリニューアルしていた。
+      <description>&lt;p&gt;&lt;a href=&#34;https://blog.hika69.com/blog/2015/07/01/roots/&#34;&gt;前回のエントリ&lt;/a&gt;で、Roots について調べていたけどなぜか Hugo でブログをリニューアルしていた。
 Octopress にくらべて生成速度が速くてとても快適だ。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo :: A fast and modern static website engine&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Hugo でのブログ構築についてはいろいろと情報が出回っているので、使用している Hugo 用のテーマ Casper のカスタマイズ方法などをまとめておく。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/vjeantet/hugo-theme-casper&#34;&gt;vjeantet/hugo-theme-casper&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;casper-のカスタマイズ:32ab7241d48fcc174c877413a917f8cf&#34;&gt;Casper のカスタマイズ&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;config.toml&lt;/code&gt; に Casper 独自の設定を加える。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[params]
-  customHeaderPartial = &amp;quot;customHeader.html&amp;quot;
-  customFooterPartial = &amp;quot;customFooter.html&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;customHeaderPartial&lt;/code&gt; &lt;code&gt;customFooterPartial&lt;/code&gt; にファイルを指定して &lt;code&gt;layouts/partials&lt;/code&gt; 以下に配置すると、それぞれ &lt;code&gt;&amp;lt;/head&amp;gt;&lt;/code&gt; と &lt;code&gt;&amp;lt;/body&amp;gt;&lt;/code&gt;の末尾で読み込んでくれる。&lt;/p&gt;
-
-&lt;h3 id=&#34;シンタックスハイライト:32ab7241d48fcc174c877413a917f8cf&#34;&gt;シンタックスハイライト&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;customHeaderPartial&lt;/code&gt; の指定。&lt;/p&gt;
-
-&lt;p&gt;シンタックスハイライト用に &lt;code&gt;highlight.js&lt;/code&gt; 用の CSS を読み込む。その他に、テーマの上書き用のCSSも読み込んでおく。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/paraiso.dark.min.css&amp;quot;&amp;gt;
-&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;/css/custom.css&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;customFooterPartial&lt;/code&gt; で &lt;code&gt;highlight.js&lt;/code&gt; の本体と実行処理を記述している。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;script src=&amp;quot;https://yandex.st/highlightjs/8.0/highlight.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-&amp;lt;script&amp;gt;hljs.initHighlightingOnLoad();&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;意図しない箇所で組文字に変換される現象の回避:32ab7241d48fcc174c877413a917f8cf&#34;&gt;意図しない箇所で組文字に変換される現象の回避&lt;/h3&gt;
-
-&lt;p&gt;Casper テーマのデフォルトのスタイルでは見出しなどで「ページ」や「株式会社」などの文字列が単一の文字に変換される現象が発生していた。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E7%B5%84%E6%96%87%E5%AD%97&#34;&gt;組文字&lt;/a&gt; というものらしいが &lt;code&gt;font-feature-settings&lt;/code&gt; のスタイルを上記の上書き用 CSS でリセットすることで、回避できた。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;* {
-  -webkit-font-feature-settings: normal !important;
-  -moz-font-feature-settings: normal !important;
-  -o-font-feature-settings: normal !important;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;詳細は以下。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.riaxdnp.jp/?p=5094&#34;&gt;フォントの機能を使えるCSS3のFont feature settingsとは&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/ja/docs/Web/CSS/font-feature-settings&#34;&gt;font-feature-settings - CSS | MDN&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;カバー画像の設定:32ab7241d48fcc174c877413a917f8cf&#34;&gt;カバー画像の設定&lt;/h3&gt;
-
-&lt;p&gt;カバー画像はパブリック・ドメインの NASA の写真を公開している Flickr アカウントから探した。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.flickr.com/photos/nasacommons/&#34;&gt;NASA on The Commons | Flickr - Photo Sharing!&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;config.toml&lt;/code&gt; に以下の記述を追加して &lt;code&gt;static&lt;/code&gt; 以下に画像を配置する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[params]
-  cover = &amp;quot;images/cover.jpg&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

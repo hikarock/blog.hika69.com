@@ -6,9 +6,11 @@
     <description>Recent content in Slide on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Fri, 29 Aug 2014 11:45:06 +0000</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/slide/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/slide/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>YAPC::Asia Tokyo 2014 前夜祭で「プライベートで3年間チーム開発した話」をしてきた</title>
@@ -16,26 +18,9 @@
       <pubDate>Fri, 29 Aug 2014 11:45:06 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/08/29/yapc2014/</guid>
-      <description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://yapcasia.org/2014/08/eve-of-yapcasia.html&#34;&gt;YAPC::Asia Tokyo 2014 前夜祭「欲しいものは作ればいい！ 〜Webアプリ10連発〜」&lt;/a&gt;で話してきました。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://yapcasia.org/2014/08/eve-of-yapcasia.html&#34;&gt;YAPC::Asia Tokyo 2014 前夜祭「欲しいものは作ればいい！ 〜Webアプリ10連発〜」&lt;/a&gt;で話してきました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/viewer/u1g2d7&#34;&gt;プライベートで3年間チーム開発した話 | Stobo&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;気づいたら3年間Webアプリやらなんやらチームで作ってきたので、良いまとめの機会になりました。誘ってくれた &lt;a href=&#34;https://twitter.com/uzulla&#34;&gt;@uzulla&lt;/a&gt; さん、ありがとうございました。&lt;/p&gt;
-
-&lt;h3 id=&#34;補足:4ed16ff9bb0230619638850202c12cd5&#34;&gt;補足&lt;/h3&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;&lt;p&gt;誤解があったかもしれないけど「いいね」するとお金がかかるのは僕じゃなくて &lt;a href=&#34;https://twitter.com/hideack&#34;&gt;@hideack&lt;/a&gt; です。ありがとう。&lt;/p&gt;&amp;mdash; hikarock (@hika69) &lt;a href=&#34;https://twitter.com/hika69/statuses/504946565199323136&#34;&gt;2014, 8月 28&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;僕たち的には、たまにチームでビールが飲みたいなあ、とか季節の変わり目に思うことがあります。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://suzuri.jp/REMP/&#34;&gt;REMP ∞ SUZURI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://spike.cc/p/scsIZLtH&#34;&gt;REMPステッカー (10枚) - SPIKE&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -44,62 +29,9 @@
       <pubDate>Mon, 25 Aug 2014 21:05:21 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/08/25/tng14/</guid>
-      <description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;
-
-&lt;p&gt;そういえば、&lt;a href=&#34;http://blog.nodejs.jp/2011/03/node-1_25.html&#34;&gt;最初のNode学園&lt;/a&gt;からお客さん側だったので感慨深い。緊張しました。&lt;/p&gt;
-
-&lt;p&gt;今回は「IsomorphicなWAF」がテーマだったらしく、&lt;a href=&#34;https://twitter.com/yosuke_furukawa&#34;&gt;@yosuke_furukawa&lt;/a&gt;さんに「MeteorもしくはRendrの話をしませんか」とお誘いいただいてRendrの話をすることになりました。&lt;/p&gt;
-
-&lt;p&gt;主に&lt;a href=&#34;http://ca.storyboards.jp/&#34;&gt;Casto&lt;/a&gt;でRendrを使うにいたったSPAに対するもやもやと、実際に使ってみてどうだったか、を振り返ってみました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/viewer/wo41ho&#34;&gt;Rendrの話 | Stobo&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;そもそも-isomorphic-javascript-とはなんぞや:185887276d78685095b8b7ba1df81f2e&#34;&gt;そもそも Isomorphic JavaScript とはなんぞや&lt;/h3&gt;
-
-&lt;p&gt;と理解が浅い感じがするので、リンクをまとめておく。
-すいません、後で読む。&lt;/p&gt;
-
-&lt;h5 id=&#34;isomorphic-javascript-とは:185887276d78685095b8b7ba1df81f2e&#34;&gt;Isomorphic JavaScript とは&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.nodejitsu.com/scaling-isomorphic-javascript-code/&#34;&gt;Scaling Isomorphic Javascript Code | Nodejitsu Inc.&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gist.github.com/tily/1362110&#34;&gt;(翻訳) サバクラ両方で動く JavaScript の大規模開発を行うために&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&#34;rendr:185887276d78685095b8b7ba1df81f2e&#34;&gt;Rendr&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/&#34;&gt;Isomorphic JavaScript: The Future of Web Apps - Airbnb Engineering&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://wazanova.jp/post/66745548194/airbnb&#34;&gt;(翻訳) Airbnb: シングルページアプリを実現するハイブリッドアプローチの課題 -  ワザノバ | wazanova&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://nerds.airbnb.com/slides-and-video-from-spike-brehms-tech-talk/&#34;&gt;Building Single-Page Apps - Airbnb Engineering&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/spikebrehm/building-a-singlepage-app-backbone-nodejs-and-beyond&#34;&gt;Slides on SlideShare&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&#34;meteor:185887276d78685095b8b7ba1df81f2e&#34;&gt;Meteor&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/naoya/20120422/1335109615&#34;&gt;Meteor.js - naoyaのはてなダイアリー&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&#34;その他:185887276d78685095b8b7ba1df81f2e&#34;&gt;その他&lt;/h5&gt;
-
-&lt;p&gt;Isomorphic JavaScriptに関するまとめサイト。こんなんあったのね。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://isomorphic.net/&#34;&gt;Isomorphic JavaScript - The future of web app development&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -110,8 +42,7 @@
       <guid>https://blog.hika69.com/blog/2013/11/20/klab-js/</guid>
       <description>&lt;p&gt;KLab さんの JavaScript 勉強会で Hoodie の話をしました。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/viewer/ycy7it&#34;&gt;Hoodieでノーバックエンド開発 | Stobo&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -5,29 +5,50 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  	<meta property="og:title" content=" Grunt を導入 &middot;  hikarock blog" />
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="Grunt を導入"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@hika69"/>
+
+
+
+  	<meta property="og:title" content="Grunt を導入 &middot; hikarock blog" />
   	<meta property="og:site_name" content="hikarock blog" />
   	<meta property="og:url" content="https://blog.hika69.com/blog/2013/06/01/grunt-js/" />
 
     
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2013-06-01T22:28:00Z" />
 
-    <meta property="og:article:published_time" content="2013-06-01T22:28:00Z" />
-
     
-    <meta property="og:article:tag" content="javascript" />
+    <meta property="article:tag" content="javascript" />
     
-    <meta property="og:article:tag" content="less" />
+    <meta property="article:tag" content="less" />
     
-    <meta property="og:article:tag" content="grunt" />
+    <meta property="article:tag" content="grunt" />
     
     
 
-  <title>
-     Grunt を導入 &middot;  hikarock blog
-  </title>
+    <title>Grunt を導入 &middot; hikarock blog</title>
 
-    <meta name="description" content="" />
+    
+    <meta name="description" content="&lt;p&gt;Gruntを&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;に導入するためのメモ。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;" />
+    
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,8 +58,10 @@
 
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
+    
+
+    
 
     
       
@@ -46,9 +69,71 @@
       
       
     
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.24.1" />
 
     <link rel="canonical" href="https://blog.hika69.com/blog/2013/06/01/grunt-js/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://blog.hika69.com/images/logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://blog.hika69.com/images/logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": https://hika69.com,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": 街に詳しい。
+        
+    },
+    "headline": Grunt を導入,
+    "name": Grunt を導入,
+    "wordCount": 66,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://blog.hika69.com/blog/2013/06/01/grunt-js/,
+    "datePublished": 2013-06-01T22:28Z,
+    "dateModified": 2013-06-01T22:28Z,
+    
+    "keywords": javascript, less, grunt,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://blog.hika69.com/blog/2013/06/01/grunt-js/
+    }
+}
+    </script>
+    
+
+
+    
 
     
     <script>
@@ -89,9 +174,8 @@
     <ul>
         
         
-        
     </ul>
-    
+
     
     <a class="subscribe-button icon-feed" href="https://blog.hika69.com/index.xml">Subscribe</a>
     
@@ -112,7 +196,7 @@
       <a class="blog-logo" href="https://blog.hika69.com/"><img src="https://blog.hika69.com/images/logo.png" alt="Home" /></a>
   
   
-      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml" >&nbsp;&nbsp;Subscribe</a>
   
   </nav>
 </header>
@@ -147,11 +231,11 @@
     </header>
 
     <section class="post-content">
-      
+      <p>Gruntを<a href="http://www.remp.jp/hello">REMP</a>に導入するためのメモ。</p>
 
-<p>Gruntを<a href="http://www.remp.jp/hello">REMP</a>に導入するためのメモ。</p>
+<p></p>
 
-<h3 id="node-jsのインストール:496db6cbbd971ead66e2b3a7e0cad29f">node.jsのインストール</h3>
+<h3 id="node-jsのインストール">node.jsのインストール</h3>
 
 <p>node.jsを最新版にする。<a href="http://nodejs.org/">node.js</a>のinstallボタンで落ちてくるパッケージから再インストールするだけ。</p>
 
@@ -161,14 +245,14 @@ npm -v
 1.2.23
 </code></pre>
 
-<h3 id="grunt-cliのインストール:496db6cbbd971ead66e2b3a7e0cad29f">grunt-cliのインストール</h3>
+<h3 id="grunt-cliのインストール">grunt-cliのインストール</h3>
 
 <p>グローバルにgrunt-cliをインストール。</p>
 
 <pre><code>npm install -g grunt-cli
 </code></pre>
 
-<h3 id="プロジェクト毎にgruntを導入する:496db6cbbd971ead66e2b3a7e0cad29f">プロジェクト毎にgruntを導入する</h3>
+<h3 id="プロジェクト毎にgruntを導入する">プロジェクト毎にgruntを導入する</h3>
 
 <p>プロジェクトのルートでpackage.jsonを生成する。</p>
 
@@ -184,7 +268,7 @@ npm -v
 package.jsonに依存関係が記録されていれば<code>npm install</code>だけで一括導入ができるので流用しやすそう。
 なので<code>--save-dev</code>をつけることにする。</p>
 
-<h3 id="タスクのインストール:496db6cbbd971ead66e2b3a7e0cad29f">タスクのインストール</h3>
+<h3 id="タスクのインストール">タスクのインストール</h3>
 
 <ol>
 <li>grunt-contrib-uglify
@@ -212,7 +296,7 @@ package.jsonに依存関係が記録されていれば<code>npm install</code>�
 <pre><code>npm install grunt-contrib
 </code></pre>
 
-<h3 id="いまの設定:496db6cbbd971ead66e2b3a7e0cad29f">いまの設定</h3>
+<h3 id="いまの設定">いまの設定</h3>
 
 <script src="https://gist.github.com/hikarock/5690366.js"></script>
 
@@ -222,7 +306,7 @@ package.jsonに依存関係が記録されていれば<code>npm install</code>�
 <p>lessファイルとコンパイル先のcssを両方ワイルドカード指定する方法がわからなくてはまったけど解決。
 このリンクを参考に設定した。</p>
 
-<h3 id="実行:496db6cbbd971ead66e2b3a7e0cad29f">実行</h3>
+<h3 id="実行">実行</h3>
 
 <p>デフォルトのタスクを実行する。</p>
 
@@ -234,13 +318,12 @@ package.jsonに依存関係が記録されていれば<code>npm install</code>�
 <pre><code>grunt less:dist
 </code></pre>
 
-<h3 id="参考:496db6cbbd971ead66e2b3a7e0cad29f">参考</h3>
+<h3 id="参考">参考</h3>
 
 <ul>
 <li><a href="http://gruntjs.com/sample-gruntfile">Sumple Gruntfile</a></li>
 <li><a href="http://js.studio-kingdom.com/grunt">Grunt 日本語リファレンス</a></li>
 </ul>
-
     </section>
 
 
@@ -249,7 +332,7 @@ package.jsonに依存関係が記録されていれば<code>npm install</code>�
 
     
     <figure class="author-image">
-        <a class="img" href="https://blog.hika69.com/" style="background-image: url(https://blog.hika69.com/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+        <a class="img" href="https://blog.hika69.com/" style="background-image: url(/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
     </figure>
     
 
@@ -275,7 +358,7 @@ package.jsonに依存関係が記録されていれば<code>npm install</code>�
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Grunt%20%e3%82%92%e5%b0%8e%e5%85%a5&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2013%2f06%2f01%2fgrunt-js%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Grunt%20%e3%82%92%e5%b0%8e%e5%85%a5&nbsp;-&nbsp;hikarock%20blog&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2013%2f06%2f01%2fgrunt-js%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -304,8 +387,30 @@ package.jsonに依存関係が記録されていれば<code>npm install</code>�
 </article>
 
 </main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://blog.hika69.com/blog/2013/06/03/ueno-daitoryo/">
+          <section class="post">
+              <h2>大統領</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://blog.hika69.com/blog/2013/05/28/underscore-js/">
+          <section class="post">
+              <h2>Underscore.js の _.debounce が便利そう</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        <section class="copyright"><a href="">hikarock blog</a> &copy; 2017 hikarock</section>
         
         <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
         

@@ -6,9 +6,11 @@
     <description>Recent content in Book on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Thu, 13 Jun 2013 23:54:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/book/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/book/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>はじめての Node.js</title>
@@ -18,10 +20,7 @@
       <guid>https://blog.hika69.com/blog/2013/06/13/learning-node-js/</guid>
       <description>&lt;p&gt;読み始めた。&lt;/p&gt;
 
-&lt;p&gt;分厚いので電書版を出してほしい。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AENode-js-%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%B5%E3%82%A4%E3%83%89JavaScript%E3%81%A7Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E9%96%8B%E7%99%BA%E3%81%99%E3%82%8B-%E6%9D%BE%E5%B3%B6-%E6%B5%A9%E9%81%93/dp/4797370904%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4797370904&#34; target=&#34;_blank&#34; title=&#34;はじめてのNode.js -サーバーサイドJavaScriptでWebアプリを開発する-&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/510pDzY1u9L.jpg&#34; width=&#34;396&#34; height=&#34;500&#34; alt=&#34;はじめてのNode.js -サーバーサイドJavaScriptでWebアプリを開発する-&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -32,20 +31,7 @@
       <guid>https://blog.hika69.com/blog/2013/06/10/jikokuten/</guid>
       <description>&lt;p&gt;持国天のフィギュアをもらいました。かっこいい。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/jikokuten-1.jpg&#34; alt=&#34;持国天のフィギュア&#34; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;持国天（じこくてん）、梵名ドゥリタラーシュトラ （धृतराष्ट्र [dhRtaraaSTra] 『国を支える者』、提頭頼咤）とは仏教における天部の仏神。増長天、広目天、多聞天と共に四天王の一尊に数えられる。&amp;ndash;&lt;a href=&#34;http://ja.wikipedia.org/wiki/%E6%8C%81%E5%9B%BD%E5%A4%A9&#34;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;どぅりたらーしゅとら。&lt;/p&gt;
-
-&lt;p&gt;この本ももらった。京都行きたい。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/%E4%BB%8F%E5%83%8F%E3%83%AF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89%E4%BA%AC%E9%83%BD-%E6%BB%8B%E8%B3%80-JTB%E3%81%AE%E3%83%A0%E3%83%83%E3%82%AF/dp/4533086535%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4533086535&#34; target=&#34;_blank&#34; title=&#34;仏像ワンダーランド京都 滋賀 (JTBのムック)&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/51RqgJUHTeL.jpg&#34; width=&#34;405&#34; height=&#34;500&#34; alt=&#34;仏像ワンダーランド京都 滋賀 (JTBのムック)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ありがとうございました。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -56,37 +42,7 @@
       <guid>https://blog.hika69.com/blog/2013/05/28/underscore-js/</guid>
       <description>&lt;p&gt;「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.jsガイドブック&lt;/a&gt;」の読書会2回目。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/Backbone-js%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF-%E9%AB%98%E6%A9%8B-%E4%BE%91%E4%B9%85/dp/4899773501%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4899773501&#34; target=&#34;_blank&#34; title=&#34;Backbone.jsガイドブック&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/31tI0WaZukL.jpg&#34; width=&#34;394&#34; height=&#34;500&#34; alt=&#34;Backbone.jsガイドブック&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;1章の後半から始めた。underscore.jsのタイマー系の関数が超絶便利そうだった。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://underscorejs.org/#debounce&#34;&gt;debounce&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://underscorejs.org/#throttle&#34;&gt;throttle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://underscorejs.org/#delay&#34;&gt;delay&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://underscorejs.org/#defer&#34;&gt;defer&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;この辺。&lt;/p&gt;
-
-&lt;p&gt;重いレンダリング処理とか保存処理のイベント多発を&lt;code&gt;setTimeout&lt;/code&gt;とか&lt;code&gt;clearTimeout&lt;/code&gt;でがんばってブロックしてたところは&lt;code&gt;_.debounce&lt;/code&gt;の方がきれいに書けそう。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;のライブラリ保存処理がちょうどこんな感じで、&lt;/p&gt;
-
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://jsdo.it/blogparts/4prZ/js?width=100%&amp;height=540&amp;view=javascript&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;code&gt;_.debounce&lt;/code&gt;だとこんな感じになる。&lt;/p&gt;
-
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://jsdo.it/blogparts/sUcm/js?width=100%&amp;height=320&amp;view=javascript&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp&#34;&gt;ストーリーボード&lt;/a&gt;のMarkdownのレンダリングのとこもこれ使ったらいいな、と思ってたらドキュメントにもまんまなこと書いてあった。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;For example: rendering a preview of a Markdown comment, recalculating a layout after the window has stopped being resized, and so on.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;かきなおそ。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -97,24 +53,7 @@
       <guid>https://blog.hika69.com/blog/2013/05/27/sql-antipatterns/</guid>
       <description>&lt;p&gt;3章まで読んだ。Kindle for iPadで読んでると表が見づらい&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/SQL%E3%82%A2%E3%83%B3%E3%83%81%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3-Bill-Karwin/dp/4873115892%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4873115892&#34; target=&#34;_blank&#34; title=&#34;SQLアンチパターン&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/41qHKrFZi0L.jpg&#34; width=&#34;391&#34; height=&#34;500&#34; alt=&#34;SQLアンチパターン&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;ジェイウォーク（信号無視）&lt;/li&gt;
-&lt;li&gt;ナイーブツリー（素朴な木）&lt;/li&gt;
-&lt;li&gt;IDリクワイアド（とりあえずID）&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;「とりあえずID」を交差テーブルで使ってるようなケースを最近やらかしてて、はっとしてテーブルつくり直した。&lt;/p&gt;
-
-&lt;p&gt;外部キーを設定しようとしたら&lt;code&gt;errno: 150&lt;/code&gt;とか言われて心が折れそうになったけど、このエントリ読んで解決できました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://fizsoft.net/?p=294&#34;&gt;MySQLでCan’t create table(errno: 150) &lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ありがとうございます。&lt;/p&gt;
-
-&lt;p&gt;引き続き読もう。関係ないけど町田リブロ閉店がショックすぎる。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -125,13 +64,7 @@
       <guid>https://blog.hika69.com/blog/2013/05/27/javascript-ninja/</guid>
       <description>&lt;p&gt;買ってきた。&lt;/p&gt;
 
-&lt;p&gt;目次だけざっと見たけど &lt;code&gt;with&lt;/code&gt; についてけっこうページさいてる。
-バッドパーツだって何度で目にした気がするけれど。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/JavaScript-Ninja%E3%81%AE%E6%A5%B5%E6%84%8F-%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E9%96%8B%E7%99%BA%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E7%9F%A5%E8%AD%98%E3%81%A8%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0-Programmers%E2%80%99-SELECTION/dp/4798128457%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4798128457&#34; target=&#34;_blank&#34; title=&#34;JavaScript Ninjaの極意 ライブラリ開発のための知識とコーディング (Programmers’ SELECTION)&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/51wsFoSKrKL.jpg&#34; width=&#34;388&#34; height=&#34;500&#34; alt=&#34;JavaScript Ninjaの極意 ライブラリ開発のための知識とコーディング (Programmers’ SELECTION)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;読む本たくさんあって追いつかない。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -142,22 +75,7 @@
       <guid>https://blog.hika69.com/blog/2013/05/26/japan-derby/</guid>
       <description>&lt;p&gt;友人にさそわれて、日本ダービーが開催されている東京競馬場まで行ってきた。&lt;/p&gt;
 
-&lt;p&gt;スポーツ新聞の一面に書いてある通りに買ったら、当たった。生まれてはじめて1000円以上勝った。&lt;/p&gt;
-
-&lt;p&gt;レース後そのまま府中散歩。&lt;/p&gt;
-
-&lt;p&gt;普門寺で薬師如来と迫力のある閻魔大王像を見て、府中の森公園でだらだらして、大国魂神社でおみくじ引いて駅に戻った。
-府中、じっくり歩いたことなかったけれど、緑が多くて魅力的な町だった。&lt;/p&gt;
-
-&lt;p&gt;府中本町駅手前の&lt;a href=&#34;http://www2.odn.ne.jp/~cdf21010/&#34;&gt;小さな絵地図専門店&lt;/a&gt;で「多摩川散策絵図」と「丹沢大山散策絵図」を買った。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/japan-derby-1.jpg&#34; alt=&#34;多摩川散策絵図&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;多摩川の源流から羽田空港のある河口までを描いている絵地図。広げると縦長で3mくらいある。
-名所がデフォルメされていてとても楽しい。&lt;/p&gt;
-
-&lt;p&gt;著者の&lt;a href=&#34;http://booklog.jp/author/%E6%9D%91%E6%9D%BE%E6%98%AD&#34;&gt;村松昭&lt;/a&gt;さんは他にもたくさんの絵地図を書いていて、地図を買った店舗をアトリエにしているらしい。素敵だ。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -166,34 +84,9 @@
       <pubDate>Sat, 25 May 2013 01:04:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/05/25/backbone-js/</guid>
-      <description>
+      <description>&lt;p&gt;社内で「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.js ガイドブック&lt;/a&gt;」の読書会が始まったので参加した。&lt;/p&gt;
 
-&lt;p&gt;社内で「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.js ガイドブック&lt;/a&gt;」の読書会が始まったので参加した。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/Backbone-js%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF-%E9%AB%98%E6%A9%8B-%E4%BE%91%E4%B9%85/dp/4899773501%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4899773501&#34; target=&#34;_blank&#34; title=&#34;Backbone.jsガイドブック&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/31tI0WaZukL.jpg&#34; width=&#34;394&#34; height=&#34;500&#34; alt=&#34;Backbone.jsガイドブック&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;1章くらい進むかな、と思ったけど、途中サンプルコードを動作確認したりしてたら10ページくらいしか読み進まなかった。&lt;/p&gt;
-
-&lt;p&gt;ためしたのはこの辺り。
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://jsdo.it/blogparts/z9YK/js?width=100%&amp;height=496&amp;view=javascript&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;クラスプロパティ・メソッドと、インスタンスプロパティ・メソッドの動作の違いを確認した。&lt;/p&gt;
-
-&lt;h3 id=&#34;ほかに:1e427e62cc44ddfd497e5b7351c6556d&#34;&gt;ほかに&lt;/h3&gt;
-
-&lt;p&gt;「&lt;a href=&#34;http://booklog.jp/item/1/477415654X&#34;&gt;コーディングを支える技術&lt;/a&gt;」を読み始めた。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B%E6%8A%80%E8%A1%93-%7E%E6%88%90%E3%82%8A%E7%AB%8B%E3%81%A1%E3%81%8B%E3%82%89%E5%AD%A6%E3%81%B6%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E4%BD%9C%E6%B3%95-WEB-PRESS-plus/dp/477415654X%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D477415654X&#34; target=&#34;_blank&#34; title=&#34;コーディングを支える技術 ~成り立ちから学ぶプログラミング作法 (WEB+DB PRESS plus)&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/51nXP3TKXVL.jpg&#34; width=&#34;353&#34; height=&#34;500&#34; alt=&#34;コーディングを支える技術 ~成り立ちから学ぶプログラミング作法 (WEB+DB PRESS plus)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;今あるプログラミング言語の「あたりまえ」は試行錯誤の結果なんだなあと、目から鱗。&lt;/p&gt;
-
-&lt;p&gt;例外処理、制御構文のあたりは特に。&lt;/p&gt;
-
-&lt;p&gt;プログラミング言語がまだ試行錯誤の途上にある、というよく考えたら当たり前のことが新鮮に感じた。
-とにかく面白い。&lt;/p&gt;
-
-&lt;p&gt;変数の章は、気力が落ちたのでちょっと読み飛ばしたけれど。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

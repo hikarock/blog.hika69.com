@@ -6,9 +6,11 @@
     <description>Recent content in Digitalocean on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Sat, 03 Sep 2016 16:41:41 +0900</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/digitalocean/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/digitalocean/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>DigitalOcean 上に Vagrant でサーバーを立ち上げる</title>
@@ -16,110 +18,9 @@
       <pubDate>Sat, 03 Sep 2016 16:41:41 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/09/03/digitalocean/</guid>
-      <description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://m.do.co/c/a129e4a597f1&#34;&gt;DigitalOcean&lt;/a&gt; 上に Vagtant で仮想サーバー (DigitalOcean では &lt;code&gt;droplet&lt;/code&gt; と言うらしい) が立ち上がるまでのログ。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://m.do.co/c/a129e4a597f1&#34;&gt;DigitalOcean&lt;/a&gt; 上に Vagtant で仮想サーバー (DigitalOcean では &lt;code&gt;droplet&lt;/code&gt; と言うらしい) が立ち上がるまでのログ。&lt;/p&gt;
-
-&lt;p&gt;DigitalOcean アカウントは作成済みの前提。&lt;/p&gt;
-
-&lt;h3 id=&#34;tugboat-の導入:408d90965407ccd8c9d1d1bcc218cd96&#34;&gt;tugboat の導入&lt;/h3&gt;
-
-&lt;p&gt;DigitalOcean を便利に操作できるコマンドラインツール tugboat を導入する。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/pearkes/tugboat&#34;&gt;pearkes/tugboat&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;あらかじめ以下のページで tugboat 用のトークンを発行しておく。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://cloud.digitalocean.com/settings/api/tokens&#34;&gt;DigitalOcean - API Tokens&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% gem install tugboat
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以下のコマンドで 上記で発行したトークンを設定する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% tugboat authorize
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;CentOS の images を一覧する例。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% tugboat images | grep centos
-6.7 x32 (slug: centos-6-5-x32, id: 14782899, distro: CentOS)
-6.7 x64 (slug: centos-6-5-x64, id: 14782952, distro: CentOS)
-5.11 x32 (slug: centos-5-x32, id: 18292035, distro: CentOS)
-5.11 x64 (slug: centos-5-x64, id: 18292131, distro: CentOS)
-7.2 x64 (slug: centos-7-0-x64, id: 18835303, distro: CentOS)
-7.2 x64 (slug: centos-7-x64, id: 19389325, distro: CentOS)
-6.8 x64 (slug: centos-6-x64, id: 19389823, distro: CentOS)
-6.8 x32 (slug: centos-6-x32, id: 19389931, distro: CentOS)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;7.2 x64&lt;/code&gt; がなぜか2つある。slug &lt;code&gt;centos-7-x64&lt;/code&gt; を今回は利用してみる。&lt;/p&gt;
-
-&lt;h3 id=&#34;vagrant-の準備:408d90965407ccd8c9d1d1bcc218cd96&#34;&gt;Vagrant の準備&lt;/h3&gt;
-
-&lt;p&gt;Vagrant のバージョンを確認。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% vagrant -v
-Vagrant 1.8.5
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Vagrant のプラグイン &lt;code&gt;vagrant-digitalocean&lt;/code&gt; を導入する。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/devopsgroup-io/vagrant-digitalocean#configure&#34;&gt;devopsgroup-io/vagrant-digitalocean&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% vagrant plugin install vagrant-digitalocean
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;README.md にあるように &lt;code&gt;Vagrantfile&lt;/code&gt; を作成する。&lt;code&gt;provider.xxx&lt;/code&gt; のあたりは tugboat を使って調べつつ適宜書き換える。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;Vagrant.configure(&#39;2&#39;) do |config|
-  config.vm.hostname = &#39;foo.hika69.com&#39;
-
-  config.vm.provider :digital_ocean do |provider, override|
-    override.ssh.private_key_path = &#39;~/.ssh/id_rsa&#39;
-    override.vm.box = &#39;digital_ocean&#39;
-    override.vm.box_url = &#39;https://github.com/devopsgroup-io/vagrant-digitalocean/raw/master/box/digital_ocean.box&#39;
-    provider.token = &#39;xxxxxxxxxxxxxxxxxxxxxxxxx&#39;
-    provider.image = &#39;centos-7-x64&#39;
-    provider.region = &#39;sgp1&#39;
-    provider.size = &#39;512mb&#39;
-  end
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;provider.region&lt;/code&gt; のバリエーションを調べる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% tugboat regions
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;provider.size&lt;/code&gt; の場合。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% tugboat sizes
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;tugboat を使わないで以下のように vagrant-digitalocean の機能を使っても同じことができる (ただトークンをつけるのが少し面倒)。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% vagrant digitalocean-list regions {TOKEN}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;vagrant-up-する:408d90965407ccd8c9d1d1bcc218cd96&#34;&gt;Vagrant up する&lt;/h3&gt;
-
-&lt;p&gt;仮想サーバーを起動する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% vagrant up --provider=digital_ocean
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;サーバーに-ssh-接続する:408d90965407ccd8c9d1d1bcc218cd96&#34;&gt;サーバーに SSH 接続する&lt;/h3&gt;
-
-&lt;p&gt;接続は &lt;code&gt;vagrant ssh&lt;/code&gt; するだけ。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% vagrant ssh
-
-Last login: Sun Sep  4 07:55:24 2016 from xxx
-[root@foo ~]# cat /etc/redhat-release
-CentOS Linux release 7.2.1511 (Core)
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

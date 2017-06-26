@@ -5,29 +5,48 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  	<meta property="og:title" content=" iOSアプリ開発のGit運用 &middot;  hikarock blog" />
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="iOSアプリ開発のGit運用"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@hika69"/>
+
+
+
+  	<meta property="og:title" content="iOSアプリ開発のGit運用 &middot; hikarock blog" />
   	<meta property="og:site_name" content="hikarock blog" />
   	<meta property="og:url" content="https://blog.hika69.com/blog/2014/12/16/git-flow/" />
 
     
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2014-12-16T09:37:50Z" />
 
-    <meta property="og:article:published_time" content="2014-12-16T09:37:50Z" />
-
     
-    <meta property="og:article:tag" content="git" />
+    <meta property="article:tag" content="git" />
     
-    <meta property="og:article:tag" content="git-flow" />
+    <meta property="article:tag" content="git-flow" />
     
-    <meta property="og:article:tag" content="ios" />
+    <meta property="article:tag" content="ios" />
     
     
 
-  <title>
-     iOSアプリ開発のGit運用 &middot;  hikarock blog
-  </title>
+    <title>iOSアプリ開発のGit運用 &middot; hikarock blog</title>
 
-    <meta name="description" content="" />
+    
+    <meta name="description" content="&lt;p&gt;iOSアプリはリリースサイクルが長くなりがちなので、&lt;a href=&#34;https://gist.github.com/Gab-km/3705015&#34;&gt;GitHub Flow&lt;/a&gt;ではなく、&lt;a href=&#34;http://danielkummer.github.io/git-flow-cheatsheet/ind" />
+    
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,8 +56,10 @@
 
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
+    
+
+    
 
     
       
@@ -46,9 +67,71 @@
       
       
     
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.24.1" />
 
     <link rel="canonical" href="https://blog.hika69.com/blog/2014/12/16/git-flow/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://blog.hika69.com/images/logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://blog.hika69.com/images/logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": https://hika69.com,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": 街に詳しい。
+        
+    },
+    "headline": iOSアプリ開発のGit運用,
+    "name": iOSアプリ開発のGit運用,
+    "wordCount": 49,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://blog.hika69.com/blog/2014/12/16/git-flow/,
+    "datePublished": 2014-12-16T09:37Z,
+    "dateModified": 2014-12-16T09:37Z,
+    
+    "keywords": git, git-flow, ios,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://blog.hika69.com/blog/2014/12/16/git-flow/
+    }
+}
+    </script>
+    
+
+
+    
 
     
     <script>
@@ -89,9 +172,8 @@
     <ul>
         
         
-        
     </ul>
-    
+
     
     <a class="subscribe-button icon-feed" href="https://blog.hika69.com/index.xml">Subscribe</a>
     
@@ -112,7 +194,7 @@
       <a class="blog-logo" href="https://blog.hika69.com/"><img src="https://blog.hika69.com/images/logo.png" alt="Home" /></a>
   
   
-      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml" >&nbsp;&nbsp;Subscribe</a>
   
   </nav>
 </header>
@@ -147,13 +229,13 @@
     </header>
 
     <section class="post-content">
-      
+      <p>iOSアプリはリリースサイクルが長くなりがちなので、<a href="https://gist.github.com/Gab-km/3705015">GitHub Flow</a>ではなく、<a href="http://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html">git-flow</a>を参考にしたフローを使っている。</p>
 
-<p>iOSアプリはリリースサイクルが長くなりがちなので、<a href="https://gist.github.com/Gab-km/3705015">GitHub Flow</a>ではなく、<a href="http://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html">git-flow</a>を参考にしたフローを使っている。</p>
+<p></p>
 
 <p>仕事もプライベートもこのフローで今のところ問題はない感じ (複数人開発含む)。</p>
 
-<h3 id="各ブランチの役割:0550120cb8935579b8c8c5fd080ebba7">各ブランチの役割</h3>
+<h3 id="各ブランチの役割">各ブランチの役割</h3>
 
 <p>基本的に普通の <code>git-flow</code> と変わらないけれど、AppStore がからむとこを中心に説明します。</p>
 
@@ -186,14 +268,14 @@
 </ul></li>
 </ul>
 
-<h3 id="git-flow-コマンドについて:0550120cb8935579b8c8c5fd080ebba7">git-flow コマンドについて</h3>
+<h3 id="git-flow-コマンドについて">git-flow コマンドについて</h3>
 
 <p><code>git-flow</code>コマンドは上記のようなフローでの開発を補助するgitのサブコマンドです。
 各ブランチの作成やマージが便利になるコマンドが用意されているけど、プルリクエストやGithub上でのマージは考慮されていない。</p>
 
 <p>上記フローを実践するために必ずしも<code>git-flow</code>コマンドを使う必要はない。僕は普通のgitコマンドでブランチ切ったり、Github上のプルリクエストからマージしたりしてる。</p>
 
-<h3 id="何がうれしいか:0550120cb8935579b8c8c5fd080ebba7">何がうれしいか</h3>
+<h3 id="何がうれしいか">何がうれしいか</h3>
 
 <ul>
 <li>iTunes Connectで申請中に、次のバージョンの機能を<code>develop</code>にさくさくマージできる
@@ -205,7 +287,6 @@
 <li>リリース版のアプリで不具合があった時に、常に<code>master</code>がリリースされたものと同一だと安心感がある。<code>hotfix</code>で障害対応が可能</li>
 <li><code>release</code>ブランチをプルリクエストしておくと<code>What's New in this Version</code>をまとめるときに便利</li>
 </ul>
-
     </section>
 
 
@@ -214,7 +295,7 @@
 
     
     <figure class="author-image">
-        <a class="img" href="https://blog.hika69.com/" style="background-image: url(https://blog.hika69.com/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+        <a class="img" href="https://blog.hika69.com/" style="background-image: url(/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
     </figure>
     
 
@@ -240,7 +321,7 @@
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=iOS%e3%82%a2%e3%83%97%e3%83%aa%e9%96%8b%e7%99%ba%e3%81%aeGit%e9%81%8b%e7%94%a8&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2014%2f12%2f16%2fgit-flow%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=iOS%e3%82%a2%e3%83%97%e3%83%aa%e9%96%8b%e7%99%ba%e3%81%aeGit%e9%81%8b%e7%94%a8&nbsp;-&nbsp;hikarock%20blog&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2014%2f12%2f16%2fgit-flow%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -269,8 +350,30 @@
 </article>
 
 </main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://blog.hika69.com/blog/2014/12/21/osx-color-palettes/">
+          <section class="post">
+              <h2>Xcode でカラーパレットを保存して共有したい</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://blog.hika69.com/blog/2014/11/18/github-to-bitbucket/">
+          <section class="post">
+              <h2>GitHub の非公開リポジトリを Bitbucket に引越</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        <section class="copyright"><a href="">hikarock blog</a> &copy; 2017 hikarock</section>
         
         <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
         

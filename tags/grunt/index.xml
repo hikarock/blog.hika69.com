@@ -6,9 +6,11 @@
     <description>Recent content in Grunt on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Sat, 01 Jun 2013 22:28:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/grunt/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/grunt/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Grunt を導入</title>
@@ -16,100 +18,9 @@
       <pubDate>Sat, 01 Jun 2013 22:28:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/06/01/grunt-js/</guid>
-      <description>
+      <description>&lt;p&gt;Gruntを&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;に導入するためのメモ。&lt;/p&gt;
 
-&lt;p&gt;Gruntを&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;に導入するためのメモ。&lt;/p&gt;
-
-&lt;h3 id=&#34;node-jsのインストール:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;node.jsのインストール&lt;/h3&gt;
-
-&lt;p&gt;node.jsを最新版にする。&lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt;のinstallボタンで落ちてくるパッケージから再インストールするだけ。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;node -v
-v0.10.8
-npm -v
-1.2.23
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;grunt-cliのインストール:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;grunt-cliのインストール&lt;/h3&gt;
-
-&lt;p&gt;グローバルにgrunt-cliをインストール。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install -g grunt-cli
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;プロジェクト毎にgruntを導入する:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;プロジェクト毎にgruntを導入する&lt;/h3&gt;
-
-&lt;p&gt;プロジェクトのルートでpackage.jsonを生成する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm init
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;プロジェクトのルートでgruntをインストール。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install grunt --save-dev
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;--save-dev&lt;/code&gt;をつけるとpackage.jsonにインストールしたタスクの依存関係が記録される。
-package.jsonに依存関係が記録されていれば&lt;code&gt;npm install&lt;/code&gt;だけで一括導入ができるので流用しやすそう。
-なので&lt;code&gt;--save-dev&lt;/code&gt;をつけることにする。&lt;/p&gt;
-
-&lt;h3 id=&#34;タスクのインストール:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;タスクのインストール&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;grunt-contrib-uglify
-
-&lt;ul&gt;
-&lt;li&gt;JavaScriptを圧縮する&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;grunt-contrib-watch
-
-&lt;ul&gt;
-&lt;li&gt;Lessを監視して変更した時に別のタスクを呼び出す&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;grunt-contrib-less
-
-&lt;ul&gt;
-&lt;li&gt;Lessをcssにコンパイルしたり圧縮したりする&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install grunt-contrib-uglify grunt-contrib-watch grunt-contrib-less --save-dev
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以下だと便利タスク一式が一発で入るらしいけど、一個ずつ選びたいので使わない。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install grunt-contrib
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;いまの設定:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;いまの設定&lt;/h3&gt;
-
-&lt;script src=&#34;https://gist.github.com/hikarock/5690366.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;&lt;p&gt;lessコンパイルで対象ファイル一個ずつ書かなくていい方法。ありがとうstackoverflow - &lt;a href=&#34;http://t.co/GRA670cij9&#34; title=&#34;http://stackoverflow.com/questions/15344584/grunt-0-4-less-task-how-to-not-concatenate-destination-files&#34;&gt;stackoverflow.com/questions/1534…&lt;/a&gt;&lt;/p&gt;&amp;mdash; hika69さん (@hika69) &lt;a href=&#34;https://twitter.com/hika69/status/340436916019286017&#34;&gt;2013年5月31日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;lessファイルとコンパイル先のcssを両方ワイルドカード指定する方法がわからなくてはまったけど解決。
-このリンクを参考に設定した。&lt;/p&gt;
-
-&lt;h3 id=&#34;実行:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;実行&lt;/h3&gt;
-
-&lt;p&gt;デフォルトのタスクを実行する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;grunt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;タスクを指定して実行する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;grunt less:dist
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;参考:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;参考&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://gruntjs.com/sample-gruntfile&#34;&gt;Sumple Gruntfile&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://js.studio-kingdom.com/grunt&#34;&gt;Grunt 日本語リファレンス&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

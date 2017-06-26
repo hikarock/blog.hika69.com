@@ -5,29 +5,48 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  	<meta property="og:title" content=" Xcode のキー配置をカスタマイズする &middot;  hikarock blog" />
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="Xcode のキー配置をカスタマイズする"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@hika69"/>
+
+
+
+  	<meta property="og:title" content="Xcode のキー配置をカスタマイズする &middot; hikarock blog" />
   	<meta property="og:site_name" content="hikarock blog" />
   	<meta property="og:url" content="https://blog.hika69.com/blog/2014/12/28/xcode-remap-key/" />
 
     
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2014-12-28T13:01:51Z" />
 
-    <meta property="og:article:published_time" content="2014-12-28T13:01:51Z" />
-
     
-    <meta property="og:article:tag" content="xcode" />
+    <meta property="article:tag" content="xcode" />
     
-    <meta property="og:article:tag" content="karabiner" />
+    <meta property="article:tag" content="karabiner" />
     
-    <meta property="og:article:tag" content="mac" />
+    <meta property="article:tag" content="mac" />
     
     
 
-  <title>
-     Xcode のキー配置をカスタマイズする &middot;  hikarock blog
-  </title>
+    <title>Xcode のキー配置をカスタマイズする &middot; hikarock blog</title>
 
-    <meta name="description" content="" />
+    
+    <meta name="description" content="&lt;p&gt;&lt;a href=&#34;https://github.com/XVimProject/XVim&#34;&gt;XVim&lt;/a&gt; を使いはじめたら、Xcodeのキー配置が、カスタマイズ済みのターミナル (およびVim) と微妙に違うのが気になってきた (ターミナルはControlキーをよく使うので、CommandキーとControl" />
+    
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,8 +56,10 @@
 
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
+    
+
+    
 
     
       
@@ -46,9 +67,71 @@
       
       
     
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.24.1" />
 
     <link rel="canonical" href="https://blog.hika69.com/blog/2014/12/28/xcode-remap-key/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://blog.hika69.com/images/logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://blog.hika69.com/images/logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": https://hika69.com,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": 街に詳しい。
+        
+    },
+    "headline": Xcode のキー配置をカスタマイズする,
+    "name": Xcode のキー配置をカスタマイズする,
+    "wordCount": 56,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://blog.hika69.com/blog/2014/12/28/xcode-remap-key/,
+    "datePublished": 2014-12-28T13:01Z,
+    "dateModified": 2014-12-28T13:01Z,
+    
+    "keywords": xcode, karabiner, mac,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://blog.hika69.com/blog/2014/12/28/xcode-remap-key/
+    }
+}
+    </script>
+    
+
+
+    
 
     
     <script>
@@ -89,9 +172,8 @@
     <ul>
         
         
-        
     </ul>
-    
+
     
     <a class="subscribe-button icon-feed" href="https://blog.hika69.com/index.xml">Subscribe</a>
     
@@ -112,7 +194,7 @@
       <a class="blog-logo" href="https://blog.hika69.com/"><img src="https://blog.hika69.com/images/logo.png" alt="Home" /></a>
   
   
-      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml" >&nbsp;&nbsp;Subscribe</a>
   
   </nav>
 </header>
@@ -149,6 +231,8 @@
     <section class="post-content">
       <p><a href="https://github.com/XVimProject/XVim">XVim</a> を使いはじめたら、Xcodeのキー配置が、カスタマイズ済みのターミナル (およびVim) と微妙に違うのが気になってきた (ターミナルはControlキーをよく使うので、CommandキーとControlキーを入れ替えている) 。</p>
 
+<p></p>
+
 <p><a href="https://pqrs.org/osx/karabiner/index.html.ja">Karabiner</a> を使ってXcodeのCommandキーとControlキーを入れ替えた。</p>
 
 <p>private.xmlに以下を追記した。</p>
@@ -184,7 +268,6 @@
 <p><img src="https://blog.hika69.com/images/post/karabiner.png" alt="" /></p>
 
 <p>XVim 入れたらこういうことになるだろうなあ、と思ってたけど案の定 Xcode Way から遠ざかりつつある&hellip;</p>
-
     </section>
 
 
@@ -193,7 +276,7 @@
 
     
     <figure class="author-image">
-        <a class="img" href="https://blog.hika69.com/" style="background-image: url(https://blog.hika69.com/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+        <a class="img" href="https://blog.hika69.com/" style="background-image: url(/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
     </figure>
     
 
@@ -219,7 +302,7 @@
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Xcode%20%e3%81%ae%e3%82%ad%e3%83%bc%e9%85%8d%e7%bd%ae%e3%82%92%e3%82%ab%e3%82%b9%e3%82%bf%e3%83%9e%e3%82%a4%e3%82%ba%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2014%2f12%2f28%2fxcode-remap-key%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Xcode%20%e3%81%ae%e3%82%ad%e3%83%bc%e9%85%8d%e7%bd%ae%e3%82%92%e3%82%ab%e3%82%b9%e3%82%bf%e3%83%9e%e3%82%a4%e3%82%ba%e3%81%99%e3%82%8b&nbsp;-&nbsp;hikarock%20blog&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2014%2f12%2f28%2fxcode-remap-key%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -248,8 +331,30 @@
 </article>
 
 </main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://blog.hika69.com/blog/2014/12/29/hexbin/">
+          <section class="post">
+              <h2>hexbin に Casto ステッカーが追加された</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://blog.hika69.com/blog/2014/12/28/casto-sticker/">
+          <section class="post">
+              <h2>Casto のステッカーができた</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        <section class="copyright"><a href="">hikarock blog</a> &copy; 2017 hikarock</section>
         
         <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
         

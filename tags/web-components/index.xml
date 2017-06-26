@@ -6,9 +6,11 @@
     <description>Recent content in Web Components on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Mon, 07 Nov 2016 23:14:10 +0900</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/web-components/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/web-components/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>HyperTalk の play コマンド風のカスタム要素 &lt;x-play&gt; をつくった</title>
@@ -16,57 +18,9 @@
       <pubDate>Mon, 07 Nov 2016 23:14:10 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/11/07/x-play/</guid>
-      <description>
+      <description>&lt;p&gt;20 年ほど前に買った &lt;a href=&#34;http://booklog.jp/item/1/479529609X&#34;&gt;HyperCardの本&lt;/a&gt; をパラパラめくっていたら、&lt;code&gt;play&lt;/code&gt; というコマンドが紹介されていた。音色とメロディーを指定して、音楽を再生することができる便利なコマンドだ。&lt;/p&gt;
 
-&lt;p&gt;20 年ほど前に買った &lt;a href=&#34;http://booklog.jp/item/1/479529609X&#34;&gt;HyperCardの本&lt;/a&gt; をパラパラめくっていたら、&lt;code&gt;play&lt;/code&gt; というコマンドが紹介されていた。音色とメロディーを指定して、音楽を再生することができる便利なコマンドだ。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.kreativekorp.com/docs/openxion/1.4/manual/hyp/cm/play.html&#34;&gt;HyperTalk Commands - play&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;play &amp;quot;harpsichord&amp;quot; &amp;quot;ch d e f g a b c5w&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Web で似たようなことができると面白そうだな、と思いたって Polymer のカスタム要素で同じようなインターフェースを実装してみた。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hikarock/x-play&#34;&gt;hikarock/x-play&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://hikarock.github.io/x-play/&#34;&gt;DEMO (音が出ます)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;記述方法はこんな感じ。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;x-play sound=&amp;quot;piano&amp;quot; tempo=&amp;quot;80&amp;quot; repeat=&amp;quot;1&amp;quot; melody=&amp;quot;d2 e2 c2 c1 g1&amp;quot;&amp;gt;&amp;lt;/x-play&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;タグを並べて、同時に再生もできるようです (たくさん並べたら音がずれそう&amp;hellip;)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;x-play sound=&amp;quot;snare&amp;quot; tempo=&amp;quot;100&amp;quot; repeat=&amp;quot;2&amp;quot; melody=&amp;quot;-  c4  - c4  - c4  - c4&amp;quot;&amp;gt;&amp;lt;/x-play&amp;gt;
-&amp;lt;x-play sound=&amp;quot;kick&amp;quot;  tempo=&amp;quot;100&amp;quot; repeat=&amp;quot;2&amp;quot; melody=&amp;quot;c4 c4 c4 c4 c4 c4 c4 c4&amp;quot;&amp;gt;&amp;lt;/x-play&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;動作環境:7e63cc1ad65fb1894ea5ea12d98493f1&#34;&gt;動作環境&lt;/h3&gt;
-
-&lt;p&gt;最新版の Mac Chrome / Safari / Firefox あたりで動作を確認した。iOS の Safari だと音がでないが、まだ原因は調べてない。&lt;/p&gt;
-
-&lt;h3 id=&#34;音源について:7e63cc1ad65fb1894ea5ea12d98493f1&#34;&gt;音源について&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://maoudamashii.jokersounds.com/&#34;&gt;魔王魂&lt;/a&gt; さんの音源を利用させていただきました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://maoudamashii.jokersounds.com/list/se12.html&#34;&gt;楽器の無料・フリー効果音素材/魔王魂&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;まず最初に断っておきますが、「このページにある素材の使い道は作者の私すら分かりかねます。」&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;とありますが、まさにぴったりの素材でとても助かりました。&lt;/p&gt;
-
-&lt;h3 id=&#34;余談:7e63cc1ad65fb1894ea5ea12d98493f1&#34;&gt;余談&lt;/h3&gt;
-
-&lt;p&gt;@hideack が HyperTalk の play コマンドよりも歴史の古い MML という言語を教えてくれた。&lt;/p&gt;
-
-&lt;p&gt;以下のページによると初期の MML は 1978 年にシャープ社のコンピュータに搭載されたらしい。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Music_Macro_Language&#34;&gt;Music Macro Language - Wikipedia&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

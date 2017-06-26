@@ -5,27 +5,48 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  	<meta property="og:title" content=" Xcode でカラーパレットを保存して共有したい &middot;  hikarock blog" />
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="Xcode でカラーパレットを保存して共有したい"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@hika69"/>
+
+
+
+  	<meta property="og:title" content="Xcode でカラーパレットを保存して共有したい &middot; hikarock blog" />
   	<meta property="og:site_name" content="hikarock blog" />
   	<meta property="og:url" content="https://blog.hika69.com/blog/2014/12/21/osx-color-palettes/" />
 
     
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-
-    <meta property="og:article:published_time" content="2014-12-21T00:31:08Z" />
+    <meta property="article:published_time" content="2014-12-21T00:31:08Z" />
 
     
-    <meta property="og:article:tag" content="mac" />
+    <meta property="article:tag" content="mac" />
     
-    <meta property="og:article:tag" content="xcode" />
+    <meta property="article:tag" content="xcode" />
     
     
 
-  <title>
-     Xcode でカラーパレットを保存して共有したい &middot;  hikarock blog
-  </title>
+    <title>Xcode でカラーパレットを保存して共有したい &middot; hikarock blog</title>
 
-    <meta name="description" content="" />
+    
+    <meta name="description" content="&lt;p&gt;と思ったので調べた。Xcode というより Mac OS X の機能ぽい (OS X Yosemite &amp;amp; Xcode 6.1.1 の場合。他のバージョンで使えるかはわからない)。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;" />
+    
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,8 +56,10 @@
 
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
+    
+
+    
 
     
       
@@ -44,9 +67,71 @@
       
       
     
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.24.1" />
 
     <link rel="canonical" href="https://blog.hika69.com/blog/2014/12/21/osx-color-palettes/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://blog.hika69.com/images/logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://blog.hika69.com/images/logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": https://hika69.com,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": 街に詳しい。
+        
+    },
+    "headline": Xcode でカラーパレットを保存して共有したい,
+    "name": Xcode でカラーパレットを保存して共有したい,
+    "wordCount": 20,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://blog.hika69.com/blog/2014/12/21/osx-color-palettes/,
+    "datePublished": 2014-12-21T00:31Z,
+    "dateModified": 2014-12-21T00:31Z,
+    
+    "keywords": mac, xcode,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://blog.hika69.com/blog/2014/12/21/osx-color-palettes/
+    }
+}
+    </script>
+    
+
+
+    
 
     
     <script>
@@ -87,9 +172,8 @@
     <ul>
         
         
-        
     </ul>
-    
+
     
     <a class="subscribe-button icon-feed" href="https://blog.hika69.com/index.xml">Subscribe</a>
     
@@ -110,7 +194,7 @@
       <a class="blog-logo" href="https://blog.hika69.com/"><img src="https://blog.hika69.com/images/logo.png" alt="Home" /></a>
   
   
-      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml" >&nbsp;&nbsp;Subscribe</a>
   
   </nav>
 </header>
@@ -145,6 +229,8 @@
     <section class="post-content">
       <p>と思ったので調べた。Xcode というより Mac OS X の機能ぽい (OS X Yosemite &amp; Xcode 6.1.1 の場合。他のバージョンで使えるかはわからない)。</p>
 
+<p></p>
+
 <p>Xcode でカラーパレットを開いて、中央のタブ (Color Palettes) を選択する。</p>
 
 <p><img src="https://blog.hika69.com/images/post/osx-color-palettes-1.png" alt="" /></p>
@@ -152,7 +238,6 @@
 <p>左端の歯車のアイコンをクリックして<code>New</code>を選択するとカラーパレットを作成することができる。</p>
 
 <p>保存したカラーパレットは<code>~/Library/Colors/</code>以下に<code>Foo.clr</code>のようなファイル名で保存されているので、このファイルをプロジェクトメンバー間で共有すると便利そう。</p>
-
     </section>
 
 
@@ -161,7 +246,7 @@
 
     
     <figure class="author-image">
-        <a class="img" href="https://blog.hika69.com/" style="background-image: url(https://blog.hika69.com/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+        <a class="img" href="https://blog.hika69.com/" style="background-image: url(/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
     </figure>
     
 
@@ -187,7 +272,7 @@
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Xcode%20%e3%81%a7%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%91%e3%83%ac%e3%83%83%e3%83%88%e3%82%92%e4%bf%9d%e5%ad%98%e3%81%97%e3%81%a6%e5%85%b1%e6%9c%89%e3%81%97%e3%81%9f%e3%81%84&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2014%2f12%2f21%2fosx-color-palettes%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Xcode%20%e3%81%a7%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%91%e3%83%ac%e3%83%83%e3%83%88%e3%82%92%e4%bf%9d%e5%ad%98%e3%81%97%e3%81%a6%e5%85%b1%e6%9c%89%e3%81%97%e3%81%9f%e3%81%84&nbsp;-&nbsp;hikarock%20blog&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2014%2f12%2f21%2fosx-color-palettes%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -216,8 +301,30 @@
 </article>
 
 </main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://blog.hika69.com/blog/2014/12/22/penrose-stairs/">
+          <section class="post">
+              <h2>LEGOでペンローズ階段作った</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://blog.hika69.com/blog/2014/12/16/git-flow/">
+          <section class="post">
+              <h2>iOSアプリ開発のGit運用</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        <section class="copyright"><a href="">hikarock blog</a> &copy; 2017 hikarock</section>
         
         <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
         

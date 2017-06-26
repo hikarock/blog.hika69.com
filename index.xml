@@ -6,9 +6,11 @@
     <description>Recent content on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Mon, 20 Feb 2017 22:55:56 +0900</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>HTTPie の Sessions の使い方</title>
@@ -18,37 +20,7 @@
       <guid>https://blog.hika69.com/blog/2017/02/20/httpie/</guid>
       <description>&lt;p&gt;API のリクエストにめっちゃ長いトークンを含めないといけなかったりすると、コマンドを打つのもコピペするのも面倒なんだけど、&lt;a href=&#34;https://httpie.org/&#34;&gt;HTTPie&lt;/a&gt; に &lt;a href=&#34;https://httpie.org/doc#sessions&#34;&gt;Sessions&lt;/a&gt; という便利そうな機能があったので試してみた。&lt;/p&gt;
 
-&lt;p&gt;ここでは例として &lt;code&gt;foo&lt;/code&gt; という名前の Session を作る。 &lt;code&gt;Authorization:&amp;quot;~&amp;quot;&lt;/code&gt; が入力がめんどいトークンなど。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% http --session=foo api.example.com Authorization:&amp;quot;Bearer {very-very-long-token}&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Session &lt;code&gt;foo&lt;/code&gt; を使うと、上記のヘッダ付きのリクエストになる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% http --session=foo api.example.com/bar
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Session の情報は以下のパスに保存されていた。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% cat ~/.httpie/sessions/api.example.com/foo.json
-{
-    &amp;quot;__meta__&amp;quot;: {
-        &amp;quot;about&amp;quot;: &amp;quot;HTTPie session file&amp;quot;,
-        &amp;quot;help&amp;quot;: &amp;quot;https://httpie.org/docs#sessions&amp;quot;,
-        &amp;quot;httpie&amp;quot;: &amp;quot;0.9.8&amp;quot;
-    },
-    &amp;quot;auth&amp;quot;: {
-        &amp;quot;password&amp;quot;: null,
-        &amp;quot;type&amp;quot;: null,
-        &amp;quot;username&amp;quot;: null
-    },
-    &amp;quot;cookies&amp;quot;: {},
-    &amp;quot;headers&amp;quot;: {
-        &amp;quot;Authorization&amp;quot;: &amp;quot;Bearer {very-very-long-token}&amp;quot;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -59,20 +31,7 @@
       <guid>https://blog.hika69.com/blog/2017/02/16/iphone-lego-dock/</guid>
       <description>&lt;p&gt;iPhone ドックが欲しいけど買うまででもない感じなので、YouTube で見かけた LEGO 製 iPhone ドックを作ってみた。&lt;/p&gt;
 
-&lt;p&gt;以下の動画を説明書がわりに作る。&lt;/p&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/4gqi5-cnisQ&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;足りなかったブロックは適当に合いそうなもので代用した。子供のころからつかっているものなので結構ぼろいし、無駄に装飾的になっている。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/lego-dock-1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;動画の通りだと iPhone がちょっとぐらついたので、コネクタの左右にプレートを足している。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/lego-dock-2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;今回は使わなかったけれど、パーツが足りない時は&lt;a href=&#34;http://www.brickers.jp/&#34;&gt;こういう店&lt;/a&gt;でバラ買いするとよさそう。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -81,153 +40,11 @@
       <pubDate>Fri, 25 Nov 2016 17:49:12 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/11/25/phan/</guid>
-      <description>
-
-&lt;p&gt;開発環境 (Mac) で PHP の静的解析がしたくて Phan を導入した。&lt;/p&gt;
+      <description>&lt;p&gt;開発環境 (Mac) で PHP の静的解析がしたくて Phan を導入した。&lt;/p&gt;
 
 &lt;p&gt;さくっといけるかと思いきやいろいろつまづいたので備忘。&lt;/p&gt;
 
-&lt;h3 id=&#34;参考:593646a7e5561d464cbb25a13a7e3164&#34;&gt;参考&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/etsy/phan&#34;&gt;etsy/phan: Static analyzer for PHP&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://inside.pixiv.net/entry/2016/11/11/202656&#34;&gt;Phan静的解析がもたらす大PHP型検査時代 - pixiv inside&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;php7-を準備:593646a7e5561d464cbb25a13a7e3164&#34;&gt;PHP7 を準備&lt;/h3&gt;
-
-&lt;p&gt;phan が要求する PHP7 を導入する。今回は PHP5.6 も同居させたいので phpbrew を使う。&lt;/p&gt;
-
-&lt;p&gt;以下のエントリが参考になった。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.karakaram.com/mac-install-phpbrew&#34;&gt;MacでのPHP開発はphpbrewが非常に良い | karakaram-blog&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;phpbrew-をインストール:593646a7e5561d464cbb25a13a7e3164&#34;&gt;phpbrew をインストール&lt;/h4&gt;
-
-&lt;p&gt;以下のドキュメントを見つつ進める。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/phpbrew/phpbrew#install&#34;&gt;phpbrew/phpbrew#install&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;phpbrew をダウンロードしてパスの通ったところに配置する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
-% chmod +x phpbrew
-% mv phpbrew ~/bin/
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;初期設定のコマンドを実行。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% phpbrew init
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;.zshrc&lt;/code&gt; に以下の記述を追記。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;if [ -d ${HOME}/.phpbrew ]; then
-  source $HOME/.phpbrew/bashrc
-fi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;利用可能なPHPのバージョンを調べる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% phpbrew known
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;7系で最新のバージョンをインストールする。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% phpbrew install 7.0.13 +default
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ちなみに 5.3.x のような古いバージョンを入れたい時は &lt;code&gt;--old&lt;/code&gt; オプションで表示される。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% phpbrew known --old
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;インストールが完了したらバージョンを切り替える。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% phpbrew switch php-7.0.13
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;phan-をインストール:593646a7e5561d464cbb25a13a7e3164&#34;&gt;phan をインストール&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/etsy/phan/wiki/Getting-Started#from-phanphar&#34;&gt;Getting Started · etsy/phan Wiki&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;From Phan.phar&amp;rdquo; の手順で進める。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% curl -L https://github.com/etsy/phan/releases/download/0.6/phan.phar -o phan.phar;
-% mv phan.phar ~/bin
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://inside.pixiv.net/entry/2016/11/11/202656&#34;&gt;pixiv さんのエントリ&lt;/a&gt; を参考に、以下のスクリプトを、パスの通ったところに設置する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;#!/bin/sh
-
-/Users/hikarock/.phpbrew/php/php-7.0.13/bin/php ${PHAN_BIN:-/Users/hikarock/bin/phan.phar} &amp;quot;$@&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;php-ast-をインストール:593646a7e5561d464cbb25a13a7e3164&#34;&gt;php-ast をインストール&lt;/h3&gt;
-
-&lt;p&gt;phan が依存している php-ast をインストールする。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/nikic/php-ast#installation&#34;&gt;nikic/php-ast: Extension exposing PHP 7 abstract syntax tree&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% git clone git@github.com:nikic/php-ast.git
-% cd php-ast
-% phpize
-% ./configure
-% make
-% sudo make install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;php -i | grep extension_dir&lt;/code&gt; などで extension のインストール先を確認して、該当ディレクトリに &lt;code&gt;ast.so&lt;/code&gt; が配置されていることを確認。&lt;/p&gt;
-
-&lt;p&gt;ちなみに以下に配置されていた。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% pwd
-/Users/hikarock/.phpbrew/php/php-7.0.13/lib/php/extensions/no-debug-non-zts-20151012
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;php.ini の &lt;code&gt;[php]&lt;/code&gt; 配下に以下を追記して extension を読み込む。php.ini の場所は &lt;code&gt;php --ini&lt;/code&gt; で確認する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;extension = &amp;quot;ast.so&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;足りてなかった-extension-を追加:593646a7e5561d464cbb25a13a7e3164&#34;&gt;足りてなかった extension を追加&lt;/h3&gt;
-
-&lt;p&gt;phan が依存している &lt;code&gt;sqlite3&lt;/code&gt; が足りていなかったので phpbrew で追加する&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% phpbrew ext install sqlite3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ここでようやく phan コマンドが正常動作した。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;phan -h
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;phan-config-php-の設置:593646a7e5561d464cbb25a13a7e3164&#34;&gt;.phan/config.php の設置&lt;/h3&gt;
-
-&lt;p&gt;静的解析を行いたいプロジェクトのディレクトリ直下に &lt;code&gt;.phan/config.php&lt;/code&gt; を作成する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-return [
-    // 解析対象のディレクトリ
-    &#39;directory_list&#39; =&amp;gt; [
-        &#39;lib/&#39;
-    ],
-    // 解析対象外のディレクトリ
-    &#39;exclude_analysis_directory_list&#39; =&amp;gt; [
-        &#39;vendor/&#39;
-    ],
-];
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;実行する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% cd /path/to/project
-% phan --progress-bar -ophan.log
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;大量の解析結果が &lt;code&gt;phan.log&lt;/code&gt; に出力された。めでたしめでたし。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -236,57 +53,9 @@ return [
       <pubDate>Mon, 07 Nov 2016 23:14:10 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/11/07/x-play/</guid>
-      <description>
+      <description>&lt;p&gt;20 年ほど前に買った &lt;a href=&#34;http://booklog.jp/item/1/479529609X&#34;&gt;HyperCardの本&lt;/a&gt; をパラパラめくっていたら、&lt;code&gt;play&lt;/code&gt; というコマンドが紹介されていた。音色とメロディーを指定して、音楽を再生することができる便利なコマンドだ。&lt;/p&gt;
 
-&lt;p&gt;20 年ほど前に買った &lt;a href=&#34;http://booklog.jp/item/1/479529609X&#34;&gt;HyperCardの本&lt;/a&gt; をパラパラめくっていたら、&lt;code&gt;play&lt;/code&gt; というコマンドが紹介されていた。音色とメロディーを指定して、音楽を再生することができる便利なコマンドだ。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.kreativekorp.com/docs/openxion/1.4/manual/hyp/cm/play.html&#34;&gt;HyperTalk Commands - play&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;play &amp;quot;harpsichord&amp;quot; &amp;quot;ch d e f g a b c5w&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Web で似たようなことができると面白そうだな、と思いたって Polymer のカスタム要素で同じようなインターフェースを実装してみた。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hikarock/x-play&#34;&gt;hikarock/x-play&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://hikarock.github.io/x-play/&#34;&gt;DEMO (音が出ます)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;記述方法はこんな感じ。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;x-play sound=&amp;quot;piano&amp;quot; tempo=&amp;quot;80&amp;quot; repeat=&amp;quot;1&amp;quot; melody=&amp;quot;d2 e2 c2 c1 g1&amp;quot;&amp;gt;&amp;lt;/x-play&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;タグを並べて、同時に再生もできるようです (たくさん並べたら音がずれそう&amp;hellip;)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;x-play sound=&amp;quot;snare&amp;quot; tempo=&amp;quot;100&amp;quot; repeat=&amp;quot;2&amp;quot; melody=&amp;quot;-  c4  - c4  - c4  - c4&amp;quot;&amp;gt;&amp;lt;/x-play&amp;gt;
-&amp;lt;x-play sound=&amp;quot;kick&amp;quot;  tempo=&amp;quot;100&amp;quot; repeat=&amp;quot;2&amp;quot; melody=&amp;quot;c4 c4 c4 c4 c4 c4 c4 c4&amp;quot;&amp;gt;&amp;lt;/x-play&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;動作環境:7e63cc1ad65fb1894ea5ea12d98493f1&#34;&gt;動作環境&lt;/h3&gt;
-
-&lt;p&gt;最新版の Mac Chrome / Safari / Firefox あたりで動作を確認した。iOS の Safari だと音がでないが、まだ原因は調べてない。&lt;/p&gt;
-
-&lt;h3 id=&#34;音源について:7e63cc1ad65fb1894ea5ea12d98493f1&#34;&gt;音源について&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://maoudamashii.jokersounds.com/&#34;&gt;魔王魂&lt;/a&gt; さんの音源を利用させていただきました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://maoudamashii.jokersounds.com/list/se12.html&#34;&gt;楽器の無料・フリー効果音素材/魔王魂&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;まず最初に断っておきますが、「このページにある素材の使い道は作者の私すら分かりかねます。」&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;とありますが、まさにぴったりの素材でとても助かりました。&lt;/p&gt;
-
-&lt;h3 id=&#34;余談:7e63cc1ad65fb1894ea5ea12d98493f1&#34;&gt;余談&lt;/h3&gt;
-
-&lt;p&gt;@hideack が HyperTalk の play コマンドよりも歴史の古い MML という言語を教えてくれた。&lt;/p&gt;
-
-&lt;p&gt;以下のページによると初期の MML は 1978 年にシャープ社のコンピュータに搭載されたらしい。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Music_Macro_Language&#34;&gt;Music Macro Language - Wikipedia&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -295,110 +64,9 @@ return [
       <pubDate>Sat, 03 Sep 2016 16:41:41 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/09/03/digitalocean/</guid>
-      <description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://m.do.co/c/a129e4a597f1&#34;&gt;DigitalOcean&lt;/a&gt; 上に Vagtant で仮想サーバー (DigitalOcean では &lt;code&gt;droplet&lt;/code&gt; と言うらしい) が立ち上がるまでのログ。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://m.do.co/c/a129e4a597f1&#34;&gt;DigitalOcean&lt;/a&gt; 上に Vagtant で仮想サーバー (DigitalOcean では &lt;code&gt;droplet&lt;/code&gt; と言うらしい) が立ち上がるまでのログ。&lt;/p&gt;
-
-&lt;p&gt;DigitalOcean アカウントは作成済みの前提。&lt;/p&gt;
-
-&lt;h3 id=&#34;tugboat-の導入:408d90965407ccd8c9d1d1bcc218cd96&#34;&gt;tugboat の導入&lt;/h3&gt;
-
-&lt;p&gt;DigitalOcean を便利に操作できるコマンドラインツール tugboat を導入する。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/pearkes/tugboat&#34;&gt;pearkes/tugboat&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;あらかじめ以下のページで tugboat 用のトークンを発行しておく。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://cloud.digitalocean.com/settings/api/tokens&#34;&gt;DigitalOcean - API Tokens&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% gem install tugboat
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以下のコマンドで 上記で発行したトークンを設定する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% tugboat authorize
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;CentOS の images を一覧する例。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% tugboat images | grep centos
-6.7 x32 (slug: centos-6-5-x32, id: 14782899, distro: CentOS)
-6.7 x64 (slug: centos-6-5-x64, id: 14782952, distro: CentOS)
-5.11 x32 (slug: centos-5-x32, id: 18292035, distro: CentOS)
-5.11 x64 (slug: centos-5-x64, id: 18292131, distro: CentOS)
-7.2 x64 (slug: centos-7-0-x64, id: 18835303, distro: CentOS)
-7.2 x64 (slug: centos-7-x64, id: 19389325, distro: CentOS)
-6.8 x64 (slug: centos-6-x64, id: 19389823, distro: CentOS)
-6.8 x32 (slug: centos-6-x32, id: 19389931, distro: CentOS)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;7.2 x64&lt;/code&gt; がなぜか2つある。slug &lt;code&gt;centos-7-x64&lt;/code&gt; を今回は利用してみる。&lt;/p&gt;
-
-&lt;h3 id=&#34;vagrant-の準備:408d90965407ccd8c9d1d1bcc218cd96&#34;&gt;Vagrant の準備&lt;/h3&gt;
-
-&lt;p&gt;Vagrant のバージョンを確認。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% vagrant -v
-Vagrant 1.8.5
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Vagrant のプラグイン &lt;code&gt;vagrant-digitalocean&lt;/code&gt; を導入する。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/devopsgroup-io/vagrant-digitalocean#configure&#34;&gt;devopsgroup-io/vagrant-digitalocean&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% vagrant plugin install vagrant-digitalocean
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;README.md にあるように &lt;code&gt;Vagrantfile&lt;/code&gt; を作成する。&lt;code&gt;provider.xxx&lt;/code&gt; のあたりは tugboat を使って調べつつ適宜書き換える。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;Vagrant.configure(&#39;2&#39;) do |config|
-  config.vm.hostname = &#39;foo.hika69.com&#39;
-
-  config.vm.provider :digital_ocean do |provider, override|
-    override.ssh.private_key_path = &#39;~/.ssh/id_rsa&#39;
-    override.vm.box = &#39;digital_ocean&#39;
-    override.vm.box_url = &#39;https://github.com/devopsgroup-io/vagrant-digitalocean/raw/master/box/digital_ocean.box&#39;
-    provider.token = &#39;xxxxxxxxxxxxxxxxxxxxxxxxx&#39;
-    provider.image = &#39;centos-7-x64&#39;
-    provider.region = &#39;sgp1&#39;
-    provider.size = &#39;512mb&#39;
-  end
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;provider.region&lt;/code&gt; のバリエーションを調べる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% tugboat regions
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;provider.size&lt;/code&gt; の場合。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% tugboat sizes
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;tugboat を使わないで以下のように vagrant-digitalocean の機能を使っても同じことができる (ただトークンをつけるのが少し面倒)。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% vagrant digitalocean-list regions {TOKEN}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;vagrant-up-する:408d90965407ccd8c9d1d1bcc218cd96&#34;&gt;Vagrant up する&lt;/h3&gt;
-
-&lt;p&gt;仮想サーバーを起動する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% vagrant up --provider=digital_ocean
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;サーバーに-ssh-接続する:408d90965407ccd8c9d1d1bcc218cd96&#34;&gt;サーバーに SSH 接続する&lt;/h3&gt;
-
-&lt;p&gt;接続は &lt;code&gt;vagrant ssh&lt;/code&gt; するだけ。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;% vagrant ssh
-
-Last login: Sun Sep  4 07:55:24 2016 from xxx
-[root@foo ~]# cat /etc/redhat-release
-CentOS Linux release 7.2.1511 (Core)
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -409,22 +77,7 @@ CentOS Linux release 7.2.1511 (Core)
       <guid>https://blog.hika69.com/blog/2016/07/24/spa-layout-boilerplate/</guid>
       <description>&lt;p&gt;SPA を書き始める時に、大枠のレイアウトをどう組むか迷う。&lt;/p&gt;
 
-&lt;p&gt;タイトルの &lt;strong&gt;よくあるレイアウト&lt;/strong&gt; は、固定のヘッダ・フッタがあり、中央のメイン部が2カラムでスクロール可能なもの。要するに Mac の Finder のようなレイアウト。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/236607/17078886/a8b40728-513a-11e6-9e17-2f24f8604f52.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Grid 系のフレームワークを検討はするものの Bootstrap のような重量級のフレームワークはおおげさに感じる。&lt;/p&gt;
-
-&lt;p&gt;また、Electron のような単一の実行環境の場合は、クロスブラウザを意識したフレームワークが無駄に感じられるので使いたくない、というのもある。&lt;/p&gt;
-
-&lt;p&gt;それで &lt;code&gt;position: absolute&lt;/code&gt; を使った数十行の CSS (Stylus) をいつも書いている気がするので、以下のリポジトリにまとめた。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/hikarock/electron-layout-boilerplate&#34;&gt;hikarock/electron-layout-boilerplate&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;それぞれのプロジェクトから &lt;code&gt;@require &#39;layout&#39;&lt;/code&gt; して使うことを想定している。&lt;/p&gt;
-
-&lt;p&gt;セレクタがタグなのが行儀が悪いけれど、&lt;code&gt;header&lt;/code&gt; とか &lt;code&gt;main&lt;/code&gt; を同一アプリで繰り返し使わない、と割り切る。&lt;code&gt;nav&lt;/code&gt; は繰り返し使いたくなりそうだけど、まあその時はクラスセレクタに変更すればよいだろう。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -433,31 +86,9 @@ CentOS Linux release 7.2.1511 (Core)
       <pubDate>Fri, 01 Jul 2016 14:18:19 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/07/01/chab/</guid>
-      <description>
+      <description>&lt;p&gt;chab という6年前に作ったライブラリなんだけど、しばらく放置してたら動かなくなっていたので、改修して GitHub で再公開した。&lt;/p&gt;
 
-&lt;p&gt;chab という6年前に作ったライブラリなんだけど、しばらく放置してたら動かなくなっていたので、改修して GitHub で再公開した。&lt;/p&gt;
-
-&lt;h3 id=&#34;リポジトリ:78308e31204479aa19490f2ca34d4a0e&#34;&gt;リポジトリ&lt;/h3&gt;
-
-&lt;p&gt;詳細は &lt;a href=&#34;https://github.com/hikarock/chab&#34;&gt;README.md&lt;/a&gt; にて。&lt;/p&gt;
-
-&lt;h3 id=&#34;デモ:78308e31204479aa19490f2ca34d4a0e&#34;&gt;デモ&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://hikarock.github.io/chab/&#34;&gt;https://hikarock.github.io/chab/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;今回の修正内容:78308e31204479aa19490f2ca34d4a0e&#34;&gt;今回の修正内容&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.w3.org/TR/webdatabase/&#34;&gt;Web SQL Database&lt;/a&gt; の openDatabase の引数を2つしか指定していなかったのが原因で動作していなかったようなので修正した。&lt;/p&gt;
-
-&lt;p&gt;第3引数は &lt;code&gt;displayName&lt;/code&gt; だけど Chrome Developer Tools を見る限りだと第1引数に指定した値が表示されている。どこで使われるのかはわからなかった。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/chab-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;第4引数は &lt;code&gt;estimatedSize&lt;/code&gt; はDBのサイズを byte で指定する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;this.db = openDatabase(&amp;quot;chabdb&amp;quot;, &amp;quot;1.0.1&amp;quot;, &amp;quot;chab&amp;quot;, 1024 * 1024);
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -466,62 +97,9 @@ CentOS Linux release 7.2.1511 (Core)
       <pubDate>Fri, 27 May 2016 00:20:53 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/05/27/chrome-extension-inline-install/</guid>
-      <description>
+      <description>&lt;p&gt;Chrome 拡張を Chrome ウェブストア に遷移せずにインストールできる Inline Installation に対応した時の覚書。&lt;/p&gt;
 
-&lt;p&gt;Chrome 拡張を Chrome ウェブストア に遷移せずにインストールできる Inline Installation に対応した時の覚書。&lt;/p&gt;
-
-&lt;h3 id=&#34;オフィシャルのドキュメント:97c4b7edc7ed1d60b05fc5875229f18c&#34;&gt;オフィシャルのドキュメント&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://developer.chrome.com/webstore/inline_installation&#34;&gt;Using Inline Installation - Google Chrome&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;手順:97c4b7edc7ed1d60b05fc5875229f18c&#34;&gt;手順&lt;/h3&gt;
-
-&lt;p&gt;あらかじめ Chrome ウェブストアのデベロッパー ダッシュボードと Google Search Console で、Inline Installation を導入したいウェブサイトを設定する。&lt;/p&gt;
-
-&lt;p&gt;Inline Installation を設置したいサイトの head 内に link タグを挿入する。&lt;code&gt;{itemId}&lt;/code&gt; に該当の拡張機能のURLに含まれるIDを指定する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;link rel=&amp;quot;chrome-webstore-item&amp;quot; href=&amp;quot;https://chrome.google.com/webstore/detail/{itemId}&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;リンクやボタンなどを押下したタイミングで Inline Installation を実行する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(document).on(&#39;click&#39;, &#39;#install-button&#39;, function(evt) {
-    evt.preventDefault();
-
-    if (!(&#39;chrome&#39; in window)) {
-        console.log(&#39;拡張機能をインストールするには、Google Chrome をご利用ください&#39;);
-        return;
-    }
-
-    chrome.webstore.install(&#39;&#39;, function() {
-        // successCallback
-    }, function(errMessage, code) {
-        // failureCallback
-        console.log(errMessage, code);
-    });
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;インストール済みか判定して表示を変更する:97c4b7edc7ed1d60b05fc5875229f18c&#34;&gt;インストール済みか判定して表示を変更する&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;chrome.app.isInstalled&lt;/code&gt; の値を判定すればよいだけかと思っていたけど、Chrome 拡張機能の場合はこの値は常に false になる。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/18275960/chrome-app-isinstalled-always-returns-false-for-google-chrome-extensions&#34;&gt;chrome.app.isInstalled always returns false for Google Chrome extensions? - Stack Overflow&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;この回答によると &lt;code&gt;isInstalled&lt;/code&gt; が使えるのは Hosted apps の場合のみで、拡張機能の場合は &lt;a href=&#34;https://developer.chrome.com/extensions/content_scripts&#34;&gt;Content Script&lt;/a&gt; で以下のように body に判定用の DOM を挿入しないといけないようだ。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(&#39;body&#39;).append($(&#39;&amp;lt;div&amp;gt;&#39;).attr(&#39;id&#39;, &#39;extension-is-installed&#39;));
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;if ($(&#39;#extension-is-installed&#39;).length &amp;gt; 0) {
-  $(&#39;#install-button&#39;).css(&#39;display&#39;, &#39;none&#39;);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;このようにインストール済みか判定をしないとどうなるかというと、インストール済みでボタンを押下しても初回と同様のダイアログが表示されて、再インストールが実行されるだけ。&lt;/p&gt;
-
-&lt;p&gt;インストール済みの場合に拡張機能のチュートリアルを表示したい、とかでない限りはこの対応はいらない気がする。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -532,37 +110,7 @@ CentOS Linux release 7.2.1511 (Core)
       <guid>https://blog.hika69.com/blog/2016/05/20/psr-2-single-blank-line/</guid>
       <description>&lt;p&gt;PHP の &lt;a href=&#34;http://www.php-fig.org/psr/psr-2/&#34;&gt;PSR-2&lt;/a&gt; で「最終行に空行を入れる」という規約がある。&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;All PHP files MUST end with a single blank line.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;この規約に従っていたつもりなんだけど、勘違いしていたことがわかった&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:068fbfaf1d29160431985fc269a051fe:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:068fbfaf1d29160431985fc269a051fe:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;ので備忘。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://firegoby.jp/archives/2391&#34;&gt;UNIXの行の定義とviの改行コード | Firegoby&lt;/a&gt; より引用&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;POSIXでは「Unix においてテキストファイルとは行の集合であり、行とは改行文字で終わるものと定義される」と定義されている。&lt;/p&gt;
-
-&lt;p&gt;viのような由緒正しきテキストエディターは、この定義を忠実に守っており、行末には必ず改行が入る仕様になっている。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;このため Vim で最終行に &lt;strong&gt;空行が見える&lt;/strong&gt; ように記述している場合、最終行に改行が連続(LFLF)して入力されている。&lt;/p&gt;
-
-&lt;p&gt;GitHub でも最終行の空行は表示されない&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:068fbfaf1d29160431985fc269a051fe:2&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:068fbfaf1d29160431985fc269a051fe:2&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;。PSR-2 の規約を満たしていても、Vim と GitHub では空行が見えないため、空行を連続して入力してしまっていた。&lt;/p&gt;
-
-&lt;p&gt;ということで PSR-2 に従う場合、Vim では最終行の &lt;strong&gt;空行が見えない状態が正解&lt;/strong&gt; のようだ。&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:068fbfaf1d29160431985fc269a051fe:1&#34;&gt;発端はプロジェクトの新メンバーのエディタが Atom で、僕が Vim だったため表示が違ったこと
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:068fbfaf1d29160431985fc269a051fe:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li id=&#34;fn:068fbfaf1d29160431985fc269a051fe:2&#34;&gt;GitHub の表示については PHP-FIG のメンバーである &lt;a href=&#34;https://github.com/cakephp/cakephp/blob/master/src/Collection/Collection.php#L101&#34;&gt;CakePHP&lt;/a&gt; や &lt;a href=&#34;https://github.com/drupal/drupal/blob/8.1.x/core/lib/Drupal.php#L724&#34;&gt;Drual&lt;/a&gt; の .php ファイルの最終行の表示を確認した。
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:068fbfaf1d29160431985fc269a051fe:2&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -571,20 +119,9 @@ CentOS Linux release 7.2.1511 (Core)
       <pubDate>Wed, 20 Apr 2016 00:19:20 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/</guid>
-      <description>
+      <description>&lt;p&gt;以前書いたエントリ &lt;a href=&#34;http://blog.hika69.com/blog/2014/01/28/google-apps-script/&#34;&gt;Twitter 検索の結果を Google Drive のスプレッドシートに出力する&lt;/a&gt; の方法が現在使えなくなっているので、代替のスクリプトとその使い方を Gist に置きました。&lt;/p&gt;
 
-&lt;p&gt;以前書いたエントリ &lt;a href=&#34;http://blog.hika69.com/blog/2014/01/28/google-apps-script/&#34;&gt;Twitter 検索の結果を Google Drive のスプレッドシートに出力する&lt;/a&gt; の方法が現在使えなくなっているので、代替のスクリプトとその使い方を Gist に置きました。&lt;/p&gt;
-
-&lt;h3 id=&#34;readme-md-https-gist-github-com-hikarock-61fa2cbd933c3ec3abc2afa1830ba68b:1fd485e9c2c175413383efa6ac2e016a&#34;&gt;&lt;a href=&#34;https://gist.github.com/hikarock/61fa2cbd933c3ec3abc2afa1830ba68b&#34;&gt;README.md&lt;/a&gt;&lt;/h3&gt;
-
-&lt;script src=&#34;https://gist.github.com/hikarock/61fa2cbd933c3ec3abc3afa1830ba68b.js&#34;&gt;&lt;/script&gt;
-
-&lt;h3 id=&#34;twitter-gas-js-https-gist-github-com-hikarock-e4d549ddbae5d9d67a1d93b56d69e129:1fd485e9c2c175413383efa6ac2e016a&#34;&gt;&lt;a href=&#34;https://gist.github.com/hikarock/e4d549ddbae5d9d67a1d93b56d69e129&#34;&gt;twitter-gas.js&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;@hideack さんがコメントで、同時に Slack 通知する方法についても書いてくれてます。&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/hikarock/e4d549ddbae5d9d67a1d93b56d69e129.js&#34;&gt;&lt;/script&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -593,133 +130,9 @@ CentOS Linux release 7.2.1511 (Core)
       <pubDate>Wed, 06 Apr 2016 22:26:17 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/04/06/frisby/</guid>
-      <description>
+      <description>&lt;p&gt;REST API のテストツール Frisby.js を使ってみた。&lt;/p&gt;
 
-&lt;p&gt;REST API のテストツール Frisby.js を使ってみた。&lt;/p&gt;
-
-&lt;h3 id=&#34;導入:93f38952e09b7e441a25f845abcaf75b&#34;&gt;導入&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://frisbyjs.com/&#34;&gt;REST API Testing—Frisby.js&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;npm で Frisby.js を導入する。&lt;/p&gt;
-
-&lt;p&gt;jasmine-node は依存パッケージで、config は必須ではないけど本番環境と開発環境の切り替えに使う。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ npm i -D frisby jasmine-node config
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ファイル構成はこんな感じになった。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ tree
- .
- ├── package.json
- ├── node_modules
- ├── config
- │  └── test
- │      └── api
- │          └── v1
- │              ├── development.json
- │              └── production.json
- └── test
-     └── api
-         └── v1
-             ├── bar.spec.js
-             └── foo.spec.js
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;設定ファイルには、とりあえずAPIのURLだけ追加。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;url&amp;quot;: &amp;quot;http://api.example.com/v1&amp;quot;,
-  &amp;quot;url-auth&amp;quot;: &amp;quot;http://test:password@api.example.com/v1&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;package.json&lt;/code&gt; にテストを実行するタスクを追加する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;  &amp;quot;scripts&amp;quot;: {
-    &amp;quot;test:api:development&amp;quot;: &amp;quot;export NODE_ENV=development &amp;amp;&amp;amp; export NODE_CONFIG_DIR=./config/test/api/v1 &amp;amp;&amp;amp; jasmine-node ./test/api/v1&amp;quot;,
-    &amp;quot;test:api:production&amp;quot;: &amp;quot;export NODE_ENV=production &amp;amp;&amp;amp; export NODE_CONFIG_DIR=./config/test/api/v1 &amp;amp;&amp;amp; jasmine-node ./test/api/v1&amp;quot;
-  },
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;テストを実行する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm run test:api:production
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;json-レスポンス-内の型を検証する:93f38952e09b7e441a25f845abcaf75b&#34;&gt;JSON レスポンス 内の型を検証する&lt;/h3&gt;
-
-&lt;p&gt;例えば以下のようなレスポンスが返るAPIの場合。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;id&amp;quot;: 1,
-  &amp;quot;name&amp;quot;: &amp;quot;hikarock&amp;quot;,
-  &amp;quot;url&amp;quot;: &amp;quot;http://hika69.com&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以下の &lt;code&gt;users.spec.js&lt;/code&gt; を用意する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var frisby = require(&#39;frisby&#39;);
-var config = require(&#39;config&#39;);
-
-frisby.create(&#39;GET:users&#39;)
-  .get(config.get(&#39;url&#39;) + &#39;/users/hikarock&#39;)
-  .expectStatus(200)
-  .expectHeaderContains(&#39;content-type&#39;, &#39;application/json&#39;)
-  .expectJSONTypes({
-    id: Number,
-    name: String,
-    url: String
-  })
-.toss();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;配列の検証:93f38952e09b7e441a25f845abcaf75b&#34;&gt;配列の検証&lt;/h3&gt;
-
-&lt;p&gt;配列内の1レコードの検証を行いたい場合は &lt;code&gt;expectJSONTypes&lt;/code&gt; の第一引数に &lt;code&gt;users.0&lt;/code&gt; のような独自の記法で指定する。
-複数レコードの検証を行う場合は &lt;code&gt;users.*&lt;/code&gt; のようにワイルドカードも指定できる。&lt;/p&gt;
-
-&lt;p&gt;例えば以下のようなレスポンスが返るAPIの場合。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  users: [
-    {
-      &amp;quot;id&amp;quot;: 1,
-      &amp;quot;name&amp;quot;: &amp;quot;hikarock&amp;quot;,
-      &amp;quot;url&amp;quot;: &amp;quot;http://hika69.com&amp;quot;
-    },
-    {
-      &amp;quot;id&amp;quot;: 2,
-      &amp;quot;name&amp;quot;: &amp;quot;foo&amp;quot;,
-      &amp;quot;url&amp;quot;: &amp;quot;http://example.com&amp;quot;
-    }
-    ...
-  ]
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;1レコード目を検証する場合は以下のように記述する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;frisby.create(&#39;GET:users&#39;)
-  .get(config.get(&#39;url&#39;) + &#39;/users&#39;)
-  .expectStatus(200)
-  .expectHeaderContains(&#39;content-type&#39;, &#39;application/json&#39;)
-  .expectJSONTypes(&#39;users.0&#39;, {
-    id: Number,
-    name: String,
-    url: String
-  })
-.toss();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;まとめ:93f38952e09b7e441a25f845abcaf75b&#34;&gt;まとめ&lt;/h3&gt;
-
-&lt;p&gt;導入も楽で、いい感じ。&lt;/p&gt;
-
-&lt;p&gt;今回はGETの正常系しか試してないので、実行順を考慮する必要のある更新系なども試してみたい。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -728,81 +141,9 @@ frisby.create(&#39;GET:users&#39;)
       <pubDate>Sat, 02 Apr 2016 12:21:22 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/04/02/raspberry-pi-3/</guid>
-      <description>
+      <description>&lt;p&gt;使いみちを決めないで Raspberry Pi 3 を買ってしまったけど、とりあえず OS いれて起動するまでセットアップしてみる。&lt;/p&gt;
 
-&lt;p&gt;使いみちを決めないで Raspberry Pi 3 を買ってしまったけど、とりあえず OS いれて起動するまでセットアップしてみる。&lt;/p&gt;
-
-&lt;h3 id=&#34;購入したもの:be81337d34db55b6da5a36357444f01f&#34;&gt;購入したもの&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.amazon.co.jp/Raspberry-Pi3-Model-B-Element14/dp/B01D1FR2WE%3Fpsc%3D1%26SubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB01D1FR2WE&#34;&gt;Amazon.co.jp： Raspberry Pi3 Model B (Element14): パソコン・周辺機器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.amazon.co.jp/%E6%9D%B1%E8%8A%9D-microSDHC-EXCERIA-TOSHIBA-%E6%B5%B7%E5%A4%96%E5%90%91%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%93%81/dp/B00ZF75RLK%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00ZF75RLK&#34;&gt;Amazon.co.jp： 東芝 microSDHC 32GB EXCERIA 48MB/s UHS-I Class10 TOSHIBA 海外向パッケージ品 [並行輸入品]: パソコン・周辺機器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.amazon.co.jp/Raspberry-Pi-3B-2B-%E5%B0%82%E7%94%A8%E3%82%B1%E3%83%BC%E3%82%B9-%EF%BC%88Green%EF%BC%89/dp/B00OH026UQ%3Fpsc%3D1%26SubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00OH026UQ&#34;&gt;Amazon.co.jp： Raspberry Pi 3B/2B/B+ 専用ケース（Green）: パソコン・周辺機器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;HDMI ケーブル&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;以下は、すでに持っているもので流用。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;USB キーボード&lt;/li&gt;
-&lt;li&gt;USB マウス&lt;/li&gt;
-&lt;li&gt;&lt;del&gt;2.5A の電源推奨らしいがとりあえず余っていたiPhone用の 1A の電源&lt;/del&gt; 若干不安だったので後日2.1Aの電源に買い換えた (それでも少し足りてない)&lt;/li&gt;
-&lt;li&gt;電源接続用の MicroUSB ケーブル&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;os-のセットアップ:be81337d34db55b6da5a36357444f01f&#34;&gt;OS のセットアップ&lt;/h3&gt;
-
-&lt;p&gt;ここから RASPBIAN JESSIE をダウンロードする。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.raspberrypi.org/downloads/raspbian/&#34;&gt;Download Raspbian for Raspberry Pi&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ダウンロードしたファイルを展開して &lt;code&gt;2016-03-18-raspbian-jessie.img&lt;/code&gt; を確認。&lt;/p&gt;
-
-&lt;p&gt;OSのインストールは以下のドキュメントを見ながら進める。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/installation/installing-images/mac.md&#34;&gt;Installing operating system images on Mac OS - Raspberry Pi Documentation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;microSD カードを Mac に挿入してから以下のコマンドを実行する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ diskutil list
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;microSD カードが &lt;code&gt;/dev/dis2&lt;/code&gt; でマウントされていることを確認。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo diskutil unmountDisk /dev/disk2
-$ sudo dd bs=1M if=/Users/hikarock/Downloads/2016-03-18-raspbian-jessie.img of=/dev/disk2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;しばし待つ。完了後に Finder で Mac のデバイスとして認識されているのを確認してから microSD カードを取り出す。
-取り出した microSD を Raspberry Pi に挿入する。&lt;/p&gt;
-
-&lt;h3 id=&#34;mac-から-ssh-接続できるようにする:be81337d34db55b6da5a36357444f01f&#34;&gt;Mac から SSH 接続できるようにする&lt;/h3&gt;
-
-&lt;p&gt;電源の Micro USB ケーブルを差すだけで OS が起動する。&lt;/p&gt;
-
-&lt;h4 id=&#34;wi-fi-の接続:be81337d34db55b6da5a36357444f01f&#34;&gt;Wi-Fi の接続&lt;/h4&gt;
-
-&lt;p&gt;右上のメニューから GUI で設定できる。&lt;/p&gt;
-
-&lt;h4 id=&#34;ssh-の有効化:be81337d34db55b6da5a36357444f01f&#34;&gt;SSH の有効化&lt;/h4&gt;
-
-&lt;p&gt;IP アドレスを確認する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pi@raspberrypi:~ $ ip addr
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;raspi-config&lt;/code&gt; で設定画面が起動するので、ssh を有効化する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pi@raspberrypi:~ $ sudo raspi-config
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Mac から ssh する (初期パスワードは &lt;code&gt;raspberry&lt;/code&gt;)。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ssh pi@192.168.X.X
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;入れた。ということで何に使おうか。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -813,94 +154,7 @@ $ sudo dd bs=1M if=/Users/hikarock/Downloads/2016-03-18-raspbian-jessie.img of=/
       <guid>https://blog.hika69.com/blog/2016/01/25/bfg/</guid>
       <description>&lt;p&gt;あるリポジトリを GitHub に push した時に、100MB 以上のファイルが含まれていたため拒否されてしまった。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;% git push origin master
-...
-remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
-remote: error: Trace: xxx
-remote: error: See http://git.io/iEPt8g for more information.
-remote: error: File big.exe is 160.21 MB; this exceeds GitHub&#39;s file size limit of 100.00 MB
-To git@github.com:hikarock/some-big-repo.git
- ! [remote rejected] master -&amp;gt; master (pre-receive hook declined)
-error: failed to push some refs to &#39;git@github.com:hikarock/some-big-repo.git&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://git-lfs.github.com/&#34;&gt;Git Large File Storage&lt;/a&gt; も使ってみたかったけど課金&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:ae8ab95f0667855683a86e9e88aa2ebd:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:ae8ab95f0667855683a86e9e88aa2ebd:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;してないので、素直に &lt;code&gt;more information&lt;/code&gt; のリンクを開く。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://help.github.com/articles/removing-files-from-a-repository-s-history/&#34;&gt;Removing files from a repository&amp;rsquo;s history - User Documentation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;2パターンのファイル削除方法が掲載されていて、今回はだいぶ昔にコミットされたファイルを消したかったので &lt;code&gt;Removing a file added in an older commit&lt;/code&gt; で紹介されている BFG を使う。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://rtyley.github.io/bfg-repo-cleaner/&#34;&gt;BFG Repo-Cleaner by rtyley&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;BFG のサイトから jar ファイルをダウンロードして、&lt;code&gt;.zshrc&lt;/code&gt; にエイリアスを設定した。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;alias bfg=&#39;java -jar ~/bin/bfg-1.12.8.jar&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;リポジトリに移動して、エラーの原因になっている巨大ファイルを &lt;code&gt;git rm&lt;/code&gt; する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% cd some-big-repo
-% git rm big.exe
-rm &#39;big.exe&#39;
-% git ci -m &#39;巨大なファイルを削除&#39;
-[master xxx] 巨大なファイルを削除
- 1 file changed, 0 insertions(+), 0 deletions(-)
- delete mode 100755 big.exe
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;対象リポジトリ内の100M以上のファイルを対象に &lt;code&gt;bfg&lt;/code&gt; を実行。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% cd ..
-% bfg --strip-blobs-bigger-than 100M some-big-repo
-SLF4J: Failed to load class &amp;quot;org.slf4j.impl.StaticLoggerBinder&amp;quot;.
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-
-Using repo : some-big-repo/.git
-
-...
-
-Deleted files
--------------
-
-        Filename                       Git id
-        --------------------------------------------------
-        big.exe                      | xxx (160.2 MB)
-
-In total, 7 object ids were changed. Full details are logged here:
-
-        /Users/hikarock/some-big-repo.bfg-report/2016-01-25/20-00-01
-
-BFG run is complete! When ready, run: git reflog expire --expire=now --all &amp;amp;&amp;amp; git gc --prune=now --aggressive
-
-Has the BFG saved you time?  Support the BFG on BountySource:  https://j.mp/fund-bfg
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;メッセージの最後に出ている通りに &lt;code&gt;git reflog&lt;/code&gt; を実行する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% cd some-big-repo
-% git reflog expire --expire=now --all &amp;amp;&amp;amp; git gc --prune=now --aggressive
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;もういちど &lt;code&gt;git push&lt;/code&gt; を実行。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% git push origin master
-...
-To git@github.com:hikarock/some-big-repo
- * [new branch]      master -&amp;gt; master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;push できた。&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:ae8ab95f0667855683a86e9e88aa2ebd:1&#34;&gt;容量1GB、帯域1GB/月 までは無料だったので今回のケースでは使ってもよかったかも。&lt;a href=&#34;https://github.com/pricing&#34;&gt;詳細&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:ae8ab95f0667855683a86e9e88aa2ebd:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -909,98 +163,9 @@ To git@github.com:hikarock/some-big-repo
       <pubDate>Thu, 07 Jan 2016 21:46:22 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/01/07/rename-snake-case-to-pascal-case/</guid>
-      <description>
+      <description>&lt;p&gt;あるプロジェクトで &lt;a href=&#34;http://www.php-fig.org/psr/psr-0/&#34;&gt;PSR-0&lt;/a&gt; に対応する作業に関連して、スネークケースのファイル名とクラス名をパスカルケースに変換する必要があった。&lt;/p&gt;
 
-&lt;p&gt;あるプロジェクトで &lt;a href=&#34;http://www.php-fig.org/psr/psr-0/&#34;&gt;PSR-0&lt;/a&gt; に対応する作業に関連して、スネークケースのファイル名とクラス名をパスカルケースに変換する必要があった。&lt;/p&gt;
-
-&lt;h3 id=&#34;ファイル名の変換:4739118768bed0d63c3796c5bfa8d06b&#34;&gt;ファイル名の変換&lt;/h3&gt;
-
-&lt;p&gt;Mac に rename コマンドをインストールする。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ brew install rename
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;変換前&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ls -l
--rw-r--r-- 1 hikarock staff 0  1  7 21:47 foo_bar_buzz.php
--rw-r--r-- 1 hikarock staff 0  1  7 21:47 hoge_fuga.php
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;rename コマンドを叩く。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ rename -f &#39;s/(^|_)(.)/\U$2\E/g&#39; *.php
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;変換後&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ls -l
-total 0
--rw-r--r-- 1 hikarock staff 0  1  7 21:47 FooBarBuzz.php
--rw-r--r-- 1 hikarock staff 0  1  7 21:47 HogeFuga.php
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;よさそう。&lt;/p&gt;
-
-&lt;h3 id=&#34;クラス名の変換:4739118768bed0d63c3796c5bfa8d06b&#34;&gt;クラス名の変換&lt;/h3&gt;
-
-&lt;p&gt;Mac に標準で入っている sed は使わずに GNU sed をインストールする。&lt;/p&gt;
-
-&lt;p&gt;参考: &lt;a href=&#34;http://shunirr.hatenablog.jp/entry/2012/12/19/160544&#34;&gt;Homebrew を使って OSX に GNU sed を入れる - おともだちティータイム&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ brew install gnu-sed
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;変換前。対象はクラス名だけにしたいので、他のスネークケースの変数名や関数名を含んだ状態で、余計な箇所が変更されていないか確認しながら検証する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;?php
-
-class foo_bar_buzz_controller extends bar_buzz_controller {
-  private $hoge_fuga;
-  public function set_hoge_fuga() {
-    //
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;gsed コマンドで変換する。&lt;code&gt;/^class.*\{$/&lt;/code&gt; で対象行でクラス宣言の行だけに絞り込んでいる ( &lt;code&gt;{&lt;/code&gt; は改行した次の行に書く場合の方が多いかもしれないけど、このプロジェクトでは &lt;code&gt;class&lt;/code&gt; と同一行に書いている)。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ gsed -i -r &#39;/^class.*\{$/ s/_(.)/\U\1\E/g&#39; *.php
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;変換後&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;?php
-
-class fooBarBuzzController extends barBuzzController {
-  private $hoge_fuga;
-  public function set_hoge_fuga() {
-    //
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;クラス名の先頭が小文字のままだった。&lt;/p&gt;
-
-&lt;p&gt;今回はたまたま対象クラス名の末尾に必ず &lt;code&gt;Controller&lt;/code&gt; が含まれていたので、以下のようにしてお茶を濁した。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ perl -pi -e &#39;s/ (\w+?)Controller/ \u\1Controller/g&#39; *.php
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;perl コマンドを使ったのは sed で最短一致ができなかったため。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;?php
-
-class FooBarBuzzController extends BarBuzzController {
-  private $hoge_fuga;
-  public function set_hoge_fuga() {
-    //
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;完了。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1011,26 +176,505 @@ class FooBarBuzzController extends BarBuzzController {
       <guid>https://blog.hika69.com/blog/2016/01/02/node-cli-open-editor/</guid>
       <description>&lt;p&gt;&lt;code&gt;git commit&lt;/code&gt; をコマンドラインから実行した時に Vim が自動で開いてコミットコメントを入力できるが、このような挙動を Node のCLIアプリを自作するときにどうやるか調べた。&lt;/p&gt;
 
-&lt;p&gt;ずばりな回答が以下。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>自作アプリのシンボルフォントを作った</title>
+      <link>https://blog.hika69.com/blog/2015/12/28/symbol-font/</link>
+      <pubDate>Mon, 28 Dec 2015 20:32:36 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2015/12/28/symbol-font/</guid>
+      <description>&lt;p&gt;『「シンボルフォント in Web」草稿』を参考に &lt;a href=&#34;https://www.sketchapp.com/&#34;&gt;Sketch&lt;/a&gt; と IcoMoon でシンボルフォントを作成した。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/15726004/is-there-a-way-to-quit-node-js-and-launch-vim-on-a-file&#34;&gt;Is there a way to quit Node.js and launch VIM on a file? - Stack Overflow&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ブログを Hugo に変えた</title>
+      <link>https://blog.hika69.com/blog/2015/11/15/hugo/</link>
+      <pubDate>Sun, 15 Nov 2015 13:07:37 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2015/11/15/hugo/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://blog.hika69.com/blog/2015/07/01/roots/&#34;&gt;前回のエントリ&lt;/a&gt;で、Roots について調べていたけどなぜか Hugo でブログをリニューアルしていた。
+Octopress にくらべて生成速度が速くてとても快適だ。&lt;/p&gt;
 
-&lt;p&gt;この回答では Vim を固定で指定しているが &lt;code&gt;process.env.EDITOR&lt;/code&gt; で Vim 以外のエディタにも対応できる。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>静的サイトジェネレータ Roots の覚書</title>
+      <link>https://blog.hika69.com/blog/2015/07/01/roots/</link>
+      <pubDate>Wed, 01 Jul 2015 22:01:34 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2015/07/01/roots/</guid>
+      <description>&lt;p&gt;定期的にブログをリニューアルしたくなる病が発症する。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var fs = require(&#39;fs&#39;);
-var file = &#39;~/.foo.txt&#39;;
-var editor = require(&#39;child_process&#39;).spawn(process.env.EDITOR, [file], {stdio: &#39;inherit&#39;});
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>eslint を vim-watchdogs から使う</title>
+      <link>https://blog.hika69.com/blog/2015/05/05/eslint/</link>
+      <pubDate>Tue, 05 May 2015 17:03:27 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2015/05/05/eslint/</guid>
+      <description>&lt;p&gt;vim-watchdogs から eslint が使えるように設定したのでメモ。&lt;/p&gt;
 
-editor.on(&#39;exit&#39;, function() {
-  var text = fs.readFileSync(file, &#39;utf-8&#39;);
-  console.log(text);
-});
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JavaScript の IMAP クライアント browserbox で Gmail に接続する</title>
+      <link>https://blog.hika69.com/blog/2015/02/24/browserbox/</link>
+      <pubDate>Tue, 24 Feb 2015 12:47:45 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2015/02/24/browserbox/</guid>
+      <description>&lt;p&gt;iOS 標準のメモアプリのように、IMAP で Gmail と同期できるクライアントを JS で作れないかな、と思って&lt;a href=&#34;https://github.com/whiteout-io/browserbox&#34;&gt;whiteout-io/browserbox&lt;/a&gt;を試してみた。&lt;/p&gt;
 
-&lt;p&gt;エディタの終了を &lt;code&gt;exit&lt;/code&gt; イベントで検知してコールバック内でファイルの内容を取得している。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>新しくなった Stobo の紹介</title>
+      <link>https://blog.hika69.com/blog/2015/02/21/stobo/</link>
+      <pubDate>Sat, 21 Feb 2015 19:28:21 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2015/02/21/stobo/</guid>
+      <description>&lt;p&gt;StoboはMarkdownでプレゼン資料が作れて配信できるWebアプリです。&lt;/p&gt;
 
-&lt;p&gt;毎回内容をクリアする場合は、&lt;code&gt;fs.readFile[Sync]&lt;/code&gt; した後に &lt;code&gt;fs.unlink[Sync]&lt;/code&gt; すればよい。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>npm init 時のデフォルト設定をカスタマイズする</title>
+      <link>https://blog.hika69.com/blog/2015/02/21/npm-init/</link>
+      <pubDate>Sat, 21 Feb 2015 19:17:39 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2015/02/21/npm-init/</guid>
+      <description>&lt;p&gt;&lt;code&gt;npm init&lt;/code&gt;した時にlicenceの種類やauthorの情報を自動的にいれる設定。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>editorify というライブラリを作った</title>
+      <link>https://blog.hika69.com/blog/2015/02/13/editorify/</link>
+      <pubDate>Fri, 13 Feb 2015 00:55:57 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2015/02/13/editorify/</guid>
+      <description>&lt;p&gt;エディタリファイと読むんだろうか。とにかく&lt;code&gt;fy&lt;/code&gt;ってつけたかっただけな感じで言いづらい jQuery プラグインを作った。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>IB_DESIGNABLE を使おう</title>
+      <link>https://blog.hika69.com/blog/2015/02/10/ibdesignable/</link>
+      <pubDate>Tue, 10 Feb 2015 19:55:15 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2015/02/10/ibdesignable/</guid>
+      <description>&lt;p&gt;Xcode6 から使える &lt;code&gt;IB_DESIGNABLE&lt;/code&gt; と &lt;code&gt;IBInspectable&lt;/code&gt; が非常に便利なんだけど情報が少ない。&lt;/p&gt;
+
+&lt;p&gt;ので、基本とかは置いといて、とりあえず知ってることを雑多にまとめてみる。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>hub コマンドで GitHub と GHE に PullRequest する</title>
+      <link>https://blog.hika69.com/blog/2015/02/09/git-pr/</link>
+      <pubDate>Mon, 09 Feb 2015 19:36:38 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2015/02/09/git-pr/</guid>
+      <description>&lt;p&gt;GitHubでは以下のalias (リンク参照) を設定して&lt;code&gt;git pr master&lt;/code&gt;のように使っていたけれど、GHEで動かなかったので&lt;code&gt;.gitconfig&lt;/code&gt;を編集した。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Xcode のストーリーボードで背後の要素を選択する</title>
+      <link>https://blog.hika69.com/blog/2015/01/08/xcode-select-bg-elements/</link>
+      <pubDate>Thu, 08 Jan 2015 10:54:17 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2015/01/08/xcode-select-bg-elements/</guid>
+      <description>&lt;p&gt;Xcode のストーリーボード上で背後の要素をあれこれしたかったけど、前面の要素がじゃまして選択できなくて困ってたが、コマンドで簡単に選択できることがわかった。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>hexbin に Casto ステッカーが追加された</title>
+      <link>https://blog.hika69.com/blog/2014/12/29/hexbin/</link>
+      <pubDate>Mon, 29 Dec 2014 21:12:44 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2014/12/29/hexbin/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://hexb.in/&#34;&gt;hexbin&lt;/a&gt; は六角形の主にNode系のロゴを集めたサイト。運営しているのは NodeSchool に携わっている&lt;a href=&#34;https://twitter.com/maxogden&#34;&gt;@maxogden&lt;/a&gt;さん。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Xcode のキー配置をカスタマイズする</title>
+      <link>https://blog.hika69.com/blog/2014/12/28/xcode-remap-key/</link>
+      <pubDate>Sun, 28 Dec 2014 13:01:51 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2014/12/28/xcode-remap-key/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/XVimProject/XVim&#34;&gt;XVim&lt;/a&gt; を使いはじめたら、Xcodeのキー配置が、カスタマイズ済みのターミナル (およびVim) と微妙に違うのが気になってきた (ターミナルはControlキーをよく使うので、CommandキーとControlキーを入れ替えている) 。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Casto のステッカーができた</title>
+      <link>https://blog.hika69.com/blog/2014/12/28/casto-sticker/</link>
+      <pubDate>Sun, 28 Dec 2014 11:34:27 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2014/12/28/casto-sticker/</guid>
+      <description>&lt;p&gt;Node 系のステッカーは六角形で揃えてるみたいなので、&lt;a href=&#34;http://ca.storyboards.jp&#34;&gt;Casto&lt;/a&gt; も Node/Rendr で動いてるので同じ形にしてみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LEGOでペンローズ階段作った</title>
+      <link>https://blog.hika69.com/blog/2014/12/22/penrose-stairs/</link>
+      <pubDate>Mon, 22 Dec 2014 00:03:36 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2014/12/22/penrose-stairs/</guid>
+      <description>&lt;p&gt;この&lt;a href=&#34;http://www.instructables.com/id/Impossible-Staircase/?lang=ja&#34;&gt;記事&lt;/a&gt;の通りに木材でつくろうと思ったんだけど、先にプロトタイプとしてレゴ版を作ることにした。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Xcode でカラーパレットを保存して共有したい</title>
+      <link>https://blog.hika69.com/blog/2014/12/21/osx-color-palettes/</link>
+      <pubDate>Sun, 21 Dec 2014 00:31:08 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2014/12/21/osx-color-palettes/</guid>
+      <description>&lt;p&gt;と思ったので調べた。Xcode というより Mac OS X の機能ぽい (OS X Yosemite &amp;amp; Xcode 6.1.1 の場合。他のバージョンで使えるかはわからない)。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>iOSアプリ開発のGit運用</title>
+      <link>https://blog.hika69.com/blog/2014/12/16/git-flow/</link>
+      <pubDate>Tue, 16 Dec 2014 09:37:50 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2014/12/16/git-flow/</guid>
+      <description>&lt;p&gt;iOSアプリはリリースサイクルが長くなりがちなので、&lt;a href=&#34;https://gist.github.com/Gab-km/3705015&#34;&gt;GitHub Flow&lt;/a&gt;ではなく、&lt;a href=&#34;http://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html&#34;&gt;git-flow&lt;/a&gt;を参考にしたフローを使っている。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GitHub の非公開リポジトリを Bitbucket に引越</title>
+      <link>https://blog.hika69.com/blog/2014/11/18/github-to-bitbucket/</link>
+      <pubDate>Tue, 18 Nov 2014 11:34:01 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2014/11/18/github-to-bitbucket/</guid>
+      <description>&lt;p&gt;GitHub のプライベートリポジトリの上限がきてしまったので、使用頻度の低いリポジトリを Bitbucket の非公開リポジトリに引越した。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>YAPC::Asia Tokyo 2014 前夜祭で「プライベートで3年間チーム開発した話」をしてきた</title>
+      <link>https://blog.hika69.com/blog/2014/08/29/yapc2014/</link>
+      <pubDate>Fri, 29 Aug 2014 11:45:06 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2014/08/29/yapc2014/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://yapcasia.org/2014/08/eve-of-yapcasia.html&#34;&gt;YAPC::Asia Tokyo 2014 前夜祭「欲しいものは作ればいい！ 〜Webアプリ10連発〜」&lt;/a&gt;で話してきました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>東京 Node 学園 14時限目で Rendr の話をした</title>
+      <link>https://blog.hika69.com/blog/2014/08/25/tng14/</link>
+      <pubDate>Mon, 25 Aug 2014 21:05:21 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2014/08/25/tng14/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Meteor でアプリのランディングページを作った</title>
+      <link>https://blog.hika69.com/blog/2014/07/31/meteor/</link>
+      <pubDate>Thu, 31 Jul 2014 23:25:25 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2014/07/31/meteor/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://triph.jp&#34;&gt;triph&lt;/a&gt;のランディングページ(というかアプリ全体&amp;hellip;)をHerokuに乗せていたんだけど、ちょっとおおげさな感じがしてきたので&lt;a href=&#34;https://meteor.com&#34;&gt;Meteor&lt;/a&gt;に移した。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>rendr-handlebars で部分テンプレートを使う</title>
+      <link>https://blog.hika69.com/blog/2014/04/23/rendr-handlebars/</link>
+      <pubDate>Wed, 23 Apr 2014 00:10:08 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2014/04/23/rendr-handlebars/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rendrjs/rendr-handlebars&#34;&gt;rendr-handlebars&lt;/a&gt;でpartial (部分テンプレート) が使えることにさっき気づいた。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ライブコーディングアプリ「Casto」ができるまで</title>
+      <link>https://blog.hika69.com/blog/2014/04/02/casto/</link>
+      <pubDate>Wed, 02 Apr 2014 00:42:15 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2014/04/02/casto/</guid>
+      <description>&lt;p&gt;「&lt;a href=&#34;http://ca.storyboards.jp&#34;&gt;Casto&lt;/a&gt;」(きゃすと)をリリースしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chrome 拡張「シンプル翻訳」を更新</title>
+      <link>https://blog.hika69.com/blog/2014/02/24/simple-honyaku/</link>
+      <pubDate>Mon, 24 Feb 2014 14:47:27 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2014/02/24/simple-honyaku/</guid>
+      <description>&lt;p&gt;Chrome 拡張機能の「&lt;a href=&#34;https://chrome.google.com/webstore/detail/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E7%BF%BB%E8%A8%B3/pdnmkammncjnifdeclafllianknnoaif&#34;&gt;シンプル翻訳&lt;/a&gt;」を2年ぶりに更新しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Twitter 検索の結果を Google Drive のスプレッドシートに出力する</title>
+      <link>https://blog.hika69.com/blog/2014/01/28/google-apps-script/</link>
+      <pubDate>Tue, 28 Jan 2014 17:07:27 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2014/01/28/google-apps-script/</guid>
+      <description>&lt;p&gt;以前Google Apps Scriptで作成したプログラムがTwitter API Ver.1の廃止で動かなくなってたので直しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>拡大・縮小自在な LESS の mixin の作り方</title>
+      <link>https://blog.hika69.com/blog/2014/01/02/less-mixin/</link>
+      <pubDate>Thu, 02 Jan 2014 22:40:46 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2014/01/02/less-mixin/</guid>
+      <description>&lt;p&gt;ストーリーボードではスライドをHTMLとCSSで描画するため、同じレイアウト・見た目で縮尺だけ変えたいことがある。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Leap でストボを操作する動画を作った</title>
+      <link>https://blog.hika69.com/blog/2013/12/25/leap-video/</link>
+      <pubDate>Wed, 25 Dec 2013 20:24:41 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/12/25/leap-video/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp&#34;&gt;ストーリーボード&lt;/a&gt;がLeap Motionに対応したんだけど、あんまり伝わってないので紹介動画を作成しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>iBeacon 端末を買った</title>
+      <link>https://blog.hika69.com/blog/2013/12/24/estimote/</link>
+      <pubDate>Tue, 24 Dec 2013 21:12:57 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/12/24/estimote/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://twitter.com/nakajijapan&#34;&gt;@nakajijapan&lt;/a&gt;と共同購入して1個だけ入手。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ストボのバージョンアップ業</title>
+      <link>https://blog.hika69.com/blog/2013/12/24/storyboards-version-up/</link>
+      <pubDate>Tue, 24 Dec 2013 20:45:26 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/12/24/storyboards-version-up/</guid>
+      <description>&lt;p&gt;1年程放置ぎみだった&lt;a href=&#34;http://www.storyboards.jp&#34;&gt;ストーリーボード&lt;/a&gt;のバージョンアップ業を1ヶ月くらいやってました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Less でボタンの mixin</title>
+      <link>https://blog.hika69.com/blog/2013/12/05/less-button-mixin/</link>
+      <pubDate>Thu, 05 Dec 2013 00:02:29 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/12/05/less-button-mixin/</guid>
+      <description>&lt;p&gt;以下の画像ボタンを再現するLessのmixin書いた。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hoodie の話をした</title>
+      <link>https://blog.hika69.com/blog/2013/11/20/klab-js/</link>
+      <pubDate>Wed, 20 Nov 2013 22:43:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/11/20/klab-js/</guid>
+      <description>&lt;p&gt;KLab さんの JavaScript 勉強会で Hoodie の話をしました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>New Constellation</title>
+      <link>https://blog.hika69.com/blog/2013/11/01/toad-the-wet-sprocket/</link>
+      <pubDate>Fri, 01 Nov 2013 23:20:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/11/01/toad-the-wet-sprocket/</guid>
+      <description>&lt;p&gt;Toad the Wet Sprocketの新作が16年(!)ぶりにリリースされた。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>双子池と棒ノ折山</title>
+      <link>https://blog.hika69.com/blog/2013/09/07/yama/</link>
+      <pubDate>Sat, 07 Sep 2013 22:19:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/09/07/yama/</guid>
+      <description>&lt;p&gt;今年はちょいちょい山に行ってる。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>大山のこま</title>
+      <link>https://blog.hika69.com/blog/2013/06/23/ooyama-koma/</link>
+      <pubDate>Sun, 23 Jun 2013 21:18:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/06/23/ooyama-koma/</guid>
+      <description>&lt;p&gt;一年ぶりに大山に登った。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>はじめての Node.js</title>
+      <link>https://blog.hika69.com/blog/2013/06/13/learning-node-js/</link>
+      <pubDate>Thu, 13 Jun 2013 23:54:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/06/13/learning-node-js/</guid>
+      <description>&lt;p&gt;読み始めた。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Square リーダーが届いた</title>
+      <link>https://blog.hika69.com/blog/2013/06/10/square/</link>
+      <pubDate>Mon, 10 Jun 2013 23:15:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/06/10/square/</guid>
+      <description>&lt;p&gt;小さくころっとしていてかわいい。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>持国天</title>
+      <link>https://blog.hika69.com/blog/2013/06/10/jikokuten/</link>
+      <pubDate>Mon, 10 Jun 2013 23:01:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/06/10/jikokuten/</guid>
+      <description>&lt;p&gt;持国天のフィギュアをもらいました。かっこいい。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>大統領</title>
+      <link>https://blog.hika69.com/blog/2013/06/03/ueno-daitoryo/</link>
+      <pubDate>Mon, 03 Jun 2013 00:45:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/06/03/ueno-daitoryo/</guid>
+      <description>&lt;p&gt;上野の大統領支店に行ってきた。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Grunt を導入</title>
+      <link>https://blog.hika69.com/blog/2013/06/01/grunt-js/</link>
+      <pubDate>Sat, 01 Jun 2013 22:28:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/06/01/grunt-js/</guid>
+      <description>&lt;p&gt;Gruntを&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;に導入するためのメモ。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Underscore.js の _.debounce が便利そう</title>
+      <link>https://blog.hika69.com/blog/2013/05/28/underscore-js/</link>
+      <pubDate>Tue, 28 May 2013 21:53:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/05/28/underscore-js/</guid>
+      <description>&lt;p&gt;「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.jsガイドブック&lt;/a&gt;」の読書会2回目。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SQL アンチパターン</title>
+      <link>https://blog.hika69.com/blog/2013/05/27/sql-antipatterns/</link>
+      <pubDate>Mon, 27 May 2013 20:51:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/05/27/sql-antipatterns/</guid>
+      <description>&lt;p&gt;3章まで読んだ。Kindle for iPadで読んでると表が見づらい&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JavaScript 忍者を買った</title>
+      <link>https://blog.hika69.com/blog/2013/05/27/javascript-ninja/</link>
+      <pubDate>Mon, 27 May 2013 20:40:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/05/27/javascript-ninja/</guid>
+      <description>&lt;p&gt;買ってきた。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>日本ダービーと府中</title>
+      <link>https://blog.hika69.com/blog/2013/05/26/japan-derby/</link>
+      <pubDate>Sun, 26 May 2013 23:37:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/05/26/japan-derby/</guid>
+      <description>&lt;p&gt;友人にさそわれて、日本ダービーが開催されている東京競馬場まで行ってきた。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>「Backbone.js ガイドブック」読書会がはじまった</title>
+      <link>https://blog.hika69.com/blog/2013/05/25/backbone-js/</link>
+      <pubDate>Sat, 25 May 2013 01:04:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/05/25/backbone-js/</guid>
+      <description>&lt;p&gt;社内で「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.js ガイドブック&lt;/a&gt;」の読書会が始まったので参加した。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ブログを引っ越した</title>
+      <link>https://blog.hika69.com/blog/2013/05/24/my-first-post/</link>
+      <pubDate>Fri, 24 May 2013 00:39:57 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/05/24/my-first-post/</guid>
+      <description>&lt;p&gt;厳密にはまだ引っ越してない。WordPressからデータ移行をしないと。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

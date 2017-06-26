@@ -6,9 +6,11 @@
     <description>Recent content in Github on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Mon, 25 Jan 2016 20:04:28 +0900</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>BFG で巨大なファイルを削除して GitHub に push するまで</title>
@@ -18,94 +20,7 @@
       <guid>https://blog.hika69.com/blog/2016/01/25/bfg/</guid>
       <description>&lt;p&gt;あるリポジトリを GitHub に push した時に、100MB 以上のファイルが含まれていたため拒否されてしまった。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;% git push origin master
-...
-remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
-remote: error: Trace: xxx
-remote: error: See http://git.io/iEPt8g for more information.
-remote: error: File big.exe is 160.21 MB; this exceeds GitHub&#39;s file size limit of 100.00 MB
-To git@github.com:hikarock/some-big-repo.git
- ! [remote rejected] master -&amp;gt; master (pre-receive hook declined)
-error: failed to push some refs to &#39;git@github.com:hikarock/some-big-repo.git&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://git-lfs.github.com/&#34;&gt;Git Large File Storage&lt;/a&gt; も使ってみたかったけど課金&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:ae8ab95f0667855683a86e9e88aa2ebd:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:ae8ab95f0667855683a86e9e88aa2ebd:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;してないので、素直に &lt;code&gt;more information&lt;/code&gt; のリンクを開く。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://help.github.com/articles/removing-files-from-a-repository-s-history/&#34;&gt;Removing files from a repository&amp;rsquo;s history - User Documentation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;2パターンのファイル削除方法が掲載されていて、今回はだいぶ昔にコミットされたファイルを消したかったので &lt;code&gt;Removing a file added in an older commit&lt;/code&gt; で紹介されている BFG を使う。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://rtyley.github.io/bfg-repo-cleaner/&#34;&gt;BFG Repo-Cleaner by rtyley&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;BFG のサイトから jar ファイルをダウンロードして、&lt;code&gt;.zshrc&lt;/code&gt; にエイリアスを設定した。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;alias bfg=&#39;java -jar ~/bin/bfg-1.12.8.jar&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;リポジトリに移動して、エラーの原因になっている巨大ファイルを &lt;code&gt;git rm&lt;/code&gt; する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% cd some-big-repo
-% git rm big.exe
-rm &#39;big.exe&#39;
-% git ci -m &#39;巨大なファイルを削除&#39;
-[master xxx] 巨大なファイルを削除
- 1 file changed, 0 insertions(+), 0 deletions(-)
- delete mode 100755 big.exe
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;対象リポジトリ内の100M以上のファイルを対象に &lt;code&gt;bfg&lt;/code&gt; を実行。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% cd ..
-% bfg --strip-blobs-bigger-than 100M some-big-repo
-SLF4J: Failed to load class &amp;quot;org.slf4j.impl.StaticLoggerBinder&amp;quot;.
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-
-Using repo : some-big-repo/.git
-
-...
-
-Deleted files
--------------
-
-        Filename                       Git id
-        --------------------------------------------------
-        big.exe                      | xxx (160.2 MB)
-
-In total, 7 object ids were changed. Full details are logged here:
-
-        /Users/hikarock/some-big-repo.bfg-report/2016-01-25/20-00-01
-
-BFG run is complete! When ready, run: git reflog expire --expire=now --all &amp;amp;&amp;amp; git gc --prune=now --aggressive
-
-Has the BFG saved you time?  Support the BFG on BountySource:  https://j.mp/fund-bfg
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;メッセージの最後に出ている通りに &lt;code&gt;git reflog&lt;/code&gt; を実行する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% cd some-big-repo
-% git reflog expire --expire=now --all &amp;amp;&amp;amp; git gc --prune=now --aggressive
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;もういちど &lt;code&gt;git push&lt;/code&gt; を実行。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;% git push origin master
-...
-To git@github.com:hikarock/some-big-repo
- * [new branch]      master -&amp;gt; master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;push できた。&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:ae8ab95f0667855683a86e9e88aa2ebd:1&#34;&gt;容量1GB、帯域1GB/月 までは無料だったので今回のケースでは使ってもよかったかも。&lt;a href=&#34;https://github.com/pricing&#34;&gt;詳細&lt;/a&gt;
- &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:ae8ab95f0667855683a86e9e88aa2ebd:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -116,16 +31,7 @@ To git@github.com:hikarock/some-big-repo
       <guid>https://blog.hika69.com/blog/2015/02/09/git-pr/</guid>
       <description>&lt;p&gt;GitHubでは以下のalias (リンク参照) を設定して&lt;code&gt;git pr master&lt;/code&gt;のように使っていたけれど、GHEで動かなかったので&lt;code&gt;.gitconfig&lt;/code&gt;を編集した。&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/banyan@github/items/3c82fa357fe355c16f32#comment-cf6dbbe34ce80d0ac3a7&#34;&gt;GitHub へ簡単に Pull Request を送る - Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;[alias]
-  pr = !REP_OWNER=$(git remote -v | grep -e &#39;(push)&#39; | awk &#39;{print $2}&#39; | awk -F &#39;[:/]&#39; &#39;{print $2}&#39;) &amp;amp;&amp;amp; hub pull-request $2 -h $REP_OWNER:`git rev-parse --abbrev-ref HEAD` -b $REP_OWNER:$1 &amp;amp;&amp;amp; shift &amp;quot;$#&amp;quot; 1&amp;gt;/dev/null 2&amp;gt;/dev/null
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;快適。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -134,67 +40,9 @@ To git@github.com:hikarock/some-big-repo
       <pubDate>Tue, 18 Nov 2014 11:34:01 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/11/18/github-to-bitbucket/</guid>
-      <description>
+      <description>&lt;p&gt;GitHub のプライベートリポジトリの上限がきてしまったので、使用頻度の低いリポジトリを Bitbucket の非公開リポジトリに引越した。&lt;/p&gt;
 
-&lt;p&gt;GitHub のプライベートリポジトリの上限がきてしまったので、使用頻度の低いリポジトリを Bitbucket の非公開リポジトリに引越した。&lt;/p&gt;
-
-&lt;h3 id=&#34;コードの引越:c2ae888402f8d3c8a64fa936a8c437a5&#34;&gt;コードの引越&lt;/h3&gt;
-
-&lt;p&gt;Bitbucket に GitHub と同名のリポジトリを作成して、Bitbucket に push するだけ。
-&lt;code&gt;{username}&lt;/code&gt;、&lt;code&gt;{reponame}&lt;/code&gt;は適宜読み替えてください。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cd {reponame}
-$ git remote add bitbucket https://{username}@bitbucket.org/{username}/{reponame}.git
-$ git push bitbucket master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;issues-の引越:c2ae888402f8d3c8a64fa936a8c437a5&#34;&gt;Issues の引越&lt;/h3&gt;
-
-&lt;p&gt;これを使った。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/sorich87/github-to-bitbucket-issues-migration&#34;&gt;sorich87/github-to-bitbucket-issues-migration&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Usage の通りに実行すると zip ファイルが生成された。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ bundle install
-$ bundle exec ruby cli.rb {username}/{reponame} {username} {password} exportfilename.zip
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Bitbucket のウェブUIから zip ファイルをインポートできる。URL は以下。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;https://bitbucket.org/{username}/{reponame}/admin/issues/import-export&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;wiki-の引越:c2ae888402f8d3c8a64fa936a8c437a5&#34;&gt;Wiki の引越&lt;/h3&gt;
-
-&lt;p&gt;コードと同様に GitHub の wiki を clone して Bitbucket に push する。&lt;/p&gt;
-
-&lt;p&gt;以下のエントリを参考にした。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://codetheory.in/export-your-issues-and-wikis-from-github-repo-and-import-to-bitbucket-migration/&#34;&gt;Export your Issues and Wikis from Github Repo and Import to Bitbucket (Migration)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;wiki を clone 。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git clone https://github.com/{username}/{reponame}.wiki.git
-$ cd {reponame}.wiki
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;remote に bitbucket を追加。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git remote add bitbucket https://{username}@bitbucket.org/{username}/{reponame}.git/wiki
-$ git remote -v
-bitbucket       https://{username}@bitbucket.org/{username}/{reponame}.git/wiki (fetch)
-bitbucket       https://{username}@bitbucket.org/{username}/{reponame}.git/wiki (push)
-origin  https://github.com/{username}/{reponame}.wiki.git (fetch)
-origin  https://github.com/{username}/{reponame}.wiki.git (push)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;あらかじめデフォルトの wiki が生成されていて、普通に push すると reject されてしまったので &lt;code&gt;-f&lt;/code&gt; オプションをつけた。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ git push -f bitbucket master
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以上で完了。GitHub Flavored Markdown が一部動いてないけど十分いい感じに移行できた。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -6,9 +6,11 @@
     <description>Recent content in Regexp on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Thu, 07 Jan 2016 21:46:22 +0900</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/regexp/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/regexp/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>スネークケースのファイル名・クラス名をパスカルケースにリネームする</title>
@@ -16,98 +18,9 @@
       <pubDate>Thu, 07 Jan 2016 21:46:22 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/01/07/rename-snake-case-to-pascal-case/</guid>
-      <description>
+      <description>&lt;p&gt;あるプロジェクトで &lt;a href=&#34;http://www.php-fig.org/psr/psr-0/&#34;&gt;PSR-0&lt;/a&gt; に対応する作業に関連して、スネークケースのファイル名とクラス名をパスカルケースに変換する必要があった。&lt;/p&gt;
 
-&lt;p&gt;あるプロジェクトで &lt;a href=&#34;http://www.php-fig.org/psr/psr-0/&#34;&gt;PSR-0&lt;/a&gt; に対応する作業に関連して、スネークケースのファイル名とクラス名をパスカルケースに変換する必要があった。&lt;/p&gt;
-
-&lt;h3 id=&#34;ファイル名の変換:4739118768bed0d63c3796c5bfa8d06b&#34;&gt;ファイル名の変換&lt;/h3&gt;
-
-&lt;p&gt;Mac に rename コマンドをインストールする。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ brew install rename
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;変換前&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ls -l
--rw-r--r-- 1 hikarock staff 0  1  7 21:47 foo_bar_buzz.php
--rw-r--r-- 1 hikarock staff 0  1  7 21:47 hoge_fuga.php
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;rename コマンドを叩く。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ rename -f &#39;s/(^|_)(.)/\U$2\E/g&#39; *.php
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;変換後&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ls -l
-total 0
--rw-r--r-- 1 hikarock staff 0  1  7 21:47 FooBarBuzz.php
--rw-r--r-- 1 hikarock staff 0  1  7 21:47 HogeFuga.php
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;よさそう。&lt;/p&gt;
-
-&lt;h3 id=&#34;クラス名の変換:4739118768bed0d63c3796c5bfa8d06b&#34;&gt;クラス名の変換&lt;/h3&gt;
-
-&lt;p&gt;Mac に標準で入っている sed は使わずに GNU sed をインストールする。&lt;/p&gt;
-
-&lt;p&gt;参考: &lt;a href=&#34;http://shunirr.hatenablog.jp/entry/2012/12/19/160544&#34;&gt;Homebrew を使って OSX に GNU sed を入れる - おともだちティータイム&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ brew install gnu-sed
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;変換前。対象はクラス名だけにしたいので、他のスネークケースの変数名や関数名を含んだ状態で、余計な箇所が変更されていないか確認しながら検証する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;?php
-
-class foo_bar_buzz_controller extends bar_buzz_controller {
-  private $hoge_fuga;
-  public function set_hoge_fuga() {
-    //
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;gsed コマンドで変換する。&lt;code&gt;/^class.*\{$/&lt;/code&gt; で対象行でクラス宣言の行だけに絞り込んでいる ( &lt;code&gt;{&lt;/code&gt; は改行した次の行に書く場合の方が多いかもしれないけど、このプロジェクトでは &lt;code&gt;class&lt;/code&gt; と同一行に書いている)。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ gsed -i -r &#39;/^class.*\{$/ s/_(.)/\U\1\E/g&#39; *.php
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;変換後&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;?php
-
-class fooBarBuzzController extends barBuzzController {
-  private $hoge_fuga;
-  public function set_hoge_fuga() {
-    //
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;クラス名の先頭が小文字のままだった。&lt;/p&gt;
-
-&lt;p&gt;今回はたまたま対象クラス名の末尾に必ず &lt;code&gt;Controller&lt;/code&gt; が含まれていたので、以下のようにしてお茶を濁した。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ perl -pi -e &#39;s/ (\w+?)Controller/ \u\1Controller/g&#39; *.php
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;perl コマンドを使ったのは sed で最短一致ができなかったため。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;?php
-
-class FooBarBuzzController extends BarBuzzController {
-  private $hoge_fuga;
-  public function set_hoge_fuga() {
-    //
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;完了。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -6,9 +6,11 @@
     <description>Recent content in Raspberry Pi on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Sat, 02 Apr 2016 12:21:22 +0900</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Raspberry Pi 3 のセットアップ</title>
@@ -16,81 +18,9 @@
       <pubDate>Sat, 02 Apr 2016 12:21:22 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/04/02/raspberry-pi-3/</guid>
-      <description>
+      <description>&lt;p&gt;使いみちを決めないで Raspberry Pi 3 を買ってしまったけど、とりあえず OS いれて起動するまでセットアップしてみる。&lt;/p&gt;
 
-&lt;p&gt;使いみちを決めないで Raspberry Pi 3 を買ってしまったけど、とりあえず OS いれて起動するまでセットアップしてみる。&lt;/p&gt;
-
-&lt;h3 id=&#34;購入したもの:be81337d34db55b6da5a36357444f01f&#34;&gt;購入したもの&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.amazon.co.jp/Raspberry-Pi3-Model-B-Element14/dp/B01D1FR2WE%3Fpsc%3D1%26SubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB01D1FR2WE&#34;&gt;Amazon.co.jp： Raspberry Pi3 Model B (Element14): パソコン・周辺機器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.amazon.co.jp/%E6%9D%B1%E8%8A%9D-microSDHC-EXCERIA-TOSHIBA-%E6%B5%B7%E5%A4%96%E5%90%91%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E5%93%81/dp/B00ZF75RLK%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00ZF75RLK&#34;&gt;Amazon.co.jp： 東芝 microSDHC 32GB EXCERIA 48MB/s UHS-I Class10 TOSHIBA 海外向パッケージ品 [並行輸入品]: パソコン・周辺機器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.amazon.co.jp/Raspberry-Pi-3B-2B-%E5%B0%82%E7%94%A8%E3%82%B1%E3%83%BC%E3%82%B9-%EF%BC%88Green%EF%BC%89/dp/B00OH026UQ%3Fpsc%3D1%26SubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00OH026UQ&#34;&gt;Amazon.co.jp： Raspberry Pi 3B/2B/B+ 専用ケース（Green）: パソコン・周辺機器&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;HDMI ケーブル&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;以下は、すでに持っているもので流用。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;USB キーボード&lt;/li&gt;
-&lt;li&gt;USB マウス&lt;/li&gt;
-&lt;li&gt;&lt;del&gt;2.5A の電源推奨らしいがとりあえず余っていたiPhone用の 1A の電源&lt;/del&gt; 若干不安だったので後日2.1Aの電源に買い換えた (それでも少し足りてない)&lt;/li&gt;
-&lt;li&gt;電源接続用の MicroUSB ケーブル&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;os-のセットアップ:be81337d34db55b6da5a36357444f01f&#34;&gt;OS のセットアップ&lt;/h3&gt;
-
-&lt;p&gt;ここから RASPBIAN JESSIE をダウンロードする。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.raspberrypi.org/downloads/raspbian/&#34;&gt;Download Raspbian for Raspberry Pi&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ダウンロードしたファイルを展開して &lt;code&gt;2016-03-18-raspbian-jessie.img&lt;/code&gt; を確認。&lt;/p&gt;
-
-&lt;p&gt;OSのインストールは以下のドキュメントを見ながら進める。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/installation/installing-images/mac.md&#34;&gt;Installing operating system images on Mac OS - Raspberry Pi Documentation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;microSD カードを Mac に挿入してから以下のコマンドを実行する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ diskutil list
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;microSD カードが &lt;code&gt;/dev/dis2&lt;/code&gt; でマウントされていることを確認。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo diskutil unmountDisk /dev/disk2
-$ sudo dd bs=1M if=/Users/hikarock/Downloads/2016-03-18-raspbian-jessie.img of=/dev/disk2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;しばし待つ。完了後に Finder で Mac のデバイスとして認識されているのを確認してから microSD カードを取り出す。
-取り出した microSD を Raspberry Pi に挿入する。&lt;/p&gt;
-
-&lt;h3 id=&#34;mac-から-ssh-接続できるようにする:be81337d34db55b6da5a36357444f01f&#34;&gt;Mac から SSH 接続できるようにする&lt;/h3&gt;
-
-&lt;p&gt;電源の Micro USB ケーブルを差すだけで OS が起動する。&lt;/p&gt;
-
-&lt;h4 id=&#34;wi-fi-の接続:be81337d34db55b6da5a36357444f01f&#34;&gt;Wi-Fi の接続&lt;/h4&gt;
-
-&lt;p&gt;右上のメニューから GUI で設定できる。&lt;/p&gt;
-
-&lt;h4 id=&#34;ssh-の有効化:be81337d34db55b6da5a36357444f01f&#34;&gt;SSH の有効化&lt;/h4&gt;
-
-&lt;p&gt;IP アドレスを確認する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pi@raspberrypi:~ $ ip addr
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;raspi-config&lt;/code&gt; で設定画面が起動するので、ssh を有効化する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pi@raspberrypi:~ $ sudo raspi-config
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Mac から ssh する (初期パスワードは &lt;code&gt;raspberry&lt;/code&gt;)。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ ssh pi@192.168.X.X
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;入れた。ということで何に使おうか。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

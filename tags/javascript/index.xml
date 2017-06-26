@@ -6,9 +6,11 @@
     <description>Recent content in Javascript on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Mon, 07 Nov 2016 23:14:10 +0900</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>HyperTalk の play コマンド風のカスタム要素 &lt;x-play&gt; をつくった</title>
@@ -16,57 +18,9 @@
       <pubDate>Mon, 07 Nov 2016 23:14:10 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/11/07/x-play/</guid>
-      <description>
+      <description>&lt;p&gt;20 年ほど前に買った &lt;a href=&#34;http://booklog.jp/item/1/479529609X&#34;&gt;HyperCardの本&lt;/a&gt; をパラパラめくっていたら、&lt;code&gt;play&lt;/code&gt; というコマンドが紹介されていた。音色とメロディーを指定して、音楽を再生することができる便利なコマンドだ。&lt;/p&gt;
 
-&lt;p&gt;20 年ほど前に買った &lt;a href=&#34;http://booklog.jp/item/1/479529609X&#34;&gt;HyperCardの本&lt;/a&gt; をパラパラめくっていたら、&lt;code&gt;play&lt;/code&gt; というコマンドが紹介されていた。音色とメロディーを指定して、音楽を再生することができる便利なコマンドだ。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.kreativekorp.com/docs/openxion/1.4/manual/hyp/cm/play.html&#34;&gt;HyperTalk Commands - play&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;play &amp;quot;harpsichord&amp;quot; &amp;quot;ch d e f g a b c5w&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Web で似たようなことができると面白そうだな、と思いたって Polymer のカスタム要素で同じようなインターフェースを実装してみた。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hikarock/x-play&#34;&gt;hikarock/x-play&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://hikarock.github.io/x-play/&#34;&gt;DEMO (音が出ます)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;記述方法はこんな感じ。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;x-play sound=&amp;quot;piano&amp;quot; tempo=&amp;quot;80&amp;quot; repeat=&amp;quot;1&amp;quot; melody=&amp;quot;d2 e2 c2 c1 g1&amp;quot;&amp;gt;&amp;lt;/x-play&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;タグを並べて、同時に再生もできるようです (たくさん並べたら音がずれそう&amp;hellip;)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;x-play sound=&amp;quot;snare&amp;quot; tempo=&amp;quot;100&amp;quot; repeat=&amp;quot;2&amp;quot; melody=&amp;quot;-  c4  - c4  - c4  - c4&amp;quot;&amp;gt;&amp;lt;/x-play&amp;gt;
-&amp;lt;x-play sound=&amp;quot;kick&amp;quot;  tempo=&amp;quot;100&amp;quot; repeat=&amp;quot;2&amp;quot; melody=&amp;quot;c4 c4 c4 c4 c4 c4 c4 c4&amp;quot;&amp;gt;&amp;lt;/x-play&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;動作環境:7e63cc1ad65fb1894ea5ea12d98493f1&#34;&gt;動作環境&lt;/h3&gt;
-
-&lt;p&gt;最新版の Mac Chrome / Safari / Firefox あたりで動作を確認した。iOS の Safari だと音がでないが、まだ原因は調べてない。&lt;/p&gt;
-
-&lt;h3 id=&#34;音源について:7e63cc1ad65fb1894ea5ea12d98493f1&#34;&gt;音源について&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://maoudamashii.jokersounds.com/&#34;&gt;魔王魂&lt;/a&gt; さんの音源を利用させていただきました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://maoudamashii.jokersounds.com/list/se12.html&#34;&gt;楽器の無料・フリー効果音素材/魔王魂&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;まず最初に断っておきますが、「このページにある素材の使い道は作者の私すら分かりかねます。」&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;とありますが、まさにぴったりの素材でとても助かりました。&lt;/p&gt;
-
-&lt;h3 id=&#34;余談:7e63cc1ad65fb1894ea5ea12d98493f1&#34;&gt;余談&lt;/h3&gt;
-
-&lt;p&gt;@hideack が HyperTalk の play コマンドよりも歴史の古い MML という言語を教えてくれた。&lt;/p&gt;
-
-&lt;p&gt;以下のページによると初期の MML は 1978 年にシャープ社のコンピュータに搭載されたらしい。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Music_Macro_Language&#34;&gt;Music Macro Language - Wikipedia&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -75,31 +29,9 @@
       <pubDate>Fri, 01 Jul 2016 14:18:19 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/07/01/chab/</guid>
-      <description>
+      <description>&lt;p&gt;chab という6年前に作ったライブラリなんだけど、しばらく放置してたら動かなくなっていたので、改修して GitHub で再公開した。&lt;/p&gt;
 
-&lt;p&gt;chab という6年前に作ったライブラリなんだけど、しばらく放置してたら動かなくなっていたので、改修して GitHub で再公開した。&lt;/p&gt;
-
-&lt;h3 id=&#34;リポジトリ:78308e31204479aa19490f2ca34d4a0e&#34;&gt;リポジトリ&lt;/h3&gt;
-
-&lt;p&gt;詳細は &lt;a href=&#34;https://github.com/hikarock/chab&#34;&gt;README.md&lt;/a&gt; にて。&lt;/p&gt;
-
-&lt;h3 id=&#34;デモ:78308e31204479aa19490f2ca34d4a0e&#34;&gt;デモ&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://hikarock.github.io/chab/&#34;&gt;https://hikarock.github.io/chab/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;今回の修正内容:78308e31204479aa19490f2ca34d4a0e&#34;&gt;今回の修正内容&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.w3.org/TR/webdatabase/&#34;&gt;Web SQL Database&lt;/a&gt; の openDatabase の引数を2つしか指定していなかったのが原因で動作していなかったようなので修正した。&lt;/p&gt;
-
-&lt;p&gt;第3引数は &lt;code&gt;displayName&lt;/code&gt; だけど Chrome Developer Tools を見る限りだと第1引数に指定した値が表示されている。どこで使われるのかはわからなかった。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/chab-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;第4引数は &lt;code&gt;estimatedSize&lt;/code&gt; はDBのサイズを byte で指定する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;this.db = openDatabase(&amp;quot;chabdb&amp;quot;, &amp;quot;1.0.1&amp;quot;, &amp;quot;chab&amp;quot;, 1024 * 1024);
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -108,62 +40,9 @@
       <pubDate>Fri, 27 May 2016 00:20:53 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/05/27/chrome-extension-inline-install/</guid>
-      <description>
+      <description>&lt;p&gt;Chrome 拡張を Chrome ウェブストア に遷移せずにインストールできる Inline Installation に対応した時の覚書。&lt;/p&gt;
 
-&lt;p&gt;Chrome 拡張を Chrome ウェブストア に遷移せずにインストールできる Inline Installation に対応した時の覚書。&lt;/p&gt;
-
-&lt;h3 id=&#34;オフィシャルのドキュメント:97c4b7edc7ed1d60b05fc5875229f18c&#34;&gt;オフィシャルのドキュメント&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://developer.chrome.com/webstore/inline_installation&#34;&gt;Using Inline Installation - Google Chrome&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;手順:97c4b7edc7ed1d60b05fc5875229f18c&#34;&gt;手順&lt;/h3&gt;
-
-&lt;p&gt;あらかじめ Chrome ウェブストアのデベロッパー ダッシュボードと Google Search Console で、Inline Installation を導入したいウェブサイトを設定する。&lt;/p&gt;
-
-&lt;p&gt;Inline Installation を設置したいサイトの head 内に link タグを挿入する。&lt;code&gt;{itemId}&lt;/code&gt; に該当の拡張機能のURLに含まれるIDを指定する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;link rel=&amp;quot;chrome-webstore-item&amp;quot; href=&amp;quot;https://chrome.google.com/webstore/detail/{itemId}&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;リンクやボタンなどを押下したタイミングで Inline Installation を実行する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(document).on(&#39;click&#39;, &#39;#install-button&#39;, function(evt) {
-    evt.preventDefault();
-
-    if (!(&#39;chrome&#39; in window)) {
-        console.log(&#39;拡張機能をインストールするには、Google Chrome をご利用ください&#39;);
-        return;
-    }
-
-    chrome.webstore.install(&#39;&#39;, function() {
-        // successCallback
-    }, function(errMessage, code) {
-        // failureCallback
-        console.log(errMessage, code);
-    });
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;インストール済みか判定して表示を変更する:97c4b7edc7ed1d60b05fc5875229f18c&#34;&gt;インストール済みか判定して表示を変更する&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;chrome.app.isInstalled&lt;/code&gt; の値を判定すればよいだけかと思っていたけど、Chrome 拡張機能の場合はこの値は常に false になる。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/18275960/chrome-app-isinstalled-always-returns-false-for-google-chrome-extensions&#34;&gt;chrome.app.isInstalled always returns false for Google Chrome extensions? - Stack Overflow&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;この回答によると &lt;code&gt;isInstalled&lt;/code&gt; が使えるのは Hosted apps の場合のみで、拡張機能の場合は &lt;a href=&#34;https://developer.chrome.com/extensions/content_scripts&#34;&gt;Content Script&lt;/a&gt; で以下のように body に判定用の DOM を挿入しないといけないようだ。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(&#39;body&#39;).append($(&#39;&amp;lt;div&amp;gt;&#39;).attr(&#39;id&#39;, &#39;extension-is-installed&#39;));
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;if ($(&#39;#extension-is-installed&#39;).length &amp;gt; 0) {
-  $(&#39;#install-button&#39;).css(&#39;display&#39;, &#39;none&#39;);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;このようにインストール済みか判定をしないとどうなるかというと、インストール済みでボタンを押下しても初回と同様のダイアログが表示されて、再インストールが実行されるだけ。&lt;/p&gt;
-
-&lt;p&gt;インストール済みの場合に拡張機能のチュートリアルを表示したい、とかでない限りはこの対応はいらない気がする。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -172,20 +51,9 @@
       <pubDate>Wed, 20 Apr 2016 00:19:20 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/</guid>
-      <description>
+      <description>&lt;p&gt;以前書いたエントリ &lt;a href=&#34;http://blog.hika69.com/blog/2014/01/28/google-apps-script/&#34;&gt;Twitter 検索の結果を Google Drive のスプレッドシートに出力する&lt;/a&gt; の方法が現在使えなくなっているので、代替のスクリプトとその使い方を Gist に置きました。&lt;/p&gt;
 
-&lt;p&gt;以前書いたエントリ &lt;a href=&#34;http://blog.hika69.com/blog/2014/01/28/google-apps-script/&#34;&gt;Twitter 検索の結果を Google Drive のスプレッドシートに出力する&lt;/a&gt; の方法が現在使えなくなっているので、代替のスクリプトとその使い方を Gist に置きました。&lt;/p&gt;
-
-&lt;h3 id=&#34;readme-md-https-gist-github-com-hikarock-61fa2cbd933c3ec3abc2afa1830ba68b:1fd485e9c2c175413383efa6ac2e016a&#34;&gt;&lt;a href=&#34;https://gist.github.com/hikarock/61fa2cbd933c3ec3abc2afa1830ba68b&#34;&gt;README.md&lt;/a&gt;&lt;/h3&gt;
-
-&lt;script src=&#34;https://gist.github.com/hikarock/61fa2cbd933c3ec3abc3afa1830ba68b.js&#34;&gt;&lt;/script&gt;
-
-&lt;h3 id=&#34;twitter-gas-js-https-gist-github-com-hikarock-e4d549ddbae5d9d67a1d93b56d69e129:1fd485e9c2c175413383efa6ac2e016a&#34;&gt;&lt;a href=&#34;https://gist.github.com/hikarock/e4d549ddbae5d9d67a1d93b56d69e129&#34;&gt;twitter-gas.js&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;@hideack さんがコメントで、同時に Slack 通知する方法についても書いてくれてます。&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/hikarock/e4d549ddbae5d9d67a1d93b56d69e129.js&#34;&gt;&lt;/script&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -194,133 +62,9 @@
       <pubDate>Wed, 06 Apr 2016 22:26:17 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/04/06/frisby/</guid>
-      <description>
+      <description>&lt;p&gt;REST API のテストツール Frisby.js を使ってみた。&lt;/p&gt;
 
-&lt;p&gt;REST API のテストツール Frisby.js を使ってみた。&lt;/p&gt;
-
-&lt;h3 id=&#34;導入:93f38952e09b7e441a25f845abcaf75b&#34;&gt;導入&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://frisbyjs.com/&#34;&gt;REST API Testing—Frisby.js&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;npm で Frisby.js を導入する。&lt;/p&gt;
-
-&lt;p&gt;jasmine-node は依存パッケージで、config は必須ではないけど本番環境と開発環境の切り替えに使う。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ npm i -D frisby jasmine-node config
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ファイル構成はこんな感じになった。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ tree
- .
- ├── package.json
- ├── node_modules
- ├── config
- │  └── test
- │      └── api
- │          └── v1
- │              ├── development.json
- │              └── production.json
- └── test
-     └── api
-         └── v1
-             ├── bar.spec.js
-             └── foo.spec.js
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;設定ファイルには、とりあえずAPIのURLだけ追加。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;url&amp;quot;: &amp;quot;http://api.example.com/v1&amp;quot;,
-  &amp;quot;url-auth&amp;quot;: &amp;quot;http://test:password@api.example.com/v1&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;package.json&lt;/code&gt; にテストを実行するタスクを追加する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;  &amp;quot;scripts&amp;quot;: {
-    &amp;quot;test:api:development&amp;quot;: &amp;quot;export NODE_ENV=development &amp;amp;&amp;amp; export NODE_CONFIG_DIR=./config/test/api/v1 &amp;amp;&amp;amp; jasmine-node ./test/api/v1&amp;quot;,
-    &amp;quot;test:api:production&amp;quot;: &amp;quot;export NODE_ENV=production &amp;amp;&amp;amp; export NODE_CONFIG_DIR=./config/test/api/v1 &amp;amp;&amp;amp; jasmine-node ./test/api/v1&amp;quot;
-  },
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;テストを実行する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm run test:api:production
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;json-レスポンス-内の型を検証する:93f38952e09b7e441a25f845abcaf75b&#34;&gt;JSON レスポンス 内の型を検証する&lt;/h3&gt;
-
-&lt;p&gt;例えば以下のようなレスポンスが返るAPIの場合。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;id&amp;quot;: 1,
-  &amp;quot;name&amp;quot;: &amp;quot;hikarock&amp;quot;,
-  &amp;quot;url&amp;quot;: &amp;quot;http://hika69.com&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以下の &lt;code&gt;users.spec.js&lt;/code&gt; を用意する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var frisby = require(&#39;frisby&#39;);
-var config = require(&#39;config&#39;);
-
-frisby.create(&#39;GET:users&#39;)
-  .get(config.get(&#39;url&#39;) + &#39;/users/hikarock&#39;)
-  .expectStatus(200)
-  .expectHeaderContains(&#39;content-type&#39;, &#39;application/json&#39;)
-  .expectJSONTypes({
-    id: Number,
-    name: String,
-    url: String
-  })
-.toss();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;配列の検証:93f38952e09b7e441a25f845abcaf75b&#34;&gt;配列の検証&lt;/h3&gt;
-
-&lt;p&gt;配列内の1レコードの検証を行いたい場合は &lt;code&gt;expectJSONTypes&lt;/code&gt; の第一引数に &lt;code&gt;users.0&lt;/code&gt; のような独自の記法で指定する。
-複数レコードの検証を行う場合は &lt;code&gt;users.*&lt;/code&gt; のようにワイルドカードも指定できる。&lt;/p&gt;
-
-&lt;p&gt;例えば以下のようなレスポンスが返るAPIの場合。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  users: [
-    {
-      &amp;quot;id&amp;quot;: 1,
-      &amp;quot;name&amp;quot;: &amp;quot;hikarock&amp;quot;,
-      &amp;quot;url&amp;quot;: &amp;quot;http://hika69.com&amp;quot;
-    },
-    {
-      &amp;quot;id&amp;quot;: 2,
-      &amp;quot;name&amp;quot;: &amp;quot;foo&amp;quot;,
-      &amp;quot;url&amp;quot;: &amp;quot;http://example.com&amp;quot;
-    }
-    ...
-  ]
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;1レコード目を検証する場合は以下のように記述する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;frisby.create(&#39;GET:users&#39;)
-  .get(config.get(&#39;url&#39;) + &#39;/users&#39;)
-  .expectStatus(200)
-  .expectHeaderContains(&#39;content-type&#39;, &#39;application/json&#39;)
-  .expectJSONTypes(&#39;users.0&#39;, {
-    id: Number,
-    name: String,
-    url: String
-  })
-.toss();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;まとめ:93f38952e09b7e441a25f845abcaf75b&#34;&gt;まとめ&lt;/h3&gt;
-
-&lt;p&gt;導入も楽で、いい感じ。&lt;/p&gt;
-
-&lt;p&gt;今回はGETの正常系しか試してないので、実行順を考慮する必要のある更新系なども試してみたい。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -331,51 +75,7 @@ frisby.create(&#39;GET:users&#39;)
       <guid>https://blog.hika69.com/blog/2015/05/05/eslint/</guid>
       <description>&lt;p&gt;vim-watchdogs から eslint が使えるように設定したのでメモ。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/osyo-manga/vim-watchdogs&#34;&gt;osyo-manga/vim-watchdogs&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;eslint をグローバルにインストールする。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://eslint.org/&#34;&gt;ESLint - Pluggable JavaScript linter&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm install -g eslint
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;.vimrc&lt;/code&gt;でファイルタイプが&lt;code&gt;javascript&lt;/code&gt;の場合に eslint コマンドが実行されるように設定する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-vim&#34;&gt;let g:watchdogs_check_BufWritePost_enable = 1
-let g:watchdogs_check_CursorHold_enable = 1
-
-&amp;quot;
-&amp;quot; 以下を追記
-&amp;quot;
-let g:quickrun_config = {
-\   &amp;quot;javascript/watchdogs_checker&amp;quot; : {
-\     &amp;quot;type&amp;quot; : &amp;quot;eslint&amp;quot;
-\   }
-\ }
-call watchdogs#setup(g:quickrun_config)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;これで&lt;code&gt;:WatchdogsRun&lt;/code&gt;した時に eslint が実行される。&lt;/p&gt;
-
-&lt;p&gt;ただ、このままだと ES6/JSX の構文を使っているとエラーとして検出されてしまうので、&lt;code&gt;.eslintrc&lt;/code&gt;の&lt;code&gt;ecmaFeatures&lt;/code&gt;に値を指定して機能毎に有効にする。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{
-  &amp;quot;ecmaFeatures&amp;quot;: {
-    &amp;quot;templateStrings&amp;quot;: true
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;.eslintrc&lt;/code&gt;の設定により以下の構文はエラーとして検出されない。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;console.log(`Hello, ${name}!`);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;その他の機能毎の設定方法は以下を参照。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://eslint.org/docs/user-guide/configuring.html&#34;&gt;Documentation - ESLint - Pluggable JavaScript linter&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -386,73 +86,7 @@ call watchdogs#setup(g:quickrun_config)
       <guid>https://blog.hika69.com/blog/2015/02/24/browserbox/</guid>
       <description>&lt;p&gt;iOS 標準のメモアプリのように、IMAP で Gmail と同期できるクライアントを JS で作れないかな、と思って&lt;a href=&#34;https://github.com/whiteout-io/browserbox&#34;&gt;whiteout-io/browserbox&lt;/a&gt;を試してみた。&lt;/p&gt;
 
-&lt;p&gt;もろもろフリーダムな環境にしたかったので&lt;a href=&#34;https://github.com/nwjs/nw.js&#34;&gt;nwjs/nw.js&lt;/a&gt;を使って環境を作る。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;{
-  &amp;quot;name&amp;quot;: &amp;quot;imap&amp;quot;,
-  &amp;quot;main&amp;quot;: &amp;quot;index.html&amp;quot;,
-  &amp;quot;dependencies&amp;quot;: {
-    &amp;quot;browserbox&amp;quot;: &amp;quot;^0.8.1&amp;quot;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-  &amp;lt;head&amp;gt;
-    &amp;lt;title&amp;gt;mail&amp;lt;/title&amp;gt;
-    &amp;lt;script src=&amp;quot;mail.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-  &amp;lt;/head&amp;gt;
-  &amp;lt;body&amp;gt;
-  &amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var BrowserBox = require(&#39;browserbox&#39;),
-
-var host     = &#39;imap.gmail.com&#39;,
-    port     = 993,
-    email    = &#39;example@gmail.com&#39;,
-    password = &#39;xxxxxxxxxxxxxxxx&#39;,
-    mailbox  = &#39;INBOX&#39;;
-
-var client = new BrowserBox(host, port, {
-  auth: {
-    user: email,
-    pass: password
-  }
-});
-
-client.connect();
-client.onauth = function() {
-  client.listMailboxes(function(err, mailboxes) {
-    console.log(err || mailboxes);
-    client.selectMailbox(mailbox, function(err, mailbox) {
-      console.log(err || &#39;Mailbox was successfully changed to &#39; + mailbox);
-    });
-  });
-};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;実行。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ /Applications/nwjs.app/Contents/MacOS/nwjs .
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Gmail で2段階認証を使っている場合はこのコードで接続できない。
-さらに、以下の設定で「安全性の低いアプリ」を許可しないと接続できなかった。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.google.com/settings/security/lesssecureapps&#34;&gt;安全性の低いアプリ - アカウント設定&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;許可しない場合は以下のエラーが出る。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[98549:0224/125046:INFO:CONSOLE(41)] &amp;quot;&amp;quot;[2015-02-24T03:50:46.248Z][browserbox IMAP]&amp;quot; &amp;quot;[1] S: W3 NO [ALERT] Please log in via your web browser: http://support.google.com/mail/accounts/bin/answer.py?answer=78754 (Failure)&amp;quot;&amp;quot;, source: /Users/projects/mail/node_modules/browserbox/node_modules/axe-logger/axe.js (41)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;このままでは実用的ではない感じ。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -463,25 +97,7 @@ client.onauth = function() {
       <guid>https://blog.hika69.com/blog/2015/02/13/editorify/</guid>
       <description>&lt;p&gt;エディタリファイと読むんだろうか。とにかく&lt;code&gt;fy&lt;/code&gt;ってつけたかっただけな感じで言いづらい jQuery プラグインを作った。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/hikarock/editorify&#34;&gt;hikarock/editorify&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ひとことでいうと &lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt; を使って簡単なウィジウィグとか作れるライブラリ。
-例えば、markdown のリンクを挿入する場合はこんな感じに書く。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(&#39;.link&#39;).on(&#39;click&#39;, function (evt) {
-  $(&#39;.editor&#39;).editorify([
-    [&#39;clear&#39;],
-    [&#39;insert&#39;, &#39;[](http://example.com)&#39;],
-    [&#39;start&#39;],
-    [&#39;right&#39;, 1]
-  ]);
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;left&lt;/code&gt; とか &lt;code&gt;start&lt;/code&gt; とかでカーソル移動できるので &lt;code&gt;[]&lt;/code&gt; の中にカーソルが移動している状態になる。&lt;a href=&#34;https://hikarock.github.io/editorify/&#34;&gt;DEMO&lt;/a&gt;はこちら。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/&#34;&gt;Stobo&lt;/a&gt; のエディタ部分を絶賛改造中でモンスターブランチがもうスカイツリーくらいに育っているんだけど、その中の成果が分割されて editorify になった。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -490,62 +106,9 @@ client.onauth = function() {
       <pubDate>Mon, 25 Aug 2014 21:05:21 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/08/25/tng14/</guid>
-      <description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;
-
-&lt;p&gt;そういえば、&lt;a href=&#34;http://blog.nodejs.jp/2011/03/node-1_25.html&#34;&gt;最初のNode学園&lt;/a&gt;からお客さん側だったので感慨深い。緊張しました。&lt;/p&gt;
-
-&lt;p&gt;今回は「IsomorphicなWAF」がテーマだったらしく、&lt;a href=&#34;https://twitter.com/yosuke_furukawa&#34;&gt;@yosuke_furukawa&lt;/a&gt;さんに「MeteorもしくはRendrの話をしませんか」とお誘いいただいてRendrの話をすることになりました。&lt;/p&gt;
-
-&lt;p&gt;主に&lt;a href=&#34;http://ca.storyboards.jp/&#34;&gt;Casto&lt;/a&gt;でRendrを使うにいたったSPAに対するもやもやと、実際に使ってみてどうだったか、を振り返ってみました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/viewer/wo41ho&#34;&gt;Rendrの話 | Stobo&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;そもそも-isomorphic-javascript-とはなんぞや:185887276d78685095b8b7ba1df81f2e&#34;&gt;そもそも Isomorphic JavaScript とはなんぞや&lt;/h3&gt;
-
-&lt;p&gt;と理解が浅い感じがするので、リンクをまとめておく。
-すいません、後で読む。&lt;/p&gt;
-
-&lt;h5 id=&#34;isomorphic-javascript-とは:185887276d78685095b8b7ba1df81f2e&#34;&gt;Isomorphic JavaScript とは&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.nodejitsu.com/scaling-isomorphic-javascript-code/&#34;&gt;Scaling Isomorphic Javascript Code | Nodejitsu Inc.&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gist.github.com/tily/1362110&#34;&gt;(翻訳) サバクラ両方で動く JavaScript の大規模開発を行うために&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&#34;rendr:185887276d78685095b8b7ba1df81f2e&#34;&gt;Rendr&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/&#34;&gt;Isomorphic JavaScript: The Future of Web Apps - Airbnb Engineering&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://wazanova.jp/post/66745548194/airbnb&#34;&gt;(翻訳) Airbnb: シングルページアプリを実現するハイブリッドアプローチの課題 -  ワザノバ | wazanova&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://nerds.airbnb.com/slides-and-video-from-spike-brehms-tech-talk/&#34;&gt;Building Single-Page Apps - Airbnb Engineering&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/spikebrehm/building-a-singlepage-app-backbone-nodejs-and-beyond&#34;&gt;Slides on SlideShare&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&#34;meteor:185887276d78685095b8b7ba1df81f2e&#34;&gt;Meteor&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/naoya/20120422/1335109615&#34;&gt;Meteor.js - naoyaのはてなダイアリー&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&#34;その他:185887276d78685095b8b7ba1df81f2e&#34;&gt;その他&lt;/h5&gt;
-
-&lt;p&gt;Isomorphic JavaScriptに関するまとめサイト。こんなんあったのね。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://isomorphic.net/&#34;&gt;Isomorphic JavaScript - The future of web app development&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -556,24 +119,7 @@ client.onauth = function() {
       <guid>https://blog.hika69.com/blog/2014/04/23/rendr-handlebars/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rendrjs/rendr-handlebars&#34;&gt;rendr-handlebars&lt;/a&gt;でpartial (部分テンプレート) が使えることにさっき気づいた。&lt;/p&gt;
 
-&lt;p&gt;引数に&lt;code&gt;app/templates&lt;/code&gt;以下のパスを指定する。&lt;/p&gt;
-
-&lt;p&gt;app/templates/home/index.hbs&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{{partial &amp;quot;home/include&amp;quot;}}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;上のようにパスだけ指定した場合は読み込み元と同じコンテキストで変数にアクセスすることができる。&lt;/p&gt;
-
-&lt;p&gt;app/templates/home/include.hbs&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{{partial &amp;quot;home/include&amp;quot; name=&amp;quot;taro&amp;quot;}}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;こんな感じでコンテキストを渡すこともできる。&lt;/p&gt;
-
-&lt;p&gt;便利ですね。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -584,31 +130,7 @@ client.onauth = function() {
       <guid>https://blog.hika69.com/blog/2014/02/24/simple-honyaku/</guid>
       <description>&lt;p&gt;Chrome 拡張機能の「&lt;a href=&#34;https://chrome.google.com/webstore/detail/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E7%BF%BB%E8%A8%B3/pdnmkammncjnifdeclafllianknnoaif&#34;&gt;シンプル翻訳&lt;/a&gt;」を2年ぶりに更新しました。&lt;/p&gt;
 
-&lt;p&gt;素敵なバナーやアイコンは &lt;a href=&#34;https://twitter.com/meganejunkie&#34;&gt;@meganejunkie&lt;/a&gt; 先生に作ってもらいました (ありがとうございます) 。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/simple-honyaku-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/simple-honyaku-2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;利用しているAPIを変更しましたが機能的にはほぼ変わっていません。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Google翻訳APIから、Bing Translator APIに変更&lt;/li&gt;
-&lt;li&gt;オプションから個別にBing Application IDが設定可能に&lt;/li&gt;
-&lt;li&gt;翻訳結果の読み上げ機能(英語のみ)を追加&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/simple-honyaku-3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;デフォルトだと一つのBing Application IDをみんなで使いまわすので、API制限かかるかもしれません。
-なので一応「オプション」画面から個別にBing Application IDを上書きできるようにしています。&lt;/p&gt;
-
-&lt;p&gt;インストールはこちらから。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E7%BF%BB%E8%A8%B3/pdnmkammncjnifdeclafllianknnoaif&#34;&gt;Chrome ウェブストア - シンプル翻訳&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ソースは&lt;a href=&#34;https://github.com/hikarock/simple_honyaku&#34;&gt;GitHub&lt;/a&gt;に置いてます。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -617,95 +139,9 @@ client.onauth = function() {
       <pubDate>Tue, 28 Jan 2014 17:07:27 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/01/28/google-apps-script/</guid>
-      <description>
+      <description>&lt;p&gt;以前Google Apps Scriptで作成したプログラムがTwitter API Ver.1の廃止で動かなくなってたので直しました。&lt;/p&gt;
 
-&lt;p&gt;以前Google Apps Scriptで作成したプログラムがTwitter API Ver.1の廃止で動かなくなってたので直しました。&lt;/p&gt;
-
-&lt;p&gt;ついでにライブラリとしてだれでも使えるようにしました。&lt;del&gt;ソースコードはここに置いてます。&lt;/del&gt;&lt;/p&gt;
-
-&lt;p&gt;使い方まとめるよ。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2015/10/7 追記: Google Apps Scriptで&lt;code&gt;OAuthConfig&lt;/code&gt;が廃止されたため、このスクリプトは動きません。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2016/4/20 追記: 何人かにこのスクリプトが使いたいと要望をもらったので、ちょっと面倒な方法ですが&lt;a href=&#34;https://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/&#34;&gt;ここ&lt;/a&gt;に現在動作するスクリプトの使い方を書きました。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;1-twitterアプリの作成:810c749fc8fa5127bcde89e372276574&#34;&gt;1) Twitterアプリの作成&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://dev.twitter.com/&#34;&gt;Twitter Developers&lt;/a&gt;でGoogle Apps Script用のアプリを作成してください。&lt;/p&gt;
-
-&lt;p&gt;以下は入力例です。&lt;code&gt;Callback URL&lt;/code&gt;は以下で指定するURLを設定してください。
-他の項目は自分がわかりやすいもので。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Name: &lt;code&gt;GoogleAppsScript&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Description: &lt;code&gt;GoogleAppsScriptから利用します&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Website: &lt;code&gt;http://example.com/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Callback URL: &lt;code&gt;https://spreadsheets.google.com/macros&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;作成が成功すると&lt;code&gt;Consumer key&lt;/code&gt;と&lt;code&gt;Consumer secret&lt;/code&gt;が発行されます。これはあとで使います。&lt;/p&gt;
-
-&lt;h3 id=&#34;2-スプレッドシートの作成:810c749fc8fa5127bcde89e372276574&#34;&gt;2) スプレッドシートの作成&lt;/h3&gt;
-
-&lt;p&gt;Google Driveでスプレッドシート作成します。&lt;/p&gt;
-
-&lt;p&gt;メニューから&lt;code&gt;ツール &amp;gt; スクリプトエディタ&lt;/code&gt;を選択します。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/google-apps-script-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;「無題のプロジェクト」が開きますので、プロジェクトに適当に名前をつけてください。&lt;/p&gt;
-
-&lt;h3 id=&#34;3-ライブラリの読込:810c749fc8fa5127bcde89e372276574&#34;&gt;3) ライブラリの読込&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;リソース &amp;gt; ライブラリ&lt;/code&gt;を選択すると以下のウィンドウが表示されます。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/google-apps-script-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;「ライブラリを検索」に &lt;code&gt;MHGYgT-unu1fC7zXOkNfBUVSHJARy_IP7&lt;/code&gt; を入力して選択ボタンを押します。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/google-apps-script-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;最新のバージョンを選択します。この例では「1」を選択して保存。&lt;/p&gt;
-
-&lt;h3 id=&#34;4-プロジェクトのプロパティの設定:810c749fc8fa5127bcde89e372276574&#34;&gt;4) プロジェクトのプロパティの設定&lt;/h3&gt;
-
-&lt;p&gt;次に&lt;code&gt;ファイル &amp;gt; プロジェクトのプロパティ&lt;/code&gt;を選択します。
-ユーザーのプロパティタブを開いて以下の名前のプロパティを設定します。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;TWITTER_CONSUMER_SECRET&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;TWITTER_CONSUMER_KEY&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;それぞれに先ほどTwitter Developersで取得した「Consumer key」と「Consumer secret」の値を設定してください。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/google-apps-script-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;5-トリガースクリプトの作成:810c749fc8fa5127bcde89e372276574&#34;&gt;5) トリガースクリプトの作成&lt;/h3&gt;
-
-&lt;p&gt;コード.gsに以下のようなスクリプトを記述してください。
-この例は検索キーワード「都知事」で最初(0番目)のシートに検索結果を出力する、という意味です。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;function myFunction() {
-  Twitter.search(&amp;quot;都知事&amp;quot;, 0);
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;実行するとスプレッドシートに検索結果が出力されます。
-初回実行時はTwitterとGoogleの承認画面が表示されると思います。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/google-apps-script-06.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;こんな感じで検索結果が出力されてたら成功。&lt;/p&gt;
-
-&lt;h3 id=&#34;6-定期的に検索を実行する:810c749fc8fa5127bcde89e372276574&#34;&gt;6) 定期的に検索を実行する&lt;/h3&gt;
-
-&lt;p&gt;メニューから&lt;code&gt;リソース &amp;gt; 現在のスクリプトのトリガー&lt;/code&gt;を選択します。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/google-apps-script-05.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;この設定だと1時間おきに検索が実行されて、検索結果がスプレッドシートに貯まっていきます。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -716,8 +152,7 @@ client.onauth = function() {
       <guid>https://blog.hika69.com/blog/2013/11/20/klab-js/</guid>
       <description>&lt;p&gt;KLab さんの JavaScript 勉強会で Hoodie の話をしました。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/viewer/ycy7it&#34;&gt;Hoodieでノーバックエンド開発 | Stobo&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -728,10 +163,7 @@ client.onauth = function() {
       <guid>https://blog.hika69.com/blog/2013/06/13/learning-node-js/</guid>
       <description>&lt;p&gt;読み始めた。&lt;/p&gt;
 
-&lt;p&gt;分厚いので電書版を出してほしい。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AENode-js-%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%B5%E3%82%A4%E3%83%89JavaScript%E3%81%A7Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E9%96%8B%E7%99%BA%E3%81%99%E3%82%8B-%E6%9D%BE%E5%B3%B6-%E6%B5%A9%E9%81%93/dp/4797370904%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4797370904&#34; target=&#34;_blank&#34; title=&#34;はじめてのNode.js -サーバーサイドJavaScriptでWebアプリを開発する-&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/510pDzY1u9L.jpg&#34; width=&#34;396&#34; height=&#34;500&#34; alt=&#34;はじめてのNode.js -サーバーサイドJavaScriptでWebアプリを開発する-&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -740,100 +172,42 @@ client.onauth = function() {
       <pubDate>Sat, 01 Jun 2013 22:28:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/06/01/grunt-js/</guid>
-      <description>
+      <description>&lt;p&gt;Gruntを&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;に導入するためのメモ。&lt;/p&gt;
 
-&lt;p&gt;Gruntを&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;に導入するためのメモ。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Underscore.js の _.debounce が便利そう</title>
+      <link>https://blog.hika69.com/blog/2013/05/28/underscore-js/</link>
+      <pubDate>Tue, 28 May 2013 21:53:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/05/28/underscore-js/</guid>
+      <description>&lt;p&gt;「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.jsガイドブック&lt;/a&gt;」の読書会2回目。&lt;/p&gt;
 
-&lt;h3 id=&#34;node-jsのインストール:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;node.jsのインストール&lt;/h3&gt;
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JavaScript 忍者を買った</title>
+      <link>https://blog.hika69.com/blog/2013/05/27/javascript-ninja/</link>
+      <pubDate>Mon, 27 May 2013 20:40:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/05/27/javascript-ninja/</guid>
+      <description>&lt;p&gt;買ってきた。&lt;/p&gt;
 
-&lt;p&gt;node.jsを最新版にする。&lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt;のinstallボタンで落ちてくるパッケージから再インストールするだけ。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>「Backbone.js ガイドブック」読書会がはじまった</title>
+      <link>https://blog.hika69.com/blog/2013/05/25/backbone-js/</link>
+      <pubDate>Sat, 25 May 2013 01:04:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2013/05/25/backbone-js/</guid>
+      <description>&lt;p&gt;社内で「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.js ガイドブック&lt;/a&gt;」の読書会が始まったので参加した。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;node -v
-v0.10.8
-npm -v
-1.2.23
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;grunt-cliのインストール:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;grunt-cliのインストール&lt;/h3&gt;
-
-&lt;p&gt;グローバルにgrunt-cliをインストール。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install -g grunt-cli
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;プロジェクト毎にgruntを導入する:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;プロジェクト毎にgruntを導入する&lt;/h3&gt;
-
-&lt;p&gt;プロジェクトのルートでpackage.jsonを生成する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm init
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;プロジェクトのルートでgruntをインストール。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install grunt --save-dev
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;--save-dev&lt;/code&gt;をつけるとpackage.jsonにインストールしたタスクの依存関係が記録される。
-package.jsonに依存関係が記録されていれば&lt;code&gt;npm install&lt;/code&gt;だけで一括導入ができるので流用しやすそう。
-なので&lt;code&gt;--save-dev&lt;/code&gt;をつけることにする。&lt;/p&gt;
-
-&lt;h3 id=&#34;タスクのインストール:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;タスクのインストール&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;grunt-contrib-uglify
-
-&lt;ul&gt;
-&lt;li&gt;JavaScriptを圧縮する&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;grunt-contrib-watch
-
-&lt;ul&gt;
-&lt;li&gt;Lessを監視して変更した時に別のタスクを呼び出す&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;grunt-contrib-less
-
-&lt;ul&gt;
-&lt;li&gt;Lessをcssにコンパイルしたり圧縮したりする&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install grunt-contrib-uglify grunt-contrib-watch grunt-contrib-less --save-dev
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以下だと便利タスク一式が一発で入るらしいけど、一個ずつ選びたいので使わない。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install grunt-contrib
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;いまの設定:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;いまの設定&lt;/h3&gt;
-
-&lt;script src=&#34;https://gist.github.com/hikarock/5690366.js&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;&lt;p&gt;lessコンパイルで対象ファイル一個ずつ書かなくていい方法。ありがとうstackoverflow - &lt;a href=&#34;http://t.co/GRA670cij9&#34; title=&#34;http://stackoverflow.com/questions/15344584/grunt-0-4-less-task-how-to-not-concatenate-destination-files&#34;&gt;stackoverflow.com/questions/1534…&lt;/a&gt;&lt;/p&gt;&amp;mdash; hika69さん (@hika69) &lt;a href=&#34;https://twitter.com/hika69/status/340436916019286017&#34;&gt;2013年5月31日&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;lessファイルとコンパイル先のcssを両方ワイルドカード指定する方法がわからなくてはまったけど解決。
-このリンクを参考に設定した。&lt;/p&gt;
-
-&lt;h3 id=&#34;実行:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;実行&lt;/h3&gt;
-
-&lt;p&gt;デフォルトのタスクを実行する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;grunt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;タスクを指定して実行する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;grunt less:dist
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;参考:496db6cbbd971ead66e2b3a7e0cad29f&#34;&gt;参考&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://gruntjs.com/sample-gruntfile&#34;&gt;Sumple Gruntfile&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://js.studio-kingdom.com/grunt&#34;&gt;Grunt 日本語リファレンス&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -6,9 +6,11 @@
     <description>Recent content in Ibeacon on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Tue, 24 Dec 2013 21:12:57 +0000</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/ibeacon/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/ibeacon/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>iBeacon 端末を買った</title>
@@ -18,19 +20,7 @@
       <guid>https://blog.hika69.com/blog/2013/12/24/estimote/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://twitter.com/nakajijapan&#34;&gt;@nakajijapan&lt;/a&gt;と共同購入して1個だけ入手。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/estimote-1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;3個セットで1個あたり$33くらい。高い。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://triph.jp&#34;&gt;triph&lt;/a&gt;で使いたいので休み中いろいろ試す予定。
-端末が安くなったら浅草にくばって回りたい。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/estimote-2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;あとLeap Motionも買ってた。&lt;a href=&#34;https://twitter.com/KitaitiMakoto&#34;&gt;@KitaitiMakoto&lt;/a&gt;さんがストーリーボードのページめくりにLeapを使えるようにしてくれたのを試したかったので。&lt;/p&gt;
-
-&lt;p&gt;しかしほかに使い道が見つからない。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

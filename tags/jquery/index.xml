@@ -6,9 +6,11 @@
     <description>Recent content in Jquery on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Fri, 13 Feb 2015 00:55:57 +0000</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>editorify というライブラリを作った</title>
@@ -18,25 +20,7 @@
       <guid>https://blog.hika69.com/blog/2015/02/13/editorify/</guid>
       <description>&lt;p&gt;エディタリファイと読むんだろうか。とにかく&lt;code&gt;fy&lt;/code&gt;ってつけたかっただけな感じで言いづらい jQuery プラグインを作った。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/hikarock/editorify&#34;&gt;hikarock/editorify&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ひとことでいうと &lt;code&gt;&amp;lt;textarea&amp;gt;&lt;/code&gt; を使って簡単なウィジウィグとか作れるライブラリ。
-例えば、markdown のリンクを挿入する場合はこんな感じに書く。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;$(&#39;.link&#39;).on(&#39;click&#39;, function (evt) {
-  $(&#39;.editor&#39;).editorify([
-    [&#39;clear&#39;],
-    [&#39;insert&#39;, &#39;[](http://example.com)&#39;],
-    [&#39;start&#39;],
-    [&#39;right&#39;, 1]
-  ]);
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;left&lt;/code&gt; とか &lt;code&gt;start&lt;/code&gt; とかでカーソル移動できるので &lt;code&gt;[]&lt;/code&gt; の中にカーソルが移動している状態になる。&lt;a href=&#34;https://hikarock.github.io/editorify/&#34;&gt;DEMO&lt;/a&gt;はこちら。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/&#34;&gt;Stobo&lt;/a&gt; のエディタ部分を絶賛改造中でモンスターブランチがもうスカイツリーくらいに育っているんだけど、その中の成果が分割されて editorify になった。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
