@@ -1,6 +1,7 @@
-baseurl = "https://blog.hika69.com/"
-languageCode = "ja"
-title = "hikarock blog"
+BaseUrl = "https://blog.hika69.com/"
+LanguageCode = "ja"
+Title = "hikarock blog"
+paginate = 10
 Copyright = "&copy; 2017 hikarock"
 canonifyurls = true
 
@@ -12,6 +13,7 @@ canonifyurls = true
 
 [params]
   # description = ""
+  # metadescription = ""
   cover = "images/cover.jpg"
   author = "hikarock"
   authorlocation = "Tokyo, Japan"
