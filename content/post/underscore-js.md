@@ -1,14 +1,10 @@
----
-title: "Underscore.js の _.debounce が便利そう"
-date: "2013-05-28T21:53:00"
-comments: true
-tags: 
-- javascript
-- backbone
-- underscore
-- book
----
++++
+comments = true
+date = "2013-05-28T21:53:00"
+tags = ["javascript", "backbone", "underscore", "book"]
+title = "Underscore.js の _.debounce が便利そう"
 
++++
 
 「[Backbone.jsガイドブック](http://booklog.jp/item/1/4899773501)」の読書会2回目。
 

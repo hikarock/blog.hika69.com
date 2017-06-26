@@ -1,12 +1,11 @@
----
-title: "ライブコーディングアプリ「Casto」ができるまで"
-date: "2014-04-02T00:42:15"
-comments: true
-published: true
-tags: 
-- casto
-- rendr
----
++++
+comments = true
+date = "2014-04-02T00:42:15"
+published = true
+tags = ["casto", "rendr"]
+title = "ライブコーディングアプリ「Casto」ができるまで"
+
++++
 
 「[Casto](http://ca.storyboards.jp)」(きゃすと)をリリースしました。
 

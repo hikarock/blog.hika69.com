@@ -1,10 +1,10 @@
----
-title: "双子池と棒ノ折山"
-date: "2013-09-07T22:19:00"
-comments: true
-tags: 
-- hiking
----
++++
+comments = true
+date = "2013-09-07T22:19:00"
+tags = ["hiking"]
+title = "双子池と棒ノ折山"
+
++++
 
 今年はちょいちょい山に行ってる。
 

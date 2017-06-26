@@ -1,11 +1,10 @@
----
-title: "静的サイトジェネレータ Roots の覚書"
-date: "2015-07-01T22:01:34"
-comments: true
-tags: 
-- roots
-- node
----
++++
+comments = true
+date = "2015-07-01T22:01:34"
+tags = ["roots", "node"]
+title = "静的サイトジェネレータ Roots の覚書"
+
++++
 
 定期的にブログをリニューアルしたくなる病が発症する。
 

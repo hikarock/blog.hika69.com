@@ -1,12 +1,10 @@
----
-title: "GitHub の非公開リポジトリを Bitbucket に引越"
-date: "2014-11-18T11:34:01"
-comments: true
-tags: 
-- github
-- bitbucket
-- git
----
++++
+comments = true
+date = "2014-11-18T11:34:01"
+tags = ["github", "bitbucket", "git"]
+title = "GitHub の非公開リポジトリを Bitbucket に引越"
+
++++
 
 GitHub のプライベートリポジトリの上限がきてしまったので、使用頻度の低いリポジトリを Bitbucket の非公開リポジトリに引越した。
 

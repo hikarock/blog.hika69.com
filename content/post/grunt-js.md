@@ -1,12 +1,10 @@
----
-title: "Grunt を導入"
-date: "2013-06-01T22:28:00"
-comments: true
-tags: 
-- javascript
-- less
-- grunt
----
++++
+comments = true
+date = "2013-06-01T22:28:00"
+tags = ["javascript", "less", "grunt"]
+title = "Grunt を導入"
+
++++
 
 Gruntを[REMP](http://www.remp.jp/hello)に導入するためのメモ。
 

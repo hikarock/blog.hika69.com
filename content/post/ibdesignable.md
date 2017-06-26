@@ -1,12 +1,10 @@
----
-title: "IB_DESIGNABLE を使おう"
-date: "2015-02-10T19:55:15"
-comments: true
-tags: 
-- xcode
-- ios
-- objective-c
----
++++
+comments = true
+date = "2015-02-10T19:55:15"
+tags = ["xcode", "ios", "objective-c"]
+title = "IB_DESIGNABLE を使おう"
+
++++
 
 Xcode6 から使える `IB_DESIGNABLE` と `IBInspectable` が非常に便利なんだけど情報が少ない。
 

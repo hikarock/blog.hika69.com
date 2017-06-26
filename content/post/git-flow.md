@@ -1,12 +1,10 @@
----
-title: "iOSアプリ開発のGit運用"
-date: "2014-12-16T09:37:50"
-comments: true
-tags: 
-- git
-- git-flow
-- ios
----
++++
+comments = true
+date = "2014-12-16T09:37:50"
+tags = ["git", "git-flow", "ios"]
+title = "iOSアプリ開発のGit運用"
+
++++
 
 iOSアプリはリリースサイクルが長くなりがちなので、[GitHub Flow](https://gist.github.com/Gab-km/3705015)ではなく、[git-flow](http://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html)を参考にしたフローを使っている。
 

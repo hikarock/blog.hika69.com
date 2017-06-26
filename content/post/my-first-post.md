@@ -1,10 +1,10 @@
----
-title: "ブログを引っ越した"
-date: "2013-05-24T00:39:57"
-comments: true
-tags: 
-- info
----
++++
+comments = true
+date = "2013-05-24T00:39:57"
+tags = ["info"]
+title = "ブログを引っ越した"
+
++++
 
 厳密にはまだ引っ越してない。WordPressからデータ移行をしないと。
 

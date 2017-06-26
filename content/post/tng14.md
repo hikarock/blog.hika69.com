@@ -1,13 +1,10 @@
----
-title: "東京 Node 学園 14時限目で Rendr の話をした"
-date: "2014-08-25T21:05:21"
-comments: true
-tags: 
-- rendr
-- meteor
-- javascript
-- slide
----
++++
+comments = true
+date = "2014-08-25T21:05:21"
+tags = ["rendr", "meteor", "javascript", "slide"]
+title = "東京 Node 学園 14時限目で Rendr の話をした"
+
++++
 
 [東京Node学園 14時限目](http://nodejs.connpass.com/event/7908/)でRendrについて話してきました。
 

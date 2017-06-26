@@ -1,11 +1,10 @@
----
-title: "iBeacon 端末を買った"
-date: "2013-12-24T21:12:57"
-comments: true
-tags: 
-- ibeacon
-- leap-motion
----
++++
+comments = true
+date = "2013-12-24T21:12:57"
+tags = ["ibeacon", "leap-motion"]
+title = "iBeacon 端末を買った"
+
++++
 
 [@nakajijapan](https://twitter.com/nakajijapan)と共同購入して1個だけ入手。
 

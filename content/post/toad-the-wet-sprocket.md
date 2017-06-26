@@ -1,10 +1,10 @@
----
-title: "New Constellation"
-date: "2013-11-01T23:20:00"
-comments: true
-tags: 
-- music
----
++++
+comments = true
+date = "2013-11-01T23:20:00"
+tags = ["music"]
+title = "New Constellation"
+
++++
 
 Toad the Wet Sprocketの新作が16年(!)ぶりにリリースされた。
 

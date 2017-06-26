@@ -1,11 +1,10 @@
----
-title: "ストボのバージョンアップ業"
-date: "2013-12-24T20:45:26"
-comments: true
-tags: 
-- stobo
-- bootstrap
----
++++
+comments = true
+date = "2013-12-24T20:45:26"
+tags = ["stobo", "bootstrap"]
+title = "ストボのバージョンアップ業"
+
++++
 
 1年程放置ぎみだった[ストーリーボード](http://www.storyboards.jp)のバージョンアップ業を1ヶ月くらいやってました。
 

@@ -1,11 +1,10 @@
----
-title: "hub コマンドで GitHub と GHE に PullRequest する"
-date: "2015-02-09T19:36:38"
-comments: true
-tags: 
-- git
-- github
----
++++
+comments = true
+date = "2015-02-09T19:36:38"
+tags = ["git", "github"]
+title = "hub コマンドで GitHub と GHE に PullRequest する"
+
++++
 
 GitHubでは以下のalias (リンク参照) を設定して`git pr master`のように使っていたけれど、GHEで動かなかったので`.gitconfig`を編集した。
 

@@ -1,12 +1,10 @@
----
-title: "「Backbone.js ガイドブック」読書会がはじまった"
-date: "2013-05-25T01:04:00"
-comments: true
-tags:
-- javascript
-- backbone
-- book
----
++++
+comments = true
+date = "2013-05-25T01:04:00"
+tags = ["javascript", "backbone", "book"]
+title = "「Backbone.js ガイドブック」読書会がはじまった"
+
++++
 
 社内で「[Backbone.js ガイドブック](http://booklog.jp/item/1/4899773501)」の読書会が始まったので参加した。
 

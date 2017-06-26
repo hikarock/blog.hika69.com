@@ -1,11 +1,10 @@
----
-title: "editorify というライブラリを作った"
-date: "2015-02-13T00:55:57"
-comments: true
-tags: 
-- javascript
-- jquery
----
++++
+comments = true
+date = "2015-02-13T00:55:57"
+tags = ["javascript", "jquery"]
+title = "editorify というライブラリを作った"
+
++++
 
 エディタリファイと読むんだろうか。とにかく`fy`ってつけたかっただけな感じで言いづらい jQuery プラグインを作った。
 

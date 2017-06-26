@@ -1,11 +1,10 @@
----
-title: "拡大・縮小自在な LESS の mixin の作り方"
-date: "2014-01-02T22:40:46"
-comments: true
-tags: 
-- less
-- stobo
----
++++
+comments = true
+date = "2014-01-02T22:40:46"
+tags = ["less", "stobo"]
+title = "拡大・縮小自在な LESS の mixin の作り方"
+
++++
 
 ストーリーボードではスライドをHTMLとCSSで描画するため、同じレイアウト・見た目で縮尺だけ変えたいことがある。
 

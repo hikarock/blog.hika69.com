@@ -1,10 +1,10 @@
----
-title: "Casto のステッカーができた"
-date: "2014-12-28T11:34:27"
-comments: true
-tags: 
-- casto
----
++++
+comments = true
+date = "2014-12-28T11:34:27"
+tags = ["casto"]
+title = "Casto のステッカーができた"
+
++++
 
 Node 系のステッカーは六角形で揃えてるみたいなので、[Casto](http://ca.storyboards.jp) も Node/Rendr で動いてるので同じ形にしてみました。
 

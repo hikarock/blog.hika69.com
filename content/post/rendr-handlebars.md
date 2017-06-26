@@ -1,13 +1,10 @@
----
-title: "rendr-handlebars で部分テンプレートを使う"
-date: "2014-04-23T00:10:08"
-comments: true
-tags: 
-- javascript
-- rendr
-- handlebars
-- casto
----
++++
+comments = true
+date = "2014-04-23T00:10:08"
+tags = ["javascript", "rendr", "handlebars", "casto"]
+title = "rendr-handlebars で部分テンプレートを使う"
+
++++
 
 [rendr-handlebars](https://github.com/rendrjs/rendr-handlebars)でpartial (部分テンプレート) が使えることにさっき気づいた。
 

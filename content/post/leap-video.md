@@ -1,11 +1,10 @@
----
-title: "Leap でストボを操作する動画を作った"
-date: "2013-12-25T20:24:41"
-comments: true
-tags: 
-- leap-motion
-- stobo
----
++++
+comments = true
+date = "2013-12-25T20:24:41"
+tags = ["leap-motion", "stobo"]
+title = "Leap でストボを操作する動画を作った"
+
++++
 
 [ストーリーボード](http://www.storyboards.jp)がLeap Motionに対応したんだけど、あんまり伝わってないので紹介動画を作成しました。
 

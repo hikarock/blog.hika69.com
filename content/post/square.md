@@ -1,10 +1,10 @@
----
-title: "Square リーダーが届いた"
-date: "2013-06-10T23:15:00"
-comments: true
-tags: 
-- square
----
++++
+comments = true
+date = "2013-06-10T23:15:00"
+tags = ["square"]
+title = "Square リーダーが届いた"
+
++++
 
 小さくころっとしていてかわいい。
 

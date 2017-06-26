@@ -1,11 +1,10 @@
----
-title: "SQL アンチパターン"
-date: "2013-05-27T20:51:00"
-comments: true
-tags: 
-- sql
-- book
----
++++
+comments = true
+date = "2013-05-27T20:51:00"
+tags = ["sql", "book"]
+title = "SQL アンチパターン"
+
++++
 
 3章まで読んだ。Kindle for iPadで読んでると表が見づらい...
 

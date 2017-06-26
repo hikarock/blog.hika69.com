@@ -1,11 +1,10 @@
----
-title: "Chrome 拡張「シンプル翻訳」を更新"
-date: "2014-02-24T14:47:27"
-comments: true
-tags: 
-- javascript
-- chrome-extension
----
++++
+comments = true
+date = "2014-02-24T14:47:27"
+tags = ["javascript", "chrome-extension"]
+title = "Chrome 拡張「シンプル翻訳」を更新"
+
++++
 
 Chrome 拡張機能の「[シンプル翻訳](https://chrome.google.com/webstore/detail/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E7%BF%BB%E8%A8%B3/pdnmkammncjnifdeclafllianknnoaif)」を2年ぶりに更新しました。
 

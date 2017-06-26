@@ -1,12 +1,10 @@
----
-title: "Twitter 検索の結果を Google Drive のスプレッドシートに出力する"
-date: "2014-01-28T17:07:27"
-comments: true
-tags: 
-- twitter-api
-- gas
-- javascript
----
++++
+comments = true
+date = "2014-01-28T17:07:27"
+tags = ["twitter-api", "gas", "javascript"]
+title = "Twitter 検索の結果を Google Drive のスプレッドシートに出力する"
+
++++
 
 以前Google Apps Scriptで作成したプログラムがTwitter API Ver.1の廃止で動かなくなってたので直しました。
 

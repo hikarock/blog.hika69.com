@@ -1,11 +1,10 @@
----
-title: "日本ダービーと府中"
-date: "2013-05-26T23:37:00"
-comments: true
-tags: 
-- book
-- walk
----
++++
+comments = true
+date = "2013-05-26T23:37:00"
+tags = ["book", "walk"]
+title = "日本ダービーと府中"
+
++++
 
 友人にさそわれて、日本ダービーが開催されている東京競馬場まで行ってきた。
 

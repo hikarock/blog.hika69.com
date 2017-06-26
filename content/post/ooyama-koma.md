@@ -1,10 +1,10 @@
----
-title: "大山のこま"
-date: "2013-06-23T21:18:00"
-comments: true
-tags: 
-- hiking
----
++++
+comments = true
+date = "2013-06-23T21:18:00"
+tags = ["hiking"]
+title = "大山のこま"
+
++++
 
 一年ぶりに大山に登った。
 

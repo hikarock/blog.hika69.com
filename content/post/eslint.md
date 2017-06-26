@@ -1,11 +1,10 @@
----
-title: "eslint を vim-watchdogs から使う"
-date: "2015-05-05T17:03:27"
-comments: true
-tags: 
-- vim
-- javascript
----
++++
+comments = true
+date = "2015-05-05T17:03:27"
+tags = ["vim", "javascript"]
+title = "eslint を vim-watchdogs から使う"
+
++++
 
 vim-watchdogs から eslint が使えるように設定したのでメモ。
 

@@ -1,11 +1,10 @@
----
-title: "Less でボタンの mixin"
-date: "2013-12-05T00:02:29"
-comments: true
-tags: 
-- less
-- stobo
----
++++
+comments = true
+date = "2013-12-05T00:02:29"
+tags = ["less", "stobo"]
+title = "Less でボタンの mixin"
+
++++
 
 以下の画像ボタンを再現するLessのmixin書いた。
 

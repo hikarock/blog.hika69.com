@@ -1,10 +1,10 @@
----
-title: "持国天"
-date: "2013-06-10T23:01:00"
-comments: true
-tags: 
-- book
----
++++
+comments = true
+date = "2013-06-10T23:01:00"
+tags = ["book"]
+title = "持国天"
+
++++
 
 持国天のフィギュアをもらいました。かっこいい。
 

@@ -1,12 +1,10 @@
----
-title: "はじめての Node.js"
-date: "2013-06-13T23:54:00"
-comments: true
-tags: 
-- node
-- javascript
-- book
----
++++
+comments = true
+date = "2013-06-13T23:54:00"
+tags = ["node", "javascript", "book"]
+title = "はじめての Node.js"
+
++++
 
 読み始めた。
 

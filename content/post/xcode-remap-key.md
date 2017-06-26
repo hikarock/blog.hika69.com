@@ -1,12 +1,10 @@
----
-title: "Xcode のキー配置をカスタマイズする"
-date: "2014-12-28T13:01:51"
-comments: true
-tags: 
-- xcode
-- karabiner
-- mac
----
++++
+comments = true
+date = "2014-12-28T13:01:51"
+tags = ["xcode", "karabiner", "mac"]
+title = "Xcode のキー配置をカスタマイズする"
+
++++
 
 [XVim](https://github.com/XVimProject/XVim) を使いはじめたら、Xcodeのキー配置が、カスタマイズ済みのターミナル (およびVim) と微妙に違うのが気になってきた (ターミナルはControlキーをよく使うので、CommandキーとControlキーを入れ替えている) 。
 

@@ -1,11 +1,10 @@
----
-title: "Meteor でアプリのランディングページを作った"
-date: "2014-07-31T23:25:25"
-comments: true
-tags: 
-- meteor
-- triph
----
++++
+comments = true
+date = "2014-07-31T23:25:25"
+tags = ["meteor", "triph"]
+title = "Meteor でアプリのランディングページを作った"
+
++++
 
 [triph](http://triph.jp)のランディングページ(というかアプリ全体...)をHerokuに乗せていたんだけど、ちょっとおおげさな感じがしてきたので[Meteor](https://meteor.com)に移した。
 

@@ -1,11 +1,10 @@
----
-title: "JavaScript 忍者を買った"
-date: "2013-05-27T20:40:00"
-comments: true
-tags: 
-- javascript
-- book
----
++++
+comments = true
+date = "2013-05-27T20:40:00"
+tags = ["javascript", "book"]
+title = "JavaScript 忍者を買った"
+
++++
 
 買ってきた。
 

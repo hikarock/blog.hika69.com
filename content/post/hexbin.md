@@ -1,11 +1,10 @@
----
-title: "hexbin に Casto ステッカーが追加された"
-date: "2014-12-29T21:12:44"
-comments: true
-tags: 
-- casto
-- hexbin
----
++++
+comments = true
+date = "2014-12-29T21:12:44"
+tags = ["casto", "hexbin"]
+title = "hexbin に Casto ステッカーが追加された"
+
++++
 
 [hexbin](http://hexb.in/) は六角形の主にNode系のロゴを集めたサイト。運営しているのは NodeSchool に携わっている[@maxogden](https://twitter.com/maxogden)さん。
 
