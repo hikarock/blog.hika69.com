@@ -5,27 +5,48 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  	<meta property="og:title" content=" 拡大・縮小自在な LESS の mixin の作り方 &middot;  hikarock blog" />
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="拡大・縮小自在な LESS の mixin の作り方"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@hika69"/>
+
+
+
+  	<meta property="og:title" content="拡大・縮小自在な LESS の mixin の作り方 &middot; hikarock blog" />
   	<meta property="og:site_name" content="hikarock blog" />
   	<meta property="og:url" content="https://blog.hika69.com/blog/2014/01/02/less-mixin/" />
 
     
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-
-    <meta property="og:article:published_time" content="2014-01-02T22:40:46Z" />
+    <meta property="article:published_time" content="2014-01-02T22:40:46Z" />
 
     
-    <meta property="og:article:tag" content="less" />
+    <meta property="article:tag" content="less" />
     
-    <meta property="og:article:tag" content="stobo" />
+    <meta property="article:tag" content="stobo" />
     
     
 
-  <title>
-     拡大・縮小自在な LESS の mixin の作り方 &middot;  hikarock blog
-  </title>
+    <title>拡大・縮小自在な LESS の mixin の作り方 &middot; hikarock blog</title>
 
-    <meta name="description" content="" />
+    
+    <meta name="description" content="&lt;p&gt;ストーリーボードではスライドをHTMLとCSSで描画するため、同じレイアウト・見た目で縮尺だけ変えたいことがある。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;" />
+    
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,8 +56,10 @@
 
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
+    
+
+    
 
     
       
@@ -44,9 +67,71 @@
       
       
     
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.24.1" />
 
     <link rel="canonical" href="https://blog.hika69.com/blog/2014/01/02/less-mixin/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://blog.hika69.com/images/logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://blog.hika69.com/images/logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": https://hika69.com,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": 街に詳しい。
+        
+    },
+    "headline": 拡大・縮小自在な LESS の mixin の作り方,
+    "name": 拡大・縮小自在な LESS の mixin の作り方,
+    "wordCount": 88,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://blog.hika69.com/blog/2014/01/02/less-mixin/,
+    "datePublished": 2014-01-02T22:40Z,
+    "dateModified": 2014-01-02T22:40Z,
+    
+    "keywords": less, stobo,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://blog.hika69.com/blog/2014/01/02/less-mixin/
+    }
+}
+    </script>
+    
+
+
+    
 
     
     <script>
@@ -87,9 +172,8 @@
     <ul>
         
         
-        
     </ul>
-    
+
     
     <a class="subscribe-button icon-feed" href="https://blog.hika69.com/index.xml">Subscribe</a>
     
@@ -110,7 +194,7 @@
       <a class="blog-logo" href="https://blog.hika69.com/"><img src="https://blog.hika69.com/images/logo.png" alt="Home" /></a>
   
   
-      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml" >&nbsp;&nbsp;Subscribe</a>
   
   </nav>
 </header>
@@ -143,23 +227,23 @@
     </header>
 
     <section class="post-content">
-      
+      <p>ストーリーボードではスライドをHTMLとCSSで描画するため、同じレイアウト・見た目で縮尺だけ変えたいことがある。</p>
 
-<p>ストーリーボードではスライドをHTMLとCSSで描画するため、同じレイアウト・見た目で縮尺だけ変えたいことがある。</p>
+<p></p>
 
-<h4 id="エディタページ:251de83f020f23281ae170b1e5c8704b">エディタページ</h4>
+<h4 id="エディタページ">エディタページ</h4>
 
 <p><img src="https://blog.hika69.com/images/post/less-mixin-1.png" alt="" /></p>
 
-<h4 id="スライドページ-pc用:251de83f020f23281ae170b1e5c8704b">スライドページ(PC用)</h4>
+<h4 id="スライドページ-pc用">スライドページ(PC用)</h4>
 
 <p><img src="https://blog.hika69.com/images/post/less-mixin-2.png" alt="" /></p>
 
-<h4 id="スライドページ-スマートフォン用:251de83f020f23281ae170b1e5c8704b">スライドページ(スマートフォン用)</h4>
+<h4 id="スライドページ-スマートフォン用">スライドページ(スマートフォン用)</h4>
 
 <p><img src="https://blog.hika69.com/images/post/less-mixin-3.png" alt="" /></p>
 
-<h4 id="ブログパーツ:251de83f020f23281ae170b1e5c8704b">ブログパーツ</h4>
+<h4 id="ブログパーツ">ブログパーツ</h4>
 
 <p><img src="https://blog.hika69.com/images/post/less-mixin-4.png" alt="" /></p>
 
@@ -169,7 +253,7 @@
 
 <p>できるだけ<code>em</code>のように相対単位を指定して、サイズ系の値にはすべて<code>@multiplier</code>を乗じています。</p>
 
-<h4 id="mixin-一部抜粋:251de83f020f23281ae170b1e5c8704b">mixin (一部抜粋)</h4>
+<h4 id="mixin-一部抜粋">mixin (一部抜粋)</h4>
 
 <pre><code class="language-css">.stbd-slide(@multiplier) {
 
@@ -197,7 +281,7 @@
   }
 </code></pre>
 
-<h4 id="呼び出し側:251de83f020f23281ae170b1e5c8704b">呼び出し側</h4>
+<h4 id="呼び出し側">呼び出し側</h4>
 
 <p>こんな感じで呼び出し側でサイズを指定します。</p>
 
@@ -221,7 +305,6 @@
 </code></pre>
 
 <p>シンプルですね。</p>
-
     </section>
 
 
@@ -230,7 +313,7 @@
 
     
     <figure class="author-image">
-        <a class="img" href="https://blog.hika69.com/" style="background-image: url(https://blog.hika69.com/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+        <a class="img" href="https://blog.hika69.com/" style="background-image: url(/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
     </figure>
     
 
@@ -256,7 +339,7 @@
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e6%8b%a1%e5%a4%a7%e3%83%bb%e7%b8%ae%e5%b0%8f%e8%87%aa%e5%9c%a8%e3%81%aa%20LESS%20%e3%81%ae%20mixin%20%e3%81%ae%e4%bd%9c%e3%82%8a%e6%96%b9&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2014%2f01%2f02%2fless-mixin%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=%e6%8b%a1%e5%a4%a7%e3%83%bb%e7%b8%ae%e5%b0%8f%e8%87%aa%e5%9c%a8%e3%81%aa%20LESS%20%e3%81%ae%20mixin%20%e3%81%ae%e4%bd%9c%e3%82%8a%e6%96%b9&nbsp;-&nbsp;hikarock%20blog&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2014%2f01%2f02%2fless-mixin%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -285,8 +368,30 @@
 </article>
 
 </main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://blog.hika69.com/blog/2014/01/28/google-apps-script/">
+          <section class="post">
+              <h2>Twitter 検索の結果を Google Drive のスプレッドシートに出力する</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://blog.hika69.com/blog/2013/12/25/leap-video/">
+          <section class="post">
+              <h2>Leap でストボを操作する動画を作った</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        <section class="copyright"><a href="">hikarock blog</a> &copy; 2017 hikarock</section>
         
         <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
         

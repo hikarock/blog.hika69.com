@@ -6,9 +6,11 @@
     <description>Recent content in Music on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Fri, 01 Nov 2013 23:20:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>New Constellation</title>
@@ -18,12 +20,7 @@
       <guid>https://blog.hika69.com/blog/2013/11/01/toad-the-wet-sprocket/</guid>
       <description>&lt;p&gt;Toad the Wet Sprocketの新作が16年(!)ぶりにリリースされた。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/New-Constellation-Toad-Wet-Sprocket/dp/B00ELE8EW2%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00ELE8EW2&#34; target=&#34;_blank&#34; title=&#34;New Constellation&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/51ppB4Se1fL.jpg&#34; width=&#34;500&#34; height=&#34;500&#34; alt=&#34;New Constellation&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;新作はとても内容が良いだけに、16年という歳月がもったいなくも感じるけれど&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.kickstarter.com/projects/toadthewetsprocket/new-studio-album-from-toad-the-wet-sprocket&#34;&gt;Kickstarter&lt;/a&gt;でレコーディング資金を調達して製作された本作、クラウドファウンディングがこの世界にあって本当によかった。と一音楽ファンは実感しました。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

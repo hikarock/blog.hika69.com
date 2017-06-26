@@ -5,27 +5,48 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  	<meta property="og:title" content=" Chrome 拡張の Inline Installation に対応する &middot;  hikarock blog" />
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="Chrome 拡張の Inline Installation に対応する"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@hika69"/>
+
+
+
+  	<meta property="og:title" content="Chrome 拡張の Inline Installation に対応する &middot; hikarock blog" />
   	<meta property="og:site_name" content="hikarock blog" />
   	<meta property="og:url" content="https://blog.hika69.com/blog/2016/05/27/chrome-extension-inline-install/" />
 
     
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-
-    <meta property="og:article:published_time" content="2016-05-27T00:20:53&#43;09:00" />
+    <meta property="article:published_time" content="2016-05-27T00:20:53&#43;09:00" />
 
     
-    <meta property="og:article:tag" content="javascript" />
+    <meta property="article:tag" content="javascript" />
     
-    <meta property="og:article:tag" content="chrome-extension" />
+    <meta property="article:tag" content="chrome-extension" />
     
     
 
-  <title>
-     Chrome 拡張の Inline Installation に対応する &middot;  hikarock blog
-  </title>
+    <title>Chrome 拡張の Inline Installation に対応する &middot; hikarock blog</title>
 
-    <meta name="description" content="" />
+    
+    <meta name="description" content="&lt;p&gt;Chrome 拡張を Chrome ウェブストア に遷移せずにインストールできる Inline Installation に対応した時の覚書。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;" />
+    
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,8 +56,10 @@
 
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
+    
+
+    
 
     
       
@@ -44,9 +67,71 @@
       
       
     
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.24.1" />
 
     <link rel="canonical" href="https://blog.hika69.com/blog/2016/05/27/chrome-extension-inline-install/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://blog.hika69.com/images/logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://blog.hika69.com/images/logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": https://hika69.com,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": 街に詳しい。
+        
+    },
+    "headline": Chrome 拡張の Inline Installation に対応する,
+    "name": Chrome 拡張の Inline Installation に対応する,
+    "wordCount": 113,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://blog.hika69.com/blog/2016/05/27/chrome-extension-inline-install/,
+    "datePublished": 2016-05-27T00:20Z,
+    "dateModified": 2016-05-27T00:20Z,
+    
+    "keywords": javascript, chrome-extension,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://blog.hika69.com/blog/2016/05/27/chrome-extension-inline-install/
+    }
+}
+    </script>
+    
+
+
+    
 
     
     <script>
@@ -87,9 +172,8 @@
     <ul>
         
         
-        
     </ul>
-    
+
     
     <a class="subscribe-button icon-feed" href="https://blog.hika69.com/index.xml">Subscribe</a>
     
@@ -110,7 +194,7 @@
       <a class="blog-logo" href="https://blog.hika69.com/"><img src="https://blog.hika69.com/images/logo.png" alt="Home" /></a>
   
   
-      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml" >&nbsp;&nbsp;Subscribe</a>
   
   </nav>
 </header>
@@ -143,15 +227,15 @@
     </header>
 
     <section class="post-content">
-      
+      <p>Chrome 拡張を Chrome ウェブストア に遷移せずにインストールできる Inline Installation に対応した時の覚書。</p>
 
-<p>Chrome 拡張を Chrome ウェブストア に遷移せずにインストールできる Inline Installation に対応した時の覚書。</p>
+<p></p>
 
-<h3 id="オフィシャルのドキュメント:97c4b7edc7ed1d60b05fc5875229f18c">オフィシャルのドキュメント</h3>
+<h3 id="オフィシャルのドキュメント">オフィシャルのドキュメント</h3>
 
 <p><a href="https://developer.chrome.com/webstore/inline_installation">Using Inline Installation - Google Chrome</a></p>
 
-<h3 id="手順:97c4b7edc7ed1d60b05fc5875229f18c">手順</h3>
+<h3 id="手順">手順</h3>
 
 <p>あらかじめ Chrome ウェブストアのデベロッパー ダッシュボードと Google Search Console で、Inline Installation を導入したいウェブサイトを設定する。</p>
 
@@ -179,7 +263,7 @@
 });
 </code></pre>
 
-<h3 id="インストール済みか判定して表示を変更する:97c4b7edc7ed1d60b05fc5875229f18c">インストール済みか判定して表示を変更する</h3>
+<h3 id="インストール済みか判定して表示を変更する">インストール済みか判定して表示を変更する</h3>
 
 <p><code>chrome.app.isInstalled</code> の値を判定すればよいだけかと思っていたけど、Chrome 拡張機能の場合はこの値は常に false になる。</p>
 
@@ -198,7 +282,6 @@
 <p>このようにインストール済みか判定をしないとどうなるかというと、インストール済みでボタンを押下しても初回と同様のダイアログが表示されて、再インストールが実行されるだけ。</p>
 
 <p>インストール済みの場合に拡張機能のチュートリアルを表示したい、とかでない限りはこの対応はいらない気がする。</p>
-
     </section>
 
 
@@ -207,7 +290,7 @@
 
     
     <figure class="author-image">
-        <a class="img" href="https://blog.hika69.com/" style="background-image: url(https://blog.hika69.com/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+        <a class="img" href="https://blog.hika69.com/" style="background-image: url(/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
     </figure>
     
 
@@ -233,7 +316,7 @@
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Chrome%20%e6%8b%a1%e5%bc%b5%e3%81%ae%20Inline%20Installation%20%e3%81%ab%e5%af%be%e5%bf%9c%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2016%2f05%2f27%2fchrome-extension-inline-install%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Chrome%20%e6%8b%a1%e5%bc%b5%e3%81%ae%20Inline%20Installation%20%e3%81%ab%e5%af%be%e5%bf%9c%e3%81%99%e3%82%8b&nbsp;-&nbsp;hikarock%20blog&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2016%2f05%2f27%2fchrome-extension-inline-install%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -262,8 +345,30 @@
 </article>
 
 </main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://blog.hika69.com/blog/2016/07/01/chab/">
+          <section class="post">
+              <h2>Web SQL Database を使って &lt;table&gt; タグを SQL ライクにセレクトするライブラリ chab を再公開した</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://blog.hika69.com/blog/2016/05/20/psr-2-single-blank-line/">
+          <section class="post">
+              <h2>PSR-2 の最終行の空行についての規約を勘違いしていた</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        <section class="copyright"><a href="">hikarock blog</a> &copy; 2017 hikarock</section>
         
         <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
         

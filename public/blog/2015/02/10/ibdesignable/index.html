@@ -5,29 +5,52 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  	<meta property="og:title" content=" IB_DESIGNABLE を使おう &middot;  hikarock blog" />
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="IB_DESIGNABLE を使おう"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@hika69"/>
+
+
+
+  	<meta property="og:title" content="IB_DESIGNABLE を使おう &middot; hikarock blog" />
   	<meta property="og:site_name" content="hikarock blog" />
   	<meta property="og:url" content="https://blog.hika69.com/blog/2015/02/10/ibdesignable/" />
 
     
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2015-02-10T19:55:15Z" />
 
-    <meta property="og:article:published_time" content="2015-02-10T19:55:15Z" />
-
     
-    <meta property="og:article:tag" content="xcode" />
+    <meta property="article:tag" content="xcode" />
     
-    <meta property="og:article:tag" content="ios" />
+    <meta property="article:tag" content="ios" />
     
-    <meta property="og:article:tag" content="objective-c" />
+    <meta property="article:tag" content="objective-c" />
     
     
 
-  <title>
-     IB_DESIGNABLE を使おう &middot;  hikarock blog
-  </title>
+    <title>IB_DESIGNABLE を使おう &middot; hikarock blog</title>
 
-    <meta name="description" content="" />
+    
+    <meta name="description" content="&lt;p&gt;Xcode6 から使える &lt;code&gt;IB_DESIGNABLE&lt;/code&gt; と &lt;code&gt;IBInspectable&lt;/code&gt; が非常に便利なんだけど情報が少ない。&lt;/p&gt;
+
+&lt;p&gt;ので、基本とかは置いといて、とりあえず知ってることを雑多にまとめてみる。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;" />
+    
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,8 +60,10 @@
 
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
+    
+
+    
 
     
       
@@ -46,9 +71,71 @@
       
       
     
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.24.1" />
 
     <link rel="canonical" href="https://blog.hika69.com/blog/2015/02/10/ibdesignable/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://blog.hika69.com/images/logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://blog.hika69.com/images/logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": https://hika69.com,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": 街に詳しい。
+        
+    },
+    "headline": IB_DESIGNABLE を使おう,
+    "name": IB_DESIGNABLE を使おう,
+    "wordCount": 130,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://blog.hika69.com/blog/2015/02/10/ibdesignable/,
+    "datePublished": 2015-02-10T19:55Z,
+    "dateModified": 2015-02-10T19:55Z,
+    
+    "keywords": xcode, ios, objective-c,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://blog.hika69.com/blog/2015/02/10/ibdesignable/
+    }
+}
+    </script>
+    
+
+
+    
 
     
     <script>
@@ -89,9 +176,8 @@
     <ul>
         
         
-        
     </ul>
-    
+
     
     <a class="subscribe-button icon-feed" href="https://blog.hika69.com/index.xml">Subscribe</a>
     
@@ -112,7 +198,7 @@
       <a class="blog-logo" href="https://blog.hika69.com/"><img src="https://blog.hika69.com/images/logo.png" alt="Home" /></a>
   
   
-      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml" >&nbsp;&nbsp;Subscribe</a>
   
   </nav>
 </header>
@@ -147,13 +233,13 @@
     </header>
 
     <section class="post-content">
-      
-
-<p>Xcode6 から使える <code>IB_DESIGNABLE</code> と <code>IBInspectable</code> が非常に便利なんだけど情報が少ない。</p>
+      <p>Xcode6 から使える <code>IB_DESIGNABLE</code> と <code>IBInspectable</code> が非常に便利なんだけど情報が少ない。</p>
 
 <p>ので、基本とかは置いといて、とりあえず知ってることを雑多にまとめてみる。</p>
 
-<h3 id="有用なリンク:37abba03a2e327338726ad5c5fd40ef4">有用なリンク</h3>
+<p></p>
+
+<h3 id="有用なリンク">有用なリンク</h3>
 
 <p>とりあえずここらへんを眺めると良いとおもう。</p>
 
@@ -163,7 +249,7 @@
 <li><a href="https://www.weheartswift.com/make-awesome-ui-components-ios-8-using-swift-xcode-6/">How to make awesome UI components in iOS 8 using Swift and XCode 6 - IBDesignable and IBInspectable</a></li>
 </ul>
 
-<h3 id="ib-designable-な-view-は-uiview-もしくは-nsview-を継承して作る:37abba03a2e327338726ad5c5fd40ef4"><code>IB_DESIGNABLE</code> な View は <code>UIView</code> もしくは <code>NSView</code> を継承して作る</h3>
+<h3 id="ib-designable-な-view-は-uiview-もしくは-nsview-を継承して作る"><code>IB_DESIGNABLE</code> な View は <code>UIView</code> もしくは <code>NSView</code> を継承して作る</h3>
 
 <p><img src="https://blog.hika69.com/images/post/ib-designable-1.png" alt="" /></p>
 
@@ -172,7 +258,7 @@
 <p>ただし <code>IBInspectable</code> は使える。コードを書かないで値を設定できるだけでも便利なので、使い道はあると思う。
 心の目で見るんだ。</p>
 
-<h3 id="初期値を設定する:37abba03a2e327338726ad5c5fd40ef4">初期値を設定する</h3>
+<h3 id="初期値を設定する">初期値を設定する</h3>
 
 <p><code>initWithCoder</code> で設定する。ただし、ここで設定した初期値が IB 上のフォームで選択状態になってたりはしない。心の目で見るんだ。</p>
 
@@ -186,7 +272,7 @@
 }
 </code></pre>
 
-<h3 id="ibinspectable-で使える型:37abba03a2e327338726ad5c5fd40ef4"><code>IBInspectable</code> で使える型</h3>
+<h3 id="ibinspectable-で使える型"><code>IBInspectable</code> で使える型</h3>
 
 <p><code>enum</code> が使えると便利そうだと思ったけどだめだった。</p>
 
@@ -195,7 +281,7 @@
 <p>上でも紹介している、<a href="https://www.weheartswift.com/make-awesome-ui-components-ios-8-using-swift-xcode-6/">このエントリ</a>
 にある型を試した。他にも使える型があるのかもしれない。</p>
 
-<h3 id="要素の消し忘れに注意:37abba03a2e327338726ad5c5fd40ef4">要素の消し忘れに注意</h3>
+<h3 id="要素の消し忘れに注意">要素の消し忘れに注意</h3>
 
 <p><img src="https://blog.hika69.com/images/post/ib-designable-3.png" alt="" /></p>
 
@@ -204,7 +290,7 @@
 
 <p>迷子の要素がある画面を iOS7.1 で開いたら何もログを出さずに落ちたが、要素を削除したら問題なく起動した(iOS8 では問題なかった)。やっかいだ。</p>
 
-<h3 id="ibinspectable-な-view-を継承する:37abba03a2e327338726ad5c5fd40ef4"><code>IBInspectable</code> な View を継承する</h3>
+<h3 id="ibinspectable-な-view-を継承する"><code>IBInspectable</code> な View を継承する</h3>
 
 <p>継承した <code>IBInspectable</code> な View のプロパティが両方 IB 上に表示される。</p>
 
@@ -213,7 +299,6 @@
 <p>2つの View でそれぞれ設定した値がストーリーボード上に反映されている。</p>
 
 <p>(<code>UIView</code> を継承している <code>UITableViewCell</code> の場合は <code>IB_DESIGNABLE</code> が動かなかったので、このへんの仕組みがよくわからない感じ)</p>
-
     </section>
 
 
@@ -222,7 +307,7 @@
 
     
     <figure class="author-image">
-        <a class="img" href="https://blog.hika69.com/" style="background-image: url(https://blog.hika69.com/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+        <a class="img" href="https://blog.hika69.com/" style="background-image: url(/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
     </figure>
     
 
@@ -248,7 +333,7 @@
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=IB_DESIGNABLE%20%e3%82%92%e4%bd%bf%e3%81%8a%e3%81%86&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2015%2f02%2f10%2fibdesignable%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=IB_DESIGNABLE%20%e3%82%92%e4%bd%bf%e3%81%8a%e3%81%86&nbsp;-&nbsp;hikarock%20blog&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2015%2f02%2f10%2fibdesignable%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -277,8 +362,30 @@
 </article>
 
 </main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://blog.hika69.com/blog/2015/02/13/editorify/">
+          <section class="post">
+              <h2>editorify というライブラリを作った</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://blog.hika69.com/blog/2015/02/09/git-pr/">
+          <section class="post">
+              <h2>hub コマンドで GitHub と GHE に PullRequest する</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        <section class="copyright"><a href="">hikarock blog</a> &copy; 2017 hikarock</section>
         
         <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
         

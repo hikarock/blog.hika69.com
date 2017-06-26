@@ -5,27 +5,48 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  	<meta property="og:title" content=" editorify というライブラリを作った &middot;  hikarock blog" />
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="editorify というライブラリを作った"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@hika69"/>
+
+
+
+  	<meta property="og:title" content="editorify というライブラリを作った &middot; hikarock blog" />
   	<meta property="og:site_name" content="hikarock blog" />
   	<meta property="og:url" content="https://blog.hika69.com/blog/2015/02/13/editorify/" />
 
     
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-
-    <meta property="og:article:published_time" content="2015-02-13T00:55:57Z" />
+    <meta property="article:published_time" content="2015-02-13T00:55:57Z" />
 
     
-    <meta property="og:article:tag" content="javascript" />
+    <meta property="article:tag" content="javascript" />
     
-    <meta property="og:article:tag" content="jquery" />
+    <meta property="article:tag" content="jquery" />
     
     
 
-  <title>
-     editorify というライブラリを作った &middot;  hikarock blog
-  </title>
+    <title>editorify というライブラリを作った &middot; hikarock blog</title>
 
-    <meta name="description" content="" />
+    
+    <meta name="description" content="&lt;p&gt;エディタリファイと読むんだろうか。とにかく&lt;code&gt;fy&lt;/code&gt;ってつけたかっただけな感じで言いづらい jQuery プラグインを作った。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;" />
+    
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,8 +56,10 @@
 
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
+    
+
+    
 
     
       
@@ -44,9 +67,71 @@
       
       
     
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.24.1" />
 
     <link rel="canonical" href="https://blog.hika69.com/blog/2015/02/13/editorify/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://blog.hika69.com/images/logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://blog.hika69.com/images/logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": https://hika69.com,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": 街に詳しい。
+        
+    },
+    "headline": editorify というライブラリを作った,
+    "name": editorify というライブラリを作った,
+    "wordCount": 32,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://blog.hika69.com/blog/2015/02/13/editorify/,
+    "datePublished": 2015-02-13T00:55Z,
+    "dateModified": 2015-02-13T00:55Z,
+    
+    "keywords": javascript, jquery,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://blog.hika69.com/blog/2015/02/13/editorify/
+    }
+}
+    </script>
+    
+
+
+    
 
     
     <script>
@@ -87,9 +172,8 @@
     <ul>
         
         
-        
     </ul>
-    
+
     
     <a class="subscribe-button icon-feed" href="https://blog.hika69.com/index.xml">Subscribe</a>
     
@@ -110,7 +194,7 @@
       <a class="blog-logo" href="https://blog.hika69.com/"><img src="https://blog.hika69.com/images/logo.png" alt="Home" /></a>
   
   
-      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml" >&nbsp;&nbsp;Subscribe</a>
   
   </nav>
 </header>
@@ -145,6 +229,8 @@
     <section class="post-content">
       <p>エディタリファイと読むんだろうか。とにかく<code>fy</code>ってつけたかっただけな感じで言いづらい jQuery プラグインを作った。</p>
 
+<p></p>
+
 <p><a href="https://github.com/hikarock/editorify">hikarock/editorify</a></p>
 
 <p>ひとことでいうと <code>&lt;textarea&gt;</code> を使って簡単なウィジウィグとか作れるライブラリ。
@@ -163,7 +249,6 @@
 <p><code>left</code> とか <code>start</code> とかでカーソル移動できるので <code>[]</code> の中にカーソルが移動している状態になる。<a href="https://hikarock.github.io/editorify/">DEMO</a>はこちら。</p>
 
 <p><a href="http://www.storyboards.jp/">Stobo</a> のエディタ部分を絶賛改造中でモンスターブランチがもうスカイツリーくらいに育っているんだけど、その中の成果が分割されて editorify になった。</p>
-
     </section>
 
 
@@ -172,7 +257,7 @@
 
     
     <figure class="author-image">
-        <a class="img" href="https://blog.hika69.com/" style="background-image: url(https://blog.hika69.com/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+        <a class="img" href="https://blog.hika69.com/" style="background-image: url(/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
     </figure>
     
 
@@ -198,7 +283,7 @@
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=editorify%20%e3%81%a8%e3%81%84%e3%81%86%e3%83%a9%e3%82%a4%e3%83%96%e3%83%a9%e3%83%aa%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%9f&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2015%2f02%2f13%2feditorify%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=editorify%20%e3%81%a8%e3%81%84%e3%81%86%e3%83%a9%e3%82%a4%e3%83%96%e3%83%a9%e3%83%aa%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%9f&nbsp;-&nbsp;hikarock%20blog&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2015%2f02%2f13%2feditorify%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -227,8 +312,30 @@
 </article>
 
 </main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://blog.hika69.com/blog/2015/02/21/npm-init/">
+          <section class="post">
+              <h2>npm init 時のデフォルト設定をカスタマイズする</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://blog.hika69.com/blog/2015/02/10/ibdesignable/">
+          <section class="post">
+              <h2>IB_DESIGNABLE を使おう</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        <section class="copyright"><a href="">hikarock blog</a> &copy; 2017 hikarock</section>
         
         <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
         

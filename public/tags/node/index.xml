@@ -6,9 +6,11 @@
     <description>Recent content in Node on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Wed, 06 Apr 2016 22:26:17 +0900</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/node/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/node/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>REST API のテストツール Frisby.js</title>
@@ -16,133 +18,9 @@
       <pubDate>Wed, 06 Apr 2016 22:26:17 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/04/06/frisby/</guid>
-      <description>
+      <description>&lt;p&gt;REST API のテストツール Frisby.js を使ってみた。&lt;/p&gt;
 
-&lt;p&gt;REST API のテストツール Frisby.js を使ってみた。&lt;/p&gt;
-
-&lt;h3 id=&#34;導入:93f38952e09b7e441a25f845abcaf75b&#34;&gt;導入&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://frisbyjs.com/&#34;&gt;REST API Testing—Frisby.js&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;npm で Frisby.js を導入する。&lt;/p&gt;
-
-&lt;p&gt;jasmine-node は依存パッケージで、config は必須ではないけど本番環境と開発環境の切り替えに使う。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ npm i -D frisby jasmine-node config
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ファイル構成はこんな感じになった。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ tree
- .
- ├── package.json
- ├── node_modules
- ├── config
- │  └── test
- │      └── api
- │          └── v1
- │              ├── development.json
- │              └── production.json
- └── test
-     └── api
-         └── v1
-             ├── bar.spec.js
-             └── foo.spec.js
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;設定ファイルには、とりあえずAPIのURLだけ追加。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-  &amp;quot;url&amp;quot;: &amp;quot;http://api.example.com/v1&amp;quot;,
-  &amp;quot;url-auth&amp;quot;: &amp;quot;http://test:password@api.example.com/v1&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;package.json&lt;/code&gt; にテストを実行するタスクを追加する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;  &amp;quot;scripts&amp;quot;: {
-    &amp;quot;test:api:development&amp;quot;: &amp;quot;export NODE_ENV=development &amp;amp;&amp;amp; export NODE_CONFIG_DIR=./config/test/api/v1 &amp;amp;&amp;amp; jasmine-node ./test/api/v1&amp;quot;,
-    &amp;quot;test:api:production&amp;quot;: &amp;quot;export NODE_ENV=production &amp;amp;&amp;amp; export NODE_CONFIG_DIR=./config/test/api/v1 &amp;amp;&amp;amp; jasmine-node ./test/api/v1&amp;quot;
-  },
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;テストを実行する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ npm run test:api:production
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;json-レスポンス-内の型を検証する:93f38952e09b7e441a25f845abcaf75b&#34;&gt;JSON レスポンス 内の型を検証する&lt;/h3&gt;
-
-&lt;p&gt;例えば以下のようなレスポンスが返るAPIの場合。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;id&amp;quot;: 1,
-  &amp;quot;name&amp;quot;: &amp;quot;hikarock&amp;quot;,
-  &amp;quot;url&amp;quot;: &amp;quot;http://hika69.com&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以下の &lt;code&gt;users.spec.js&lt;/code&gt; を用意する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;var frisby = require(&#39;frisby&#39;);
-var config = require(&#39;config&#39;);
-
-frisby.create(&#39;GET:users&#39;)
-  .get(config.get(&#39;url&#39;) + &#39;/users/hikarock&#39;)
-  .expectStatus(200)
-  .expectHeaderContains(&#39;content-type&#39;, &#39;application/json&#39;)
-  .expectJSONTypes({
-    id: Number,
-    name: String,
-    url: String
-  })
-.toss();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;配列の検証:93f38952e09b7e441a25f845abcaf75b&#34;&gt;配列の検証&lt;/h3&gt;
-
-&lt;p&gt;配列内の1レコードの検証を行いたい場合は &lt;code&gt;expectJSONTypes&lt;/code&gt; の第一引数に &lt;code&gt;users.0&lt;/code&gt; のような独自の記法で指定する。
-複数レコードの検証を行う場合は &lt;code&gt;users.*&lt;/code&gt; のようにワイルドカードも指定できる。&lt;/p&gt;
-
-&lt;p&gt;例えば以下のようなレスポンスが返るAPIの場合。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  users: [
-    {
-      &amp;quot;id&amp;quot;: 1,
-      &amp;quot;name&amp;quot;: &amp;quot;hikarock&amp;quot;,
-      &amp;quot;url&amp;quot;: &amp;quot;http://hika69.com&amp;quot;
-    },
-    {
-      &amp;quot;id&amp;quot;: 2,
-      &amp;quot;name&amp;quot;: &amp;quot;foo&amp;quot;,
-      &amp;quot;url&amp;quot;: &amp;quot;http://example.com&amp;quot;
-    }
-    ...
-  ]
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;1レコード目を検証する場合は以下のように記述する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;frisby.create(&#39;GET:users&#39;)
-  .get(config.get(&#39;url&#39;) + &#39;/users&#39;)
-  .expectStatus(200)
-  .expectHeaderContains(&#39;content-type&#39;, &#39;application/json&#39;)
-  .expectJSONTypes(&#39;users.0&#39;, {
-    id: Number,
-    name: String,
-    url: String
-  })
-.toss();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;まとめ:93f38952e09b7e441a25f845abcaf75b&#34;&gt;まとめ&lt;/h3&gt;
-
-&lt;p&gt;導入も楽で、いい感じ。&lt;/p&gt;
-
-&lt;p&gt;今回はGETの正常系しか試してないので、実行順を考慮する必要のある更新系なども試してみたい。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -153,26 +31,7 @@ frisby.create(&#39;GET:users&#39;)
       <guid>https://blog.hika69.com/blog/2016/01/02/node-cli-open-editor/</guid>
       <description>&lt;p&gt;&lt;code&gt;git commit&lt;/code&gt; をコマンドラインから実行した時に Vim が自動で開いてコミットコメントを入力できるが、このような挙動を Node のCLIアプリを自作するときにどうやるか調べた。&lt;/p&gt;
 
-&lt;p&gt;ずばりな回答が以下。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/15726004/is-there-a-way-to-quit-node-js-and-launch-vim-on-a-file&#34;&gt;Is there a way to quit Node.js and launch VIM on a file? - Stack Overflow&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;この回答では Vim を固定で指定しているが &lt;code&gt;process.env.EDITOR&lt;/code&gt; で Vim 以外のエディタにも対応できる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var fs = require(&#39;fs&#39;);
-var file = &#39;~/.foo.txt&#39;;
-var editor = require(&#39;child_process&#39;).spawn(process.env.EDITOR, [file], {stdio: &#39;inherit&#39;});
-
-editor.on(&#39;exit&#39;, function() {
-  var text = fs.readFileSync(file, &#39;utf-8&#39;);
-  console.log(text);
-});
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;エディタの終了を &lt;code&gt;exit&lt;/code&gt; イベントで検知してコールバック内でファイルの内容を取得している。&lt;/p&gt;
-
-&lt;p&gt;毎回内容をクリアする場合は、&lt;code&gt;fs.readFile[Sync]&lt;/code&gt; した後に &lt;code&gt;fs.unlink[Sync]&lt;/code&gt; すればよい。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -183,98 +42,7 @@ editor.on(&#39;exit&#39;, function() {
       <guid>https://blog.hika69.com/blog/2015/07/01/roots/</guid>
       <description>&lt;p&gt;定期的にブログをリニューアルしたくなる病が発症する。&lt;/p&gt;
 
-&lt;p&gt;以下を条件に探してて roots がよさそうだったので試した。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;node製&lt;/li&gt;
-&lt;li&gt;stylus&lt;/li&gt;
-&lt;li&gt;ファイル構成がシンプル&lt;/li&gt;
-&lt;li&gt;拡張しやすい&lt;/li&gt;
-&lt;li&gt;デフォルトのテーマがかっこいい&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://roots.cx/&#34;&gt;Roots: Enlightened Static Sites&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;とりあえずインストールする。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ npm install -g roots
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ブログ用のテンプレートを追加する必要があるようなので、動画を見つつ進める。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=RitO5dyPH44&#34;&gt;Roots Templates - YouTube&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;以下のテンプレートを追加。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ roots tpl add blog https://github.com/carrot/roots-template-blog.git
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;-t&lt;/code&gt;でテンプレートを指定してプロジェクトを作成する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ roots new hikarock-blog -t blog
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以下のようにデフォルトのテンプレートを指定しておけば、次から&lt;code&gt;-t&lt;/code&gt;は不要になる模様。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ roots tpl default blog
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;生成された。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;.
-├── app.coffee
-├── app.production.coffee
-├── assets
-│   ├── css
-│   │   ├── _settings.styl
-│   │   └── master.styl
-│   ├── img
-│   └── js
-│       └── main.coffee
-├── node_modules
-├── package.json
-├── posts
-│   ├── first_post.jade
-│   └── second_post.jade
-├── public
-│   ├── css
-│   │   ├── master.css
-│   │   └── master.css.map
-│   ├── img
-│   ├── index.html
-│   ├── js
-│   │   ├── main.js
-│   │   └── main.js.map
-│   └── posts
-│       ├── first_post.html
-│       └── second_post.html
-├── readme.md
-└── views
-    ├── _single.jade
-    ├── index.jade
-    └── layout.jade
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ファイル構成はシンプルでよさそう。&lt;/p&gt;
-
-&lt;p&gt;サイトを立ち上げる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ roots watch
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;デフォルトのテーマはないに等しいくらいに無印スタイル&lt;/li&gt;
-&lt;li&gt;jade内に markdown を書くのがちょっと慣れない。インデントがだるい&lt;/li&gt;
-&lt;li&gt;&lt;del&gt;GitHub味のmarkdown が解釈されていない。パーサーを marked とかに変えたらよいのだろうか&lt;/del&gt;
-
-&lt;ul&gt;
-&lt;li&gt;もともと marked だった。一部解釈できない記法が含んでいたので崩れていた&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;デプロイは試してない&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;他はいい感じなので気が向いたら引っ越そう。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -285,24 +53,7 @@ editor.on(&#39;exit&#39;, function() {
       <guid>https://blog.hika69.com/blog/2015/02/21/npm-init/</guid>
       <description>&lt;p&gt;&lt;code&gt;npm init&lt;/code&gt;した時にlicenceの種類やauthorの情報を自動的にいれる設定。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ npm config set init.author.name &amp;quot;hikarock&amp;quot;
-$ npm config set init.author.email i@hika69.com
-$ npm config set init.author.url http://blog.hika69.com
-$ npm config set init.license MIT
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;~/.npmrc&lt;/code&gt;というファイルが作られて以下のように設定されている。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;init.license=MIT
-init.author.name=hikarock
-init.author.email=i@hika69.com
-init.author.url=http://blog.hika69.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;また&lt;code&gt;npm config list&lt;/code&gt;でも現在の設定を確認できる。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://docs.npmjs.com/cli/config&#34;&gt;config | npm Documentation&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -313,10 +64,7 @@ init.author.url=http://blog.hika69.com
       <guid>https://blog.hika69.com/blog/2013/06/13/learning-node-js/</guid>
       <description>&lt;p&gt;読み始めた。&lt;/p&gt;
 
-&lt;p&gt;分厚いので電書版を出してほしい。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AENode-js-%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%B5%E3%82%A4%E3%83%89JavaScript%E3%81%A7Web%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E9%96%8B%E7%99%BA%E3%81%99%E3%82%8B-%E6%9D%BE%E5%B3%B6-%E6%B5%A9%E9%81%93/dp/4797370904%3FSubscriptionId%3D0AVSM5SVKRWTFMG7ZR82%26tag%3Dhikarock-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4797370904&#34; target=&#34;_blank&#34; title=&#34;はじめてのNode.js -サーバーサイドJavaScriptでWebアプリを開発する-&#34;&gt;&lt;img src=&#34;https://images-na.ssl-images-amazon.com/images/I/510pDzY1u9L.jpg&#34; width=&#34;396&#34; height=&#34;500&#34; alt=&#34;はじめてのNode.js -サーバーサイドJavaScriptでWebアプリを開発する-&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

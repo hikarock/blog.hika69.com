@@ -5,27 +5,48 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  	<meta property="og:title" content=" DigitalOcean 上に Vagrant でサーバーを立ち上げる &middot;  hikarock blog" />
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="DigitalOcean 上に Vagrant でサーバーを立ち上げる"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@hika69"/>
+
+
+
+  	<meta property="og:title" content="DigitalOcean 上に Vagrant でサーバーを立ち上げる &middot; hikarock blog" />
   	<meta property="og:site_name" content="hikarock blog" />
   	<meta property="og:url" content="https://blog.hika69.com/blog/2016/09/03/digitalocean/" />
 
     
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-
-    <meta property="og:article:published_time" content="2016-09-03T16:41:41&#43;09:00" />
+    <meta property="article:published_time" content="2016-09-03T16:41:41&#43;09:00" />
 
     
-    <meta property="og:article:tag" content="digitalocean" />
+    <meta property="article:tag" content="digitalocean" />
     
-    <meta property="og:article:tag" content="vagrant" />
+    <meta property="article:tag" content="vagrant" />
     
     
 
-  <title>
-     DigitalOcean 上に Vagrant でサーバーを立ち上げる &middot;  hikarock blog
-  </title>
+    <title>DigitalOcean 上に Vagrant でサーバーを立ち上げる &middot; hikarock blog</title>
 
-    <meta name="description" content="" />
+    
+    <meta name="description" content="&lt;p&gt;&lt;a href=&#34;https://m.do.co/c/a129e4a597f1&#34;&gt;DigitalOcean&lt;/a&gt; 上に Vagtant で仮想サーバー (DigitalOcean では &lt;code&gt;droplet&lt;/code&gt; と言うらしい) が立ち上がるまでのログ。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;" />
+    
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,8 +56,10 @@
 
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
+    
+
+    
 
     
       
@@ -44,9 +67,71 @@
       
       
     
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.24.1" />
 
     <link rel="canonical" href="https://blog.hika69.com/blog/2016/09/03/digitalocean/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://blog.hika69.com/images/logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://blog.hika69.com/images/logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": https://hika69.com,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": 街に詳しい。
+        
+    },
+    "headline": DigitalOcean 上に Vagrant でサーバーを立ち上げる,
+    "name": DigitalOcean 上に Vagrant でサーバーを立ち上げる,
+    "wordCount": 229,
+    "timeRequired": "PT2M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://blog.hika69.com/blog/2016/09/03/digitalocean/,
+    "datePublished": 2016-09-03T16:41Z,
+    "dateModified": 2016-09-03T16:41Z,
+    
+    "keywords": digitalocean, vagrant,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://blog.hika69.com/blog/2016/09/03/digitalocean/
+    }
+}
+    </script>
+    
+
+
+    
 
     
     <script>
@@ -87,9 +172,8 @@
     <ul>
         
         
-        
     </ul>
-    
+
     
     <a class="subscribe-button icon-feed" href="https://blog.hika69.com/index.xml">Subscribe</a>
     
@@ -110,7 +194,7 @@
       <a class="blog-logo" href="https://blog.hika69.com/"><img src="https://blog.hika69.com/images/logo.png" alt="Home" /></a>
   
   
-      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml" >&nbsp;&nbsp;Subscribe</a>
   
   </nav>
 </header>
@@ -143,13 +227,13 @@
     </header>
 
     <section class="post-content">
-      
+      <p><a href="https://m.do.co/c/a129e4a597f1">DigitalOcean</a> 上に Vagtant で仮想サーバー (DigitalOcean では <code>droplet</code> と言うらしい) が立ち上がるまでのログ。</p>
 
-<p><a href="https://m.do.co/c/a129e4a597f1">DigitalOcean</a> 上に Vagtant で仮想サーバー (DigitalOcean では <code>droplet</code> と言うらしい) が立ち上がるまでのログ。</p>
+<p></p>
 
 <p>DigitalOcean アカウントは作成済みの前提。</p>
 
-<h3 id="tugboat-の導入:408d90965407ccd8c9d1d1bcc218cd96">tugboat の導入</h3>
+<h3 id="tugboat-の導入">tugboat の導入</h3>
 
 <p>DigitalOcean を便利に操作できるコマンドラインツール tugboat を導入する。</p>
 
@@ -182,7 +266,7 @@
 
 <p><code>7.2 x64</code> がなぜか2つある。slug <code>centos-7-x64</code> を今回は利用してみる。</p>
 
-<h3 id="vagrant-の準備:408d90965407ccd8c9d1d1bcc218cd96">Vagrant の準備</h3>
+<h3 id="vagrant-の準備">Vagrant の準備</h3>
 
 <p>Vagrant のバージョンを確認。</p>
 
@@ -229,14 +313,14 @@ end
 <pre><code class="language-sh">% vagrant digitalocean-list regions {TOKEN}
 </code></pre>
 
-<h3 id="vagrant-up-する:408d90965407ccd8c9d1d1bcc218cd96">Vagrant up する</h3>
+<h3 id="vagrant-up-する">Vagrant up する</h3>
 
 <p>仮想サーバーを起動する。</p>
 
 <pre><code class="language-sh">% vagrant up --provider=digital_ocean
 </code></pre>
 
-<h3 id="サーバーに-ssh-接続する:408d90965407ccd8c9d1d1bcc218cd96">サーバーに SSH 接続する</h3>
+<h3 id="サーバーに-ssh-接続する">サーバーに SSH 接続する</h3>
 
 <p>接続は <code>vagrant ssh</code> するだけ。</p>
 
@@ -246,7 +330,6 @@ Last login: Sun Sep  4 07:55:24 2016 from xxx
 [root@foo ~]# cat /etc/redhat-release
 CentOS Linux release 7.2.1511 (Core)
 </code></pre>
-
     </section>
 
 
@@ -255,7 +338,7 @@ CentOS Linux release 7.2.1511 (Core)
 
     
     <figure class="author-image">
-        <a class="img" href="https://blog.hika69.com/" style="background-image: url(https://blog.hika69.com/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+        <a class="img" href="https://blog.hika69.com/" style="background-image: url(/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
     </figure>
     
 
@@ -281,7 +364,7 @@ CentOS Linux release 7.2.1511 (Core)
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=DigitalOcean%20%e4%b8%8a%e3%81%ab%20Vagrant%20%e3%81%a7%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e3%82%92%e7%ab%8b%e3%81%a1%e4%b8%8a%e3%81%92%e3%82%8b&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2016%2f09%2f03%2fdigitalocean%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=DigitalOcean%20%e4%b8%8a%e3%81%ab%20Vagrant%20%e3%81%a7%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e3%82%92%e7%ab%8b%e3%81%a1%e4%b8%8a%e3%81%92%e3%82%8b&nbsp;-&nbsp;hikarock%20blog&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2016%2f09%2f03%2fdigitalocean%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -310,8 +393,30 @@ CentOS Linux release 7.2.1511 (Core)
 </article>
 
 </main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://blog.hika69.com/blog/2016/11/07/x-play/">
+          <section class="post">
+              <h2>HyperTalk の play コマンド風のカスタム要素 &lt;x-play&gt; をつくった</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://blog.hika69.com/blog/2016/07/24/spa-layout-boilerplate/">
+          <section class="post">
+              <h2>SPAのよくあるレイアウトの雛形を作った</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        <section class="copyright"><a href="">hikarock blog</a> &copy; 2017 hikarock</section>
         
         <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
         

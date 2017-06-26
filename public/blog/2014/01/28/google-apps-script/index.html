@@ -5,29 +5,50 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  	<meta property="og:title" content=" Twitter 検索の結果を Google Drive のスプレッドシートに出力する &middot;  hikarock blog" />
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="Twitter 検索の結果を Google Drive のスプレッドシートに出力する"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@hika69"/>
+
+
+
+  	<meta property="og:title" content="Twitter 検索の結果を Google Drive のスプレッドシートに出力する &middot; hikarock blog" />
   	<meta property="og:site_name" content="hikarock blog" />
   	<meta property="og:url" content="https://blog.hika69.com/blog/2014/01/28/google-apps-script/" />
 
     
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2014-01-28T17:07:27Z" />
 
-    <meta property="og:article:published_time" content="2014-01-28T17:07:27Z" />
-
     
-    <meta property="og:article:tag" content="twitter-api" />
+    <meta property="article:tag" content="twitter-api" />
     
-    <meta property="og:article:tag" content="gas" />
+    <meta property="article:tag" content="gas" />
     
-    <meta property="og:article:tag" content="javascript" />
+    <meta property="article:tag" content="javascript" />
     
     
 
-  <title>
-     Twitter 検索の結果を Google Drive のスプレッドシートに出力する &middot;  hikarock blog
-  </title>
+    <title>Twitter 検索の結果を Google Drive のスプレッドシートに出力する &middot; hikarock blog</title>
 
-    <meta name="description" content="" />
+    
+    <meta name="description" content="&lt;p&gt;以前Google Apps Scriptで作成したプログラムがTwitter API Ver.1の廃止で動かなくなってたので直しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;" />
+    
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,8 +58,10 @@
 
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
+    
+
+    
 
     
       
@@ -46,9 +69,71 @@
       
       
     
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.24.1" />
 
     <link rel="canonical" href="https://blog.hika69.com/blog/2014/01/28/google-apps-script/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://blog.hika69.com/images/logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://blog.hika69.com/images/logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": https://hika69.com,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": 街に詳しい。
+        
+    },
+    "headline": Twitter 検索の結果を Google Drive のスプレッドシートに出力する,
+    "name": Twitter 検索の結果を Google Drive のスプレッドシートに出力する,
+    "wordCount": 84,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://blog.hika69.com/blog/2014/01/28/google-apps-script/,
+    "datePublished": 2014-01-28T17:07Z,
+    "dateModified": 2014-01-28T17:07Z,
+    
+    "keywords": twitter-api, gas, javascript,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://blog.hika69.com/blog/2014/01/28/google-apps-script/
+    }
+}
+    </script>
+    
+
+
+    
 
     
     <script>
@@ -89,9 +174,8 @@
     <ul>
         
         
-        
     </ul>
-    
+
     
     <a class="subscribe-button icon-feed" href="https://blog.hika69.com/index.xml">Subscribe</a>
     
@@ -112,7 +196,7 @@
       <a class="blog-logo" href="https://blog.hika69.com/"><img src="https://blog.hika69.com/images/logo.png" alt="Home" /></a>
   
   
-      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml" >&nbsp;&nbsp;Subscribe</a>
   
   </nav>
 </header>
@@ -147,9 +231,9 @@
     </header>
 
     <section class="post-content">
-      
+      <p>以前Google Apps Scriptで作成したプログラムがTwitter API Ver.1の廃止で動かなくなってたので直しました。</p>
 
-<p>以前Google Apps Scriptで作成したプログラムがTwitter API Ver.1の廃止で動かなくなってたので直しました。</p>
+<p></p>
 
 <p>ついでにライブラリとしてだれでも使えるようにしました。<del>ソースコードはここに置いてます。</del></p>
 
@@ -159,7 +243,7 @@
 
 <p><strong>2016/4/20 追記: 何人かにこのスクリプトが使いたいと要望をもらったので、ちょっと面倒な方法ですが<a href="https://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/">ここ</a>に現在動作するスクリプトの使い方を書きました。</strong></p>
 
-<h3 id="1-twitterアプリの作成:810c749fc8fa5127bcde89e372276574">1) Twitterアプリの作成</h3>
+<h3 id="1-twitterアプリの作成">1) Twitterアプリの作成</h3>
 
 <p><a href="https://dev.twitter.com/">Twitter Developers</a>でGoogle Apps Script用のアプリを作成してください。</p>
 
@@ -175,7 +259,7 @@
 
 <p>作成が成功すると<code>Consumer key</code>と<code>Consumer secret</code>が発行されます。これはあとで使います。</p>
 
-<h3 id="2-スプレッドシートの作成:810c749fc8fa5127bcde89e372276574">2) スプレッドシートの作成</h3>
+<h3 id="2-スプレッドシートの作成">2) スプレッドシートの作成</h3>
 
 <p>Google Driveでスプレッドシート作成します。</p>
 
@@ -185,7 +269,7 @@
 
 <p>「無題のプロジェクト」が開きますので、プロジェクトに適当に名前をつけてください。</p>
 
-<h3 id="3-ライブラリの読込:810c749fc8fa5127bcde89e372276574">3) ライブラリの読込</h3>
+<h3 id="3-ライブラリの読込">3) ライブラリの読込</h3>
 
 <p><code>リソース &gt; ライブラリ</code>を選択すると以下のウィンドウが表示されます。</p>
 
@@ -197,7 +281,7 @@
 
 <p>最新のバージョンを選択します。この例では「1」を選択して保存。</p>
 
-<h3 id="4-プロジェクトのプロパティの設定:810c749fc8fa5127bcde89e372276574">4) プロジェクトのプロパティの設定</h3>
+<h3 id="4-プロジェクトのプロパティの設定">4) プロジェクトのプロパティの設定</h3>
 
 <p>次に<code>ファイル &gt; プロジェクトのプロパティ</code>を選択します。
 ユーザーのプロパティタブを開いて以下の名前のプロパティを設定します。</p>
@@ -211,7 +295,7 @@
 
 <p><img src="https://blog.hika69.com/images/post/google-apps-script-04.png" alt="" /></p>
 
-<h3 id="5-トリガースクリプトの作成:810c749fc8fa5127bcde89e372276574">5) トリガースクリプトの作成</h3>
+<h3 id="5-トリガースクリプトの作成">5) トリガースクリプトの作成</h3>
 
 <p>コード.gsに以下のようなスクリプトを記述してください。
 この例は検索キーワード「都知事」で最初(0番目)のシートに検索結果を出力する、という意味です。</p>
@@ -228,14 +312,13 @@
 
 <p>こんな感じで検索結果が出力されてたら成功。</p>
 
-<h3 id="6-定期的に検索を実行する:810c749fc8fa5127bcde89e372276574">6) 定期的に検索を実行する</h3>
+<h3 id="6-定期的に検索を実行する">6) 定期的に検索を実行する</h3>
 
 <p>メニューから<code>リソース &gt; 現在のスクリプトのトリガー</code>を選択します。</p>
 
 <p><img src="https://blog.hika69.com/images/post/google-apps-script-05.png" alt="" /></p>
 
 <p>この設定だと1時間おきに検索が実行されて、検索結果がスプレッドシートに貯まっていきます。</p>
-
     </section>
 
 
@@ -244,7 +327,7 @@
 
     
     <figure class="author-image">
-        <a class="img" href="https://blog.hika69.com/" style="background-image: url(https://blog.hika69.com/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+        <a class="img" href="https://blog.hika69.com/" style="background-image: url(/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
     </figure>
     
 
@@ -270,7 +353,7 @@
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Twitter%20%e6%a4%9c%e7%b4%a2%e3%81%ae%e7%b5%90%e6%9e%9c%e3%82%92%20Google%20Drive%20%e3%81%ae%e3%82%b9%e3%83%97%e3%83%ac%e3%83%83%e3%83%89%e3%82%b7%e3%83%bc%e3%83%88%e3%81%ab%e5%87%ba%e5%8a%9b%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2014%2f01%2f28%2fgoogle-apps-script%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Twitter%20%e6%a4%9c%e7%b4%a2%e3%81%ae%e7%b5%90%e6%9e%9c%e3%82%92%20Google%20Drive%20%e3%81%ae%e3%82%b9%e3%83%97%e3%83%ac%e3%83%83%e3%83%89%e3%82%b7%e3%83%bc%e3%83%88%e3%81%ab%e5%87%ba%e5%8a%9b%e3%81%99%e3%82%8b&nbsp;-&nbsp;hikarock%20blog&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2014%2f01%2f28%2fgoogle-apps-script%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -299,8 +382,30 @@
 </article>
 
 </main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://blog.hika69.com/blog/2014/02/24/simple-honyaku/">
+          <section class="post">
+              <h2>Chrome 拡張「シンプル翻訳」を更新</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://blog.hika69.com/blog/2014/01/02/less-mixin/">
+          <section class="post">
+              <h2>拡大・縮小自在な LESS の mixin の作り方</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        <section class="copyright"><a href="">hikarock blog</a> &copy; 2017 hikarock</section>
         
         <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
         

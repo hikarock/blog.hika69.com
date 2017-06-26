@@ -6,9 +6,11 @@
     <description>Recent content in Karabiner on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Sun, 28 Dec 2014 13:01:51 +0000</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/karabiner/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/karabiner/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Xcode のキー配置をカスタマイズする</title>
@@ -18,42 +20,7 @@
       <guid>https://blog.hika69.com/blog/2014/12/28/xcode-remap-key/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/XVimProject/XVim&#34;&gt;XVim&lt;/a&gt; を使いはじめたら、Xcodeのキー配置が、カスタマイズ済みのターミナル (およびVim) と微妙に違うのが気になってきた (ターミナルはControlキーをよく使うので、CommandキーとControlキーを入れ替えている) 。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://pqrs.org/osx/karabiner/index.html.ja&#34;&gt;Karabiner&lt;/a&gt; を使ってXcodeのCommandキーとControlキーを入れ替えた。&lt;/p&gt;
-
-&lt;p&gt;private.xmlに以下を追記した。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt;
-&amp;lt;root&amp;gt;
-  &amp;lt;list&amp;gt;
-    &amp;lt;item&amp;gt;
-      &amp;lt;name&amp;gt;Enable at only Xcode&amp;lt;/name&amp;gt;
-      &amp;lt;appdef&amp;gt;
-        &amp;lt;appname&amp;gt;XCODE&amp;lt;/appname&amp;gt;
-        &amp;lt;equal&amp;gt;com.apple.dt.Xcode&amp;lt;/equal&amp;gt;
-      &amp;lt;/appdef&amp;gt;
-      &amp;lt;item&amp;gt;
-        &amp;lt;name&amp;gt;Control_L to Command_L (XCODE ONLY)&amp;lt;/name&amp;gt;
-        &amp;lt;only&amp;gt;XCODE&amp;lt;/only&amp;gt;
-        &amp;lt;identifier&amp;gt;remap.app_xcode_contolL2commandL2&amp;lt;/identifier&amp;gt;
-        &amp;lt;autogen&amp;gt;--KeyToKey-- KeyCode::CONTROL_L, KeyCode::COMMAND_L&amp;lt;/autogen&amp;gt;
-      &amp;lt;/item&amp;gt;
-      &amp;lt;item&amp;gt;
-        &amp;lt;name&amp;gt;Command_L to Control_L (XCODE ONLY)&amp;lt;/name&amp;gt;
-        &amp;lt;only&amp;gt;XCODE&amp;lt;/only&amp;gt;
-        &amp;lt;identifier&amp;gt;remap.app_xcode_commandL2controlL2&amp;lt;/identifier&amp;gt;
-        &amp;lt;autogen&amp;gt;--KeyToKey-- KeyCode::COMMAND_L, KeyCode::CONTROL_L&amp;lt;/autogen&amp;gt;
-      &amp;lt;/item&amp;gt;
-    &amp;lt;/item&amp;gt;
-  &amp;lt;/list&amp;gt;
-&amp;lt;/root&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;Reload XML&lt;/code&gt;したら設定が現れるので、両方にチェックをいれて完了。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/karabiner.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;XVim 入れたらこういうことになるだろうなあ、と思ってたけど案の定 Xcode Way から遠ざかりつつある&amp;hellip;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

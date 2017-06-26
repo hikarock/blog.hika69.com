@@ -5,25 +5,44 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  	<meta property="og:title" content=" HTTPie の Sessions の使い方 &middot;  hikarock blog" />
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="HTTPie の Sessions の使い方"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@hika69"/>
+
+
+
+  	<meta property="og:title" content="HTTPie の Sessions の使い方 &middot; hikarock blog" />
   	<meta property="og:site_name" content="hikarock blog" />
   	<meta property="og:url" content="https://blog.hika69.com/blog/2017/02/20/httpie/" />
 
     
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-
-    <meta property="og:article:published_time" content="2017-02-20T22:55:56&#43;09:00" />
+    <meta property="article:published_time" content="2017-02-20T22:55:56&#43;09:00" />
 
     
-    <meta property="og:article:tag" content="httpie" />
+    <meta property="article:tag" content="httpie" />
     
     
 
-  <title>
-     HTTPie の Sessions の使い方 &middot;  hikarock blog
-  </title>
+    <title>HTTPie の Sessions の使い方 &middot; hikarock blog</title>
 
-    <meta name="description" content="" />
+    
+    <meta name="description" content="&lt;p&gt;API のリクエストにめっちゃ長いトークンを含めないといけなかったりすると、コマンドを打つのもコピペするのも面倒なんだけど、&lt;a href=&#34;https://httpie.org/&#34;&gt;HTTPie&lt;/a&gt; に &lt;a href=&#34;https://httpie.org/doc#sessions&#34;&gt;Sessions&lt;/" />
+    
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,8 +52,10 @@
 
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
+    
+
+    
 
     
       
@@ -42,9 +63,71 @@
       
       
     
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.24.1" />
 
     <link rel="canonical" href="https://blog.hika69.com/blog/2017/02/20/httpie/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://blog.hika69.com/images/logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://blog.hika69.com/images/logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": https://hika69.com,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": 街に詳しい。
+        
+    },
+    "headline": HTTPie の Sessions の使い方,
+    "name": HTTPie の Sessions の使い方,
+    "wordCount": 60,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://blog.hika69.com/blog/2017/02/20/httpie/,
+    "datePublished": 2017-02-20T22:55Z,
+    "dateModified": 2017-02-20T22:55Z,
+    
+    "keywords": httpie,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://blog.hika69.com/blog/2017/02/20/httpie/
+    }
+}
+    </script>
+    
+
+
+    
 
     
     <script>
@@ -85,9 +168,8 @@
     <ul>
         
         
-        
     </ul>
-    
+
     
     <a class="subscribe-button icon-feed" href="https://blog.hika69.com/index.xml">Subscribe</a>
     
@@ -108,7 +190,7 @@
       <a class="blog-logo" href="https://blog.hika69.com/"><img src="https://blog.hika69.com/images/logo.png" alt="Home" /></a>
   
   
-      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml" >&nbsp;&nbsp;Subscribe</a>
   
   </nav>
 </header>
@@ -141,6 +223,8 @@
     <section class="post-content">
       <p>API のリクエストにめっちゃ長いトークンを含めないといけなかったりすると、コマンドを打つのもコピペするのも面倒なんだけど、<a href="https://httpie.org/">HTTPie</a> に <a href="https://httpie.org/doc#sessions">Sessions</a> という便利そうな機能があったので試してみた。</p>
 
+<p></p>
+
 <p>ここでは例として <code>foo</code> という名前の Session を作る。 <code>Authorization:&quot;~&quot;</code> が入力がめんどいトークンなど。</p>
 
 <pre><code>% http --session=foo api.example.com Authorization:&quot;Bearer {very-very-long-token}&quot;
@@ -171,7 +255,6 @@
     }
 }
 </code></pre>
-
     </section>
 
 
@@ -180,7 +263,7 @@
 
     
     <figure class="author-image">
-        <a class="img" href="https://blog.hika69.com/" style="background-image: url(https://blog.hika69.com/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+        <a class="img" href="https://blog.hika69.com/" style="background-image: url(/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
     </figure>
     
 
@@ -206,7 +289,7 @@
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=HTTPie%20%e3%81%ae%20Sessions%20%e3%81%ae%e4%bd%bf%e3%81%84%e6%96%b9&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2017%2f02%2f20%2fhttpie%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=HTTPie%20%e3%81%ae%20Sessions%20%e3%81%ae%e4%bd%bf%e3%81%84%e6%96%b9&nbsp;-&nbsp;hikarock%20blog&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2017%2f02%2f20%2fhttpie%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -235,8 +318,23 @@
 </article>
 
 </main>
+
+
+  <aside class="read-next">
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://blog.hika69.com/blog/2017/02/16/iphone-lego-dock/">
+          <section class="post">
+              <h2>LEGO で iPhone 用のドックを作った</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        <section class="copyright"><a href="">hikarock blog</a> &copy; 2017 hikarock</section>
         
         <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
         

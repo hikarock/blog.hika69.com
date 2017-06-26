@@ -6,9 +6,11 @@
     <description>Recent content in Hoodie on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Wed, 20 Nov 2013 22:43:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/hoodie/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/hoodie/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Hoodie の話をした</title>
@@ -18,8 +20,7 @@
       <guid>https://blog.hika69.com/blog/2013/11/20/klab-js/</guid>
       <description>&lt;p&gt;KLab さんの JavaScript 勉強会で Hoodie の話をしました。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/viewer/ycy7it&#34;&gt;Hoodieでノーバックエンド開発 | Stobo&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

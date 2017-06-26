@@ -5,27 +5,48 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  	<meta property="og:title" content=" SPAのよくあるレイアウトの雛形を作った &middot;  hikarock blog" />
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="SPAのよくあるレイアウトの雛形を作った"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@hika69"/>
+
+
+
+  	<meta property="og:title" content="SPAのよくあるレイアウトの雛形を作った &middot; hikarock blog" />
   	<meta property="og:site_name" content="hikarock blog" />
   	<meta property="og:url" content="https://blog.hika69.com/blog/2016/07/24/spa-layout-boilerplate/" />
 
     
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-
-    <meta property="og:article:published_time" content="2016-07-24T14:51:49&#43;09:00" />
+    <meta property="article:published_time" content="2016-07-24T14:51:49&#43;09:00" />
 
     
-    <meta property="og:article:tag" content="stylus" />
+    <meta property="article:tag" content="stylus" />
     
-    <meta property="og:article:tag" content="css" />
+    <meta property="article:tag" content="css" />
     
     
 
-  <title>
-     SPAのよくあるレイアウトの雛形を作った &middot;  hikarock blog
-  </title>
+    <title>SPAのよくあるレイアウトの雛形を作った &middot; hikarock blog</title>
 
-    <meta name="description" content="" />
+    
+    <meta name="description" content="&lt;p&gt;SPA を書き始める時に、大枠のレイアウトをどう組むか迷う。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;" />
+    
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,8 +56,10 @@
 
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
+    
+
+    
 
     
       
@@ -44,9 +67,71 @@
       
       
     
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.24.1" />
 
     <link rel="canonical" href="https://blog.hika69.com/blog/2016/07/24/spa-layout-boilerplate/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://blog.hika69.com/images/logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://blog.hika69.com/images/logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": https://hika69.com,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": 街に詳しい。
+        
+    },
+    "headline": SPAのよくあるレイアウトの雛形を作った,
+    "name": SPAのよくあるレイアウトの雛形を作った,
+    "wordCount": 32,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://blog.hika69.com/blog/2016/07/24/spa-layout-boilerplate/,
+    "datePublished": 2016-07-24T14:51Z,
+    "dateModified": 2016-07-24T14:51Z,
+    
+    "keywords": stylus, css,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://blog.hika69.com/blog/2016/07/24/spa-layout-boilerplate/
+    }
+}
+    </script>
+    
+
+
+    
 
     
     <script>
@@ -87,9 +172,8 @@
     <ul>
         
         
-        
     </ul>
-    
+
     
     <a class="subscribe-button icon-feed" href="https://blog.hika69.com/index.xml">Subscribe</a>
     
@@ -110,7 +194,7 @@
       <a class="blog-logo" href="https://blog.hika69.com/"><img src="https://blog.hika69.com/images/logo.png" alt="Home" /></a>
   
   
-      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml" >&nbsp;&nbsp;Subscribe</a>
   
   </nav>
 </header>
@@ -145,6 +229,8 @@
     <section class="post-content">
       <p>SPA を書き始める時に、大枠のレイアウトをどう組むか迷う。</p>
 
+<p></p>
+
 <p>タイトルの <strong>よくあるレイアウト</strong> は、固定のヘッダ・フッタがあり、中央のメイン部が2カラムでスクロール可能なもの。要するに Mac の Finder のようなレイアウト。</p>
 
 <p><img src="https://cloud.githubusercontent.com/assets/236607/17078886/a8b40728-513a-11e6-9e17-2f24f8604f52.png" alt="" /></p>
@@ -160,7 +246,6 @@
 <p>それぞれのプロジェクトから <code>@require 'layout'</code> して使うことを想定している。</p>
 
 <p>セレクタがタグなのが行儀が悪いけれど、<code>header</code> とか <code>main</code> を同一アプリで繰り返し使わない、と割り切る。<code>nav</code> は繰り返し使いたくなりそうだけど、まあその時はクラスセレクタに変更すればよいだろう。</p>
-
     </section>
 
 
@@ -169,7 +254,7 @@
 
     
     <figure class="author-image">
-        <a class="img" href="https://blog.hika69.com/" style="background-image: url(https://blog.hika69.com/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+        <a class="img" href="https://blog.hika69.com/" style="background-image: url(/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
     </figure>
     
 
@@ -195,7 +280,7 @@
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=SPA%e3%81%ae%e3%82%88%e3%81%8f%e3%81%82%e3%82%8b%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%ae%e9%9b%9b%e5%bd%a2%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%9f&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2016%2f07%2f24%2fspa-layout-boilerplate%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=SPA%e3%81%ae%e3%82%88%e3%81%8f%e3%81%82%e3%82%8b%e3%83%ac%e3%82%a4%e3%82%a2%e3%82%a6%e3%83%88%e3%81%ae%e9%9b%9b%e5%bd%a2%e3%82%92%e4%bd%9c%e3%81%a3%e3%81%9f&nbsp;-&nbsp;hikarock%20blog&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2016%2f07%2f24%2fspa-layout-boilerplate%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -224,8 +309,30 @@
 </article>
 
 </main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://blog.hika69.com/blog/2016/09/03/digitalocean/">
+          <section class="post">
+              <h2>DigitalOcean 上に Vagrant でサーバーを立ち上げる</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://blog.hika69.com/blog/2016/07/01/chab/">
+          <section class="post">
+              <h2>Web SQL Database を使って &lt;table&gt; タグを SQL ライクにセレクトするライブラリ chab を再公開した</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        <section class="copyright"><a href="">hikarock blog</a> &copy; 2017 hikarock</section>
         
         <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
         

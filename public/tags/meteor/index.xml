@@ -6,9 +6,11 @@
     <description>Recent content in Meteor on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Mon, 25 Aug 2014 21:05:21 +0000</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/meteor/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/meteor/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>東京 Node 学園 14時限目で Rendr の話をした</title>
@@ -16,62 +18,9 @@
       <pubDate>Mon, 25 Aug 2014 21:05:21 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/08/25/tng14/</guid>
-      <description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;
-
-&lt;p&gt;そういえば、&lt;a href=&#34;http://blog.nodejs.jp/2011/03/node-1_25.html&#34;&gt;最初のNode学園&lt;/a&gt;からお客さん側だったので感慨深い。緊張しました。&lt;/p&gt;
-
-&lt;p&gt;今回は「IsomorphicなWAF」がテーマだったらしく、&lt;a href=&#34;https://twitter.com/yosuke_furukawa&#34;&gt;@yosuke_furukawa&lt;/a&gt;さんに「MeteorもしくはRendrの話をしませんか」とお誘いいただいてRendrの話をすることになりました。&lt;/p&gt;
-
-&lt;p&gt;主に&lt;a href=&#34;http://ca.storyboards.jp/&#34;&gt;Casto&lt;/a&gt;でRendrを使うにいたったSPAに対するもやもやと、実際に使ってみてどうだったか、を振り返ってみました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/viewer/wo41ho&#34;&gt;Rendrの話 | Stobo&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;そもそも-isomorphic-javascript-とはなんぞや:185887276d78685095b8b7ba1df81f2e&#34;&gt;そもそも Isomorphic JavaScript とはなんぞや&lt;/h3&gt;
-
-&lt;p&gt;と理解が浅い感じがするので、リンクをまとめておく。
-すいません、後で読む。&lt;/p&gt;
-
-&lt;h5 id=&#34;isomorphic-javascript-とは:185887276d78685095b8b7ba1df81f2e&#34;&gt;Isomorphic JavaScript とは&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.nodejitsu.com/scaling-isomorphic-javascript-code/&#34;&gt;Scaling Isomorphic Javascript Code | Nodejitsu Inc.&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gist.github.com/tily/1362110&#34;&gt;(翻訳) サバクラ両方で動く JavaScript の大規模開発を行うために&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&#34;rendr:185887276d78685095b8b7ba1df81f2e&#34;&gt;Rendr&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/&#34;&gt;Isomorphic JavaScript: The Future of Web Apps - Airbnb Engineering&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://wazanova.jp/post/66745548194/airbnb&#34;&gt;(翻訳) Airbnb: シングルページアプリを実現するハイブリッドアプローチの課題 -  ワザノバ | wazanova&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://nerds.airbnb.com/slides-and-video-from-spike-brehms-tech-talk/&#34;&gt;Building Single-Page Apps - Airbnb Engineering&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/spikebrehm/building-a-singlepage-app-backbone-nodejs-and-beyond&#34;&gt;Slides on SlideShare&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&#34;meteor:185887276d78685095b8b7ba1df81f2e&#34;&gt;Meteor&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/naoya/20120422/1335109615&#34;&gt;Meteor.js - naoyaのはてなダイアリー&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&#34;その他:185887276d78685095b8b7ba1df81f2e&#34;&gt;その他&lt;/h5&gt;
-
-&lt;p&gt;Isomorphic JavaScriptに関するまとめサイト。こんなんあったのね。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://isomorphic.net/&#34;&gt;Isomorphic JavaScript - The future of web app development&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -80,66 +29,9 @@
       <pubDate>Thu, 31 Jul 2014 23:25:25 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/07/31/meteor/</guid>
-      <description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://triph.jp&#34;&gt;triph&lt;/a&gt;のランディングページ(というかアプリ全体&amp;hellip;)をHerokuに乗せていたんだけど、ちょっとおおげさな感じがしてきたので&lt;a href=&#34;https://meteor.com&#34;&gt;Meteor&lt;/a&gt;に移した。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://triph.jp&#34;&gt;triph&lt;/a&gt;のランディングページ(というかアプリ全体&amp;hellip;)をHerokuに乗せていたんだけど、ちょっとおおげさな感じがしてきたので&lt;a href=&#34;https://meteor.com&#34;&gt;Meteor&lt;/a&gt;に移した。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hikarock/triph-web&#34;&gt;hikarock/triph-web&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;meteorにデプロイ:48e026c0e83d0c2d35c1335d577eda8a&#34;&gt;Meteorにデプロイ&lt;/h3&gt;
-
-&lt;p&gt;アカウントが無い場合はあらかじめ&lt;a href=&#34;https://meteor.com&#34;&gt;Meteor&lt;/a&gt;でサインアップして&lt;code&gt;$ meteor login&lt;/code&gt;しておく。&lt;/p&gt;
-
-&lt;p&gt;Meteorのサブドメインでサイトを運用する場合は、以下のようにコマンドを叩くだけでデプロイできる。簡単すぎる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ meteor deploy hikarock.meteor.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;今回は独自ドメインの&lt;code&gt;triph.jp&lt;/code&gt;で運用したかったので、以下のようにデプロイする。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ meteor deploy triph.jp
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;登録されているサイト一覧を確認。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ meteor list-sites
-hikarock.meteor.com
-triph.jp
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;dnsの設定:48e026c0e83d0c2d35c1335d577eda8a&#34;&gt;DNSの設定&lt;/h3&gt;
-
-&lt;p&gt;この状態だと&lt;code&gt;triph.jp&lt;/code&gt;を参照できないので、DNSにAレコードを追加する。
-&lt;code&gt;www.triph.jp&lt;/code&gt;のようにサブドメありでよければCNAMEレコードの値に&lt;code&gt;origin.meteor.com&lt;/code&gt;を追加する。&lt;/p&gt;
-
-&lt;p&gt;DNSの管理画面で以下のように設定。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/meteor-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;origin.meteor.com&lt;/code&gt;のIPは&lt;code&gt;dig&lt;/code&gt;で調べた。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ dig origin.meteor.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&#34;参考にした記事:48e026c0e83d0c2d35c1335d577eda8a&#34;&gt;参考にした記事&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/15706411&#34;&gt;javascript - Meteor.js deploy to &amp;quot;example.com&amp;quot; or &amp;quot;www.example.com&amp;quot;? - Stack Overflow&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;デプロイ可能なユーザーを追加する:48e026c0e83d0c2d35c1335d577eda8a&#34;&gt;デプロイ可能なユーザーを追加する&lt;/h3&gt;
-
-&lt;p&gt;triphを一緒に作っている &lt;a href=&#34;https://twitter.com/hypermkt&#34;&gt;@hypermkt&lt;/a&gt; もデプロイ可能する。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ meteor authorized triph.jp --add hypermkt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;triphのiPhoneアプリはもうちょっとで申請できそう。作り始めていろいろ回り道してたら1年たってしまった。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://triph.jp&#34;&gt;triph | あなたの散歩を旅行に変えます&lt;/a&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

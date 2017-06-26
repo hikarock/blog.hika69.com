@@ -6,9 +6,11 @@
     <description>Recent content in Square on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Mon, 10 Jun 2013 23:15:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/square/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/square/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Square リーダーが届いた</title>
@@ -18,10 +20,7 @@
       <guid>https://blog.hika69.com/blog/2013/06/10/square/</guid>
       <description>&lt;p&gt;小さくころっとしていてかわいい。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/square-1.jpg&#34; alt=&#34;Squareリーダー&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;「じゃがポックル」を100円で売りました。明日入金されるぞ。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

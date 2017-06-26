@@ -5,25 +5,46 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  	<meta property="og:title" content=" JavaScript の IMAP クライアント browserbox で Gmail に接続する &middot;  hikarock blog" />
+    
+    
+        <meta name="twitter:card" content="summary"/>
+    
+
+
+
+<meta name="twitter:title" content="JavaScript の IMAP クライアント browserbox で Gmail に接続する"/>
+<meta name="twitter:description" content=""/>
+<meta name="twitter:site" content="@hika69"/>
+
+
+
+  	<meta property="og:title" content="JavaScript の IMAP クライアント browserbox で Gmail に接続する &middot; hikarock blog" />
   	<meta property="og:site_name" content="hikarock blog" />
   	<meta property="og:url" content="https://blog.hika69.com/blog/2015/02/24/browserbox/" />
 
     
+        
+            <meta property="og:image" content="/images/cover.jpg"/>
+        
+    
+
+    
+    <meta property="og:description" content="" />
   	<meta property="og:type" content="article" />
-
-    <meta property="og:article:published_time" content="2015-02-24T12:47:45Z" />
+    <meta property="article:published_time" content="2015-02-24T12:47:45Z" />
 
     
-    <meta property="og:article:tag" content="javascript" />
+    <meta property="article:tag" content="javascript" />
     
     
 
-  <title>
-     JavaScript の IMAP クライアント browserbox で Gmail に接続する &middot;  hikarock blog
-  </title>
+    <title>JavaScript の IMAP クライアント browserbox で Gmail に接続する &middot; hikarock blog</title>
 
-    <meta name="description" content="" />
+    
+    <meta name="description" content="&lt;p&gt;iOS 標準のメモアプリのように、IMAP で Gmail と同期できるクライアントを JS で作れないかな、と思って&lt;a href=&#34;https://github.com/whiteout-io/browserbox&#34;&gt;whiteout-io/browserbox&lt;/a&gt;を試してみた。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;" />
+    
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,8 +54,10 @@
 
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/screen.css" />
     <link rel="stylesheet" type="text/css" href="https://blog.hika69.com/css/nav.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Inconsolata" />
 
+    
+
+    
 
     
       
@@ -42,9 +65,71 @@
       
       
     
-    <meta name="generator" content="Hugo 0.14" />
+    <meta name="generator" content="Hugo 0.24.1" />
 
     <link rel="canonical" href="https://blog.hika69.com/blog/2015/02/24/browserbox/" />
+
+    
+      
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": ,
+        "logo": https://blog.hika69.com/images/logo.png
+    },
+    "author": {
+        "@type": "Person",
+        "name": ,
+        
+        "image": {
+            "@type": "ImageObject",
+            "url": https://blog.hika69.com/images/logo.png,
+            "width": 250,
+            "height": 250
+        }, 
+        
+        "url": https://hika69.com,
+        "sameAs": [
+            
+            
+             
+             
+             
+             
+             
+            
+        ],
+        "description": 街に詳しい。
+        
+    },
+    "headline": JavaScript の IMAP クライアント browserbox で Gmail に接続する,
+    "name": JavaScript の IMAP クライアント browserbox で Gmail に接続する,
+    "wordCount": 125,
+    "timeRequired": "PT1M",
+    "inLanguage": {
+      "@type": "Language",
+      "alternateName": en
+    },
+    "url": https://blog.hika69.com/blog/2015/02/24/browserbox/,
+    "datePublished": 2015-02-24T12:47Z,
+    "dateModified": 2015-02-24T12:47Z,
+    
+    "keywords": javascript,
+    "description": ,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": https://blog.hika69.com/blog/2015/02/24/browserbox/
+    }
+}
+    </script>
+    
+
+
+    
 
     
     <script>
@@ -85,9 +170,8 @@
     <ul>
         
         
-        
     </ul>
-    
+
     
     <a class="subscribe-button icon-feed" href="https://blog.hika69.com/index.xml">Subscribe</a>
     
@@ -108,7 +192,7 @@
       <a class="blog-logo" href="https://blog.hika69.com/"><img src="https://blog.hika69.com/images/logo.png" alt="Home" /></a>
   
   
-      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml">&nbsp;&nbsp;Subscribe</a>
+      <a class="menu-button icon-feed" href="https://blog.hika69.com/index.xml" >&nbsp;&nbsp;Subscribe</a>
   
   </nav>
 </header>
@@ -140,6 +224,8 @@
 
     <section class="post-content">
       <p>iOS 標準のメモアプリのように、IMAP で Gmail と同期できるクライアントを JS で作れないかな、と思って<a href="https://github.com/whiteout-io/browserbox">whiteout-io/browserbox</a>を試してみた。</p>
+
+<p></p>
 
 <p>もろもろフリーダムな環境にしたかったので<a href="https://github.com/nwjs/nw.js">nwjs/nw.js</a>を使って環境を作る。</p>
 
@@ -207,7 +293,6 @@ client.onauth = function() {
 </code></pre>
 
 <p>このままでは実用的ではない感じ。</p>
-
     </section>
 
 
@@ -216,7 +301,7 @@ client.onauth = function() {
 
     
     <figure class="author-image">
-        <a class="img" href="https://blog.hika69.com/" style="background-image: url(https://blog.hika69.com/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
+        <a class="img" href="https://blog.hika69.com/" style="background-image: url(/images/logo.png)"><span class="hidden">hikarock's Picture</span></a>
     </figure>
     
 
@@ -242,7 +327,7 @@ client.onauth = function() {
     
 <section class="share">
   <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=JavaScript%20%e3%81%ae%20IMAP%20%e3%82%af%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%83%88%20browserbox%20%e3%81%a7%20Gmail%20%e3%81%ab%e6%8e%a5%e7%b6%9a%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2015%2f02%2f24%2fbrowserbox%2f"
+  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=JavaScript%20%e3%81%ae%20IMAP%20%e3%82%af%e3%83%a9%e3%82%a4%e3%82%a2%e3%83%b3%e3%83%88%20browserbox%20%e3%81%a7%20Gmail%20%e3%81%ab%e6%8e%a5%e7%b6%9a%e3%81%99%e3%82%8b&nbsp;-&nbsp;hikarock%20blog&amp;url=https%3a%2f%2fblog.hika69.com%2fblog%2f2015%2f02%2f24%2fbrowserbox%2f"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
@@ -271,8 +356,30 @@ client.onauth = function() {
 </article>
 
 </main>
+
+
+  <aside class="read-next">
+  
+      <a class="read-next-story" style="no-cover" href="https://blog.hika69.com/blog/2015/05/05/eslint/">
+          <section class="post">
+              <h2>eslint を vim-watchdogs から使う</h2>
+              
+          </section>
+      </a>
+  
+  
+      <a class="read-next-story prev" style="no-cover" href="https://blog.hika69.com/blog/2015/02/21/stobo/">
+          <section class="post">
+              <h2>新しくなった Stobo の紹介</h2>
+          </section>
+      </a>
+  
+</aside>
+
+
+
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="">hikarock blog</a> All rights reserved - 2015</section>
+        <section class="copyright"><a href="">hikarock blog</a> &copy; 2017 hikarock</section>
         
         <section class="poweredby">Proudly generated by <a class="icon-hugo" href="http://gohugo.io">HUGO</a>, with <a class="icon-theme" href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme</section>
         

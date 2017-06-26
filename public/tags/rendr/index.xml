@@ -6,9 +6,11 @@
     <description>Recent content in Rendr on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>All rights reserved - 2015</copyright>
+    <copyright>&amp;copy; 2017 hikarock</copyright>
     <lastBuildDate>Mon, 25 Aug 2014 21:05:21 +0000</lastBuildDate>
-    <atom:link href="https://blog.hika69.com/tags/rendr/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://blog.hika69.com/tags/rendr/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>東京 Node 学園 14時限目で Rendr の話をした</title>
@@ -16,62 +18,9 @@
       <pubDate>Mon, 25 Aug 2014 21:05:21 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/08/25/tng14/</guid>
-      <description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;
-
-&lt;p&gt;そういえば、&lt;a href=&#34;http://blog.nodejs.jp/2011/03/node-1_25.html&#34;&gt;最初のNode学園&lt;/a&gt;からお客さん側だったので感慨深い。緊張しました。&lt;/p&gt;
-
-&lt;p&gt;今回は「IsomorphicなWAF」がテーマだったらしく、&lt;a href=&#34;https://twitter.com/yosuke_furukawa&#34;&gt;@yosuke_furukawa&lt;/a&gt;さんに「MeteorもしくはRendrの話をしませんか」とお誘いいただいてRendrの話をすることになりました。&lt;/p&gt;
-
-&lt;p&gt;主に&lt;a href=&#34;http://ca.storyboards.jp/&#34;&gt;Casto&lt;/a&gt;でRendrを使うにいたったSPAに対するもやもやと、実際に使ってみてどうだったか、を振り返ってみました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp/viewer/wo41ho&#34;&gt;Rendrの話 | Stobo&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;そもそも-isomorphic-javascript-とはなんぞや:185887276d78685095b8b7ba1df81f2e&#34;&gt;そもそも Isomorphic JavaScript とはなんぞや&lt;/h3&gt;
-
-&lt;p&gt;と理解が浅い感じがするので、リンクをまとめておく。
-すいません、後で読む。&lt;/p&gt;
-
-&lt;h5 id=&#34;isomorphic-javascript-とは:185887276d78685095b8b7ba1df81f2e&#34;&gt;Isomorphic JavaScript とは&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.nodejitsu.com/scaling-isomorphic-javascript-code/&#34;&gt;Scaling Isomorphic Javascript Code | Nodejitsu Inc.&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://gist.github.com/tily/1362110&#34;&gt;(翻訳) サバクラ両方で動く JavaScript の大規模開発を行うために&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&#34;rendr:185887276d78685095b8b7ba1df81f2e&#34;&gt;Rendr&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/&#34;&gt;Isomorphic JavaScript: The Future of Web Apps - Airbnb Engineering&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://wazanova.jp/post/66745548194/airbnb&#34;&gt;(翻訳) Airbnb: シングルページアプリを実現するハイブリッドアプローチの課題 -  ワザノバ | wazanova&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://nerds.airbnb.com/slides-and-video-from-spike-brehms-tech-talk/&#34;&gt;Building Single-Page Apps - Airbnb Engineering&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/spikebrehm/building-a-singlepage-app-backbone-nodejs-and-beyond&#34;&gt;Slides on SlideShare&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&#34;meteor:185887276d78685095b8b7ba1df81f2e&#34;&gt;Meteor&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/naoya/20120422/1335109615&#34;&gt;Meteor.js - naoyaのはてなダイアリー&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5 id=&#34;その他:185887276d78685095b8b7ba1df81f2e&#34;&gt;その他&lt;/h5&gt;
-
-&lt;p&gt;Isomorphic JavaScriptに関するまとめサイト。こんなんあったのね。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://isomorphic.net/&#34;&gt;Isomorphic JavaScript - The future of web app development&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -82,24 +31,7 @@
       <guid>https://blog.hika69.com/blog/2014/04/23/rendr-handlebars/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rendrjs/rendr-handlebars&#34;&gt;rendr-handlebars&lt;/a&gt;でpartial (部分テンプレート) が使えることにさっき気づいた。&lt;/p&gt;
 
-&lt;p&gt;引数に&lt;code&gt;app/templates&lt;/code&gt;以下のパスを指定する。&lt;/p&gt;
-
-&lt;p&gt;app/templates/home/index.hbs&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{{partial &amp;quot;home/include&amp;quot;}}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;上のようにパスだけ指定した場合は読み込み元と同じコンテキストで変数にアクセスすることができる。&lt;/p&gt;
-
-&lt;p&gt;app/templates/home/include.hbs&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{{partial &amp;quot;home/include&amp;quot; name=&amp;quot;taro&amp;quot;}}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;こんな感じでコンテキストを渡すこともできる。&lt;/p&gt;
-
-&lt;p&gt;便利ですね。&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -108,130 +40,9 @@
       <pubDate>Wed, 02 Apr 2014 00:42:15 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/04/02/casto/</guid>
-      <description>
+      <description>&lt;p&gt;「&lt;a href=&#34;http://ca.storyboards.jp&#34;&gt;Casto&lt;/a&gt;」(きゃすと)をリリースしました。&lt;/p&gt;
 
-&lt;p&gt;「&lt;a href=&#34;http://ca.storyboards.jp&#34;&gt;Casto&lt;/a&gt;」(きゃすと)をリリースしました。&lt;/p&gt;
-
-&lt;p&gt;アプリの使い方などは以下の紹介記事が詳しいです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.softantenna.com/wp/webservice/casto/&#34;&gt;超簡単なライブコーディング支援サービス「Casto」- ソフトアンテナブログ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://hideack.hatenablog.com/entry/2014/03/30/163413&#34;&gt;Castoというサービスを作りました - Live coding in browse, using text editor. - テノニッキ (@hideack &amp;#39;s diary)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/casto-01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;ひとことで言うと「リアルタイムで更新できるgist」(by &lt;a href=&#34;https://twitter.com/hideack&#34;&gt;@hideack&lt;/a&gt;)です。&lt;/p&gt;
-
-&lt;h3 id=&#34;きっかけ:8088fdbe1388420ca422f5a4aebd3214&#34;&gt;きっかけ&lt;/h3&gt;
-
-&lt;p&gt;41日前の会話。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/casto-02.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;結局「ペアプロ」は&lt;a href=&#34;https://github.com/hikarock/casto/issues/38#issuecomment-38985343&#34;&gt;課題が多く&lt;/a&gt;、「ライブコーディング」のアプリとして発表しました。&lt;/p&gt;
-
-&lt;h3 id=&#34;ブラウザからファイルの更新を検知できるのか:8088fdbe1388420ca422f5a4aebd3214&#34;&gt;ブラウザからファイルの更新を検知できるのか&lt;/h3&gt;
-
-&lt;p&gt;肝になるのは「ローカルのエディタ（VimとかXcode）からの変更を、ブラウザで検知できるのか」という所だけど、ちょっと調べるとFile APIでできそうだということが分かりました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/14284124/check-if-file-has-changed-using-html5-file-api&#34;&gt;javascript - Check if file has changed using HTML5 File API - Stack Overflow&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;この回答のサンプルをそのままMeteorにアップロードしてみたのが&lt;a href=&#34;http://casto.meteor.com/&#34;&gt;こちら&lt;/a&gt;。
-ファイルを保存したタイミングで画面が更新できています。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/casto-03.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;ファイルの変更箇所を検知できるか:8088fdbe1388420ca422f5a4aebd3214&#34;&gt;ファイルの変更箇所を検知できるか&lt;/h3&gt;
-
-&lt;p&gt;これはFile APIを単純に使うだけでは実現できなそうでした。&lt;/p&gt;
-
-&lt;p&gt;ファイルのどの部分が更新されたのかわからないと、編集中の位置を閲覧者が探さないといけない。数行のスクリプトならともかく数百行あるファイルを共有するときには致命的に使いにくくなりそう。&lt;/p&gt;
-
-&lt;p&gt;最初は「変更箇所をマークする記法をあらかじめ決めておいて、エディタでそれを入力してもらって目印にする」という方式を考えていたのですが、社内の開発者に相談したところ、&lt;a href=&#34;https://twitter.com/hikalin8686&#34;&gt;@hikalin8686&lt;/a&gt;が、「変更前のテキストを保存しておいてDiffをとればいいのでは」というアイディアを出してくれて、その方法で実装しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://blog.hika69.com/images/post/casto-04.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;変更した行がハイライトされています。&lt;/p&gt;
-
-&lt;p&gt;Diffは以下のライブラリで実現できました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/kpdecker/jsdiff&#34;&gt;kpdecker/jsdiff&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;ブラウザ内でエディタをどう実装するか:8088fdbe1388420ca422f5a4aebd3214&#34;&gt;ブラウザ内でエディタをどう実装するか&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://ace.c9.io/#nav=about&#34;&gt;Ace&lt;/a&gt;を使いました。すごいですねAce。超便利。&lt;/p&gt;
-
-&lt;p&gt;Castoではシンタックスの判定にファイルの拡張子を使いますが、拡張子からAce内の&lt;code&gt;Mode&lt;/code&gt;に変換するプログラムもAceのものを流用できました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/ajaxorg/ace/blob/master/lib/ace/ext/modelist.js&#34;&gt;ace/lib/ace/ext/modelist.js at master · ajaxorg/ace&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;サーバーサイド-ui層:8088fdbe1388420ca422f5a4aebd3214&#34;&gt;サーバーサイド - UI層&lt;/h3&gt;
-
-&lt;p&gt;今回は&lt;a href=&#34;https://github.com/rendrjs/rendr&#34;&gt;Rendr&lt;/a&gt;を使ってみました。&lt;/p&gt;
-
-&lt;p&gt;Rendrについては、&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://qiita.com/mshk/items/5912dcd4d9fa52ff6371&#34;&gt;Rendr入門(1): Node.js + Backbone.jsでサーバ &amp;amp; クライアントを構築する&amp;rdquo;Rendr&amp;rdquo;の紹介&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;この記事で知って使いたいなあと思っていたけど、正直よく理解してなかったので、がんばってMongoDB / MySQLなどのバックエンド接続も含めてRendrで実装しようとしていました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://d.hatena.ne.jp/koichik/20131207/1386421200&#34;&gt;Rendr徒然 - 日記&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;そんなときにこの記事を読んで「Rendrらしい」アーキテクチャへの理解が進みました。&lt;/p&gt;
-
-&lt;p&gt;一般的なSPA (「Reder徒然」からの引用)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;client             server
-==========         ==============
-
-+---------+  HTTP  +------------+
-| Browser |&amp;lt;======&amp;gt;| API server |
-+---------+        +------------+
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;一般的なSPAや、Web APIを使ったiOS/Androidアプリもこの形に近くなると思います（&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;もこの作りです）。&lt;/p&gt;
-
-&lt;p&gt;Rendrを使ったSPA (「Reder徒然」からの引用)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;client             server
-==========         ======================================
-
-UI層                                       サービス層
-===================================        ==============
-
-+---------+  HTTP  +--------------+  HTTP  +------------+
-| Browser |&amp;lt;======&amp;gt;| Rendr server |&amp;lt;======&amp;gt;| API server |
-+---------+        +--------------+        +------------+
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ビューに関係する「UI層」内はサーバー・クライアント問わずJavaScript / Backbone.jsで統一されるため、テンプレートやバリデートの使い回しがしやすくなります。&lt;/p&gt;
-
-&lt;p&gt;またSPAでは、バルクAPI（複数のAPIをまとめたAPI）がない場合、初回表示で複数のAPIを叩くことになって表示が重くなりがちです。
-Rendrでは初回表示はUI層内のサーバーでテンプレートを組み立てて描画するのでこの問題はありません（少なくともクライアント側では）。&lt;/p&gt;
-
-&lt;p&gt;Rendrについては基本的な動作以外はまだ理解できてない部分が多いので、バージョンアップ含めて追いかけていこうと思います。&lt;/p&gt;
-
-&lt;h3 id=&#34;サーバーサイド-サービス層:8088fdbe1388420ca422f5a4aebd3214&#34;&gt;サーバーサイド - サービス層&lt;/h3&gt;
-
-&lt;p&gt;Padrino製の&lt;a href=&#34;http://www.storyboards.jp&#34;&gt;Storyboards API&lt;/a&gt;にあいのりする形で、@hideackがCasto用のAPIを構築しました。&lt;/p&gt;
-
-&lt;h3 id=&#34;デプロイ:8088fdbe1388420ca422f5a4aebd3214&#34;&gt;デプロイ&lt;/h3&gt;
-
-&lt;p&gt;こちらを参照。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://hideack.hatenablog.com/entry/2014/02/22/191700&#34;&gt;Rendrで作られたnode.jsアプリをminaでデプロイする - テノニッキ (@hideack &amp;#39;s diary)&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;これから:8088fdbe1388420ca422f5a4aebd3214&#34;&gt;これから&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/hikarock/casto/issues?state=open&#34;&gt;イシュー&lt;/a&gt;を淡々とこなします。&lt;del&gt;Firefox対応がわりと重めですね。&lt;/del&gt; 対応しました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://ca.storyboards.jp/&#34;&gt;Casto :: Live coding in browse, using text editor.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/__casto__&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hikarock/casto&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
