@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "新しくなった Stobo の紹介"
 date: "2015-02-21T19:28:21"
 comments: true

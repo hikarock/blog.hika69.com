@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "大統領"
 date: "2013-06-03T00:45:00"
 comments: true

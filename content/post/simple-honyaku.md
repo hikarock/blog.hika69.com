@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Chrome 拡張「シンプル翻訳」を更新"
 date: "2014-02-24T14:47:27"
 comments: true

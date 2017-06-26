@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Xcode でカラーパレットを保存して共有したい"
 date: "2014-12-21T00:31:08"
 comments: true

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "New Constellation"
 date: "2013-11-01T23:20:00"
 comments: true

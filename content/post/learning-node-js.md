@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "はじめての Node.js"
 date: "2013-06-13T23:54:00"
 comments: true

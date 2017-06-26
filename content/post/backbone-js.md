@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "「Backbone.js ガイドブック」読書会がはじまった"
 date: "2013-05-25T01:04:00"
 comments: true

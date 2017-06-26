@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Casto のステッカーができた"
 date: "2014-12-28T11:34:27"
 comments: true

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Xcode のキー配置をカスタマイズする"
 date: "2014-12-28T13:01:51"
 comments: true

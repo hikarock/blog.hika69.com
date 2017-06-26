@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "大山のこま"
 date: "2013-06-23T21:18:00"
 comments: true

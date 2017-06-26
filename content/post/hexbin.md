@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "hexbin に Casto ステッカーが追加された"
 date: "2014-12-29T21:12:44"
 comments: true

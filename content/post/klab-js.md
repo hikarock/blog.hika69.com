@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Hoodie の話をした"
 date: "2013-11-20T22:43:00"
 comments: true

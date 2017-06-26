@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Underscore.js の _.debounce が便利そう"
 date: "2013-05-28T21:53:00"
 comments: true

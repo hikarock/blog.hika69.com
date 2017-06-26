@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "GitHub の非公開リポジトリを Bitbucket に引越"
 date: "2014-11-18T11:34:01"
 comments: true

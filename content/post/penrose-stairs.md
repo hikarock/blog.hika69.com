@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "LEGOでペンローズ階段作った"
 date: "2014-12-22T00:03:36"
 comments: true

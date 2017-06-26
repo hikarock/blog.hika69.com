@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Xcode のストーリーボードで背後の要素を選択する"
 date: "2015-01-08T10:54:17"
 comments: true

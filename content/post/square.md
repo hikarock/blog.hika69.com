@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Square リーダーが届いた"
 date: "2013-06-10T23:15:00"
 comments: true

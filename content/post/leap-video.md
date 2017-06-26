@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Leap でストボを操作する動画を作った"
 date: "2013-12-25T20:24:41"
 comments: true

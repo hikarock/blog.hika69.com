@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "拡大・縮小自在な LESS の mixin の作り方"
 date: "2014-01-02T22:40:46"
 comments: true

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "npm init 時のデフォルト設定をカスタマイズする"
 date: "2015-02-21T19:17:39"
 comments: true

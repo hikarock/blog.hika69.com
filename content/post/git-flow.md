@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "iOSアプリ開発のGit運用"
 date: "2014-12-16T09:37:50"
 comments: true

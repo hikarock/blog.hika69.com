@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "SQL アンチパターン"
 date: "2013-05-27T20:51:00"
 comments: true

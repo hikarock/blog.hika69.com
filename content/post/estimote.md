@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "iBeacon 端末を買った"
 date: "2013-12-24T21:12:57"
 comments: true

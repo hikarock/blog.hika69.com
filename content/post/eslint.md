@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "eslint を vim-watchdogs から使う"
 date: "2015-05-05T17:03:27"
 comments: true

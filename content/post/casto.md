@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "ライブコーディングアプリ「Casto」ができるまで"
 date: "2014-04-02T00:42:15"
 comments: true

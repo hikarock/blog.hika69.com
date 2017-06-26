@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "JavaScript の IMAP クライアント browserbox で Gmail に接続する"
 date: "2015-02-24T12:47:45"
 comments: true

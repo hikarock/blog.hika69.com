@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "IB_DESIGNABLE を使おう"
 date: "2015-02-10T19:55:15"
 comments: true

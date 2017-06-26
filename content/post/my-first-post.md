@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "ブログを引っ越した"
 date: "2013-05-24T00:39:57"
 comments: true

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "日本ダービーと府中"
 date: "2013-05-26T23:37:00"
 comments: true

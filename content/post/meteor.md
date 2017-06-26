@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Meteor でアプリのランディングページを作った"
 date: "2014-07-31T23:25:25"
 comments: true

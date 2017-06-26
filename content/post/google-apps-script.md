@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Twitter 検索の結果を Google Drive のスプレッドシートに出力する"
 date: "2014-01-28T17:07:27"
 comments: true

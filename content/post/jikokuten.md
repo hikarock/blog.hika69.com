@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "持国天"
 date: "2013-06-10T23:01:00"
 comments: true

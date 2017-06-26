@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Grunt を導入"
 date: "2013-06-01T22:28:00"
 comments: true

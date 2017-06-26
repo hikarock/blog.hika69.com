@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "editorify というライブラリを作った"
 date: "2015-02-13T00:55:57"
 comments: true

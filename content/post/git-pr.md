@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "hub コマンドで GitHub と GHE に PullRequest する"
 date: "2015-02-09T19:36:38"
 comments: true

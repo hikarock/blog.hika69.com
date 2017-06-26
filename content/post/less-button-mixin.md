@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Less でボタンの mixin"
 date: "2013-12-05T00:02:29"
 comments: true

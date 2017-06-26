@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "rendr-handlebars で部分テンプレートを使う"
 date: "2014-04-23T00:10:08"
 comments: true

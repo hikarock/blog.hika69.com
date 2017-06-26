@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "ストボのバージョンアップ業"
 date: "2013-12-24T20:45:26"
 comments: true

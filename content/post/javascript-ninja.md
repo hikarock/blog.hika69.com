@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "JavaScript 忍者を買った"
 date: "2013-05-27T20:40:00"
 comments: true

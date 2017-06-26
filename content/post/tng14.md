@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "東京 Node 学園 14時限目で Rendr の話をした"
 date: "2014-08-25T21:05:21"
 comments: true
