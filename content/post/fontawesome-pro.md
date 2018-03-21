@@ -1,7 +1,7 @@
 ---
 title: "Font Awesome Pro 導入メモ"
 date: 2018-03-21T15:18:33+09:00
-tags = ["fontawesome", "font", "vue", "node"]
+tags: ["fontawesome", "font", "vue", "node"]
 ---
 
 Font Awesome Pro を購入してみた。

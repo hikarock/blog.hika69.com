@@ -105,9 +105,18 @@
     <item>
       <title>Font</title>
       <link>https://blog.hika69.com/tags/font/</link>
-      <pubDate>Mon, 28 Dec 2015 20:32:36 +0900</pubDate>
+      <pubDate>Wed, 21 Mar 2018 15:18:33 +0900</pubDate>
       
       <guid>https://blog.hika69.com/tags/font/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fontawesome</title>
+      <link>https://blog.hika69.com/tags/fontawesome/</link>
+      <pubDate>Wed, 21 Mar 2018 15:18:33 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/fontawesome/</guid>
       <description></description>
     </item>
     
@@ -321,7 +330,7 @@
     <item>
       <title>Node</title>
       <link>https://blog.hika69.com/tags/node/</link>
-      <pubDate>Wed, 06 Apr 2016 22:26:17 +0900</pubDate>
+      <pubDate>Wed, 21 Mar 2018 15:18:33 +0900</pubDate>
       
       <guid>https://blog.hika69.com/tags/node/</guid>
       <description></description>
@@ -495,6 +504,15 @@
       <pubDate>Fri, 20 May 2016 23:29:22 +0900</pubDate>
       
       <guid>https://blog.hika69.com/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vue</title>
+      <link>https://blog.hika69.com/tags/vue/</link>
+      <pubDate>Wed, 21 Mar 2018 15:18:33 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/vue/</guid>
       <description></description>
     </item>
     
