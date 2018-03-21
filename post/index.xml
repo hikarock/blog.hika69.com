@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
-    <lastBuildDate>Mon, 20 Feb 2017 22:55:56 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 21 Mar 2018 15:18:33 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.hika69.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Font Awesome Pro 導入メモ</title>
+      <link>https://blog.hika69.com/blog/2018/03/21/fontawesome-pro/</link>
+      <pubDate>Wed, 21 Mar 2018 15:18:33 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/blog/2018/03/21/fontawesome-pro/</guid>
+      <description>&lt;p&gt;Font Awesome Pro を購入してみた。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>HTTPie の Sessions の使い方</title>
