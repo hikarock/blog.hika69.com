@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Leap Motion on hikarock blog</title>
+    <title>leap-motion on hikarock blog</title>
     <link>https://blog.hika69.com/tags/leap-motion/</link>
-    <description>Recent content in Leap Motion on hikarock blog</description>
+    <description>Recent content in leap-motion on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Wed, 25 Dec 2013 20:24:41 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/12/25/leap-video/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp&#34;&gt;ストーリーボード&lt;/a&gt;がLeap Motionに対応したんだけど、あんまり伝わってないので紹介動画を作成しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.storyboards.jp&#34;&gt;ストーリーボード&lt;/a&gt;がLeap Motionに対応したんだけど、あんまり伝わってないので紹介動画を作成しました。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,9 +27,7 @@
       <pubDate>Tue, 24 Dec 2013 21:12:57 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/12/24/estimote/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://twitter.com/nakajijapan&#34;&gt;@nakajijapan&lt;/a&gt;と共同購入して1個だけ入手。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://twitter.com/nakajijapan&#34;&gt;@nakajijapan&lt;/a&gt;と共同購入して1個だけ入手。&lt;/p&gt;</description>
     </item>
     
   </channel>

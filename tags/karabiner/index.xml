@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Karabiner on hikarock blog</title>
+    <title>karabiner on hikarock blog</title>
     <link>https://blog.hika69.com/tags/karabiner/</link>
-    <description>Recent content in Karabiner on hikarock blog</description>
+    <description>Recent content in karabiner on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Sun, 28 Dec 2014 13:01:51 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/12/28/xcode-remap-key/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/XVimProject/XVim&#34;&gt;XVim&lt;/a&gt; を使いはじめたら、Xcodeのキー配置が、カスタマイズ済みのターミナル (およびVim) と微妙に違うのが気になってきた (ターミナルはControlキーをよく使うので、CommandキーとControlキーを入れ替えている) 。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/XVimProject/XVim&#34;&gt;XVim&lt;/a&gt; を使いはじめたら、Xcodeのキー配置が、カスタマイズ済みのターミナル (およびVim) と微妙に違うのが気になってきた (ターミナルはControlキーをよく使うので、CommandキーとControlキーを入れ替えている) 。&lt;/p&gt;</description>
     </item>
     
   </channel>

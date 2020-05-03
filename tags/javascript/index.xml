@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Javascript on hikarock blog</title>
+    <title>javascript on hikarock blog</title>
     <link>https://blog.hika69.com/tags/javascript/</link>
-    <description>Recent content in Javascript on hikarock blog</description>
+    <description>Recent content in javascript on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Mon, 07 Nov 2016 23:14:10 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/11/07/x-play/</guid>
-      <description>&lt;p&gt;20 年ほど前に買った &lt;a href=&#34;http://booklog.jp/item/1/479529609X&#34;&gt;HyperCardの本&lt;/a&gt; をパラパラめくっていたら、&lt;code&gt;play&lt;/code&gt; というコマンドが紹介されていた。音色とメロディーを指定して、音楽を再生することができる便利なコマンドだ。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;20 年ほど前に買った &lt;a href=&#34;http://booklog.jp/item/1/479529609X&#34;&gt;HyperCardの本&lt;/a&gt; をパラパラめくっていたら、&lt;code&gt;play&lt;/code&gt; というコマンドが紹介されていた。音色とメロディーを指定して、音楽を再生することができる便利なコマンドだ。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,9 +27,7 @@
       <pubDate>Fri, 01 Jul 2016 14:18:19 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/07/01/chab/</guid>
-      <description>&lt;p&gt;chab という6年前に作ったライブラリなんだけど、しばらく放置してたら動かなくなっていたので、改修して GitHub で再公開した。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;chab という6年前に作ったライブラリなんだけど、しばらく放置してたら動かなくなっていたので、改修して GitHub で再公開した。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,9 +36,7 @@
       <pubDate>Fri, 27 May 2016 00:20:53 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/05/27/chrome-extension-inline-install/</guid>
-      <description>&lt;p&gt;Chrome 拡張を Chrome ウェブストア に遷移せずにインストールできる Inline Installation に対応した時の覚書。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Chrome 拡張を Chrome ウェブストア に遷移せずにインストールできる Inline Installation に対応した時の覚書。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -51,9 +45,7 @@
       <pubDate>Wed, 20 Apr 2016 00:19:20 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/04/20/google-apps-script-v2/</guid>
-      <description>&lt;p&gt;以前書いたエントリ &lt;a href=&#34;http://blog.hika69.com/blog/2014/01/28/google-apps-script/&#34;&gt;Twitter 検索の結果を Google Drive のスプレッドシートに出力する&lt;/a&gt; の方法が現在使えなくなっているので、代替のスクリプトとその使い方を Gist に置きました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;以前書いたエントリ &lt;a href=&#34;http://blog.hika69.com/blog/2014/01/28/google-apps-script/&#34;&gt;Twitter 検索の結果を Google Drive のスプレッドシートに出力する&lt;/a&gt; の方法が現在使えなくなっているので、代替のスクリプトとその使い方を Gist に置きました。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -62,9 +54,7 @@
       <pubDate>Wed, 06 Apr 2016 22:26:17 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/04/06/frisby/</guid>
-      <description>&lt;p&gt;REST API のテストツール Frisby.js を使ってみた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;REST API のテストツール Frisby.js を使ってみた。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -73,9 +63,7 @@
       <pubDate>Tue, 05 May 2015 17:03:27 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2015/05/05/eslint/</guid>
-      <description>&lt;p&gt;vim-watchdogs から eslint が使えるように設定したのでメモ。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;vim-watchdogs から eslint が使えるように設定したのでメモ。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -84,9 +72,7 @@
       <pubDate>Tue, 24 Feb 2015 12:47:45 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2015/02/24/browserbox/</guid>
-      <description>&lt;p&gt;iOS 標準のメモアプリのように、IMAP で Gmail と同期できるクライアントを JS で作れないかな、と思って&lt;a href=&#34;https://github.com/whiteout-io/browserbox&#34;&gt;whiteout-io/browserbox&lt;/a&gt;を試してみた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;iOS 標準のメモアプリのように、IMAP で Gmail と同期できるクライアントを JS で作れないかな、と思って&lt;a href=&#34;https://github.com/whiteout-io/browserbox&#34;&gt;whiteout-io/browserbox&lt;/a&gt;を試してみた。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -95,9 +81,7 @@
       <pubDate>Fri, 13 Feb 2015 00:55:57 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2015/02/13/editorify/</guid>
-      <description>&lt;p&gt;エディタリファイと読むんだろうか。とにかく&lt;code&gt;fy&lt;/code&gt;ってつけたかっただけな感じで言いづらい jQuery プラグインを作った。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;エディタリファイと読むんだろうか。とにかく&lt;code&gt;fy&lt;/code&gt;ってつけたかっただけな感じで言いづらい jQuery プラグインを作った。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -106,9 +90,7 @@
       <pubDate>Mon, 25 Aug 2014 21:05:21 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/08/25/tng14/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -117,9 +99,7 @@
       <pubDate>Wed, 23 Apr 2014 00:10:08 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/04/23/rendr-handlebars/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rendrjs/rendr-handlebars&#34;&gt;rendr-handlebars&lt;/a&gt;でpartial (部分テンプレート) が使えることにさっき気づいた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rendrjs/rendr-handlebars&#34;&gt;rendr-handlebars&lt;/a&gt;でpartial (部分テンプレート) が使えることにさっき気づいた。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -128,9 +108,7 @@
       <pubDate>Mon, 24 Feb 2014 14:47:27 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/02/24/simple-honyaku/</guid>
-      <description>&lt;p&gt;Chrome 拡張機能の「&lt;a href=&#34;https://chrome.google.com/webstore/detail/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E7%BF%BB%E8%A8%B3/pdnmkammncjnifdeclafllianknnoaif&#34;&gt;シンプル翻訳&lt;/a&gt;」を2年ぶりに更新しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Chrome 拡張機能の「&lt;a href=&#34;https://chrome.google.com/webstore/detail/%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB%E7%BF%BB%E8%A8%B3/pdnmkammncjnifdeclafllianknnoaif&#34;&gt;シンプル翻訳&lt;/a&gt;」を2年ぶりに更新しました。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -139,9 +117,7 @@
       <pubDate>Tue, 28 Jan 2014 17:07:27 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/01/28/google-apps-script/</guid>
-      <description>&lt;p&gt;以前Google Apps Scriptで作成したプログラムがTwitter API Ver.1の廃止で動かなくなってたので直しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;以前Google Apps Scriptで作成したプログラムがTwitter API Ver.1の廃止で動かなくなってたので直しました。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -150,9 +126,7 @@
       <pubDate>Wed, 20 Nov 2013 22:43:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/11/20/klab-js/</guid>
-      <description>&lt;p&gt;KLab さんの JavaScript 勉強会で Hoodie の話をしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;KLab さんの JavaScript 勉強会で Hoodie の話をしました。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -161,9 +135,7 @@
       <pubDate>Thu, 13 Jun 2013 23:54:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/06/13/learning-node-js/</guid>
-      <description>&lt;p&gt;読み始めた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;読み始めた。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -172,9 +144,7 @@
       <pubDate>Sat, 01 Jun 2013 22:28:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/06/01/grunt-js/</guid>
-      <description>&lt;p&gt;Gruntを&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;に導入するためのメモ。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Gruntを&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;に導入するためのメモ。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -183,9 +153,7 @@
       <pubDate>Tue, 28 May 2013 21:53:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/05/28/underscore-js/</guid>
-      <description>&lt;p&gt;「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.jsガイドブック&lt;/a&gt;」の読書会2回目。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.jsガイドブック&lt;/a&gt;」の読書会2回目。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -194,9 +162,7 @@
       <pubDate>Mon, 27 May 2013 20:40:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/05/27/javascript-ninja/</guid>
-      <description>&lt;p&gt;買ってきた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;買ってきた。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -205,9 +171,7 @@
       <pubDate>Sat, 25 May 2013 01:04:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/05/25/backbone-js/</guid>
-      <description>&lt;p&gt;社内で「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.js ガイドブック&lt;/a&gt;」の読書会が始まったので参加した。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;社内で「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.js ガイドブック&lt;/a&gt;」の読書会が始まったので参加した。&lt;/p&gt;</description>
     </item>
     
   </channel>

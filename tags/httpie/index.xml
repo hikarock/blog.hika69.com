@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Httpie on hikarock blog</title>
+    <title>httpie on hikarock blog</title>
     <link>https://blog.hika69.com/tags/httpie/</link>
-    <description>Recent content in Httpie on hikarock blog</description>
+    <description>Recent content in httpie on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Mon, 20 Feb 2017 22:55:56 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2017/02/20/httpie/</guid>
-      <description>&lt;p&gt;API のリクエストにめっちゃ長いトークンを含めないといけなかったりすると、コマンドを打つのもコピペするのも面倒なんだけど、&lt;a href=&#34;https://httpie.org/&#34;&gt;HTTPie&lt;/a&gt; に &lt;a href=&#34;https://httpie.org/doc#sessions&#34;&gt;Sessions&lt;/a&gt; という便利そうな機能があったので試してみた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;API のリクエストにめっちゃ長いトークンを含めないといけなかったりすると、コマンドを打つのもコピペするのも面倒なんだけど、&lt;a href=&#34;https://httpie.org/&#34;&gt;HTTPie&lt;/a&gt; に &lt;a href=&#34;https://httpie.org/doc#sessions&#34;&gt;Sessions&lt;/a&gt; という便利そうな機能があったので試してみた。&lt;/p&gt;</description>
     </item>
     
   </channel>

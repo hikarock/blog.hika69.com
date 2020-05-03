@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mac on hikarock blog</title>
+    <title>mac on hikarock blog</title>
     <link>https://blog.hika69.com/tags/mac/</link>
-    <description>Recent content in Mac on hikarock blog</description>
+    <description>Recent content in mac on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Thu, 07 Jan 2016 21:46:22 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/01/07/rename-snake-case-to-pascal-case/</guid>
-      <description>&lt;p&gt;あるプロジェクトで &lt;a href=&#34;http://www.php-fig.org/psr/psr-0/&#34;&gt;PSR-0&lt;/a&gt; に対応する作業に関連して、スネークケースのファイル名とクラス名をパスカルケースに変換する必要があった。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;あるプロジェクトで &lt;a href=&#34;http://www.php-fig.org/psr/psr-0/&#34;&gt;PSR-0&lt;/a&gt; に対応する作業に関連して、スネークケースのファイル名とクラス名をパスカルケースに変換する必要があった。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,9 +27,7 @@
       <pubDate>Sun, 28 Dec 2014 13:01:51 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/12/28/xcode-remap-key/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/XVimProject/XVim&#34;&gt;XVim&lt;/a&gt; を使いはじめたら、Xcodeのキー配置が、カスタマイズ済みのターミナル (およびVim) と微妙に違うのが気になってきた (ターミナルはControlキーをよく使うので、CommandキーとControlキーを入れ替えている) 。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/XVimProject/XVim&#34;&gt;XVim&lt;/a&gt; を使いはじめたら、Xcodeのキー配置が、カスタマイズ済みのターミナル (およびVim) と微妙に違うのが気になってきた (ターミナルはControlキーをよく使うので、CommandキーとControlキーを入れ替えている) 。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,9 +36,7 @@
       <pubDate>Sun, 21 Dec 2014 00:31:08 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/12/21/osx-color-palettes/</guid>
-      <description>&lt;p&gt;と思ったので調べた。Xcode というより Mac OS X の機能ぽい (OS X Yosemite &amp;amp; Xcode 6.1.1 の場合。他のバージョンで使えるかはわからない)。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;と思ったので調べた。Xcode というより Mac OS X の機能ぽい (OS X Yosemite &amp;amp; Xcode 6.1.1 の場合。他のバージョンで使えるかはわからない)。&lt;/p&gt;</description>
     </item>
     
   </channel>

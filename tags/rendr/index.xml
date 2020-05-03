@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rendr on hikarock blog</title>
+    <title>rendr on hikarock blog</title>
     <link>https://blog.hika69.com/tags/rendr/</link>
-    <description>Recent content in Rendr on hikarock blog</description>
+    <description>Recent content in rendr on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Mon, 25 Aug 2014 21:05:21 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/08/25/tng14/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,9 +27,7 @@
       <pubDate>Wed, 23 Apr 2014 00:10:08 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/04/23/rendr-handlebars/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rendrjs/rendr-handlebars&#34;&gt;rendr-handlebars&lt;/a&gt;でpartial (部分テンプレート) が使えることにさっき気づいた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rendrjs/rendr-handlebars&#34;&gt;rendr-handlebars&lt;/a&gt;でpartial (部分テンプレート) が使えることにさっき気づいた。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,9 +36,7 @@
       <pubDate>Wed, 02 Apr 2014 00:42:15 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/04/02/casto/</guid>
-      <description>&lt;p&gt;「&lt;a href=&#34;http://ca.storyboards.jp&#34;&gt;Casto&lt;/a&gt;」(きゃすと)をリリースしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;「&lt;a href=&#34;http://ca.storyboards.jp&#34;&gt;Casto&lt;/a&gt;」(きゃすと)をリリースしました。&lt;/p&gt;</description>
     </item>
     
   </channel>

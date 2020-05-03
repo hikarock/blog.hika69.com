@@ -7,103 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
-    <lastBuildDate>Wed, 06 Apr 2016 22:26:17 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 21 Mar 2018 15:18:33 +0900</lastBuildDate>
     
 	<atom:link href="https://blog.hika69.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Api</title>
-      <link>https://blog.hika69.com/tags/api/</link>
-      <pubDate>Wed, 06 Apr 2016 22:26:17 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/api/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Backbone</title>
-      <link>https://blog.hika69.com/tags/backbone/</link>
-      <pubDate>Tue, 28 May 2013 21:53:00 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/backbone/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bitbucket</title>
-      <link>https://blog.hika69.com/tags/bitbucket/</link>
-      <pubDate>Tue, 18 Nov 2014 11:34:01 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/bitbucket/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Book</title>
-      <link>https://blog.hika69.com/tags/book/</link>
-      <pubDate>Thu, 13 Jun 2013 23:54:00 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/book/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bootstrap</title>
-      <link>https://blog.hika69.com/tags/bootstrap/</link>
-      <pubDate>Tue, 24 Dec 2013 20:45:26 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/bootstrap/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Casto</title>
-      <link>https://blog.hika69.com/tags/casto/</link>
-      <pubDate>Mon, 29 Dec 2014 21:12:44 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/casto/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Chrome Extension</title>
-      <link>https://blog.hika69.com/tags/chrome-extension/</link>
-      <pubDate>Fri, 27 May 2016 00:20:53 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/chrome-extension/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Css</title>
-      <link>https://blog.hika69.com/tags/css/</link>
-      <pubDate>Sun, 24 Jul 2016 14:51:49 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Design</title>
-      <link>https://blog.hika69.com/tags/design/</link>
-      <pubDate>Mon, 28 Dec 2015 20:32:36 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Digitalocean</title>
-      <link>https://blog.hika69.com/tags/digitalocean/</link>
-      <pubDate>Sat, 03 Sep 2016 16:41:41 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/digitalocean/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Font</title>
+      <title>font</title>
       <link>https://blog.hika69.com/tags/font/</link>
       <pubDate>Wed, 21 Mar 2018 15:18:33 +0900</pubDate>
       
@@ -112,7 +22,7 @@
     </item>
     
     <item>
-      <title>Fontawesome</title>
+      <title>fontawesome</title>
       <link>https://blog.hika69.com/tags/fontawesome/</link>
       <pubDate>Wed, 21 Mar 2018 15:18:33 +0900</pubDate>
       
@@ -121,214 +31,7 @@
     </item>
     
     <item>
-      <title>Gas</title>
-      <link>https://blog.hika69.com/tags/gas/</link>
-      <pubDate>Wed, 20 Apr 2016 00:19:20 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/gas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Git</title>
-      <link>https://blog.hika69.com/tags/git/</link>
-      <pubDate>Mon, 25 Jan 2016 20:04:28 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Git Flow</title>
-      <link>https://blog.hika69.com/tags/git-flow/</link>
-      <pubDate>Tue, 16 Dec 2014 09:37:50 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/git-flow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Github</title>
-      <link>https://blog.hika69.com/tags/github/</link>
-      <pubDate>Mon, 25 Jan 2016 20:04:28 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/github/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Grunt</title>
-      <link>https://blog.hika69.com/tags/grunt/</link>
-      <pubDate>Sat, 01 Jun 2013 22:28:00 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/grunt/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Handlebars</title>
-      <link>https://blog.hika69.com/tags/handlebars/</link>
-      <pubDate>Wed, 23 Apr 2014 00:10:08 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/handlebars/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hexbin</title>
-      <link>https://blog.hika69.com/tags/hexbin/</link>
-      <pubDate>Mon, 29 Dec 2014 21:12:44 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/hexbin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hiking</title>
-      <link>https://blog.hika69.com/tags/hiking/</link>
-      <pubDate>Sat, 07 Sep 2013 22:19:00 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/hiking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hoodie</title>
-      <link>https://blog.hika69.com/tags/hoodie/</link>
-      <pubDate>Wed, 20 Nov 2013 22:43:00 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/hoodie/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Httpie</title>
-      <link>https://blog.hika69.com/tags/httpie/</link>
-      <pubDate>Mon, 20 Feb 2017 22:55:56 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/httpie/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://blog.hika69.com/tags/hugo/</link>
-      <pubDate>Sun, 15 Nov 2015 13:07:37 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ibeacon</title>
-      <link>https://blog.hika69.com/tags/ibeacon/</link>
-      <pubDate>Tue, 24 Dec 2013 21:12:57 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/ibeacon/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Info</title>
-      <link>https://blog.hika69.com/tags/info/</link>
-      <pubDate>Fri, 24 May 2013 00:39:57 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/info/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ios</title>
-      <link>https://blog.hika69.com/tags/ios/</link>
-      <pubDate>Tue, 10 Feb 2015 19:55:15 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/ios/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javascript</title>
-      <link>https://blog.hika69.com/tags/javascript/</link>
-      <pubDate>Mon, 07 Nov 2016 23:14:10 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jquery</title>
-      <link>https://blog.hika69.com/tags/jquery/</link>
-      <pubDate>Fri, 13 Feb 2015 00:55:57 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/jquery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Karabiner</title>
-      <link>https://blog.hika69.com/tags/karabiner/</link>
-      <pubDate>Sun, 28 Dec 2014 13:01:51 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/karabiner/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Leap Motion</title>
-      <link>https://blog.hika69.com/tags/leap-motion/</link>
-      <pubDate>Wed, 25 Dec 2013 20:24:41 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/leap-motion/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lego</title>
-      <link>https://blog.hika69.com/tags/lego/</link>
-      <pubDate>Thu, 16 Feb 2017 19:59:06 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/lego/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Less</title>
-      <link>https://blog.hika69.com/tags/less/</link>
-      <pubDate>Thu, 02 Jan 2014 22:40:46 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/less/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mac</title>
-      <link>https://blog.hika69.com/tags/mac/</link>
-      <pubDate>Thu, 07 Jan 2016 21:46:22 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/mac/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Meteor</title>
-      <link>https://blog.hika69.com/tags/meteor/</link>
-      <pubDate>Mon, 25 Aug 2014 21:05:21 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/meteor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Music</title>
-      <link>https://blog.hika69.com/tags/music/</link>
-      <pubDate>Fri, 01 Nov 2013 23:20:00 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/music/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Node</title>
+      <title>node</title>
       <link>https://blog.hika69.com/tags/node/</link>
       <pubDate>Wed, 21 Mar 2018 15:18:33 +0900</pubDate>
       
@@ -337,178 +40,7 @@
     </item>
     
     <item>
-      <title>Npm</title>
-      <link>https://blog.hika69.com/tags/npm/</link>
-      <pubDate>Sat, 21 Feb 2015 19:17:39 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/npm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Objective C</title>
-      <link>https://blog.hika69.com/tags/objective-c/</link>
-      <pubDate>Tue, 10 Feb 2015 19:55:15 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/objective-c/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Php</title>
-      <link>https://blog.hika69.com/tags/php/</link>
-      <pubDate>Fri, 25 Nov 2016 17:49:12 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/php/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Polymer</title>
-      <link>https://blog.hika69.com/tags/polymer/</link>
-      <pubDate>Mon, 07 Nov 2016 23:14:10 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/polymer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Raspberry Pi</title>
-      <link>https://blog.hika69.com/tags/raspberry-pi/</link>
-      <pubDate>Sat, 02 Apr 2016 12:21:22 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/raspberry-pi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Regexp</title>
-      <link>https://blog.hika69.com/tags/regexp/</link>
-      <pubDate>Thu, 07 Jan 2016 21:46:22 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/regexp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rendr</title>
-      <link>https://blog.hika69.com/tags/rendr/</link>
-      <pubDate>Mon, 25 Aug 2014 21:05:21 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/rendr/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Roots</title>
-      <link>https://blog.hika69.com/tags/roots/</link>
-      <pubDate>Wed, 01 Jul 2015 22:01:34 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/roots/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sketch</title>
-      <link>https://blog.hika69.com/tags/sketch/</link>
-      <pubDate>Mon, 28 Dec 2015 20:32:36 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/sketch/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Slide</title>
-      <link>https://blog.hika69.com/tags/slide/</link>
-      <pubDate>Fri, 29 Aug 2014 11:45:06 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/slide/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sql</title>
-      <link>https://blog.hika69.com/tags/sql/</link>
-      <pubDate>Mon, 27 May 2013 20:51:00 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/sql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Square</title>
-      <link>https://blog.hika69.com/tags/square/</link>
-      <pubDate>Mon, 10 Jun 2013 23:15:00 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/square/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Stobo</title>
-      <link>https://blog.hika69.com/tags/stobo/</link>
-      <pubDate>Sat, 21 Feb 2015 19:28:21 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/stobo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Stylus</title>
-      <link>https://blog.hika69.com/tags/stylus/</link>
-      <pubDate>Sun, 24 Jul 2016 14:51:49 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/stylus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Triph</title>
-      <link>https://blog.hika69.com/tags/triph/</link>
-      <pubDate>Thu, 31 Jul 2014 23:25:25 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/triph/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Twitter Api</title>
-      <link>https://blog.hika69.com/tags/twitter-api/</link>
-      <pubDate>Wed, 20 Apr 2016 00:19:20 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/twitter-api/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Underscore</title>
-      <link>https://blog.hika69.com/tags/underscore/</link>
-      <pubDate>Tue, 28 May 2013 21:53:00 +0000</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/underscore/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vagrant</title>
-      <link>https://blog.hika69.com/tags/vagrant/</link>
-      <pubDate>Sat, 03 Sep 2016 16:41:41 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/vagrant/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vim</title>
-      <link>https://blog.hika69.com/tags/vim/</link>
-      <pubDate>Fri, 20 May 2016 23:29:22 +0900</pubDate>
-      
-      <guid>https://blog.hika69.com/tags/vim/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vue</title>
+      <title>vue</title>
       <link>https://blog.hika69.com/tags/vue/</link>
       <pubDate>Wed, 21 Mar 2018 15:18:33 +0900</pubDate>
       
@@ -517,16 +49,52 @@
     </item>
     
     <item>
-      <title>Walk</title>
-      <link>https://blog.hika69.com/tags/walk/</link>
-      <pubDate>Mon, 03 Jun 2013 00:45:00 +0000</pubDate>
+      <title>httpie</title>
+      <link>https://blog.hika69.com/tags/httpie/</link>
+      <pubDate>Mon, 20 Feb 2017 22:55:56 +0900</pubDate>
       
-      <guid>https://blog.hika69.com/tags/walk/</guid>
+      <guid>https://blog.hika69.com/tags/httpie/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Web Components</title>
+      <title>lego</title>
+      <link>https://blog.hika69.com/tags/lego/</link>
+      <pubDate>Thu, 16 Feb 2017 19:59:06 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/lego/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>https://blog.hika69.com/tags/php/</link>
+      <pubDate>Fri, 25 Nov 2016 17:49:12 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://blog.hika69.com/tags/javascript/</link>
+      <pubDate>Mon, 07 Nov 2016 23:14:10 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>polymer</title>
+      <link>https://blog.hika69.com/tags/polymer/</link>
+      <pubDate>Mon, 07 Nov 2016 23:14:10 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/polymer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web-components</title>
       <link>https://blog.hika69.com/tags/web-components/</link>
       <pubDate>Mon, 07 Nov 2016 23:14:10 +0900</pubDate>
       
@@ -535,7 +103,214 @@
     </item>
     
     <item>
-      <title>Xcode</title>
+      <title>digitalocean</title>
+      <link>https://blog.hika69.com/tags/digitalocean/</link>
+      <pubDate>Sat, 03 Sep 2016 16:41:41 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/digitalocean/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vagrant</title>
+      <link>https://blog.hika69.com/tags/vagrant/</link>
+      <pubDate>Sat, 03 Sep 2016 16:41:41 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/vagrant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>https://blog.hika69.com/tags/css/</link>
+      <pubDate>Sun, 24 Jul 2016 14:51:49 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stylus</title>
+      <link>https://blog.hika69.com/tags/stylus/</link>
+      <pubDate>Sun, 24 Jul 2016 14:51:49 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/stylus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chrome-extension</title>
+      <link>https://blog.hika69.com/tags/chrome-extension/</link>
+      <pubDate>Fri, 27 May 2016 00:20:53 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/chrome-extension/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>https://blog.hika69.com/tags/vim/</link>
+      <pubDate>Fri, 20 May 2016 23:29:22 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gas</title>
+      <link>https://blog.hika69.com/tags/gas/</link>
+      <pubDate>Wed, 20 Apr 2016 00:19:20 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/gas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>twitter-api</title>
+      <link>https://blog.hika69.com/tags/twitter-api/</link>
+      <pubDate>Wed, 20 Apr 2016 00:19:20 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/twitter-api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>api</title>
+      <link>https://blog.hika69.com/tags/api/</link>
+      <pubDate>Wed, 06 Apr 2016 22:26:17 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raspberry-pi</title>
+      <link>https://blog.hika69.com/tags/raspberry-pi/</link>
+      <pubDate>Sat, 02 Apr 2016 12:21:22 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://blog.hika69.com/tags/git/</link>
+      <pubDate>Mon, 25 Jan 2016 20:04:28 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://blog.hika69.com/tags/github/</link>
+      <pubDate>Mon, 25 Jan 2016 20:04:28 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mac</title>
+      <link>https://blog.hika69.com/tags/mac/</link>
+      <pubDate>Thu, 07 Jan 2016 21:46:22 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regexp</title>
+      <link>https://blog.hika69.com/tags/regexp/</link>
+      <pubDate>Thu, 07 Jan 2016 21:46:22 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/regexp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>design</title>
+      <link>https://blog.hika69.com/tags/design/</link>
+      <pubDate>Mon, 28 Dec 2015 20:32:36 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sketch</title>
+      <link>https://blog.hika69.com/tags/sketch/</link>
+      <pubDate>Mon, 28 Dec 2015 20:32:36 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/sketch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://blog.hika69.com/tags/hugo/</link>
+      <pubDate>Sun, 15 Nov 2015 13:07:37 +0900</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>roots</title>
+      <link>https://blog.hika69.com/tags/roots/</link>
+      <pubDate>Wed, 01 Jul 2015 22:01:34 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/roots/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stobo</title>
+      <link>https://blog.hika69.com/tags/stobo/</link>
+      <pubDate>Sat, 21 Feb 2015 19:28:21 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/stobo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>npm</title>
+      <link>https://blog.hika69.com/tags/npm/</link>
+      <pubDate>Sat, 21 Feb 2015 19:17:39 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/npm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jquery</title>
+      <link>https://blog.hika69.com/tags/jquery/</link>
+      <pubDate>Fri, 13 Feb 2015 00:55:57 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ios</title>
+      <link>https://blog.hika69.com/tags/ios/</link>
+      <pubDate>Tue, 10 Feb 2015 19:55:15 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>objective-c</title>
+      <link>https://blog.hika69.com/tags/objective-c/</link>
+      <pubDate>Tue, 10 Feb 2015 19:55:15 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/objective-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xcode</title>
       <link>https://blog.hika69.com/tags/xcode/</link>
       <pubDate>Tue, 10 Feb 2015 19:55:15 +0000</pubDate>
       
@@ -544,11 +319,236 @@
     </item>
     
     <item>
-      <title>Yapc</title>
+      <title>casto</title>
+      <link>https://blog.hika69.com/tags/casto/</link>
+      <pubDate>Mon, 29 Dec 2014 21:12:44 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/casto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hexbin</title>
+      <link>https://blog.hika69.com/tags/hexbin/</link>
+      <pubDate>Mon, 29 Dec 2014 21:12:44 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/hexbin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>karabiner</title>
+      <link>https://blog.hika69.com/tags/karabiner/</link>
+      <pubDate>Sun, 28 Dec 2014 13:01:51 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/karabiner/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git-flow</title>
+      <link>https://blog.hika69.com/tags/git-flow/</link>
+      <pubDate>Tue, 16 Dec 2014 09:37:50 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/git-flow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bitbucket</title>
+      <link>https://blog.hika69.com/tags/bitbucket/</link>
+      <pubDate>Tue, 18 Nov 2014 11:34:01 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/bitbucket/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>slide</title>
+      <link>https://blog.hika69.com/tags/slide/</link>
+      <pubDate>Fri, 29 Aug 2014 11:45:06 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/slide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yapc</title>
       <link>https://blog.hika69.com/tags/yapc/</link>
       <pubDate>Fri, 29 Aug 2014 11:45:06 +0000</pubDate>
       
       <guid>https://blog.hika69.com/tags/yapc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>meteor</title>
+      <link>https://blog.hika69.com/tags/meteor/</link>
+      <pubDate>Mon, 25 Aug 2014 21:05:21 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/meteor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rendr</title>
+      <link>https://blog.hika69.com/tags/rendr/</link>
+      <pubDate>Mon, 25 Aug 2014 21:05:21 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/rendr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>triph</title>
+      <link>https://blog.hika69.com/tags/triph/</link>
+      <pubDate>Thu, 31 Jul 2014 23:25:25 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/triph/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>handlebars</title>
+      <link>https://blog.hika69.com/tags/handlebars/</link>
+      <pubDate>Wed, 23 Apr 2014 00:10:08 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/handlebars/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>less</title>
+      <link>https://blog.hika69.com/tags/less/</link>
+      <pubDate>Thu, 02 Jan 2014 22:40:46 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/less/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>leap-motion</title>
+      <link>https://blog.hika69.com/tags/leap-motion/</link>
+      <pubDate>Wed, 25 Dec 2013 20:24:41 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/leap-motion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ibeacon</title>
+      <link>https://blog.hika69.com/tags/ibeacon/</link>
+      <pubDate>Tue, 24 Dec 2013 21:12:57 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/ibeacon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bootstrap</title>
+      <link>https://blog.hika69.com/tags/bootstrap/</link>
+      <pubDate>Tue, 24 Dec 2013 20:45:26 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/bootstrap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hoodie</title>
+      <link>https://blog.hika69.com/tags/hoodie/</link>
+      <pubDate>Wed, 20 Nov 2013 22:43:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/hoodie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>music</title>
+      <link>https://blog.hika69.com/tags/music/</link>
+      <pubDate>Fri, 01 Nov 2013 23:20:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hiking</title>
+      <link>https://blog.hika69.com/tags/hiking/</link>
+      <pubDate>Sat, 07 Sep 2013 22:19:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/hiking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>book</title>
+      <link>https://blog.hika69.com/tags/book/</link>
+      <pubDate>Thu, 13 Jun 2013 23:54:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/book/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>square</title>
+      <link>https://blog.hika69.com/tags/square/</link>
+      <pubDate>Mon, 10 Jun 2013 23:15:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/square/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>walk</title>
+      <link>https://blog.hika69.com/tags/walk/</link>
+      <pubDate>Mon, 03 Jun 2013 00:45:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/walk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>grunt</title>
+      <link>https://blog.hika69.com/tags/grunt/</link>
+      <pubDate>Sat, 01 Jun 2013 22:28:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/grunt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>backbone</title>
+      <link>https://blog.hika69.com/tags/backbone/</link>
+      <pubDate>Tue, 28 May 2013 21:53:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/backbone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>underscore</title>
+      <link>https://blog.hika69.com/tags/underscore/</link>
+      <pubDate>Tue, 28 May 2013 21:53:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/underscore/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sql</title>
+      <link>https://blog.hika69.com/tags/sql/</link>
+      <pubDate>Mon, 27 May 2013 20:51:00 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>info</title>
+      <link>https://blog.hika69.com/tags/info/</link>
+      <pubDate>Fri, 24 May 2013 00:39:57 +0000</pubDate>
+      
+      <guid>https://blog.hika69.com/tags/info/</guid>
       <description></description>
     </item>
     

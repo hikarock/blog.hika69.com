@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Npm on hikarock blog</title>
+    <title>npm on hikarock blog</title>
     <link>https://blog.hika69.com/tags/npm/</link>
-    <description>Recent content in Npm on hikarock blog</description>
+    <description>Recent content in npm on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Sat, 21 Feb 2015 19:17:39 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2015/02/21/npm-init/</guid>
-      <description>&lt;p&gt;&lt;code&gt;npm init&lt;/code&gt;した時にlicenceの種類やauthorの情報を自動的にいれる設定。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;code&gt;npm init&lt;/code&gt;した時にlicenceの種類やauthorの情報を自動的にいれる設定。&lt;/p&gt;</description>
     </item>
     
   </channel>

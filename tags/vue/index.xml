@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vue on hikarock blog</title>
+    <title>vue on hikarock blog</title>
     <link>https://blog.hika69.com/tags/vue/</link>
-    <description>Recent content in Vue on hikarock blog</description>
+    <description>Recent content in vue on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Wed, 21 Mar 2018 15:18:33 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2018/03/21/fontawesome-pro/</guid>
-      <description>&lt;p&gt;Font Awesome Pro を購入してみた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Font Awesome Pro を購入してみた。&lt;/p&gt;</description>
     </item>
     
   </channel>

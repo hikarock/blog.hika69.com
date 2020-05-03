@@ -43,9 +43,7 @@
     <title>PSR-2 の最終行の空行についての規約を勘違いしていた &middot; hikarock blog</title>
 
     
-    <meta name="description" content="&lt;p&gt;PHP の &lt;a href=&#34;http://www.php-fig.org/psr/psr-2/&#34;&gt;PSR-2&lt;/a&gt; で「最終行に空行を入れる」という規約がある。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;" />
+    <meta name="description" content="&lt;p&gt;PHP の &lt;a href=&#34;http://www.php-fig.org/psr/psr-2/&#34;&gt;PSR-2&lt;/a&gt; で「最終行に空行を入れる」という規約がある。&lt;/p&gt;" />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -67,7 +65,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.30.2" />
+    <meta name="generator" content="Hugo 0.57.2" />
 
     <link rel="canonical" href="https://blog.hika69.com/blog/2016/05/20/psr-2-single-blank-line/" />
 
@@ -80,21 +78,21 @@
     "@type": "Article",
     "publisher": {
         "@type": "Organization",
-        "name": ,
-        "logo": https://blog.hika69.com/images/logo.png
+        "name":  null ,
+        "logo": "https://blog.hika69.com/images/logo.png"
     },
     "author": {
         "@type": "Person",
-        "name": ,
+        "name":  null ,
         
         "image": {
             "@type": "ImageObject",
-            "url": https://blog.hika69.com/images/logo.png,
+            "url": "https://blog.hika69.com/images/logo.png",
             "width": 250,
             "height": 250
         }, 
         
-        "url": https://hika69.com,
+        "url": "https://hika69.com",
         "sameAs": [
             
             
@@ -105,26 +103,26 @@
              
             
         ],
-        "description": 街に詳しい。
+        "description": "街に詳しい。"
         
     },
-    "headline": PSR-2 の最終行の空行についての規約を勘違いしていた,
-    "name": PSR-2 の最終行の空行についての規約を勘違いしていた,
-    "wordCount": 56,
+    "headline": "PSR-2 の最終行の空行についての規約を勘違いしていた",
+    "name": "PSR-2 の最終行の空行についての規約を勘違いしていた",
+    "wordCount":  56 ,
     "timeRequired": "PT1M",
     "inLanguage": {
       "@type": "Language",
-      "alternateName": en
+      "alternateName": "en"
     },
-    "url": https://blog.hika69.com/blog/2016/05/20/psr-2-single-blank-line/,
-    "datePublished": 2016-05-20T23:29Z,
-    "dateModified": 2016-05-20T23:29Z,
+    "url": "https://blog.hika69.com/blog/2016/05/20/psr-2-single-blank-line/",
+    "datePublished": "2016-05-20T23:29Z",
+    "dateModified": "2016-05-20T23:29Z",
     
-    "keywords": vim, php,
-    "description": ,
+    "keywords": "vim, php",
+    "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": https://blog.hika69.com/blog/2016/05/20/psr-2-single-blank-line/
+        "@id": "https://blog.hika69.com/blog/2016/05/20/psr-2-single-blank-line/"
     }
 }
     </script>
@@ -229,13 +227,11 @@
     <section class="post-content">
       <p>PHP の <a href="http://www.php-fig.org/psr/psr-2/">PSR-2</a> で「最終行に空行を入れる」という規約がある。</p>
 
-<p></p>
-
 <blockquote>
 <p>All PHP files MUST end with a single blank line.</p>
 </blockquote>
 
-<p>この規約に従っていたつもりなんだけど、勘違いしていたことがわかった<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>ので備忘。</p>
+<p>この規約に従っていたつもりなんだけど、勘違いしていたことがわかった<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>ので備忘。</p>
 
 <p><a href="https://firegoby.jp/archives/2391">UNIXの行の定義とviの改行コード | Firegoby</a> より引用</p>
 
@@ -247,7 +243,7 @@
 
 <p>このため Vim で最終行に <strong>空行が見える</strong> ように記述している場合、最終行に改行が連続(LFLF)して入力されている。</p>
 
-<p>GitHub でも最終行の空行は表示されない<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>。PSR-2 の規約を満たしていても、Vim と GitHub では空行が見えないため、空行を連続して入力してしまっていた。</p>
+<p>GitHub でも最終行の空行は表示されない<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>。PSR-2 の規約を満たしていても、Vim と GitHub では空行が見えないため、空行を連続して入力してしまっていた。</p>
 
 <p>ということで PSR-2 に従う場合、Vim では最終行の <strong>空行が見えない状態が正解</strong> のようだ。</p>
 <div class="footnotes">

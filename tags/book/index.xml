@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Book on hikarock blog</title>
+    <title>book on hikarock blog</title>
     <link>https://blog.hika69.com/tags/book/</link>
-    <description>Recent content in Book on hikarock blog</description>
+    <description>Recent content in book on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Thu, 13 Jun 2013 23:54:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/06/13/learning-node-js/</guid>
-      <description>&lt;p&gt;読み始めた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;読み始めた。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,9 +27,7 @@
       <pubDate>Mon, 10 Jun 2013 23:01:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/06/10/jikokuten/</guid>
-      <description>&lt;p&gt;持国天のフィギュアをもらいました。かっこいい。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;持国天のフィギュアをもらいました。かっこいい。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,9 +36,7 @@
       <pubDate>Tue, 28 May 2013 21:53:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/05/28/underscore-js/</guid>
-      <description>&lt;p&gt;「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.jsガイドブック&lt;/a&gt;」の読書会2回目。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.jsガイドブック&lt;/a&gt;」の読書会2回目。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -51,9 +45,7 @@
       <pubDate>Mon, 27 May 2013 20:51:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/05/27/sql-antipatterns/</guid>
-      <description>&lt;p&gt;3章まで読んだ。Kindle for iPadで読んでると表が見づらい&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;3章まで読んだ。Kindle for iPadで読んでると表が見づらい&amp;hellip;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -62,9 +54,7 @@
       <pubDate>Mon, 27 May 2013 20:40:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/05/27/javascript-ninja/</guid>
-      <description>&lt;p&gt;買ってきた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;買ってきた。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -73,9 +63,7 @@
       <pubDate>Sun, 26 May 2013 23:37:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/05/26/japan-derby/</guid>
-      <description>&lt;p&gt;友人にさそわれて、日本ダービーが開催されている東京競馬場まで行ってきた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;友人にさそわれて、日本ダービーが開催されている東京競馬場まで行ってきた。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -84,9 +72,7 @@
       <pubDate>Sat, 25 May 2013 01:04:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/05/25/backbone-js/</guid>
-      <description>&lt;p&gt;社内で「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.js ガイドブック&lt;/a&gt;」の読書会が始まったので参加した。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;社内で「&lt;a href=&#34;http://booklog.jp/item/1/4899773501&#34;&gt;Backbone.js ガイドブック&lt;/a&gt;」の読書会が始まったので参加した。&lt;/p&gt;</description>
     </item>
     
   </channel>

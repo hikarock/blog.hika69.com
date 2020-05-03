@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Node on hikarock blog</title>
+    <title>node on hikarock blog</title>
     <link>https://blog.hika69.com/tags/node/</link>
-    <description>Recent content in Node on hikarock blog</description>
+    <description>Recent content in node on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Wed, 21 Mar 2018 15:18:33 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2018/03/21/fontawesome-pro/</guid>
-      <description>&lt;p&gt;Font Awesome Pro を購入してみた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Font Awesome Pro を購入してみた。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,9 +27,7 @@
       <pubDate>Wed, 06 Apr 2016 22:26:17 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/04/06/frisby/</guid>
-      <description>&lt;p&gt;REST API のテストツール Frisby.js を使ってみた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;REST API のテストツール Frisby.js を使ってみた。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,9 +36,7 @@
       <pubDate>Sat, 02 Jan 2016 18:56:05 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/01/02/node-cli-open-editor/</guid>
-      <description>&lt;p&gt;&lt;code&gt;git commit&lt;/code&gt; をコマンドラインから実行した時に Vim が自動で開いてコミットコメントを入力できるが、このような挙動を Node のCLIアプリを自作するときにどうやるか調べた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;code&gt;git commit&lt;/code&gt; をコマンドラインから実行した時に Vim が自動で開いてコミットコメントを入力できるが、このような挙動を Node のCLIアプリを自作するときにどうやるか調べた。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -51,9 +45,7 @@
       <pubDate>Wed, 01 Jul 2015 22:01:34 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2015/07/01/roots/</guid>
-      <description>&lt;p&gt;定期的にブログをリニューアルしたくなる病が発症する。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;定期的にブログをリニューアルしたくなる病が発症する。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -62,9 +54,7 @@
       <pubDate>Sat, 21 Feb 2015 19:17:39 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2015/02/21/npm-init/</guid>
-      <description>&lt;p&gt;&lt;code&gt;npm init&lt;/code&gt;した時にlicenceの種類やauthorの情報を自動的にいれる設定。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;code&gt;npm init&lt;/code&gt;した時にlicenceの種類やauthorの情報を自動的にいれる設定。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -73,9 +63,7 @@
       <pubDate>Thu, 13 Jun 2013 23:54:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/06/13/learning-node-js/</guid>
-      <description>&lt;p&gt;読み始めた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;読み始めた。&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bitbucket on hikarock blog</title>
+    <title>bitbucket on hikarock blog</title>
     <link>https://blog.hika69.com/tags/bitbucket/</link>
-    <description>Recent content in Bitbucket on hikarock blog</description>
+    <description>Recent content in bitbucket on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Tue, 18 Nov 2014 11:34:01 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/11/18/github-to-bitbucket/</guid>
-      <description>&lt;p&gt;GitHub のプライベートリポジトリの上限がきてしまったので、使用頻度の低いリポジトリを Bitbucket の非公開リポジトリに引越した。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;GitHub のプライベートリポジトリの上限がきてしまったので、使用頻度の低いリポジトリを Bitbucket の非公開リポジトリに引越した。&lt;/p&gt;</description>
     </item>
     
   </channel>

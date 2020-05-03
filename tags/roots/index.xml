@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Roots on hikarock blog</title>
+    <title>roots on hikarock blog</title>
     <link>https://blog.hika69.com/tags/roots/</link>
-    <description>Recent content in Roots on hikarock blog</description>
+    <description>Recent content in roots on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Wed, 01 Jul 2015 22:01:34 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2015/07/01/roots/</guid>
-      <description>&lt;p&gt;定期的にブログをリニューアルしたくなる病が発症する。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;定期的にブログをリニューアルしたくなる病が発症する。&lt;/p&gt;</description>
     </item>
     
   </channel>

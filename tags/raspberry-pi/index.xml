@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Raspberry Pi on hikarock blog</title>
+    <title>raspberry-pi on hikarock blog</title>
     <link>https://blog.hika69.com/tags/raspberry-pi/</link>
-    <description>Recent content in Raspberry Pi on hikarock blog</description>
+    <description>Recent content in raspberry-pi on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Sat, 02 Apr 2016 12:21:22 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/04/02/raspberry-pi-3/</guid>
-      <description>&lt;p&gt;使いみちを決めないで Raspberry Pi 3 を買ってしまったけど、とりあえず OS いれて起動するまでセットアップしてみる。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;使いみちを決めないで Raspberry Pi 3 を買ってしまったけど、とりあえず OS いれて起動するまでセットアップしてみる。&lt;/p&gt;</description>
     </item>
     
   </channel>

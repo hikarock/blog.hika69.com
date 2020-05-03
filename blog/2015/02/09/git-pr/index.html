@@ -43,9 +43,7 @@
     <title>hub コマンドで GitHub と GHE に PullRequest する &middot; hikarock blog</title>
 
     
-    <meta name="description" content="&lt;p&gt;GitHubでは以下のalias (リンク参照) を設定して&lt;code&gt;git pr master&lt;/code&gt;のように使っていたけれど、GHEで動かなかったので&lt;code&gt;.gitconfig&lt;/code&gt;を編集した。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;" />
+    <meta name="description" content="&lt;p&gt;GitHubでは以下のalias (リンク参照) を設定して&lt;code&gt;git pr master&lt;/code&gt;のように使っていたけれど、GHEで動かなかったので&lt;code&gt;.gitconfig&lt;/code&gt;を編集した。&lt;/p&gt;" />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -67,7 +65,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.30.2" />
+    <meta name="generator" content="Hugo 0.57.2" />
 
     <link rel="canonical" href="https://blog.hika69.com/blog/2015/02/09/git-pr/" />
 
@@ -80,21 +78,21 @@
     "@type": "Article",
     "publisher": {
         "@type": "Organization",
-        "name": ,
-        "logo": https://blog.hika69.com/images/logo.png
+        "name":  null ,
+        "logo": "https://blog.hika69.com/images/logo.png"
     },
     "author": {
         "@type": "Person",
-        "name": ,
+        "name":  null ,
         
         "image": {
             "@type": "ImageObject",
-            "url": https://blog.hika69.com/images/logo.png,
+            "url": "https://blog.hika69.com/images/logo.png",
             "width": 250,
             "height": 250
         }, 
         
-        "url": https://hika69.com,
+        "url": "https://hika69.com",
         "sameAs": [
             
             
@@ -105,26 +103,26 @@
              
             
         ],
-        "description": 街に詳しい。
+        "description": "街に詳しい。"
         
     },
-    "headline": hub コマンドで GitHub と GHE に PullRequest する,
-    "name": hub コマンドで GitHub と GHE に PullRequest する,
-    "wordCount": 49,
+    "headline": "hub コマンドで GitHub と GHE に PullRequest する",
+    "name": "hub コマンドで GitHub と GHE に PullRequest する",
+    "wordCount":  49 ,
     "timeRequired": "PT1M",
     "inLanguage": {
       "@type": "Language",
-      "alternateName": en
+      "alternateName": "en"
     },
-    "url": https://blog.hika69.com/blog/2015/02/09/git-pr/,
-    "datePublished": 2015-02-09T19:36Z,
-    "dateModified": 2015-02-09T19:36Z,
+    "url": "https://blog.hika69.com/blog/2015/02/09/git-pr/",
+    "datePublished": "2015-02-09T19:36Z",
+    "dateModified": "2015-02-09T19:36Z",
     
-    "keywords": git, github,
-    "description": ,
+    "keywords": "git, github",
+    "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": https://blog.hika69.com/blog/2015/02/09/git-pr/
+        "@id": "https://blog.hika69.com/blog/2015/02/09/git-pr/"
     }
 }
     </script>
@@ -229,15 +227,13 @@
     <section class="post-content">
       <p>GitHubでは以下のalias (リンク参照) を設定して<code>git pr master</code>のように使っていたけれど、GHEで動かなかったので<code>.gitconfig</code>を編集した。</p>
 
-<p></p>
-
 <ul>
-<li><a href="http://qiita.com/banyan@github/items/3c82fa357fe355c16f32#comment-cf6dbbe34ce80d0ac3a7">GitHub へ簡単に Pull Request を送る - Qiita</a></li>
-</ul>
+<li><p><a href="http://qiita.com/banyan@github/items/3c82fa357fe355c16f32#comment-cf6dbbe34ce80d0ac3a7">GitHub へ簡単に Pull Request を送る - Qiita</a></p>
 
 <pre><code>[alias]
-  pr = !REP_OWNER=$(git remote -v | grep -e '(push)' | awk '{print $2}' | awk -F '[:/]' '{print $2}') &amp;&amp; hub pull-request $2 -h $REP_OWNER:`git rev-parse --abbrev-ref HEAD` -b $REP_OWNER:$1 &amp;&amp; shift &quot;$#&quot; 1&gt;/dev/null 2&gt;/dev/null
-</code></pre>
+pr = !REP_OWNER=$(git remote -v | grep -e '(push)' | awk '{print $2}' | awk -F '[:/]' '{print $2}') &amp;&amp; hub pull-request $2 -h $REP_OWNER:`git rev-parse --abbrev-ref HEAD` -b $REP_OWNER:$1 &amp;&amp; shift &quot;$#&quot; 1&gt;/dev/null 2&gt;/dev/null
+</code></pre></li>
+</ul>
 
 <p>快適。</p>
     </section>

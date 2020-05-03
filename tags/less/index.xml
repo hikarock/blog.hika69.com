@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Less on hikarock blog</title>
+    <title>less on hikarock blog</title>
     <link>https://blog.hika69.com/tags/less/</link>
-    <description>Recent content in Less on hikarock blog</description>
+    <description>Recent content in less on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Thu, 02 Jan 2014 22:40:46 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/01/02/less-mixin/</guid>
-      <description>&lt;p&gt;ストーリーボードではスライドをHTMLとCSSで描画するため、同じレイアウト・見た目で縮尺だけ変えたいことがある。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;ストーリーボードではスライドをHTMLとCSSで描画するため、同じレイアウト・見た目で縮尺だけ変えたいことがある。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,9 +27,7 @@
       <pubDate>Thu, 05 Dec 2013 00:02:29 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/12/05/less-button-mixin/</guid>
-      <description>&lt;p&gt;以下の画像ボタンを再現するLessのmixin書いた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;以下の画像ボタンを再現するLessのmixin書いた。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,9 +36,7 @@
       <pubDate>Sat, 01 Jun 2013 22:28:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/06/01/grunt-js/</guid>
-      <description>&lt;p&gt;Gruntを&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;に導入するためのメモ。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Gruntを&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;に導入するためのメモ。&lt;/p&gt;</description>
     </item>
     
   </channel>

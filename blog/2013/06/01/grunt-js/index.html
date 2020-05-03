@@ -45,9 +45,7 @@
     <title>Grunt を導入 &middot; hikarock blog</title>
 
     
-    <meta name="description" content="&lt;p&gt;Gruntを&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;に導入するためのメモ。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;" />
+    <meta name="description" content="&lt;p&gt;Gruntを&lt;a href=&#34;http://www.remp.jp/hello&#34;&gt;REMP&lt;/a&gt;に導入するためのメモ。&lt;/p&gt;" />
     
 
     <meta name="HandheldFriendly" content="True" />
@@ -69,7 +67,7 @@
       
       
     
-    <meta name="generator" content="Hugo 0.30.2" />
+    <meta name="generator" content="Hugo 0.57.2" />
 
     <link rel="canonical" href="https://blog.hika69.com/blog/2013/06/01/grunt-js/" />
 
@@ -82,21 +80,21 @@
     "@type": "Article",
     "publisher": {
         "@type": "Organization",
-        "name": ,
-        "logo": https://blog.hika69.com/images/logo.png
+        "name":  null ,
+        "logo": "https://blog.hika69.com/images/logo.png"
     },
     "author": {
         "@type": "Person",
-        "name": ,
+        "name":  null ,
         
         "image": {
             "@type": "ImageObject",
-            "url": https://blog.hika69.com/images/logo.png,
+            "url": "https://blog.hika69.com/images/logo.png",
             "width": 250,
             "height": 250
         }, 
         
-        "url": https://hika69.com,
+        "url": "https://hika69.com",
         "sameAs": [
             
             
@@ -107,26 +105,26 @@
              
             
         ],
-        "description": 街に詳しい。
+        "description": "街に詳しい。"
         
     },
-    "headline": Grunt を導入,
-    "name": Grunt を導入,
-    "wordCount": 66,
+    "headline": "Grunt を導入",
+    "name": "Grunt を導入",
+    "wordCount":  66 ,
     "timeRequired": "PT1M",
     "inLanguage": {
       "@type": "Language",
-      "alternateName": en
+      "alternateName": "en"
     },
-    "url": https://blog.hika69.com/blog/2013/06/01/grunt-js/,
-    "datePublished": 2013-06-01T22:28Z,
-    "dateModified": 2013-06-01T22:28Z,
+    "url": "https://blog.hika69.com/blog/2013/06/01/grunt-js/",
+    "datePublished": "2013-06-01T22:28Z",
+    "dateModified": "2013-06-01T22:28Z",
     
-    "keywords": javascript, less, grunt,
-    "description": ,
+    "keywords": "javascript, less, grunt",
+    "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": https://blog.hika69.com/blog/2013/06/01/grunt-js/
+        "@id": "https://blog.hika69.com/blog/2013/06/01/grunt-js/"
     }
 }
     </script>
@@ -233,8 +231,6 @@
     <section class="post-content">
       <p>Gruntを<a href="http://www.remp.jp/hello">REMP</a>に導入するためのメモ。</p>
 
-<p></p>
-
 <h3 id="node-jsのインストール">node.jsのインストール</h3>
 
 <p>node.jsを最新版にする。<a href="http://nodejs.org/">node.js</a>のinstallボタンで落ちてくるパッケージから再インストールするだけ。</p>
@@ -281,15 +277,16 @@ package.jsonに依存関係が記録されていれば<code>npm install</code>�
 <ul>
 <li>Lessを監視して変更した時に別のタスクを呼び出す</li>
 </ul></li>
-<li>grunt-contrib-less
+
+<li><p>grunt-contrib-less</p>
 
 <ul>
-<li>Lessをcssにコンパイルしたり圧縮したりする</li>
-</ul></li>
-</ol>
+<li><p>Lessをcssにコンパイルしたり圧縮したりする</p>
 
 <pre><code>npm install grunt-contrib-uglify grunt-contrib-watch grunt-contrib-less --save-dev
-</code></pre>
+</code></pre></li>
+</ul></li>
+</ol>
 
 <p>以下だと便利タスク一式が一発で入るらしいけど、一個ずつ選びたいので使わない。</p>
 

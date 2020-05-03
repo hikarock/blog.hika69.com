@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Git Flow on hikarock blog</title>
+    <title>git-flow on hikarock blog</title>
     <link>https://blog.hika69.com/tags/git-flow/</link>
-    <description>Recent content in Git Flow on hikarock blog</description>
+    <description>Recent content in git-flow on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Tue, 16 Dec 2014 09:37:50 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/12/16/git-flow/</guid>
-      <description>&lt;p&gt;iOSアプリはリリースサイクルが長くなりがちなので、&lt;a href=&#34;https://gist.github.com/Gab-km/3705015&#34;&gt;GitHub Flow&lt;/a&gt;ではなく、&lt;a href=&#34;http://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html&#34;&gt;git-flow&lt;/a&gt;を参考にしたフローを使っている。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;iOSアプリはリリースサイクルが長くなりがちなので、&lt;a href=&#34;https://gist.github.com/Gab-km/3705015&#34;&gt;GitHub Flow&lt;/a&gt;ではなく、&lt;a href=&#34;http://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html&#34;&gt;git-flow&lt;/a&gt;を参考にしたフローを使っている。&lt;/p&gt;</description>
     </item>
     
   </channel>
