@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hiking on hikarock blog</title>
+    <title>hiking on hikarock blog</title>
     <link>https://blog.hika69.com/tags/hiking/</link>
-    <description>Recent content in Hiking on hikarock blog</description>
+    <description>Recent content in hiking on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Sat, 07 Sep 2013 22:19:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/09/07/yama/</guid>
-      <description>&lt;p&gt;今年はちょいちょい山に行ってる。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;今年はちょいちょい山に行ってる。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,9 +27,7 @@
       <pubDate>Sun, 23 Jun 2013 21:18:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/06/23/ooyama-koma/</guid>
-      <description>&lt;p&gt;一年ぶりに大山に登った。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;一年ぶりに大山に登った。&lt;/p&gt;</description>
     </item>
     
   </channel>

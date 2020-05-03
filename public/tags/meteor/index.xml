@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Meteor on hikarock blog</title>
+    <title>meteor on hikarock blog</title>
     <link>https://blog.hika69.com/tags/meteor/</link>
-    <description>Recent content in Meteor on hikarock blog</description>
+    <description>Recent content in meteor on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Mon, 25 Aug 2014 21:05:21 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/08/25/tng14/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,9 +27,7 @@
       <pubDate>Thu, 31 Jul 2014 23:25:25 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/07/31/meteor/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://triph.jp&#34;&gt;triph&lt;/a&gt;のランディングページ(というかアプリ全体&amp;hellip;)をHerokuに乗せていたんだけど、ちょっとおおげさな感じがしてきたので&lt;a href=&#34;https://meteor.com&#34;&gt;Meteor&lt;/a&gt;に移した。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://triph.jp&#34;&gt;triph&lt;/a&gt;のランディングページ(というかアプリ全体&amp;hellip;)をHerokuに乗せていたんだけど、ちょっとおおげさな感じがしてきたので&lt;a href=&#34;https://meteor.com&#34;&gt;Meteor&lt;/a&gt;に移した。&lt;/p&gt;</description>
     </item>
     
   </channel>

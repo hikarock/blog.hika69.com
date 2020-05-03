@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ios on hikarock blog</title>
+    <title>ios on hikarock blog</title>
     <link>https://blog.hika69.com/tags/ios/</link>
-    <description>Recent content in Ios on hikarock blog</description>
+    <description>Recent content in ios on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -20,9 +20,7 @@
       <guid>https://blog.hika69.com/blog/2015/02/10/ibdesignable/</guid>
       <description>&lt;p&gt;Xcode6 から使える &lt;code&gt;IB_DESIGNABLE&lt;/code&gt; と &lt;code&gt;IBInspectable&lt;/code&gt; が非常に便利なんだけど情報が少ない。&lt;/p&gt;
 
-&lt;p&gt;ので、基本とかは置いといて、とりあえず知ってることを雑多にまとめてみる。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;ので、基本とかは置いといて、とりあえず知ってることを雑多にまとめてみる。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,9 +29,7 @@
       <pubDate>Tue, 16 Dec 2014 09:37:50 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/12/16/git-flow/</guid>
-      <description>&lt;p&gt;iOSアプリはリリースサイクルが長くなりがちなので、&lt;a href=&#34;https://gist.github.com/Gab-km/3705015&#34;&gt;GitHub Flow&lt;/a&gt;ではなく、&lt;a href=&#34;http://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html&#34;&gt;git-flow&lt;/a&gt;を参考にしたフローを使っている。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;iOSアプリはリリースサイクルが長くなりがちなので、&lt;a href=&#34;https://gist.github.com/Gab-km/3705015&#34;&gt;GitHub Flow&lt;/a&gt;ではなく、&lt;a href=&#34;http://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html&#34;&gt;git-flow&lt;/a&gt;を参考にしたフローを使っている。&lt;/p&gt;</description>
     </item>
     
   </channel>

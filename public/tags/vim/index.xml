@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vim on hikarock blog</title>
+    <title>vim on hikarock blog</title>
     <link>https://blog.hika69.com/tags/vim/</link>
-    <description>Recent content in Vim on hikarock blog</description>
+    <description>Recent content in vim on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Fri, 20 May 2016 23:29:22 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/05/20/psr-2-single-blank-line/</guid>
-      <description>&lt;p&gt;PHP の &lt;a href=&#34;http://www.php-fig.org/psr/psr-2/&#34;&gt;PSR-2&lt;/a&gt; で「最終行に空行を入れる」という規約がある。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;PHP の &lt;a href=&#34;http://www.php-fig.org/psr/psr-2/&#34;&gt;PSR-2&lt;/a&gt; で「最終行に空行を入れる」という規約がある。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,9 +27,7 @@
       <pubDate>Tue, 05 May 2015 17:03:27 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2015/05/05/eslint/</guid>
-      <description>&lt;p&gt;vim-watchdogs から eslint が使えるように設定したのでメモ。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;vim-watchdogs から eslint が使えるように設定したのでメモ。&lt;/p&gt;</description>
     </item>
     
   </channel>

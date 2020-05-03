@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Handlebars on hikarock blog</title>
+    <title>handlebars on hikarock blog</title>
     <link>https://blog.hika69.com/tags/handlebars/</link>
-    <description>Recent content in Handlebars on hikarock blog</description>
+    <description>Recent content in handlebars on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Wed, 23 Apr 2014 00:10:08 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/04/23/rendr-handlebars/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rendrjs/rendr-handlebars&#34;&gt;rendr-handlebars&lt;/a&gt;でpartial (部分テンプレート) が使えることにさっき気づいた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rendrjs/rendr-handlebars&#34;&gt;rendr-handlebars&lt;/a&gt;でpartial (部分テンプレート) が使えることにさっき気づいた。&lt;/p&gt;</description>
     </item>
     
   </channel>

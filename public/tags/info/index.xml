@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Info on hikarock blog</title>
+    <title>info on hikarock blog</title>
     <link>https://blog.hika69.com/tags/info/</link>
-    <description>Recent content in Info on hikarock blog</description>
+    <description>Recent content in info on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Fri, 24 May 2013 00:39:57 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/05/24/my-first-post/</guid>
-      <description>&lt;p&gt;厳密にはまだ引っ越してない。WordPressからデータ移行をしないと。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;厳密にはまだ引っ越してない。WordPressからデータ移行をしないと。&lt;/p&gt;</description>
     </item>
     
   </channel>

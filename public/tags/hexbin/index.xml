@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hexbin on hikarock blog</title>
+    <title>hexbin on hikarock blog</title>
     <link>https://blog.hika69.com/tags/hexbin/</link>
-    <description>Recent content in Hexbin on hikarock blog</description>
+    <description>Recent content in hexbin on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Mon, 29 Dec 2014 21:12:44 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/12/29/hexbin/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://hexb.in/&#34;&gt;hexbin&lt;/a&gt; は六角形の主にNode系のロゴを集めたサイト。運営しているのは NodeSchool に携わっている&lt;a href=&#34;https://twitter.com/maxogden&#34;&gt;@maxogden&lt;/a&gt;さん。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://hexb.in/&#34;&gt;hexbin&lt;/a&gt; は六角形の主にNode系のロゴを集めたサイト。運営しているのは NodeSchool に携わっている&lt;a href=&#34;https://twitter.com/maxogden&#34;&gt;@maxogden&lt;/a&gt;さん。&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Music on hikarock blog</title>
+    <title>music on hikarock blog</title>
     <link>https://blog.hika69.com/tags/music/</link>
-    <description>Recent content in Music on hikarock blog</description>
+    <description>Recent content in music on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Fri, 01 Nov 2013 23:20:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/11/01/toad-the-wet-sprocket/</guid>
-      <description>&lt;p&gt;Toad the Wet Sprocketの新作が16年(!)ぶりにリリースされた。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Toad the Wet Sprocketの新作が16年(!)ぶりにリリースされた。&lt;/p&gt;</description>
     </item>
     
   </channel>

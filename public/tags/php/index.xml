@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Php on hikarock blog</title>
+    <title>php on hikarock blog</title>
     <link>https://blog.hika69.com/tags/php/</link>
-    <description>Recent content in Php on hikarock blog</description>
+    <description>Recent content in php on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -20,9 +20,7 @@
       <guid>https://blog.hika69.com/blog/2016/11/25/phan/</guid>
       <description>&lt;p&gt;開発環境 (Mac) で PHP の静的解析がしたくて Phan を導入した。&lt;/p&gt;
 
-&lt;p&gt;さくっといけるかと思いきやいろいろつまづいたので備忘。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;さくっといけるかと思いきやいろいろつまづいたので備忘。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,9 +29,7 @@
       <pubDate>Fri, 20 May 2016 23:29:22 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/05/20/psr-2-single-blank-line/</guid>
-      <description>&lt;p&gt;PHP の &lt;a href=&#34;http://www.php-fig.org/psr/psr-2/&#34;&gt;PSR-2&lt;/a&gt; で「最終行に空行を入れる」という規約がある。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;PHP の &lt;a href=&#34;http://www.php-fig.org/psr/psr-2/&#34;&gt;PSR-2&lt;/a&gt; で「最終行に空行を入れる」という規約がある。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -42,9 +38,7 @@
       <pubDate>Thu, 07 Jan 2016 21:46:22 +0900</pubDate>
       
       <guid>https://blog.hika69.com/blog/2016/01/07/rename-snake-case-to-pascal-case/</guid>
-      <description>&lt;p&gt;あるプロジェクトで &lt;a href=&#34;http://www.php-fig.org/psr/psr-0/&#34;&gt;PSR-0&lt;/a&gt; に対応する作業に関連して、スネークケースのファイル名とクラス名をパスカルケースに変換する必要があった。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;あるプロジェクトで &lt;a href=&#34;http://www.php-fig.org/psr/psr-0/&#34;&gt;PSR-0&lt;/a&gt; に対応する作業に関連して、スネークケースのファイル名とクラス名をパスカルケースに変換する必要があった。&lt;/p&gt;</description>
     </item>
     
   </channel>

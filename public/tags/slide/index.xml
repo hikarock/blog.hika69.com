@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Slide on hikarock blog</title>
+    <title>slide on hikarock blog</title>
     <link>https://blog.hika69.com/tags/slide/</link>
-    <description>Recent content in Slide on hikarock blog</description>
+    <description>Recent content in slide on hikarock blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy; 2017 hikarock</copyright>
@@ -18,9 +18,7 @@
       <pubDate>Fri, 29 Aug 2014 11:45:06 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/08/29/yapc2014/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://yapcasia.org/2014/08/eve-of-yapcasia.html&#34;&gt;YAPC::Asia Tokyo 2014 前夜祭「欲しいものは作ればいい！ 〜Webアプリ10連発〜」&lt;/a&gt;で話してきました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://yapcasia.org/2014/08/eve-of-yapcasia.html&#34;&gt;YAPC::Asia Tokyo 2014 前夜祭「欲しいものは作ればいい！ 〜Webアプリ10連発〜」&lt;/a&gt;で話してきました。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,9 +27,7 @@
       <pubDate>Mon, 25 Aug 2014 21:05:21 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2014/08/25/tng14/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://nodejs.connpass.com/event/7908/&#34;&gt;東京Node学園 14時限目&lt;/a&gt;でRendrについて話してきました。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,9 +36,7 @@
       <pubDate>Wed, 20 Nov 2013 22:43:00 +0000</pubDate>
       
       <guid>https://blog.hika69.com/blog/2013/11/20/klab-js/</guid>
-      <description>&lt;p&gt;KLab さんの JavaScript 勉強会で Hoodie の話をしました。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;KLab さんの JavaScript 勉強会で Hoodie の話をしました。&lt;/p&gt;</description>
     </item>
     
   </channel>
